@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `十二棵橡树`,
   },
   plugins: [
     // `gatsby-plugin-react-helmet`,
@@ -9,14 +9,14 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography.js`,
       },
-    }
+    },
     // `gatsby-transformer-remark`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `src`,
-    //     path: `${__dirname}/src`
-    //   }
-    // }
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src`
+      }
+    }
   ],
 }
