@@ -1,13 +1,24 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
 
-const IndexPage = () => (
+export default () => (
   <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <h1>Richard Hamming on Luck</h1>
+    <div>
+      <p>
+        From Richard Hamming’s classic and must-read talk, “<a href="http://www.cs.virginia.edu/~robins/YouAndYourResearch.html">
+          You and Your Research
+        </a>”.
+      </p>
+      <blockquote>
+        <p>
+          这是一篇博客{" "}
+          <em>
+            The particular thing you do is luck, but that you do something is
+            not.
+          </em>
+        </p>
+      </blockquote>
+    </div>
+    <p>Posted 哈哈哈哈哈 09, 2011</p>
   </div>
-)
-
-export default IndexPage
+);

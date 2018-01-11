@@ -3,14 +3,20 @@ module.exports = {
     title: `Gatsby Default Starter`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`
-    `gatsby-transformer-remark`,
+    // `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-typography`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src`
-      }
+        pathToConfigModule: `src/utils/typography.js`,
+      },
     }
+    // `gatsby-transformer-remark`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `src`,
+    //     path: `${__dirname}/src`
+    //   }
+    // }
   ],
 }
