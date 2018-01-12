@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default ({ data }) => (
   <div>
@@ -10,7 +10,7 @@ export default ({ data }) => (
       />
     </div>
   </div>
-);
+)
 
 
 export const query = graphql`
