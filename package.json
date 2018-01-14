@@ -10,6 +10,7 @@
     "gatsby-plugin-react-next": "^1.0.7",
     "gatsby-plugin-typography": "^1.7.10",
     "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-source-hacker-news": "^1.0.9",
     "gatsby-transformer-remark": "^1.7.28",
     "react-helmet": "^5.2.0",
     "typography-theme-github": "^0.15.10"

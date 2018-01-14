@@ -20,6 +20,8 @@ module.exports = {
         path: `${__dirname}/src`
       }
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    // 'gatsby-source-hacker-news',
+    // 'gatsby-source-test'
   ],
 }
