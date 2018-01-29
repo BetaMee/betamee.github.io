@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const LayoutWrapper = styled.div`
   margin: 0 auto;
-  max-width: 650px;
+  max-width: 980px;
   padding: 1.25rem 1rem;
 `
 
