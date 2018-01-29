@@ -1,13 +1,7 @@
-# gatsby-starter-default
-The default Gatsby starter
+# 橡树上的新博客站点
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+Hi, This is my new blog repository, using Gatsby.js which is build by react technology stack to refactor my personal site.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+This new site will depoly to Netlify after finishing developing.
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Coming soon.....
