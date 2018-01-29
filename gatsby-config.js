@@ -1,12 +1,11 @@
 module.exports = {
-  pathPrefix: '/loveoak',
-
   siteMetadata: {
     title: '十二棵橡树',
   },
   plugins: [
     // 'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',    
+    'gatsby-plugin-react-next',
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
@@ -21,7 +20,5 @@ module.exports = {
       }
     },
     'gatsby-transformer-remark',
-    // 'gatsby-source-hacker-news',
-    // 'gatsby-source-test'
   ],
 }
