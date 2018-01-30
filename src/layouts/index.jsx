@@ -4,53 +4,48 @@ import styled from 'styled-components'
 
 
 const LayoutWrapper = styled.div`
-  margin: 0 auto;
+  width: 100vw;
+`
+
+const Header = styled.header`
+  height: 54px;
+  background-color: #24292e;
+`
+
+const Mainbody = styled.div`
+  min-height: 90vh;
   max-width: 980px;
-  padding: 1.25rem 1rem;
-`
-
-const Hearder = styled.div`
-  margin-bottom: 1.5rem;
-`
-
-const SiteTitle = styled.h3`
-  display: inline;
-`
-
-const Navigation = styled.ul`
-  list-style: none;
-  float: right;
-`
-
-const LinkWrapper = styled.li`
-  display: inline-block;
-  margin-right: 1rem;
+  margin: 0 auto;
 `
 
 
-// 私有组件
-
-const NaviItem = ({to, children}) => (
-  <LinkWrapper>
-    <Link to={to}>
-      {children}
-    </Link>
-  </LinkWrapper>
-)
+const Footer = styled.footer`
+  height: 105px;
+  width: 100%;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.067);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+const SiteInfo = styled.div`
+  max-width: 980px;
+`
 
 const DefaultLayout = ({ children, data }) =>
   <LayoutWrapper>
-    <Hearder>
-      <Link to="/">
-        <SiteTitle>{data.site.siteMetadata.title}</SiteTitle>
-      </Link>
-      <Navigation>
-        <NaviItem to="/">Home</NaviItem>
-        <NaviItem to="/about/">About</NaviItem>
-        <NaviItem to="/contact/">Contact</NaviItem>
-      </Navigation>
-    </Hearder>
-    {children()}
+    <Header>
+      
+    </Header>
+    <Mainbody>
+      {children()}
+    </Mainbody>
+    <Footer>
+      <SiteInfo>
+        © 2016 - 2018 橡树上 Build with Gatsby.js, Host by Netlify | Inspiration from Github Blog Style
+      </SiteInfo>
+    </Footer>
   </LayoutWrapper>
 
 export default DefaultLayout
