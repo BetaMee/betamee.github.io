@@ -108,16 +108,19 @@ const Mainbody = styled.div`
  */
 const Footer = styled.footer`
   height: 105px;
-  width: 100%;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: rgba(0, 0, 0, 0.067);
+  max-width: 980px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.067);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `
 const SiteInfo = styled.div`
   max-width: 980px;
+`
+const ButtomLink = styled(Link)`
+  text-decoration: underline;
+  margin: 0 5px;
 `
 
 const DefaultLayout = ({ children, data }) =>
@@ -143,7 +146,11 @@ const DefaultLayout = ({ children, data }) =>
     </Mainbody>
     <Footer>
       <SiteInfo>
-        © 2016 - 2018 橡树上 Build with Gatsby.js, Host by Netlify | Inspiration from Github Blog Style
+        © 2016 - 2018 橡树上
+      </SiteInfo>
+      <SiteInfo>
+        <ButtomLink>Gatsby.js </ButtomLink>
+        <ButtomLink>Netlify</ButtomLink> | Inspiration from <ButtomLink>Github Blog Style</ButtomLink>
       </SiteInfo>
     </Footer>
   </LayoutWrapper>
