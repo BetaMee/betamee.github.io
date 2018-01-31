@@ -2,6 +2,9 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+// 图片资源
+import searchImg from '../images/search.png'
+
 /**
  * 全局布局容器
  */
@@ -13,7 +16,7 @@ const LayoutWrapper = styled.div`
  * Header组件Group
  */
 const Header = styled.header`
-  height: 54px;
+  height: 84px;
   background-color: #24292e;
   box-sizing: border-box;
   padding: 12px 0;
@@ -36,27 +39,24 @@ const Navigation = styled.div`
   align-items: center;
 `
 
-const SiteIcon = styled.div`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #424242;
-`
 
 const SiteTitle = styled.div`
   color: #FFFFFF;
-  font-size: 20px;
-  width: 300px;
+  font-size: 26px;
+  width: 250px;
   height: 30px;
   line-height: 30px;
-  background-color: #424242;
   border-radius: 3px;
   text-align:center;
   margin: 0 10px;
 `
 
+const Underline = styled.span`
+  color: #9E9E9E;
+`
+
 const LinkList = styled.ul`
-  margin: 0;
+  margin: 0 15px 0 0;
   display: flex;
   align-items: center;
 `
@@ -71,45 +71,25 @@ const StyledLink = styled(Link)`
   }
 `
 
-const UserProfile = styled.div`
-  display: flex;
-  align-items: center;
-`
-const Avatar = styled.img`
-  width: 32px;
-  height: 32px;
-  margin: 0 5px 0 0;
-  border-radius: 3px;
-  object-fit: cover;
-`
-
-const DownCaret = styled.span`
-  display: inline-block;
-  width: 0;
-  height: 0;
-  vertical-align: middle;
-  content: "";
-  border: 4px solid;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  color: rgba(255,255,255,0.75);
-`
-
-
-/**
- * StaticContent组件Group
- */
-const StaticContent = styled.div`
-
-`
-
-const GlobalBolgTitle = styled.p`
-
-`
 
 const SearchInput = styled.input`
-
+  background-color: #424242;
+  border-radius: 3px;
+  outline: 0;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.075);
+  font-size: 16px;
+  line-height: 20px;
+  padding: 2px 5px 2px 25px;
+  transition: width .3s ease-in-out 0s;
+  width: 200px;
+  font-weight: 400;
+  border-width: 0;
+  color: #fff;
+  min-height: 34px;
+  &:focus {
+    width: 250px;
+  }
+  background: url(${searchImg}) 8px center no-repeat #202326;
 `
 
 
@@ -145,27 +125,19 @@ const DefaultLayout = ({ children, data }) =>
     <Header>
       <HeaderWrapper>
         {/*导航栏*/}
+        <SiteTitle>十二棵<Underline>橡树</Underline></SiteTitle>
         <Navigation>
-          <SiteIcon></SiteIcon>
-          <SiteTitle>{data.site.siteMetadata.title}</SiteTitle>
           <LinkList>
             <StyledLink to='/'>Home</StyledLink>
             <StyledLink to='/'>Projects</StyledLink>
             <StyledLink to='/about'>About</StyledLink>
             <StyledLink to='/contact'>Contact</StyledLink>
           </LinkList>
+          {/*搜索框*/}
+          <SearchInput placeholder='Search...'/>
         </Navigation>
-        {/*用户信息*/}
-        <UserProfile>
-          <Avatar src="https://avatars2.githubusercontent.com/u/17882639?s=40&v=4"/>
-          <DownCaret /> 
-        </UserProfile>
       </HeaderWrapper>
     </Header>
-    <StaticContent>
-      <GlobalBolgTitle></GlobalBolgTitle>
-      <SearchInput/>
-    </StaticContent>
     <Mainbody>
       {children()}
     </Mainbody>
