@@ -27,9 +27,9 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 980px;
+  width: 64.5%;
   ${media.desktop`
-    width: 980px;
+    width: 64.5%;
   `}
   ${media.tablet`
     width: 100%;

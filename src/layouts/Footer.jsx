@@ -22,9 +22,9 @@ const Footer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 980px;
+  width: 64.5%;
   ${media.desktop`
-    width: 980px;
+    width: 64.5%;
   `}
   ${media.tablet`
     width: 100%;
@@ -35,8 +35,8 @@ const Footer = styled.div`
 `
 
 const SiteInfo = styled.div`
-  max-width: 980px;
 `
+
 const ButtomLink = styled(Link)`
   text-decoration: underline;
   margin: 0 5px;

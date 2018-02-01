@@ -24,9 +24,10 @@ const Mainbody = styled.div`
   box-sizing: border-box;
   min-height: 90vh;
   margin: 0 auto;
-  width: 980px;
+  width: 64.5%;
+  display: flex;
   ${media.desktop`
-    width: 980px;
+    width: 64.5%;
   `}
   ${media.tablet`
     width: 100%;
