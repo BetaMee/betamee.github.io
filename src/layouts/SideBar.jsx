@@ -45,14 +45,32 @@ const PanelTitle = styled.h3`
 const ListWrapper = styled.ul`
   margin: 0;
   box-sizing: border-box;
-  padding: 5px 10px;
 `
 const List = styled.li`
   list-style-type: none;
+  border-bottom: 1px solid #eee;
+  min-height: 42px;
+  margin: 0;
+  padding: 5px 10px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
+  &::before {
+    display: ${props => props.selected ? 'block' : 'none'};
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    content: "";
+    background-color: #e36209;
+  }
+  &:hover: {
+    background-color: #f6f8fa;
+  }
 `
+
 const StyledLink = styled(Link)`
 
 ` 
@@ -79,7 +97,7 @@ const SideBarPortal = ({ recentpostslists,  categorylists, contactlists }) =>
       <PanelTitle>Category</PanelTitle>
       <ListWrapper>
         {categorylists.map((category, index) => (
-          <List key={index}>
+          <List selected key={index}>
             <StyledLink>{category}</StyledLink>
           </List>
         ))
