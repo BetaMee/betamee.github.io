@@ -28,6 +28,7 @@ const CategoryPanel = styled.div`
 `
 const ContactPanel = styled.div`
   margin-top: 20px;
+  margin-bottom: 30px;
   width: 100%;
   min-height: 100px;
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
@@ -66,13 +67,18 @@ const List = styled.li`
     content: "";
     background-color: #e36209;
   }
-  &:hover: {
+  &:hover {
+    text-decoration: none;
     background-color: #f6f8fa;
   }
 `
 
 const StyledLink = styled(Link)`
-
+  color: rgba(0, 0, 0, 0.8);
+  &:hover {
+    color: #327fc7;
+    text-decoration: none;
+  }
 ` 
 const PostDate = styled.span`
   font-size: 14px;

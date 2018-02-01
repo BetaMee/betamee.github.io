@@ -23,6 +23,7 @@ const HeaderWrapper = styled.header`
 `
 
 const Header = styled.div`
+  overflow: hidden;
   height: 100%;
   display: flex;
   justify-content: space-between;
