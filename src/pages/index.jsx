@@ -56,7 +56,7 @@ const ArticleContent = styled.div`
 
 // 分页组件
 const Pagination = styled.div`
-
+  width: 100%;
 `
 
 

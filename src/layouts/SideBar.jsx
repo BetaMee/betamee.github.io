@@ -5,6 +5,7 @@ import Link from 'gatsby-link'
 
 const SideBarWrapper = styled.aside`
   width: 30%;
+  height: 100%;
   padding: 50px 0 0 0;
   display: flex;
   flex-direction: column;
