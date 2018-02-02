@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled.main`
   width: 70%;
   box-sizing: border-box;
   padding-right: 20px;

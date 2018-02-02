@@ -48,15 +48,15 @@ const SiteTitle = styled.div`
   height: 30px;
   line-height: 30px;
   border-radius: 3px;
-  text-align:center;
-  margin: 0 10px;
+  box-sizing: border-box;
+  padding: 0 10px;
 `
 
 const Underline = styled.span`
   color: #9E9E9E;
 `
 
-const Navigation = styled.div`
+const Navigation = styled.nav`
   width: 55%;
   display: flex;
   justify-content: space-between;

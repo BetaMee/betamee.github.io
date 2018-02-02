@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 
-const SideBarWrapper = styled.div`
+const SideBarWrapper = styled.aside`
   width: 30%;
   padding: 50px 0 0 0;
   display: flex;
