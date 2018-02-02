@@ -84,16 +84,16 @@ const PostDate = styled.span`
   font-size: 14px;
 ` 
 
-const SideBarPortal = ({ recentpostslists,  categorylists, contactlists }) =>
+const SideBarPortal = ({ recentarticlelists,  categorylists, contactlists }) =>
   <SideBarWrapper>
     <RecentPanel>
       {/*Recent blogs panel*/}
       <PanelTitle>Recent Blogs</PanelTitle>
       <ListWrapper>
-        {recentpostslists.map((posts, index) => (
+        {recentarticlelists.map((article, index) => (
           <List key={index}>
-            <StyledLink>{posts.title}</StyledLink>
-            <PostDate>{posts.date}</PostDate>
+            <StyledLink>{article.title}</StyledLink>
+            <PostDate>{article.updateAt}</PostDate>
           </List>
         ))}
       </ListWrapper>
@@ -124,21 +124,22 @@ const SideBarPortal = ({ recentpostslists,  categorylists, contactlists }) =>
   </SideBarWrapper>
 
 // mock数据
-const recentpostslists = [
+const recentarticlelists = [
   {
-    title: 'Preview the new Organization Invitation API',
-    date: '2018-10-1',
-    postId: ''
+    title: 'Preview the new Organization Invitation API', // 标题
+    updateAt: '', // 更新时间戳
+    publishAt: '2018-10-1', // 初次发表时间戳，这里的2018-1-10只是用于展示，具体时间戳有所不同
+    articleId: '' // 文章ID
   },
   {
     title: 'Team Review Requests API becomes an official part of API v3',
-    date: '2018-10-1',
-    postId: ''    
+    updateAt: '2018-10-1',
+    articleId: ''
   },
   {
     title: 'Issue Events API - Dismissed Review Event State',
-    date: '2018-10-1',
-    postId: ''    
+    updateAt: '2018-10-1',
+    articleId: ''
   }
 ]
 
@@ -172,7 +173,7 @@ const contactlists = [
 ]
 
 SideBarPortal.defaultProps = {
-  recentpostslists: recentpostslists, // 最近文章列表
+  recentarticlelists: recentarticlelists, // 最近文章列表
   categorylists: categorylists, // 类别别表
   contactlists: contactlists // 联系信息列表
 }
