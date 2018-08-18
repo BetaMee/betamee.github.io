@@ -62,32 +62,34 @@ const Pagination = styled.div`
 
 
 
-const IndexPage = ({ indexpagearticles, data }) => (
-  <React.Fragment>
-    {/*文章列表*/}
-    {indexpagearticles.map((article, index) => (
-      <Article key={index}>
-        {/*文章标题*/}
-        <ArticleHeader>
-          <ArticleLink>{article.title}<Octicon /></ArticleLink>
-        </ArticleHeader>
-        {/*文章信息*/}
-        <PublishInfo>
-          <PublishDate>{article.updateAt}</PublishDate>
-          <Publisher>{article.author}</Publisher>
-          <Category>{article.category}</Category>
-        </PublishInfo>
-        {/*文章内容*/}
-        <ArticleContent>
-          {article.content}
-        </ArticleContent>
-      </Article>
-    ))}  
-    {/*分页*/}
-    <Pagination>分页</Pagination>
-  </React.Fragment>
-)
-
+const IndexPage = ({ indexpagearticles,  data}) => {
+  console.log(data)
+  return (
+      <React.Fragment>
+      {/*文章列表*/}
+      {indexpagearticles.map((article, index) => (
+        <Article key={index}>
+          {/*文章标题*/}
+          <ArticleHeader>
+            <ArticleLink>{article.title}<Octicon /></ArticleLink>
+          </ArticleHeader>
+          {/*文章信息*/}
+          <PublishInfo>
+            <PublishDate>{article.updateAt}</PublishDate>
+            <Publisher>{article.author}</Publisher>
+            <Category>{article.category}</Category>
+          </PublishInfo>
+          {/*文章内容*/}
+          <ArticleContent>
+            {article.content}
+          </ArticleContent>
+        </Article>
+      ))}  
+      {/*分页*/}
+      <Pagination>分页</Pagination>
+    </React.Fragment>
+  )
+}
 export default IndexPage
 
 // mock数据
@@ -147,6 +149,12 @@ export const query = graphql`
       siteMetadata {
         title
       }
+    }
+    allMarkdownRemark {
+      wordCount {
+        words
+      },
+      excerpt
     }
   }
 `
