@@ -74,6 +74,21 @@ const List = styled.li`
   }
 `
 
+const ContactList = List.extend`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+const ContactLink = styled.a`
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  &:hover {
+    color: #327fc7;
+    text-decoration: none;
+  }
+`
+
 const StyledLink = styled(Link)`
   color: rgba(0, 0, 0, 0.8);
   &:hover {
@@ -83,99 +98,84 @@ const StyledLink = styled(Link)`
 ` 
 const PostDate = styled.span`
   font-size: 14px;
-` 
+`
 
-const SideBarPortal = ({ recentarticlelists,  categorylists, contactlists }) =>
-  <SideBarWrapper>
-    <RecentPanel>
-      {/*Recent blogs panel*/}
-      <PanelTitle>Recent Blogs</PanelTitle>
-      <ListWrapper>
-        {recentarticlelists.map((article, index) => (
-          <List key={index}>
-            <StyledLink>{article.title}</StyledLink>
-            <PostDate>{article.updateAt}</PostDate>
-          </List>
-        ))}
-      </ListWrapper>
-    </RecentPanel>
-    {/*Category panel*/}
-    <CategoryPanel>
-      <PanelTitle>Category</PanelTitle>
-      <ListWrapper>
-        {categorylists.map((category, index) => (
-          <List selected key={index}>
-            <StyledLink>{category}</StyledLink>
-          </List>
-        ))
-        }
-      </ListWrapper>      
-    </CategoryPanel>
-    {/*Contact Panel*/}
-    <ContactPanel>
-      <PanelTitle>Contact</PanelTitle>
-      <ListWrapper>
-        {contactlists.map((contact, index) => (
-          <List key={index}>
-            <StyledLink>{contact.platform}</StyledLink>
-          </List>
-        ))}
-      </ListWrapper>
-    </ContactPanel>
-  </SideBarWrapper>
+const SideBarPortal = ({ sortedMKData, categoryMKData, contactlists }) => {
+  const recentarticlelists = sortedMKData.edges
+    .map(edge => edge.node)
+    .map(node => ({
+      title: node.frontmatter.title,
+      date: node.frontmatter.date,
+      slug: node.fields.slug
+    }))
+  const categoryData = categoryMKData.edges.map(edge => edge.node.frontmatter.category)
+  const categorylists = Array.from(new Set(categoryData))
 
-// mock数据
-const recentarticlelists = [
-  {
-    title: 'Preview the new Organization Invitation API', // 标题
-    updateAt: '', // 更新时间戳
-    publishAt: '2018-10-1', // 初次发表时间戳，这里的2018-1-10只是用于展示，具体时间戳有所不同
-    articleId: '' // 文章ID
-  },
-  {
-    title: 'Team Review Requests API becomes an official part of API v3',
-    updateAt: '2018-10-1',
-    articleId: ''
-  },
-  {
-    title: 'Issue Events API - Dismissed Review Event State',
-    updateAt: '2018-10-1',
-    articleId: ''
-  }
-]
-
-const categorylists = [
-  'Issues',
-  'JavaScript Logs',
-  'Node Logs',
-  'Python Logs',
-  'WebDesign Logs',
-  'Life Logs'
-]
+  return (
+    <SideBarWrapper>
+      <RecentPanel>
+        {/*Recent blogs panel*/}
+        <PanelTitle>Recent Blogs</PanelTitle>
+        <ListWrapper>
+          {recentarticlelists.map((article, index) => (
+            <List key={index}>
+              <StyledLink
+                to={article.slug}
+              >{article.title}</StyledLink>
+              <PostDate>{article.date}</PostDate>
+            </List>
+          ))}
+        </ListWrapper>
+      </RecentPanel>
+      {/*Category panel*/}
+      <CategoryPanel>
+        <PanelTitle>Category</PanelTitle>
+        <ListWrapper>
+          {categorylists.map((category, index) => (
+            <List selected key={index}>
+              <StyledLink>{category}</StyledLink>
+            </List>
+          ))
+          }
+        </ListWrapper>      
+      </CategoryPanel>
+      {/*Contact Panel*/}
+      <ContactPanel>
+        <PanelTitle>Contact</PanelTitle>
+        <ListWrapper>
+          {contactlists.map((contact, index) => (
+            <ContactList key={index}>
+              <i className={`icon ${contact.icon}`} />
+              <ContactLink href={contact.link}>{contact.platform}</ContactLink>
+            </ContactList>
+          ))}
+        </ListWrapper>
+      </ContactPanel>
+    </SideBarWrapper>
+  )
+}
 
 const contactlists = [
   {
-    platform: 'Weibo',
-    link: 'www.github.com',
-    icon: ''
+    platform: 'Github',
+    link: 'https://github.com/BetaMee',
+    icon: 'icon-github'
   },
 
   {
     platform: 'Weibo',
-    link: 'www.github.com',
-    icon: ''
+    link: 'https://www.weibo.com/u/2909438360',
+    icon: 'icon-sinaweibo'
   },
 
   {
-    platform: 'Weibo',
-    link: 'www.github.com',
-    icon: ''
+    platform: 'Twitter',
+    link: 'https://twitter.com/gongxq',
+    icon: 'icon-twitter'
   }
 ]
 
 SideBarPortal.defaultProps = {
-  recentarticlelists: recentarticlelists, // 最近文章列表
-  categorylists: categorylists, // 类别别表
   contactlists: contactlists // 联系信息列表
 }
 

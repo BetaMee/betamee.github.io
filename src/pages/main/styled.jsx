@@ -5,7 +5,7 @@ import OcticonImg from '../../assets/images/link.svg'
 
 // 文章组件
 const Article = styled.article`
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 `
 // 文章发布信息
 const ArticleHeader = styled.header`

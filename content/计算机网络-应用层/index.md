@@ -1,7 +1,7 @@
 ---
 title: 计算机网络-应用层
 date: 2017-04-08T17:01:40.000Z
-categories: NetWork
+category: NetWork
 ---
 
 # 万维网WWW

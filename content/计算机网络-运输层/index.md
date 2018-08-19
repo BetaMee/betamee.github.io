@@ -1,7 +1,7 @@
 ---
 title: 计算机网络-运输层
 date: 2017-04-21 16:44:01
-categories: NetWork
+category: NetWork
 ---
 
 ## 运输层的一些概念

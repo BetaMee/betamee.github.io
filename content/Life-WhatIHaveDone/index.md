@@ -1,7 +1,7 @@
 ---
 title: Life-WhatIHaveDone
 date: 2017-04-25 01:15:53
-categories: LifeLogs
+category: LifeLogs
 ---
 这是一篇记录自己读过的书和所做的项目的文章，留下点总结。
 

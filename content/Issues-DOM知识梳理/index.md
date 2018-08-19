@@ -1,7 +1,7 @@
 ---
 title: Issue-DOM知识梳理
 date: 2017-09-10 16:54:59
-categories: Issues
+category: Issues
 ---
 
 趁九月在学校有空，对一些基础知识进行梳理一下。这次是DOM相关的知识。
@@ -34,7 +34,7 @@ JavaScript中的所有节点类型都是继承自Node类型，因此所有节点
 
 不废话，上图
 
-{% asset_img DOM节点关系.png DOM节点关系%}
+[DOM节点关系](DOM节点关系.png)
 
 ### 操纵节点的方法
 

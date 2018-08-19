@@ -1,7 +1,7 @@
 ---
 title: Issues-记录一次有趣的爬虫经历
 date: 2017-09-13 00:23:39
-categories: Issues
+category: Issues
 ---
 
 为了一个国创项目，要做爬虫收集留学论坛上的帖子，遂使用NodeJS写了一个爬虫脚本，项目挂在[Github](https://github.com/BetaMee/NodeReptile)上，现在遇到一个有趣的问题。

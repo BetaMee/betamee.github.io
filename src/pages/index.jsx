@@ -36,9 +36,7 @@ const IndexPage = ({ data }) =>
             <Category><i className="icon icon-folder-open" />{article.frontmatter.category}</Category>
           </PublishInfo>
           {/*文章内容*/}
-          <ArticleContent>
-            {article.excerpt}
-          </ArticleContent>
+          <ArticleContent dangerouslySetInnerHTML={{__html: article.html}} />
         </Article>
       )
     })}  
@@ -55,13 +53,13 @@ export const query = graphql`
         author
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {
             slug
           }
-          excerpt
+          html
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title

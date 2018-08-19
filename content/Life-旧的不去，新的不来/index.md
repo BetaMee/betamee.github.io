@@ -1,7 +1,7 @@
 ---
 title: 旧的不去，新的不来
 date: 2017-01-22 01:02:55
-categories: LifeLogs
+category: LifeLogs
 ---
 
 用了两年半的小米3彻底报废了。 :)

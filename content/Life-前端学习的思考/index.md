@@ -1,7 +1,7 @@
 ---
 title: Life-前端学习的思考
 date: 2017-04-25 00:59:06
-categories: LifeLogs
+category: LifeLogs
 ---
 晚间翻看到同为一个大三生的博客，书写自己的学习经历，尤为值得自己思考。
 
