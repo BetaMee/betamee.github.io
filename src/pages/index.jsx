@@ -1,4 +1,6 @@
 import React from 'react'
+import '../assets/icomoon/iconmoon.css'
+import '../assets/style.css'
 
 import {
   Article,
@@ -29,9 +31,9 @@ const IndexPage = ({ data }) =>
           </ArticleHeader>
           {/*文章信息*/}
           <PublishInfo>
-            <PublishDate>{article.frontmatter.date}</PublishDate>
+            <PublishDate><i className="icon icon-calendar" />{article.frontmatter.date}</PublishDate>
             <Publisher>{siteMetadata.author}</Publisher>
-            <Category>{article.frontmatter.category}</Category>
+            <Category><i className="icon icon-folder-open" />{article.frontmatter.category}</Category>
           </PublishInfo>
           {/*文章内容*/}
           <ArticleContent>

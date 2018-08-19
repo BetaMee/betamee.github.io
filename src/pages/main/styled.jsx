@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-import OcticonImg from '../../images/link.svg'
+import OcticonImg from '../../assets/images/link.svg'
 
 // 文章组件
 const Article = styled.article`
@@ -12,7 +12,7 @@ const ArticleHeader = styled.header`
   font-size: 1.6rem;
   margin-bottom: 5px;
 `
-// Article Link
+// 文章链接
 const ArticleLink = styled(Link)`
   position: relative;
 `
@@ -28,7 +28,7 @@ const Octicon = styled.span`
   transition: visibility,opacity .6s ease;
   user-select: none;
   position: absolute;
-  top: 0;
+  top: 4px;
   left: -16px;
   width: 16px;
   height: 100%;
@@ -39,6 +39,8 @@ const Octicon = styled.span`
 // 发布信息
 const PublishInfo = styled.p`
   margin-bottom: 5px;
+  color: #999;
+  font-size: 13px;
 `
 const PublishDate = styled.span`
   padding-right: 8px;

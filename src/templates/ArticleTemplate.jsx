@@ -18,9 +18,9 @@ export default class ArticleTemplate extends React.Component {
           {article.frontmatter.title}
         </ArticleHeader>
         <PublishInfo>
-          <PublishDate>{article.frontmatter.date}</PublishDate>
+          <PublishDate><i className="icon icon-calendar" />{article.frontmatter.date}</PublishDate>
           <Publisher>{siteMetadata.author}</Publisher>
-          <Category>{article.frontmatter.category}</Category>
+          <Category><i className="icon icon-folder-open" />{article.frontmatter.category}</Category>
         </PublishInfo>
         <div dangerouslySetInnerHTML={{ __html: article.html }} />
       </div>

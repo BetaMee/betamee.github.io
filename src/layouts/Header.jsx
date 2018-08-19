@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 // 图片资源
-import searchImg from '../images/search.png'
+import searchImg from '../assets/images/search.png'
 
 // 响应式media函数
 import media from '../utils/mediaquery'
