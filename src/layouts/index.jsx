@@ -37,8 +37,7 @@ const Mainbody = styled.div`
   `}
 `
 
-
-const DefaultLayout = ({ children }) =>
+const DefaultLayout = ({ children, data }) =>
   <LayoutWrapper>
     {/*Header*/}
     <HeaderPortal />
@@ -48,10 +47,40 @@ const DefaultLayout = ({ children }) =>
         {children()}
       </ContentPortal>
       {/*侧边栏*/}
-      <SideBarPortal />
+      <SideBarPortal
+        sortedMKData={data.sortedMKData}
+        categoryMKData={data.categoryMKData}
+      />
     </Mainbody>
     {/*Footer*/}
     <FooterPortal />
   </LayoutWrapper>
 
 export default DefaultLayout
+
+export const layouQuery = graphql`
+  query layouQuery {
+    sortedMKData: allMarkdownRemark (sort: {fields: [frontmatter___date], order: DESC}, limit: 3 ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
+    }
+    categoryMKData: allMarkdownRemark (sort: {fields: [frontmatter___date], order: DESC}){
+      edges {
+        node {
+          frontmatter {
+            category
+          }
+        }
+      }
+    }
+  }
+`

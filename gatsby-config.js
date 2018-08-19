@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: '十二棵橡树',
+    author: '橡树上'
   },
   plugins: [
     // 'gatsby-plugin-react-helmet',
@@ -15,10 +16,24 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'src',
-        path: `${__dirname}/src`
+        name: 'content',
+        path: `${__dirname}/content`
       }
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+            },
+          },
+        ],
+      },
+    },
   ],
 }
