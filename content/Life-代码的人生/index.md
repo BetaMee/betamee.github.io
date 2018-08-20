@@ -29,34 +29,3 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   }
 }
 ```
-
-```css
-pre[class*="language-"] {
-  color: #333;
-  background: none;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.4;
-
-  -moz-tab-size: 8;
-  -o-tab-size: 8;
-  tab-size: 8;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-```
-
-```html
-<div>Hello</div>
-```
-
-```java
-  Obeject a = new Object()
-```
