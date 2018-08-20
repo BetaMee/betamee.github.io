@@ -133,7 +133,7 @@ const SideBarPortal = ({ sortedMKData, categoryMKData, contactlists }) => {
         <ListWrapper>
           {categorylists.map((category, index) => (
             <List selected key={index}>
-              <StyledLink>{category}</StyledLink>
+              <StyledLink to={`/category/${category}`}>{category}</StyledLink>
             </List>
           ))
           }

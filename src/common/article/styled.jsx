@@ -28,7 +28,7 @@ const Octicon = styled.span`
   transition: visibility,opacity .6s ease;
   user-select: none;
   position: absolute;
-  top: 4px;
+  top: -4px;
   left: -16px;
   width: 16px;
   height: 100%;

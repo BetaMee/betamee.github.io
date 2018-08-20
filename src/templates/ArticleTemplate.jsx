@@ -28,7 +28,7 @@ export default class ArticleTemplate extends React.Component {
   }
 }
 
-export const articleQuery = graphql`
+export const articleTemplateQuery = graphql`
   query articleBySlug($slug: String!) {
     site {
       siteMetadata {
