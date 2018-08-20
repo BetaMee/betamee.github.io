@@ -14,7 +14,7 @@ import {
   Category,
   ArticleContent,
   Pagination
-} from './main/styled'
+} from '../common/article/styled'
 
 const IndexPage = ({ data }) =>
   <React.Fragment>

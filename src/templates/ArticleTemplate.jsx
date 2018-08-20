@@ -6,7 +6,7 @@ import {
   PublishDate,
   Publisher,
   Category
-} from '../pages/main/styled'
+} from '../common/article/styled'
 
 export default class ArticleTemplate extends React.Component {
   render() {

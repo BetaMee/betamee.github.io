@@ -58,8 +58,8 @@ const DefaultLayout = ({ children, data }) =>
 
 export default DefaultLayout
 
-export const layouQuery = graphql`
-  query layouQuery {
+export const layoutQuery = graphql`
+  query layoutDataQuery {
     sortedMKData: allMarkdownRemark (sort: {fields: [frontmatter___date], order: DESC}, limit: 3 ) {
       edges {
         node {
