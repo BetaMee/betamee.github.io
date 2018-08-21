@@ -100,7 +100,7 @@ const PostDate = styled.span`
   font-size: 14px;
 `
 
-const SideBarPortal = ({ sortedMKData, categoryMKData, contactlists }) => {
+const SideBarPortal = ({ sortedMKData, categoryMKData, contactlists, location  }) => {
   const recentarticlelists = sortedMKData.edges
     .map(edge => edge.node)
     .map(node => ({
@@ -110,6 +110,8 @@ const SideBarPortal = ({ sortedMKData, categoryMKData, contactlists }) => {
     }))
   const categoryData = categoryMKData.edges.map(edge => edge.node.frontmatter.category)
   const categorylists = Array.from(new Set(categoryData))
+  // 提取url变化
+  const categoryUrl = /^\/category/.test(location.pathname) ? location.pathname.replace('/category/', ''): ''
 
   return (
     <SideBarWrapper>
@@ -132,7 +134,7 @@ const SideBarPortal = ({ sortedMKData, categoryMKData, contactlists }) => {
         <PanelTitle>Category</PanelTitle>
         <ListWrapper>
           {categorylists.map((category, index) => (
-            <List selected key={index}>
+            <List selected={categoryUrl === category} key={index}>
               <StyledLink to={`/category/${category}`}>{category}</StyledLink>
             </List>
           ))

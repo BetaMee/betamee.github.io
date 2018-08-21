@@ -43,7 +43,7 @@ const Mainbody = styled.div`
   `}
 `
 
-const DefaultLayout = ({ children, data }) =>
+const DefaultLayout = ({ children, data, location  }) =>
   <LayoutWrapper>
     {/* Helmet */}
     <Helmet>
@@ -61,6 +61,7 @@ const DefaultLayout = ({ children, data }) =>
       <SideBarPortal
         sortedMKData={data.sortedMKData}
         categoryMKData={data.categoryMKData}
+        location={location}
       />
     </Mainbody>
     {/*Footer*/}
