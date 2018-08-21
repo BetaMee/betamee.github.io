@@ -38,7 +38,7 @@ const Octicon = styled.span`
 `
 // 发布信息
 const PublishInfo = styled.p`
-  margin-bottom: 5px;
+  margin-bottom: 16px;
   color: #999;
   font-size: 13px;
 `

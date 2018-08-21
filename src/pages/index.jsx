@@ -1,7 +1,4 @@
 import React from 'react'
-import '../assets/icomoon/iconmoon.css'
-import '../assets/style.css'
-import '../assets/github.css'
 
 import {
   Article,
