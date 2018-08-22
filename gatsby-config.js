@@ -24,13 +24,23 @@ module.exports = {
         path: `${__dirname}/content`
       }
     },
-    // 图片支持
-    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     // markdown支持
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          { // markdown中的图片
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 740,
+              // showCaptions: true,
+              // wrapperStyle: {
+              //   marginBottom: '10px',
+              //   background: 'red'
+              // }
+            },
+          },
           { // 代码高亮
             resolve: 'gatsby-remark-prismjs',
             options: {
@@ -39,17 +49,10 @@ module.exports = {
               aliases: {},
             },
           },
-          { // markdown中的图片
-            resolve: 'gatsby-remark-images',
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 590,
-            },
-          },
         ],
       },
     },
+    // 图片支持
+    'gatsby-plugin-sharp',
   ],
 }
