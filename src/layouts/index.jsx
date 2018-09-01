@@ -7,7 +7,7 @@ import FooterPortal from './Footer'
 import ContentPortal from './Content'
 import SideBarPortal from './SideBar'
 
-import favicon from '../assets/favicon.ico'
+import favicon from '../assets/images/favicon.ico'
 
 import '../assets/icomoon/iconmoon.css'
 import '../assets/style.css'

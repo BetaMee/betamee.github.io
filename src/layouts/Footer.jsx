@@ -37,7 +37,8 @@ const Footer = styled.div`
 const SiteInfo = styled.div`
 `
 
-const ButtomLink = styled(Link)`
+const ButtomLink = styled.a`
+  cursor: pointer;
   text-decoration: underline;
   margin: 0 5px;
 `
@@ -49,8 +50,8 @@ const FooterPortal = () =>
         © 2016 - 2018 橡树上
       </SiteInfo>
       <SiteInfo>
-        <ButtomLink>Gatsby.js </ButtomLink>
-        <ButtomLink>Netlify</ButtomLink> | Inspiration from <ButtomLink>Github Blog Style</ButtomLink>
+        <ButtomLink href='https://www.gatsbyjs.org'>Gatsby.js </ButtomLink>
+        <ButtomLink href='https://www.netlify.com/'>Netlify</ButtomLink> | Inspiration from <ButtomLink href='https://developer.github.com/'>Github Blog Style</ButtomLink>
       </SiteInfo>
     </Footer>
   </FooterWrapper>

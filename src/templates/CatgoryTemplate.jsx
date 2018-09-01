@@ -5,14 +5,29 @@ import {
   Article,
   ArticleHeader,
   ArticleLink,
-  Octicon
+  Octicon,
 } from '../common/article/styled'
+
+import {
+  CategoryHeader,
+  CategoryTag,
+  CategoryName
+} from '../common/category/styled'
 
 export default class CatgoryTemplate extends React.Component {
   render() {
-    const { data } = this.props
+    const {
+      data,
+      pathContext
+    } = this.props
+
     return (
       <React.Fragment>
+        {/*标题*/}
+        <CategoryHeader>
+          <CategoryTag> <i className='icon icon-books' />Category * </CategoryTag>
+          <CategoryName>{pathContext.category}</CategoryName>
+        </CategoryHeader>
         {/*文章列表*/}
         {data.allMarkdownRemark.edges.map((item, index) => {
           const article = item.node
@@ -40,7 +55,6 @@ export const catgoryTemplateQuery = graphql`
           fields {
             slug
           }
-          html
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
