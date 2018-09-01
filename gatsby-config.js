@@ -33,12 +33,8 @@ module.exports = {
           { // markdown中的图片
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 740,
-              // showCaptions: true,
-              // wrapperStyle: {
-              //   marginBottom: '10px',
-              //   background: 'red'
-              // }
+              maxWidth: 650,
+              showCaptions: true,
             },
           },
           { // 代码高亮
