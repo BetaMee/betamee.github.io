@@ -47,3 +47,7 @@
 .icon-github:before {
   content: "\eab0";
 }
+
+.icon-books:before {
+  content: "\e920";
+}
