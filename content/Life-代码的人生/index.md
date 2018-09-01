@@ -9,9 +9,15 @@ category: JSLogs
 时值八月，刚入职一个半月，对于一个才毕业不久的学生，职业的发展才刚刚开始。。。
 
 
-`var a = 'ddd'`
+## 这是一个标题
 
 ```js
+var a = 'ddd'
+```
+
+I can highlight `.some-class { background-color: red }` with CSS syntax.
+
+```js{1,4-6}
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
 
@@ -29,3 +35,9 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   }
 }
 ```
+
+> 图片
+
+![](./images/timg.jpg)
+
+> 图片
