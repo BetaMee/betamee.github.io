@@ -37,7 +37,6 @@ const IndexPage = ({ data }) =>
             <Publisher>{siteMetadata.author}</Publisher>
             <Category>
               <i className="icon icon-folder-open" />
-              {article.frontmatter.category}
               <CategoryLink to={`/category/${article.frontmatter.category}`}>{article.frontmatter.category}</CategoryLink>
             </Category>
           </PublishInfo>
