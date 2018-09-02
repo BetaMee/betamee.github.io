@@ -35,22 +35,23 @@ const CategoryItem = styled.div`
   }
 `
 
-
-const CategoryDate = styled.span`
+const CategoryPostDate = styled.span`
   margin: 0 12px 0 15px;
 `
 
-const CategoryTitle = styled(Link)`
-
+const CategoryPostTitle = styled(Link)`
 `
-
+const CategoryLink = styled(Link)`
+  color: #999;
+`
 
 export {
   CategoryHeader,
   CategoryTag,
   CategoryName,
   CategoryItem,
-  CategoryDate,
-  CategoryTitle
+  CategoryPostTitle,
+  CategoryPostDate,
+  CategoryLink
 }
 

@@ -1,19 +1,12 @@
 import React from 'react'
 
-
-import {
-  Article,
-  ArticleHeader,
-  ArticleLink,
-} from '../common/article/styled'
-
 import {
   CategoryHeader,
   CategoryTag,
   CategoryName,
   CategoryItem,
-  CategoryTitle,
-  CategoryDate
+  CategoryPostTitle,
+  CategoryPostDate
 } from '../common/category/styled'
 
 export default class CatgoryTemplate extends React.Component {
@@ -35,11 +28,11 @@ export default class CatgoryTemplate extends React.Component {
           const article = item.node
           return (
             <CategoryItem key={index}>
-              {/*文章标题*/}
-              <CategoryDate>{article.frontmatter.date}</CategoryDate>
-              <CategoryTitle to={article.fields.slug}>
+              {/*文章*/}
+              <CategoryPostDate>{article.frontmatter.date}</CategoryPostDate>
+              <CategoryPostTitle to={article.fields.slug}>
                 {article.frontmatter.title}
-              </CategoryTitle>
+              </CategoryPostTitle>
             </CategoryItem>
           )
         })}  

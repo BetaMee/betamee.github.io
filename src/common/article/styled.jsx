@@ -48,7 +48,8 @@ const PublishDate = styled.span`
 const Publisher = styled.span`
   padding-right: 8px;
 `
-const Category = styled.span``
+const Category = styled.span`
+`
 // 文章内容
 const ArticleContent = styled.div``
 

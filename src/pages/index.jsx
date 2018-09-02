@@ -13,6 +13,10 @@ import {
   Pagination
 } from '../common/article/styled'
 
+import {
+  CategoryLink
+} from '../common/category/styled'
+
 const IndexPage = ({ data }) =>
   <React.Fragment>
     {/*文章列表*/}
@@ -31,7 +35,11 @@ const IndexPage = ({ data }) =>
           <PublishInfo>
             <PublishDate><i className="icon icon-calendar" />{article.frontmatter.date}</PublishDate>
             <Publisher>{siteMetadata.author}</Publisher>
-            <Category><i className="icon icon-folder-open" />{article.frontmatter.category}</Category>
+            <Category>
+              <i className="icon icon-folder-open" />
+              {article.frontmatter.category}
+              <CategoryLink to={`/category/${article.frontmatter.category}`}>{article.frontmatter.category}</CategoryLink>
+            </Category>
           </PublishInfo>
           {/*文章内容*/}
           <ArticleContent dangerouslySetInnerHTML={{__html: article.html}} />
