@@ -5,3 +5,8 @@ Hi, This is my new blog repository, using Gatsby.js which is build by react tech
 This new site will depoly to Netlify after finishing developing.
 
 Coming soon.....
+
+
+## 注
+
+- `gatsby-plugin-sharp`模块依赖`python2`
