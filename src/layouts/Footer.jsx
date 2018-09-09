@@ -24,17 +24,21 @@ const Footer = styled.div`
   align-items: center;
   width: 64.5%;
   ${media.desktop`
-    width: 64.5%;
+    width: 90%;
+    flex-direction: column;
   `}
   ${media.tablet`
-    width: 100%;
+    width: 90%;
+    flex-direction: column;
   `}
   ${media.phone`
-    width: 100%;
+    width: 90%;
+    flex-direction: column;
   `}
 `
 
 const SiteInfo = styled.div`
+
 `
 
 const ButtomLink = styled.a`

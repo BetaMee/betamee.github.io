@@ -30,16 +30,22 @@ const Mainbody = styled.div`
   box-sizing: border-box;
   min-height: 90vh;
   margin: 0 auto;
+  margin-bottom: 80px;
   width: 64.5%;
   display: flex;
+  flex-direction: row;
   ${media.desktop`
-    width: 64.5%;
+    width: 90%;
   `}
   ${media.tablet`
     width: 100%;
+    flex-direction: column;
+    align-items: center;
   `}
   ${media.phone`
     width: 100%;
+    flex-direction: column;
+    align-items: center;
   `}
 `
 

@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-
+// 响应式media函数
+import media from '../utils/mediaquery'
 
 const SideBarWrapper = styled.aside`
   width: 30%;
@@ -9,6 +10,19 @@ const SideBarWrapper = styled.aside`
   padding: 50px 0 0 0;
   display: flex;
   flex-direction: column;
+  ${media.desktop`
+     width: 40%;
+  `}
+  ${media.tablet`
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  `}
+  ${media.phone`
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  `}
 `
 
 const RecentPanel = styled.div`
