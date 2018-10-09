@@ -2,8 +2,21 @@ import React from 'react'
 
 class ImagePreview extends React.Component {
   componentDidMount() {
-    const $image = document.querySelector('.gatsby-resp-image-image')
-    console.log($image.length)
+    this.$imageNodes = document.querySelectorAll('.gatsby-resp-image-image')
+    console.log($imageNodes)
+    // 监听图片点击事件
+    this.$imageNodes.forEach(node => {
+      node.addEventListener('click', e => {
+        e.preventDefault()
+        console.log('ddd')
+      },false)
+    })
+  }
+  componentWillMount() {
+    // 取消事件监听
+    this.$imageNodes.forEach(node => {
+      node.removeEventListener('click')
+    })
   }
   render() {
     return (
