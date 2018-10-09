@@ -6,6 +6,7 @@ import HeaderPortal from './Header'
 import FooterPortal from './Footer'
 import ContentPortal from './Content'
 import SideBarPortal from './SideBar'
+import ImagePreview from './ImagePreview'
 
 import favicon from '../assets/images/favicon.ico'
 
@@ -72,6 +73,8 @@ const DefaultLayout = ({ children, data, location  }) =>
     </Mainbody>
     {/*Footer*/}
     <FooterPortal />
+    {/* 图片预览 */}
+    <ImagePreview />
   </LayoutWrapper>
 
 export default DefaultLayout
