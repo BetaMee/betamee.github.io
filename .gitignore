@@ -13,3 +13,5 @@ public/
 yarn-error.log
 
 package-lock.json
+
+.python-version
