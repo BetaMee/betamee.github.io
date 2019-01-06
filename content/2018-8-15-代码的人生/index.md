@@ -30,9 +30,3 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   }
 }
 ```
-
-> 图片
-
-![](./images/vk.jpg)
-
-> 图片
