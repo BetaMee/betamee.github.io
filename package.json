@@ -4,25 +4,24 @@
   "version": "1.0.0",
   "author": "BetaMee <gongxq95@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.277",
-    "gatsby-link": "^1.6.35",
-    "gatsby-plugin-react-helmet": "^2.0.11",
-    "gatsby-plugin-react-next": "^1.0.7",
-    "gatsby-plugin-sharp": "^1.6.48",
-    "gatsby-plugin-styled-components": "^2.0.11",
-    "gatsby-plugin-typography": "^1.7.19",
-    "gatsby-remark-images": "^1.5.67",
-    "gatsby-remark-prismjs": "^2.0.5",
-    "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
-    "gatsby-transformer-sharp": "^1.6.27",
+    "gatsby": "^2.0.96",
+    "gatsby-link": "^2.0.9",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "gatsby-plugin-sharp": "^2.0.18",
+    "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-plugin-typography": "^2.2.5",
+    "gatsby-remark-images": "^3.0.1",
+    "gatsby-remark-prismjs": "^3.2.0",
+    "gatsby-source-filesystem": "^2.0.17",
+    "gatsby-transformer-remark": "^2.2.0",
+    "gatsby-transformer-sharp": "^2.1.12",
     "prismjs": "^1.15.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.4.2",
-    "typography-plugin-code": "^0.16.11",
-    "typography-theme-github": "^0.15.10"
+    "styled-components": "^4.1.3",
+    "typography-plugin-code": "^0.16.18",
+    "typography-theme-github": "^0.16.18"
   },
   "keywords": [
     "gatsby"
@@ -36,8 +35,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "eslint": "^4.16.0",
-    "eslint-plugin-react": "^7.6.1",
-    "prettier": "^1.10.2"
+    "eslint": "^5.12.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.1"
   }
 }
