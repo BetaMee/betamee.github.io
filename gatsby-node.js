@@ -51,17 +51,17 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         })
       })
       // 创建catgory归档页面
-      const categoryData = _edges.map(edge => edge.node.frontmatter.category)
-      Array.from(new Set(categoryData)).forEach((category) => {
-        createPage({
-          path: `/category/${category}`,
-          component: path.resolve('./src/templates/CatgoryTemplate.jsx'),
-          context: {
-            // Data passed to context is available in page queries as GraphQL variables.
-            category: category,
-          },
-        })
-      })
+      // const categoryData = _edges.map(edge => edge.node.frontmatter.category)
+      // Array.from(new Set(categoryData)).forEach((category) => {
+      //   createPage({
+      //     path: `/category/${category}`,
+      //     component: path.resolve('./src/templates/CatgoryTemplate.jsx'),
+      //     context: {
+      //       // Data passed to context is available in page queries as GraphQL variables.
+      //       category: category,
+      //     },
+      //   })
+      // })
       // 页面重定向
       createRedirect({
         fromPath: '/content',

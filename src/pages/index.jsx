@@ -1,52 +1,9 @@
 import React from 'react'
 
-import {
-  Article,
-  ArticleHeader,
-  ArticleLink,
-  Octicon,
-  PublishInfo,
-  PublishDate,
-  Publisher,
-  Category,
-  ArticleContent,
-  Pagination
-} from '../common/article/styled'
-
-import {
-  CategoryLink
-} from '../common/category/styled'
 
 const IndexPage = ({ data }) =>
   <React.Fragment>
-    {/*文章列表*/}
-    {data.allMarkdownRemark.edges.map((item, index) => {
-      const article = item.node
-      const siteMetadata = data.site.siteMetadata
-      return (
-        <Article key={index}>
-          {/*文章标题*/}
-          <ArticleHeader>
-            <ArticleLink to={article.fields.slug}>
-              {article.frontmatter.title}<Octicon />
-            </ArticleLink>
-          </ArticleHeader>
-          {/*文章信息*/}
-          <PublishInfo>
-            <PublishDate><i className="icon icon-calendar" />{article.frontmatter.date}</PublishDate>
-            <Publisher>{siteMetadata.author}</Publisher>
-            <Category>
-              <i className="icon icon-folder-open" />
-              <CategoryLink to={`/category/${article.frontmatter.category}`}>{article.frontmatter.category}</CategoryLink>
-            </Category>
-          </PublishInfo>
-          {/*文章内容*/}
-          <ArticleContent dangerouslySetInnerHTML={{__html: article.html}} />
-        </Article>
-      )
-    })}  
-    {/*分页*/}
-    <Pagination>分页</Pagination>
+    <div>Hello</div>
   </React.Fragment>
 
 export default IndexPage

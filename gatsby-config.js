@@ -7,15 +7,15 @@ module.exports = {
   plugins: [
     // HTML head支持
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',
+    // 'gatsby-plugin-react-next',
     // CSS
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography.js',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-typography',
+    //   options: {
+    //     pathToConfigModule: 'src/utils/typography.js',
+    //   },
+    // },
     // 文件处理
     {
       resolve: 'gatsby-source-filesystem',

@@ -5,7 +5,6 @@ const NotFoundWrapper = styled.div`
 
 `
 
-
 const NotFoundPage = () => (
   <NotFoundWrapper>
     ReferenceError: 404 is Not Found!
