@@ -21,7 +21,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
-        path: `${__dirname}/content`
+        path: `${__dirname}/blogs`
       }
     },
     'gatsby-transformer-sharp',
@@ -49,6 +49,6 @@ module.exports = {
       },
     },
     // 图片支持
-    'gatsby-plugin-sharp',
+    'gatsby-plugin-sharp'
   ],
 }

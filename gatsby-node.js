@@ -43,7 +43,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       _edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
-          component: path.resolve('./src/templates/ArticleTemplate.jsx'),
+          component: path.resolve('./src/templates/BlogTemplate.jsx'),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
             slug: node.fields.slug,

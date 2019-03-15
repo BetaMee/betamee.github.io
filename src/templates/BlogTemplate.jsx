@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import {
   ArticleHeader,
@@ -12,7 +13,7 @@ import {
   CategoryLink
 } from '../common/category/styled'
 
-export default class ArticleTemplate extends React.Component {
+export default class BlogTemplate extends React.Component {
   render() {
     const article = this.props.data.markdownRemark
     const siteMetadata = this.props.data.site.siteMetadata
@@ -35,7 +36,7 @@ export default class ArticleTemplate extends React.Component {
   }
 }
 
-export const articleTemplateQuery = graphql`
+export const blogTemplateQuery = graphql`
   query articleBySlug($slug: String!) {
     site {
       siteMetadata {
