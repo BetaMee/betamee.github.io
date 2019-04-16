@@ -1,15 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: '十二棵橡树',
-    author: '橡树上',
-    siteTitle: 'LoveOak'
+    author: '橡树上'
   },
   plugins: [
     // HTML head支持
     'gatsby-plugin-react-helmet',
-    // 'gatsby-plugin-react-next',
-    // CSS
-    'gatsby-plugin-styled-components',
     // {
     //   resolve: 'gatsby-plugin-typography',
     //   options: {

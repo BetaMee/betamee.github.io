@@ -5,7 +5,6 @@
   "author": "BetaMee <gongxq95@gmail.com>",
   "dependencies": {
     "gatsby": "^2.1.31",
-    "gatsby-link": "^2.0.16",
     "gatsby-plugin-react-helmet": "^3.0.9",
     "gatsby-plugin-sharp": "^2.0.28",
     "gatsby-plugin-styled-components": "^3.0.7",

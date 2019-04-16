@@ -1,0 +1,21 @@
+.main {
+  min-height: 600px;
+  margin: 0 20%;
+}
+.date {
+
+}
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog a {
+  font-size: 20px;
+  color: #cccccc;
+  display: inline-block;
+}
+
+.pagination {
+
+}

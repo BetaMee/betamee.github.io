@@ -1,7 +1,6 @@
-# 2019年重新学习React
 ---
 title: 2019年重新学习React
-date: 2017-01-11 22:41:00
+date: 2019-06-11 22:41:00
 category: WebFrontEnd
 ---
 
