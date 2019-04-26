@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import styles from './blog.module.css'
+import styles from './catgory.module.css'
 
-export default class BlogTemplate extends React.Component {
+export default class CatgoryTemplate extends React.Component {
   render() {
     const article = this.props.data.markdownRemark
     const site = this.props.data.site
@@ -36,8 +36,8 @@ export default class BlogTemplate extends React.Component {
   }
 }
 
-export const blogTemplateQuery = graphql`
-  query articleBySlug($slug: String!) {
+export const catgoryQuery = graphql`
+  query articleByCatgory($slug: String!) {
     site {
       siteMetadata {
         title
