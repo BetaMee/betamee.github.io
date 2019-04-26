@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import styles from './template.module.css'
@@ -22,7 +22,11 @@ export default class BlogTemplate extends React.Component {
               <span>{article.frontmatter.date}</span>
             </div>
             <div className={styles.tags}>
-
+              {(article.frontmatter.tags || []).split(' ').map((_tag, index) => (
+                <Link key={index} to={'/'}>
+                  #{_tag}
+                </Link>
+              ))}
             </div>
           </div>
           <div dangerouslySetInnerHTML={{ __html: article.html }} />
@@ -49,6 +53,7 @@ export const blogTemplateQuery = graphql`
       frontmatter {
         title
         category
+        tags
         date(formatString: "YYYY-MM-DD")
       }
     }

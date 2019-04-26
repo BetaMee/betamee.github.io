@@ -2,6 +2,7 @@
 title: Config-Mac配置记录
 date: 2019-01-06 14:10:00
 category: Configs
+tags: config tag test
 ---
 
 # Mac环境安装

@@ -7,14 +7,20 @@
 }
 
 .title {
-  font-size: 30px;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .info {
   color: #666;
+  margin-bottom: 5px;
 }
 
-.tags {
+.info span {
+  margin-right: 5px;
+}
 
+.tags a {
+  color: #666;
+  margin-right: 5px;
 }
