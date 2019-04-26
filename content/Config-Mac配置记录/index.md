@@ -7,7 +7,6 @@ tags: config tag test
 
 # Mac环境安装
 
-
 版本： 10.14.2
 
 
@@ -115,6 +114,8 @@ autoload -U compinit && compinit #这是zsh-completions需要加的配置
 
 PS:官网有个antigen工具，可以管理zsh配置，不过先不折腾了，熟悉好当前的工具再说。。
 
+
+![午餐](./floyd.jpg)
 
 ## 4.值得付费应用收集
 
