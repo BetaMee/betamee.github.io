@@ -1,16 +1,33 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Layout from '../components/layout'
+import styles from './template.module.css'
 
 export default class BlogTemplate extends React.Component {
   render() {
     const article = this.props.data.markdownRemark
-    const siteMetadata = this.props.data.site.siteMetadata
+    const site = this.props.data.site
     return (
-      <div>
-        {article.frontmatter.title}
-        <div dangerouslySetInnerHTML={{ __html: article.html }} />
-      </div>
+      <Layout
+        site={site}
+      >
+        <div className={styles.content} >
+          <div className={styles.heading}>
+            <h1 className={styles.title}>
+              {article.frontmatter.title}
+            </h1>
+            <div className={styles.info}>
+              <span>{site.siteMetadata.author}</span>
+              <span>{article.frontmatter.date}</span>
+            </div>
+            <div className={styles.tags}>
+
+            </div>
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: article.html }} />
+        </div>
+      </Layout>
     )
   }
 }
@@ -32,7 +49,7 @@ export const blogTemplateQuery = graphql`
       frontmatter {
         title
         category
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
       }
     }
   }

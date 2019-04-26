@@ -6,12 +6,12 @@ module.exports = {
   plugins: [
     // HTML head支持
     'gatsby-plugin-react-helmet',
-    // {
-    //   resolve: 'gatsby-plugin-typography',
-    //   options: {
-    //     pathToConfigModule: 'src/utils/typography.js',
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography.js',
+      },
+    },
     // 文件处理
     {
       resolve: 'gatsby-source-filesystem',
