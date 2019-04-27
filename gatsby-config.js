@@ -1,15 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: '十二棵橡树',
-    author: '橡树上',
-    siteTitle: 'LoveOak'
+    author: '橡树上'
   },
   plugins: [
     // HTML head支持
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',
-    // CSS
-    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
@@ -24,6 +20,13 @@ module.exports = {
         path: `${__dirname}/content`
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'about',
+        path: `${__dirname}/about`
+      }
+    },
     'gatsby-transformer-sharp',
     // markdown支持
     {
@@ -35,6 +38,7 @@ module.exports = {
             options: {
               maxWidth: 650,
               showCaptions: true,
+              linkImagesToOriginal: false
             },
           },
           { // 代码高亮
@@ -49,6 +53,6 @@ module.exports = {
       },
     },
     // 图片支持
-    'gatsby-plugin-sharp',
+    'gatsby-plugin-sharp'
   ],
 }

@@ -1,9 +1,4 @@
-.icon {
-  margin-right: 6px;
-}
-
 /* 处理图片 */
-
 .gatsby-resp-image-wrapper {
   /* margin: 0.3em 0; */
 }
@@ -16,7 +11,6 @@
 }
 
 /* highlight-code-line样式增强 */
-
 .gatsby-highlight-code-line {
   background-color: #484745;
   display: block;

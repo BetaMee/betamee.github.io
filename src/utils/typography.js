@@ -1,17 +1,17 @@
 import Typography from 'typography'
 import CodePlugin from 'typography-plugin-code'
-import githubTheme from 'typography-theme-github'
+import funstonTheme from 'typography-theme-funston'
 
-githubTheme.overrideThemeStyles = ({ rhythm }, options) => ({
-  'h1,h2,h3': {
-    borderBottom: '0px solid hsla(0,0%,0%,0.07)'
-  }
+funstonTheme.overrideThemeStyles = () => ({
+  // 'h1,h2,h3': {
+  //   borderBottom: '1px solid hsla(0,0%,0%,0.07)'
+  // }
 })
 
-githubTheme.plugins = [
+funstonTheme.plugins = [
   new CodePlugin(),
 ]
 
-const typography = new Typography(githubTheme)
+const typography = new Typography(funstonTheme)
 
 export default typography

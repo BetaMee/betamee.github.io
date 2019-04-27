@@ -1,17 +1,13 @@
 ---
-title: Config-Mac配置记录
+title: Mac 环境安装
 date: 2019-01-06 14:10:00
 category: Configs
+tags: config
 ---
-
-# Mac环境安装
-
 
 版本： 10.14.2
 
-
 ## 1. 安装node
-
 
 ## 2. 安装python
 
@@ -115,13 +111,14 @@ autoload -U compinit && compinit #这是zsh-completions需要加的配置
 PS:官网有个antigen工具，可以管理zsh配置，不过先不折腾了，熟悉好当前的工具再说。。
 
 
+![午餐](./floyd.jpg)
+
 ## 4.值得付费应用收集
 
 - Proxifier
 - iStats-menu 50元
 - Alfred 200元
 - NewFileMenu 12元（已安装）
-
 
 ## 5. 设置Automaker
 
