@@ -4,9 +4,9 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import styles from './blog.module.css'
 
-const BlogTemplate = () => {
-  const markdownRemark = this.props.data.markdownRemark
-  const site = this.props.data.site
+const BlogTemplate = ({ data }) => {
+  const markdownRemark = data.markdownRemark
+  const site = data.site
   return (
     <Layout
       site={site}

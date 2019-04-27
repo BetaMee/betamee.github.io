@@ -1,17 +1,13 @@
 ---
-title: Config-Mac配置记录
+title: Mac 环境安装
 date: 2019-01-06 14:10:00
 category: Configs
-tags: config tag test
+tags: config
 ---
-
-# Mac环境安装
 
 版本： 10.14.2
 
-
 ## 1. 安装node
-
 
 ## 2. 安装python
 
@@ -123,7 +119,6 @@ PS:官网有个antigen工具，可以管理zsh配置，不过先不折腾了，�
 - iStats-menu 50元
 - Alfred 200元
 - NewFileMenu 12元（已安装）
-
 
 ## 5. 设置Automaker
 
