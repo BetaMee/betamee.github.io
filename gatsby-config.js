@@ -38,6 +38,7 @@ module.exports = {
             options: {
               maxWidth: 650,
               showCaptions: true,
+              linkImagesToOriginal: false
             },
           },
           { // 代码高亮

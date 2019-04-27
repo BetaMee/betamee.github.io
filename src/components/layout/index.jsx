@@ -10,7 +10,7 @@ import 'prismjs/themes/prism-okaidia.css'
 import styles from './layout.module.css'
 
 const DefaultLayout = ({ children, site }) =>
-  <div className={styles.layout}>
+  <div className={styles.layout} >
     {/* Helmet */}
     <Helmet>
       <title>{site.siteMetadata.title}</title>
