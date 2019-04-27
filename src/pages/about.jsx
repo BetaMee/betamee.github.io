@@ -1,25 +1,36 @@
 import React from 'react'
-import styled from 'styled-components'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 
-const AboutWrapper = styled.div`
+import styles from './about.module.css'
 
-`
+const AboutPage =  ({ data }) => {
+  const site = data.site
+  const markdownRemark = data.markdownRemark
 
-const Description = styled.p`
-
-`
-
-const AboutPage =  () => (
-  <AboutWrapper>
-    <h1>Hello World</h1>
-    <Description>
-      Hi, This is my new blog repository, using Gatsby.js which is build by react technology stack to refactor my personal site.
-
-      This new site will depoly to Netlify after finishing developing.
-    
-      Coming soon.....
-    </Description>
-  </AboutWrapper>
-)
+  return (
+    <Layout
+      site={site}
+    >
+      <div className={styles.content}>
+        <div dangerouslySetInnerHTML={{__html: markdownRemark.html}}/>
+      </div>
+    </Layout>
+  )
+}
 
 export default AboutPage
+
+export const query = graphql`
+  query aboutPageQuery {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+    markdownRemark(frontmatter: { tags : { eq: "_#about" } }) {
+      html
+    }
+  }
+`

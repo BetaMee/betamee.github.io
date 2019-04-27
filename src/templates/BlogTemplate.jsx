@@ -23,7 +23,7 @@ export default class BlogTemplate extends React.Component {
             </div>
             <div className={styles.tags}>
               {(article.frontmatter.tags || []).split(' ').map((_tag, index) => (
-                <Link key={index} to={'/'}>
+                <Link key={index} to={`/tag/${_tag}`}>
                   #{_tag}
                 </Link>
               ))}

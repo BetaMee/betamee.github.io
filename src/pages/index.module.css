@@ -22,7 +22,7 @@
   flex-direction: column;
 }
 
-.catalog a {
+.catalogLink a {
   font-size: 20px;
   color: #333;
   display: inline-block;

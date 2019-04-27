@@ -1,9 +1,8 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
-
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
   if (node.internal.type === 'MarkdownRemark') {
     const slug = createFilePath({
       node,
@@ -18,8 +17,8 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   }
 }
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage, createRedirect } = boundActionCreators
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage, createRedirect } = actions
 
   return new Promise((resolve) => {
     graphql(`
@@ -28,7 +27,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           edges {
             node {
               frontmatter {
-                category
+                tags
               }
               fields {
                 slug
@@ -50,15 +49,17 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           },
         })
       })
-      // 创建catgory归档页面
-      const categoryData = _edges.map(edge => edge.node.frontmatter.category)
-      Array.from(new Set(categoryData)).forEach((category) => {
+      // 创建 tag 页面
+      const tagsData = _edges.map(edge => (edge.node.frontmatter.tags || []).split(' '))
+        .reduce((_total, _tagsItem) => {
+          return _total.concat(_tagsItem)
+        }, [])
+      Array.from(new Set(tagsData)).forEach((tag) => {
         createPage({
-          path: `/category/${category}`,
-          component: path.resolve('./src/templates/CatgoryTemplate.jsx'),
+          path: `/tag/${tag}`,
+          component: path.resolve('./src/templates/TagTemplate.jsx'),
           context: {
-            // Data passed to context is available in page queries as GraphQL variables.
-            category: category,
+            tag: `/${tag}/` // 提供正则表达式的字符串
           },
         })
       })
@@ -70,7 +71,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         toPath: '/',
       })
       createRedirect({
-        fromPath: '/category',
+        fromPath: '/tag',
         isPermanent: true,
         redirectInBrowser: true,
         toPath: '/',

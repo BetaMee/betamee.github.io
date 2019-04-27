@@ -1,0 +1,17 @@
+.content {
+  margin: 60px 20% 80px 20%;
+  min-height: 400px;
+}
+
+.heading {
+  margin-bottom: 40px;
+}
+
+.link a{
+  font-size: 20px;
+  color: #333;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+}

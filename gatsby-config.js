@@ -20,6 +20,13 @@ module.exports = {
         path: `${__dirname}/content`
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'about',
+        path: `${__dirname}/about`
+      }
+    },
     'gatsby-transformer-sharp',
     // markdown支持
     {
