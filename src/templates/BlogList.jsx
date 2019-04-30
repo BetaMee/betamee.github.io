@@ -194,7 +194,7 @@ export const BlogListQuery = graphql`
       filter: {
         frontmatter: {
           tags: {
-            ne: "_#about"
+            ne: "_about"
           }
         }
       },

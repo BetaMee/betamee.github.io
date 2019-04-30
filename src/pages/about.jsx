@@ -29,7 +29,7 @@ export const aboutQuery = graphql`
         author
       }
     }
-    markdownRemark(frontmatter: { tags : { eq: "_#about" } }) {
+    markdownRemark(frontmatter: { tags : { eq: "_about" } }) {
       html
     }
   }

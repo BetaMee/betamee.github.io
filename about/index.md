@@ -1,8 +1,8 @@
 ---
-title: _#about
+title: _about
 date: 1995-10-07 14:10:00
-category: _#about
-tags: _#about
+category: _about
+tags: _about
 ---
 
 # 超人不会飞
