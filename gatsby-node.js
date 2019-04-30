@@ -24,6 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
     graphql(`
       {
         allMarkdownRemark {
+          totalCount
           edges {
             node {
               frontmatter {
@@ -38,6 +39,24 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       const _edges = result.data.allMarkdownRemark.edges
+      const _totalCount = result.data.allMarkdownRemark.totalCount
+
+      // 创建分页
+      const blogsPerPage = 10
+      const numPages = Math.ceil(_totalCount / blogsPerPage)
+
+      Array.from({ length: numPages }).forEach((_, i) => {
+        createPage({
+          path: i === 0 ? '/' : `/page/${i + 1}`,
+          component: path.resolve('./src/templates/BlogList.jsx'),
+          context: {
+            limit: blogsPerPage,
+            skip: i * blogsPerPage,
+            numPages,
+            currentPage: i + 1
+          }
+        })
+      })
       // 创建单个文章页面
       _edges.forEach(({ node }) => {
         createPage({
@@ -72,6 +91,18 @@ exports.createPages = ({ graphql, actions }) => {
       })
       createRedirect({
         fromPath: '/tag',
+        isPermanent: true,
+        redirectInBrowser: true,
+        toPath: '/',
+      })
+      createRedirect({
+        fromPath: '/page/1',
+        isPermanent: true,
+        redirectInBrowser: true,
+        toPath: '/',
+      })
+      createRedirect({
+        fromPath: '/page',
         isPermanent: true,
         redirectInBrowser: true,
         toPath: '/',

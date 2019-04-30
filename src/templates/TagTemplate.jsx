@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import styles from './tag.module.css'
+import styles from './styles/tag.module.css'
 
 export default class TagTemplate extends React.Component {
   render() {
