@@ -104,9 +104,6 @@ module.exports = {
 webpack.config.dev.js
 
 ```js
-/**
- * Created by yran on 2017/05/31.
- */
 const path = require('path');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
@@ -241,9 +238,6 @@ module.exports = merge(base, {
 webpack.config.pro.js
 
 ```js
-/**
- * Created by gongxq on 2019/04/24.
- */
 const path = require('path');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
