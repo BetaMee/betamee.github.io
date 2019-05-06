@@ -7,6 +7,19 @@ tags: JS_Basic
 
 > 前端的工程化不仅需要 Babel 这样的“语法翻译者”，以抹平不同平台之间的特性差异，还需要可以妥善处理 JavaScript 模块以及各类 HTML、CSS、Image等资源的**构建工具**，Webpack 的出现呼应了这一趋势，极大促进了前端的发展。
 
+**目录：**
+
+<!-- toc -->
+
+- [与其他构建工具的简单比较](#)
+    + [Gulp](#Gulp)
+    + [Webpack](#Webpack)
+- [合理配置](#-1)
+- [打包形态](#-2)
+- [参考](#-3)
+
+<!-- tocstop -->
+
 什么是 Webpack？本质上，Webpack 是一个现代 JavaScript 应用程序的静态模块打包工具。当 Webpack 处理应用程序时，它会在内部构建一个依赖图(dependency graph)，此依赖图会映射项目所需的每个模块，并生成一个或多个 bundle。
 
 ## 与其他构建工具的简单比较
@@ -665,9 +678,9 @@ const testFun = () => {
 
 ## 参考
 
-https://www.gulpjs.com.cn/
-https://webpack.docschina.org/
-https://www.jianshu.com/p/b1022d224817
-https://segmentfault.com/a/1190000016596781
-https://segmentfault.com/q/1010000008058766
-https://www.barretlee.com/blog/2017/04/27/gulp-and-webpack/
+[gulp.js - 基于流的自动化构建工具。 \| gulp.js 中文网](https://www.gulpjs.com.cn/)
+[webpack 中文文档(@印记中文) https://docschina.org/](https://webpack.docschina.org/)
+[Gulp和Webpack对比 - 简书](https://www.jianshu.com/p/b1022d224817)
+[Webpack 常用知识点总结 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000016596781)
+[javascript - gulp和webpack究竟有什么区别？ - SegmentFault 思否](https://segmentfault.com/q/1010000008058766)
+[理解 Gulp 和 Webpack \| 小胡子哥的个人网站](https://www.barretlee.com/blog/2017/04/27/gulp-and-webpack/)
