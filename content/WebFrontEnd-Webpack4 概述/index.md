@@ -678,9 +678,9 @@ const testFun = () => {
 
 ## 参考
 
-[gulp.js - 基于流的自动化构建工具。 \| gulp.js 中文网](https://www.gulpjs.com.cn/)
-[webpack 中文文档(@印记中文) https://docschina.org/](https://webpack.docschina.org/)
-[Gulp和Webpack对比 - 简书](https://www.jianshu.com/p/b1022d224817)
-[Webpack 常用知识点总结 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000016596781)
-[javascript - gulp和webpack究竟有什么区别？ - SegmentFault 思否](https://segmentfault.com/q/1010000008058766)
-[理解 Gulp 和 Webpack \| 小胡子哥的个人网站](https://www.barretlee.com/blog/2017/04/27/gulp-and-webpack/)
+- [gulp.js - 基于流的自动化构建工具。 \| gulp.js 中文网](https://www.gulpjs.com.cn/)
+- [webpack 中文文档(@印记中文) https://docschina.org/](https://webpack.docschina.org/)
+- [Gulp和Webpack对比 - 简书](https://www.jianshu.com/p/b1022d224817)
+- [Webpack 常用知识点总结 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000016596781)
+- [javascript - gulp和webpack究竟有什么区别？ - SegmentFault 思否](https://segmentfault.com/q/1010000008058766)
+- [理解 Gulp 和 Webpack \| 小胡子哥的个人网站](https://www.barretlee.com/blog/2017/04/27/gulp-and-webpack/)
