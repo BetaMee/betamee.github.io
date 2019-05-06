@@ -7,12 +7,12 @@ tags: JS_Basic
 
 > 本文发布于 2019-04-15，总结了 babel 社区的工具使用，以及如何合理地进行配置。如果要看结论的话，直接跳到文章最后一节。
 
-**目录：**
+## 目录
 
 <!-- toc -->
 
-- [`@babel/preset-env`](#babelpreset-env)
-    + [介绍](#介绍)
+- [@babel/preset-env](#babelpreset-env)
+    + [介绍](#)
     + [`targets`](#targets)
     + [`spec`](#spec)
     + [`loose`](#loose)
@@ -26,17 +26,17 @@ tags: JS_Basic
     + [`configPath`](#configPath)
     + [`ignoreBrowserslistConfig`](#ignoreBrowserslistConfig)
     + [`shippedProposals`](#shippedProposals)
-- [`@babel/preset-stage-x`（废弃）](#babelpreset-stage-x)
-- [`@babel/polyfill`](#babelpolyfill)
+- [@babel/preset-stage-x（废弃）](#babelpreset-stage-x)
+- [@babel/polyfill](#babelpolyfill)
     + [介绍](#-1)
     + [副作用](#-2)
-- [`@babel/runtime`](#babelruntime)
+- [@babel/runtime](#babelruntime)
     + [介绍](#-3)
     + [使用场景](#-4)
-- [`@babel/plugin-transform-runtime`](#babelplugin-transform-runtime)
+- [@babel/plugin-transform-runtime](#babelplugin-transform-runtime)
     + [介绍](#-5)
     + [Demo](#Demo)
-- [`babel-register`](#babel-register)
+- [babel-register](#babel-register)
 - [`babel-node`](#babel-node)
 - [一份可用的配置](#-6)
     + [安装对应的包](#-7)
@@ -47,7 +47,7 @@ tags: JS_Basic
 
 <!-- tocstop -->
 
-## `@babel/preset-env`
+## @babel/preset-env
 
 #### 介绍
 
@@ -378,7 +378,7 @@ module.exports = function(api) {
 
 * 无
 
-## `@babel/preset-stage-x`（废弃） 
+## @babel/preset-stage-x（废弃） 
 
 在 babel7 中，官方已经宣布废弃 babel stage preset 包，大概是考虑到广泛使用的 stage-x 不适合社区的发展，具体原因见[官方博客](https://babeljs.io/blog/2018/07/27/removing-babels-stage-presets)
 
@@ -416,7 +416,7 @@ module.exports = function(api) {
 }
 ```
 
-## `@babel/polyfill`
+## @babel/polyfill
 
 #### 介绍
 
@@ -450,7 +450,7 @@ babel-polyfill 等同于 `regenerator runtime` + `core-js`。
 
 因此，如果是开发库、工具，可以考虑使用 babel-runtime。
 
-## `@babel/runtime`
+## @babel/runtime
 
 #### 介绍
 
@@ -472,7 +472,7 @@ babel-runtime 一般用于两种场景：
 
 使用 babel-runtime 一般会搭配 babel-plugin-transform-runtime 使用。babel-plugin-transform-runtime 用于构建过程的代码转换，而 babel-runtime 是实际导入项目代码的功能模块。
 
-## `@babel/plugin-transform-runtime`
+## @babel/plugin-transform-runtime
 
 #### 介绍
 
@@ -524,7 +524,7 @@ import "regenerator-runtime/runtime";
 import _asyncToGenerator from "@babel/runtime/helpers/esm/asyncToGenerator";
 ```
 
-## `babel-register`
+## babel-register
 
 `babel-register` 则提供了动态编译。换句话说，我们的源代码能够真正运行在生产环境下，不需要 babel 编译这一环节。
 
@@ -545,7 +545,7 @@ require('./app')
 
 当然，坏处是动态编译，导致程序在速度、性能上有所损耗。所以这一项基本不用在正式的生产环境中使用。
 
-## `babel-node`
+## babel-node
 
 上面所说，`babel-register` 提供动态编译，能够让我们的源代码真正运行在生产环境下 - 但其实不然，我们仍需要做部分调整，比如新增一个入口文件，并在该文件中 `require('@babel/register')`。而 babel-node 能真正做到一行源代码都不需要调整：
 

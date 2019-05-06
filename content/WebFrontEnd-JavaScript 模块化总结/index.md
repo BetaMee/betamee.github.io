@@ -5,53 +5,52 @@ category: WebFrontEnd
 tags: JS_Basic
 ---
 
-***关键词**： AMD、CMD、UMD、CommonJS、ES Module*
-
 > 规范JavaScript的模块定义和加载机制，降低学习和使用各种框架的门槛，能够以一种统一的方式去定义和使用模块，提高开发效率，降低了应用维护成本。
 
- **目录：**
- 
- <!-- toc -->
+**关键词**： AMD、CMD、UMD、CommonJS、ES Module
 
-- [JavaScript 模块化总结](#JavaScript)
-  * [模块化的历史](#)
-      - [刀耕火种的原始时代（1999 - 2009）](#1999---2009)
-      - [大步踏进工业化 （2009 - 至今）](#-2009)
-  * [各种模块化方案出现的时间线](#-1)
-  * [CommonJS](#CommonJS)
-      - [介绍](#-2)
-      - [特点](#-3)
-      - [module 对象](#module)
-      - [目录的加载规则](#-4)
-      - [模块的缓存](#-5)
-      - [模块的加载机制](#-6)
-  * [AMD](#AMD)
-      - [介绍](#-7)
-      - [规范介绍](#-8)
-      - [RequireJS 的介绍](#RequireJS)
-  * [CMD](#CMD)
-      - [介绍](#-9)
-      - [规范介绍](#-10)
-      - [1. define `Function`](#1-define-Function)
-      - [2. require `Function`](#2-require-Function)
-      - [3. exports `Object`](#3-exports-Object)
-      - [4. module `Object`](#4-module-Object)
-      - [SeaJS 的介绍](#SeaJS)
-  * [UMD](#UMD)
-  * [ES Module](#ES-Module)
-    + [介绍](#-11)
-    + [特点](#-12)
-    + [样例](#-13)
-  * [比较](#-14)
-      - [AMD 和 CMD 的区别](#AMD-CMD)
-      - [CommonJS 和 ES Module 的区别](#CommonJS-ES-Module)
-  * [参考](#-15)
-      - [CommonJS 知识](#CommonJS-1)
-      - [AMD 模块相关](#AMD-1)
-      - [CMD 模块相关](#CMD-1)
-      - [ES Module 模块相关](#ES-Module-1)
-      - [各个规范之间的比较](#-16)
-      - [模块化历史](#-17)
+## 目录
+ 
+<!-- toc -->
+
+- [模块化的历史](#)
+    + [刀耕火种的原始时代（1999 - 2009）](#1999---2009)
+    + [大步踏进工业化 （2009 - 至今）](#-2009)
+- [各种模块化方案出现的时间线](#-1)
+- [CommonJS](#CommonJS)
+    + [介绍](#-2)
+    + [特点](#-3)
+    + [module 对象](#module)
+    + [目录的加载规则](#-4)
+    + [模块的缓存](#-5)
+    + [模块的加载机制](#-6)
+- [AMD](#AMD)
+    + [介绍](#-7)
+    + [规范介绍](#-8)
+    + [RequireJS 的介绍](#RequireJS)
+- [CMD](#CMD)
+    + [介绍](#-9)
+    + [规范介绍](#-10)
+    + [1. define `Function`](#1-define-Function)
+    + [2. require `Function`](#2-require-Function)
+    + [3. exports `Object`](#3-exports-Object)
+    + [4. module `Object`](#4-module-Object)
+    + [SeaJS 的介绍](#SeaJS)
+- [UMD](#UMD)
+- [ES Module](#ES-Module)
+  * [介绍](#-11)
+  * [特点](#-12)
+  * [样例](#-13)
+- [比较](#-14)
+    + [AMD 和 CMD 的区别](#AMD-CMD)
+    + [CommonJS 和 ES Module 的区别](#CommonJS-ES-Module)
+- [参考](#-15)
+    + [CommonJS 知识](#CommonJS-1)
+    + [AMD 模块相关](#AMD-1)
+    + [CMD 模块相关](#CMD-1)
+    + [ES Module 模块相关](#ES-Module-1)
+    + [各个规范之间的比较](#-16)
+    + [模块化历史](#-17)
 
 <!-- tocstop -->
 
