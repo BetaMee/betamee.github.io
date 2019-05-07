@@ -24,3 +24,9 @@
   color: #666;
   margin-right: 5px;
 }
+
+@media screen and (max-width: 376px) {
+  .content {
+    margin: 60px 5% 80px 5%;
+  }
+}

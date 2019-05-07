@@ -48,3 +48,9 @@
 .itemSelected {
   background-color: #cf91e2;
 }
+
+@media screen and (max-width: 376px) {
+  .main {
+    margin: 0 5%;
+  }
+}
