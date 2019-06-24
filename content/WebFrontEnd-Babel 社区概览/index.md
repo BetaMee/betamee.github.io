@@ -564,8 +564,9 @@ $ npx babel-node app.js
 
 * `@babel/core`（核心包）
 * `@babel/preset-env`（预设）
-* `@babel/polyfill`（v7.4.0似乎被废弃）
-* `@babel/runtime`（开发业务代码可不用，开发技术库可以使用）
+* `@babel/polyfill`（v7.4.0似乎被废弃，可以不用安装）
+* `core-js`（最新版本v3，在配置版本corejs:3的情况下，这个包是用于替代 polyfill 的）
+* `@babel/runtime`（开发业务代码基本只用到helper配置，开发技术库可以深入使用）
 * `@babel/plugin-transform-runtime`（合并重复的 helper 函数）
 * `@babel/plugin-proposal-function-bind`（没有 stage-x 后，需要安装单独的插件，支持对应的 proposal 特性）
 

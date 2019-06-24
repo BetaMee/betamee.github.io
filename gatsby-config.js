@@ -33,6 +33,9 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-autolink-headers'
+          },
           { // markdown中的图片
             resolve: 'gatsby-remark-images',
             options: {
