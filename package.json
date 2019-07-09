@@ -35,7 +35,7 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy:gtihub": "gatsby build && node ./scripts/deploy-github"
+    "deploy": "gatsby build && node ./scripts/deploy-github"
   },
   "devDependencies": {
     "eslint": "^5.12.1",
