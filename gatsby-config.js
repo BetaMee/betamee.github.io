@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/loveoak',
   siteMetadata: {
     title: '十二棵橡树',
     author: '橡树上'
