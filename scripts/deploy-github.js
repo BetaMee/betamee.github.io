@@ -5,5 +5,5 @@ ghpages.publish('public', {
   repo: 'git@github.com:BetaMee/betamee.github.io.git'
 }, () => {
   // eslint-disable-next-line no-console
-  console.log('Deploy Complete!')
+  console.log('✨ Deploy Complete! 😎👨‍💻🌆')
 })
