@@ -9,7 +9,7 @@ funstonTheme.overrideThemeStyles = () => ({
 })
 
 funstonTheme.plugins = [
-  new CodePlugin(),
+  new CodePlugin()
 ]
 
 const typography = new Typography(funstonTheme)

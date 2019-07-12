@@ -3,12 +3,44 @@ import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-import styles from './styles/list.module.css'
+import styles from './styles/list.module.scss'
 
-const IndexPage = ({ data, pageContext }) => {
+interface Edge {
+  node: {
+    id: string,
+    fields: {
+      slug: string
+    },
+    frontmatter: {
+      date: string,
+      title: string
+    }
+  }
+}
+
+interface IProps {
+  data: {
+    allMarkdownRemark: {
+      edges: Array<Edge>
+    }
+  },
+  pageContext: {
+    currentPage: number,
+    numPages: number
+  }
+}
+
+type PaginationNode = Array<{
+  _key: string,
+  _index: number,
+  _selected: boolean,
+  _isDot: boolean
+}>
+
+const BlogList: React.FC<IProps> = ({ data, pageContext }) => {
   // 数据源
   const _edges = data.allMarkdownRemark.edges
-
+  console.log(_edges)
   const {
     currentPage,
     numPages
@@ -22,7 +54,7 @@ const IndexPage = ({ data, pageContext }) => {
   }))
   // 分页标志符
 
-  let _paginationNode = [] 
+  let _paginationNode: PaginationNode = [] 
   if (numPages <= 6) {
     _paginationNode = Array.from({length: numPages}, ((item, i) => ({
       _key: `${i} + ${numPages}`,
@@ -118,9 +150,7 @@ const IndexPage = ({ data, pageContext }) => {
   }
 
   return (
-    <Layout
-      site={data.site}
-    >
+    <Layout>
       <div className={styles.main}>
         <div className={styles.catalog}>
           {displayEdges.map(item => (
@@ -176,16 +206,10 @@ const IndexPage = ({ data, pageContext }) => {
   )
 }
 
-export default IndexPage
+export default BlogList
 
 export const BlogListQuery = graphql`
   query BlogListQuery($skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        author
-        title
-      }
-    }
     allMarkdownRemark(
       sort: {
         fields: [frontmatter___date],

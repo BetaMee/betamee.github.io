@@ -2,26 +2,48 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import styles from './styles/blog.module.css'
+import styles from './styles/blog.module.scss'
 
-const BlogTemplate = ({ data }) => {
+interface IProps {
+  data: {
+    site: {
+      siteMetadata: {
+        author: string
+        title: string
+      }
+    },
+    markdownRemark: {
+      id: string
+      html: string
+      fields: {
+        slug: string
+      }
+      frontmatter: {
+        title: string
+        category: string,
+        tags: string
+        date: string
+      }
+    }
+  }
+}
+
+const BlogTemplate: React.FC<IProps> = ({ data }) => {
   const markdownRemark = data.markdownRemark
-  const site = data.site
+  const siteMetadata = data.site.siteMetadata
   return (
-    <Layout
-      site={site}
-    >
+    <Layout>
       <div className={styles.content} >
         <div className={styles.heading}>
           <h1 className={styles.title}>
             {markdownRemark.frontmatter.title}
           </h1>
           <div className={styles.info}>
-            <span>{site.siteMetadata.author}</span>
+            <span>{siteMetadata.author}</span>
             <span>{markdownRemark.frontmatter.date}</span>
           </div>
           <div className={styles.tags}>
-            {(markdownRemark.frontmatter.tags || []).split(' ').map((_tag, index) => (
+            {markdownRemark.frontmatter.tags.split(' ').map((_tag, index) => (
               <Link key={index} to={`/tag/${_tag}`}>
                 #{_tag}
               </Link>
@@ -40,8 +62,8 @@ export const blogTemplateQuery = graphql`
   query blogBySlug($slug: String!) {
     site {
       siteMetadata {
-        title
         author
+        title
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

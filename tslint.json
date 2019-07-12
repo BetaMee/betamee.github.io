@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "tslint-react",
+    "tslint-react-hooks"
+  ],
+  "rules": {
+    "max-line-length": {
+      "options": [
+        120
+      ]
+    },
+    "quotemark": [true, "single", "jsx-single"],
+    "trailing-comma": [
+      true, {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "jsx-no-multiline-js": false
+  },
+  "jsRules": {
+    "max-line-length": {
+      "options": [
+        120
+      ]
+    }
+  }
+}

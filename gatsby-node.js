@@ -48,7 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
       Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
           path: i === 0 ? '/' : `/page/${i + 1}`,
-          component: path.resolve('./src/templates/BlogList.jsx'),
+          component: path.resolve('./src/templates/BlogList.tsx'),
           context: {
             limit: blogsPerPage,
             skip: i * blogsPerPage,
@@ -61,7 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
       _edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
-          component: path.resolve('./src/templates/BlogTemplate.jsx'),
+          component: path.resolve('./src/templates/BlogTemplate.tsx'),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
             slug: node.fields.slug,
@@ -76,7 +76,7 @@ exports.createPages = ({ graphql, actions }) => {
       Array.from(new Set(tagsData)).forEach((tag) => {
         createPage({
           path: `/tag/${tag}`,
-          component: path.resolve('./src/templates/TagTemplate.jsx'),
+          component: path.resolve('./src/templates/TagTemplate.tsx'),
           context: {
             tag: `/${tag}/` // 提供正则表达式的字符串
           },

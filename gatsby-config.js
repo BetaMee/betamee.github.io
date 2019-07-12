@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: 'src/utils/typography.js',
+        pathToConfigModule: 'src/utils/typography.ts',
       },
     },
     // 文件处理
@@ -60,6 +60,12 @@ module.exports = {
       },
     },
     // 图片支持
-    'gatsby-plugin-sharp'
+    'gatsby-plugin-sharp',
+    // TS 支持
+    'gatsby-plugin-typescript',
+    // TS + SCSS + CSS_MODOULE 支持
+    'gatsby-plugin-scss-typescript',
+    // TS 检查
+    // 'gatsby-plugin-typescript-checker'
   ],
 }

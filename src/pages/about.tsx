@@ -2,18 +2,21 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
-import styles from './about.module.css'
+import styles from './about.module.scss'
 
-const AboutPage =  ({ data }) => {
-  const site = data.site
-  const markdownRemark = data.markdownRemark
+interface IProps {
+  data: {
+    markdownRemark: {
+      html: string
+    }
+  }
+}
 
+const AboutPage: React.FC<IProps> =  ({ data }) => {
   return (
-    <Layout
-      site={site}
-    >
+    <Layout>
       <div className={styles.content}>
-        <div dangerouslySetInnerHTML={{__html: markdownRemark.html}}/>
+        <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
       </div>
     </Layout>
   )
@@ -23,12 +26,6 @@ export default AboutPage
 
 export const aboutQuery = graphql`
   query aboutPageQuery {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(frontmatter: { tags : { eq: "_about" } }) {
       html
     }
