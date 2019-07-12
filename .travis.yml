@@ -1,0 +1,20 @@
+# 声明构建语言环境
+language: node_js
+
+notifications:
+    on_success: never
+
+# nodejs语言版本
+node_js:
+  - "10"
+
+#缓存
+cache: yarn
+
+# 安装
+install:
+  - yarn
+
+# 执行脚本
+script:
+  - yarn run deploy
