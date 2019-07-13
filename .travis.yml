@@ -15,6 +15,6 @@ cache: yarn
 install:
   - yarn
 
-# 执行脚本
-script:
-  - yarn run deploy
+# !执行脚本，这里有问题，暂时只能手动部署
+# script:
+#   - yarn run deploy
