@@ -64,7 +64,7 @@ module.exports = {
     // TS 支持
     'gatsby-plugin-typescript',
     // TS + SCSS + CSS_MODOULE 支持
-    'gatsby-plugin-scss-typescript',
+    'gatsby-plugin-sass'
     // TS 检查
     // 'gatsby-plugin-typescript-checker'
   ],

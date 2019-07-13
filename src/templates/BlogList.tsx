@@ -4,7 +4,6 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 
 import styles from './styles/list.module.scss'
-
 interface Edge {
   node: {
     id: string,
