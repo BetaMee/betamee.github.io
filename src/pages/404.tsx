@@ -2,12 +2,14 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout/index'
-// import  './404.module.scss'
+import styles from './404.module.scss'
 
 const NotFoundPage: React.FC = () => {
   return (
     <Layout>
-      ReferenceError: 404 is Not Found!
+      <div className={styles.container}>
+        <span>ReferenceError: 404 is Not Found!</span>
+      </div>
     </Layout>
   )
 }

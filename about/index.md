@@ -14,3 +14,8 @@ YOU KNOWN WHO I AM. 😏
 I LOVE YOU THERE THOUSAND TIMES! 😙
 
 ![gongxq](./images/gongxq.jpg)
+
+![gongxq2](./images/gongxq2.JPG)
+
+![BoxOfFun](./images/BoxOfFun.jpg)
+

@@ -1,0 +1,12 @@
+.container {
+  min-height: 400px;
+  margin: 60px auto 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
