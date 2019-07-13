@@ -45,8 +45,9 @@ const BlogTemplate: React.FC<IProps> = ({ data }) => {
       node.addEventListener('click', (evt: Event) => {
         evt.preventDefault()
         const $target: any = evt.target
-        const $imageUrl: string = $target.src
+        const $imageUrl: string = $target.currentSrc
         const $description: string = $target.alt
+        console.log($imageUrl)
         changeViewerState(!isOpenImageView)
         changeImageUrlState($imageUrl)
         changeDescriptionState($description)

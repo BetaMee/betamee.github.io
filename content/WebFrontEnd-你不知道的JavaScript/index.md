@@ -18,8 +18,8 @@ tags: JS_Basic
 
 ## 作用域与闭包
 
-![](./attachments/ca2afc22.png)
+![作用域与闭包](./attachments/ca2afc22.png)
 
 ## this 和原型对象
 
-![](./attachments/a506982c.png)
+![this 和原型对象](./attachments/a506982c.png)
