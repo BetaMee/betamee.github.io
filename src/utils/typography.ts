@@ -3,9 +3,14 @@ import CodePlugin from 'typography-plugin-code'
 import funstonTheme from 'typography-theme-funston'
 
 funstonTheme.overrideThemeStyles = () => ({
-  // 'h1,h2,h3': {
-  //   borderBottom: '1px solid hsla(0,0%,0%,0.07)'
-  // }
+  'html': {
+    font: `100%/1.4 'Cabin Condensed','georgia',sans-serif`
+  },
+  'h2': {
+    fontWeight: 700,
+    marginTop: '48px',
+    fontSize: '2rem'
+  }
 })
 
 funstonTheme.plugins = [

@@ -4,3 +4,4 @@ export const title: string;
 export const menu: string;
 export const footer: string;
 export const contact: string;
+export const siteInfo: string;

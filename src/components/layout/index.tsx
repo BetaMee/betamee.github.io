@@ -45,7 +45,7 @@ const DefaultLayout: React.FC = ({ children }) => {
           to='/about'
           title='I Love You a Thousands Times'
         >
-          我是谁
+          WHO AM I?
         </Link>
       </div>
     </div>
@@ -83,7 +83,7 @@ const DefaultLayout: React.FC = ({ children }) => {
           Instagram
         </a>
       </div>
-      <div>
+      <div className={styles.siteInfo}>
         Copyright © 橡树上 2019
       </div>
     </div>

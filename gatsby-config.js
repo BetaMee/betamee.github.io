@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     // HTML head支持
     'gatsby-plugin-react-helmet',
+    // 全局样式支持
     {
       resolve: 'gatsby-plugin-typography',
       options: {
@@ -28,7 +29,6 @@ module.exports = {
         path: `${__dirname}/about`
       }
     },
-    'gatsby-transformer-sharp',
     // markdown支持
     {
       resolve: 'gatsby-transformer-remark',
@@ -60,6 +60,7 @@ module.exports = {
       },
     },
     // 图片支持
+    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     // TS 支持
     'gatsby-plugin-typescript',

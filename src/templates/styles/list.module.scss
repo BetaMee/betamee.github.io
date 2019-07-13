@@ -7,28 +7,37 @@
   display: flex;
   flex-direction: column;
   margin: 30px 0 10px 0;
-}
-
-.catalogItem {
-  margin-top: 10px; 
-}
-
-.catalogDate {
-  font-size: 46px;
-}
-
-.catalogLink {
-  display: flex;
-  flex-direction: column;
-}
-
-.catalogLink a {
-  font-size: 20px;
-  color: #333;
-  display: inline-block;
-  margin-bottom: 10px;
-  text-decoration: none;
-  border-bottom: 1px solid #ddd;
+  .item {
+    margin-top: 10px;
+  }
+  .year {
+    font-size: 46px;
+  }
+  .link {
+    display: flex;
+    flex-direction: column;
+  }
+  .link a {
+    font-size: 20px;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .date {
+    margin-right: 10px;
+    color: #999;
+    font-style: italic;
+  }
+  .newcontent {
+    padding: 1px 5px;
+    background-color: #693476;
+    border-radius: 4px;
+    color: #ffffff;
+    margin-left: 10px;
+    font-size: 20px;
+  }
 }
 
 .pagination {

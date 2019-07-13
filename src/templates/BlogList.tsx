@@ -30,31 +30,30 @@ interface IProps {
   }
 }
 
-type PaginationNode = Array<{
+interface PaginationNode  {
   _key: string,
   _index: number,
   _selected: boolean,
   _isDot: boolean
-}>
+}
 
 const BlogList: React.FC<IProps> = ({ data, pageContext }) => {
   // 数据源
   const _edges = data.allMarkdownRemark.edges
-  console.log(_edges)
   const {
     currentPage,
     numPages
   } = pageContext
   // 取日期
-  const dateArr = _edges.map(edge => edge.node.frontmatter.date)
-  const uniqueDateArr = Array.from(new Set(dateArr))
-  const displayEdges = uniqueDateArr.map(_date => ({
-    _date: _date,
-    _edges: _edges.filter(edge => edge.node.frontmatter.date === _date)
+  const YearDateArr = _edges.map(edge => edge.node.frontmatter.date.split('-')[0])
+  const uniqueDateArr = Array.from(new Set(YearDateArr))
+  const displayEdges = uniqueDateArr.map(_year => ({
+    _year: _year,
+    _edges: _edges.filter(edge => edge.node.frontmatter.date.split('-')[0] === _year)
   }))
   // 分页标志符
 
-  let _paginationNode: PaginationNode = [] 
+  let _paginationNode: Array<PaginationNode> = []
   if (numPages <= 6) {
     _paginationNode = Array.from({length: numPages}, ((item, i) => ({
       _key: `${i} + ${numPages}`,
@@ -148,25 +147,41 @@ const BlogList: React.FC<IProps> = ({ data, pageContext }) => {
       }))
     }
   }
-
+  // 当前时间
+  const currentTime = new Date().getTime()
   return (
     <Layout>
       <div className={styles.main}>
         <div className={styles.catalog}>
           {displayEdges.map(item => (
-            <div key={item._date} className={styles.catalogItem}>
-              <div className={styles.catalogDate}>{item._date}</div>
+            <div key={item._year} className={styles.item}>
+              <div className={styles.year}>{item._year}</div>
               <div
-                className={styles.catalogLink}
-              >{item._edges.map(({ node }) => (
+                className={styles.link}
+              >{item._edges.map(({ node }) => {
+                // 解析 M/D 格式
+                const _dateArr = node.frontmatter.date.split('-')
+                const _MonthDay = `${_dateArr[1]}/${_dateArr[2]}`
+                // 解析是否是最新文章
+                const pageTime = new Date(node.frontmatter.date).getTime()
+                let isNewPage = false
+                if (pageTime < currentTime && pageTime > (currentTime - 1000 * 60 * 60 * 24 * 30)) { // 30 天以内
+                  isNewPage = true
+                }
+                return (
                   <div key={node.id}>
                     <Link
                       to={node.fields.slug}
                     >
+                      <span className={styles.date}>{_MonthDay}</span>
                       {node.frontmatter.title}
                     </Link>
+                    {
+                      isNewPage && <span className={styles.newcontent}>new</span>
+                    }
                   </div>
-                ))}
+                )
+              })}
               </div>
             </div>
           ))}
@@ -187,15 +202,15 @@ const BlogList: React.FC<IProps> = ({ data, pageContext }) => {
                 )
               } else {
                 return (
-                  <Link
-                    key={item._key}
-                    to={`/page/${item._index}`}
-                    className={
-                      `${styles.paginationItem} ${item._selected ? styles.itemSelected : ''}`
-                    }
-                  >
-                    {item._index}
-                  </Link>
+                    <Link
+                      key={item._key}
+                      to={`/page/${item._index}`}
+                      className={
+                        `${styles.paginationItem} ${item._selected ? styles.itemSelected : ''}`
+                      }
+                    >
+                      {item._index}
+                    </Link>
                 )
               }
             })}
@@ -232,7 +247,7 @@ export const BlogListQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "YYYY")
+            date(formatString: "YYYY-MM-DD")
             title
           }
         }
