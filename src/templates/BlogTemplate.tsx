@@ -47,7 +47,6 @@ const BlogTemplate: React.FC<IProps> = ({ data }) => {
         const $target: any = evt.target
         const $imageUrl: string = $target.currentSrc
         const $description: string = $target.alt
-        console.log($imageUrl)
         changeViewerState(!isOpenImageView)
         changeImageUrlState($imageUrl)
         changeDescriptionState($description)

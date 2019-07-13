@@ -204,7 +204,7 @@ const BlogList: React.FC<IProps> = ({ data, pageContext }) => {
                 return (
                     <Link
                       key={item._key}
-                      to={`/page/${item._index}`}
+                      to={`${item._index === 1 ? '/' : `/page/${item._index}`}`}
                       className={
                         `${styles.paginationItem} ${item._selected ? styles.itemSelected : ''}`
                       }
