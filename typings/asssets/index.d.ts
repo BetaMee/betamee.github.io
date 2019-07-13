@@ -1,0 +1,5 @@
+declare module "*.svg"
+declare module "*.ico"
+declare module "*.png"
+declare module "*.jpeg"
+declare module "*.jpg"

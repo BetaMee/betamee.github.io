@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import ImageViewer from '../components/imageviewer'
 import styles from './styles/blog.module.scss'
 
 interface IProps {
@@ -29,8 +30,41 @@ interface IProps {
 }
 
 const BlogTemplate: React.FC<IProps> = ({ data }) => {
+  // 页面数据
   const markdownRemark = data.markdownRemark
   const siteMetadata = data.site.siteMetadata
+  // hooks
+  const [isOpenImageView, changeViewerState] = useState<boolean>(false)
+  const [ imageUrl, changeImageUrlState ] = useState<string>('')
+  const [ description, changeDescriptionState ] = useState<string>('')
+  
+  useEffect(() => {
+    const $imageNodes: NodeList = document.querySelectorAll('.gatsby-resp-image-image')
+    // !TS + DOM 怎么写？？？
+    $imageNodes.forEach((node: Node) => {
+      node.addEventListener('click', (evt: Event) => {
+        evt.preventDefault()
+        const $target: any = evt.target
+        const $imageUrl: string = $target.src
+        const $description: string = $target.alt
+        changeViewerState(!isOpenImageView)
+        changeImageUrlState($imageUrl)
+        changeDescriptionState($description)
+        // 返回清空函数
+        return () => {
+          $imageNodes.forEach((node: Node) => {
+            node.removeEventListener('click', ()=> {})
+          })
+        }
+      },false)
+    })
+  }, [])
+  // 关闭预览窗口
+  const closeViewer = () => {
+    changeViewerState(false)
+    changeImageUrlState('')
+    changeDescriptionState('')
+  }
   return (
     <Layout>
       <div className={styles.content} >
@@ -52,6 +86,15 @@ const BlogTemplate: React.FC<IProps> = ({ data }) => {
         </div>
         <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
       </div>
+      {
+        isOpenImageView && (
+          <ImageViewer
+            imageUrl={imageUrl}
+            description={description}
+            closeViewer={closeViewer}
+          />
+        )
+      }
     </Layout>
   )
 }

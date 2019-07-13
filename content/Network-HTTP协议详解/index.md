@@ -25,7 +25,7 @@ HTTP 协议是构建在 TCP/IP 协议之上的，是 TCP/IP 协议的一个子�
 
 TCP/IP协议族是由一个四层协议组成的系统，这四层分别为：应用层、传输层、网络层和数据链路层。如图 2.1。
 
-![](./http/http.png)
+![TCP/IP 协议族分层](./http/http.png)
 
 <center>图 1.1 TCP/IP 协议族分层 </center>
 
@@ -51,7 +51,7 @@ TCP/IP协议族是由一个四层协议组成的系统，这四层分别为：�
 
 使用 TCP 协议进行通信的双方必须先建立连接，然后才能开始传输数据。TCP 连接是**全双工**的，也就是说双方的数据读写可以通过一个连接进行。为了确保连接双方可靠性，在双方建立连接时，TCP 协议采用了三次握手（Three-way handshaking）策略：
 
-![](./http/tcp_three_shaking.png)
+![TCP 三次握手](./http/tcp_three_shaking.png)
 
 <center>图 1.2 TCP 三次握手 </center>
 
@@ -63,7 +63,7 @@ TCP/IP协议族是由一个四层协议组成的系统，这四层分别为：�
 
 通常我们访问一个网站，使用的是主机名或者域名（如 www.test.com）来访问，但 TCP/IP 协议使用的是 IP 地址，这是一组纯数字（如 192.176.2.1），所以必须要有一个机制来将域名转换成 IP 地址：
 
-![](./http/DNS.png)
+![DNS 简单工作机制](./http/DNS.png)
 
 <center>图 1.3 DNS 简单工作机制 </center>
 
