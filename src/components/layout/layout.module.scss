@@ -2,7 +2,6 @@
   /* padding: 0 20%; */
 }
 
-
 .header {
     padding: 0 20%;
     background-color: #693476;
@@ -60,6 +59,26 @@
 
 @media screen and (max-width: 376px) {
   .header {
+    height: unset;
+    padding: unset;
+    background-color: unset;
+    flex-direction: column;
+    .title {
+      padding: 20px 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      color: #693476;
+    }
+    .menu {
+      padding: 20px 10px;
+      width: 100%;
+      background-color: #693476;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .footer {
     padding: 0 5%;
   }
 }
