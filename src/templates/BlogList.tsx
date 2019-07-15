@@ -51,7 +51,6 @@ const BlogList: React.FC<IProps> = ({ data, pageContext }) => {
     _edges: _edges.filter(edge => edge.node.frontmatter.date.split('-')[0] === _year)
   }))
   // 分页标志符
-
   let _paginationNode: Array<PaginationNode> = []
   if (numPages <= 6) {
     _paginationNode = Array.from({length: numPages}, ((item, i) => ({
@@ -61,7 +60,6 @@ const BlogList: React.FC<IProps> = ({ data, pageContext }) => {
       _isDot: false
     })))
   } else {
-
     if (1 <= currentPage && currentPage <= 3) {
       _paginationNode = Array.from({length: 6}, ((item, i) => {
         if (i <= 3) {
