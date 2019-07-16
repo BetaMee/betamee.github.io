@@ -9,9 +9,7 @@ tags: _about
 
 版本：v10.95.07
 
-YOU KNOWN WHO I AM. 😏
-
-I LOVE YOU THERE THOUSAND TIMES! 😙
+For Test...to be continued...
 
 ![gongxq](./images/gongxq.jpg)
 
