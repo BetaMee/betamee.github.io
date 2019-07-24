@@ -1,8 +1,8 @@
 ---
 title: Mac 环境安装
 date: 2019-01-06 14:10:00
-category: Configs
-tags: config
+category: SystemLogs
+tags: Config
 ---
 
 > 版本： 10.14.2
