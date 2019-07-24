@@ -9,20 +9,20 @@ interface IProps {
   data: {
     site: {
       siteMetadata: {
-        author: string
+        author: string,
         title: string
       }
     },
     markdownRemark: {
-      id: string
-      html: string
+      id: string,
+      html: string,
       fields: {
         slug: string
-      }
+      },
       frontmatter: {
-        title: string
+        title: string,
         category: string,
-        tags: string
+        tags: string,
         date: string
       }
     }

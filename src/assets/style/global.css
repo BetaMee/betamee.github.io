@@ -10,3 +10,7 @@ body {
 center {
   margin: 20px 0;
 }
+
+table tr td strong {
+  white-space: nowrap;
+}

@@ -12,10 +12,12 @@ funstonTheme.overrideThemeStyles = () => ({
     fontSize: '2rem'
   },
   'h3': {
-
+    fontWeight: 700,
+    fontSize: '1.8rem'
   },
   'h4': {
-    
+    fontWeight: 700,
+    fontSize: '1.5rem'
   }
 })
 
