@@ -42,7 +42,7 @@ module.exports = {
             options: {
               maxWidth: 1000,
               quality: 100,
-              linkImagesToOriginal: true
+              linkImagesToOriginal: false
             },
           },
           { // 代码高亮
