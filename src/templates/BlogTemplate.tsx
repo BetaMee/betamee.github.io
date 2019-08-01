@@ -5,31 +5,11 @@ import Layout from '../components/layout'
 import ImageViewer from '../components/imageviewer'
 import styles from './styles/blog.module.scss'
 
-interface IProps {
-  data: {
-    site: {
-      siteMetadata: {
-        author: string,
-        title: string
-      }
-    },
-    markdownRemark: {
-      id: string,
-      html: string,
-      fields: {
-        slug: string
-      },
-      frontmatter: {
-        title: string,
-        category: string,
-        tags: string,
-        date: string
-      }
-    }
-  }
-}
+import {
+  IBlogTemplateProps
+} from '../interfaces'
 
-const BlogTemplate: React.FC<IProps> = ({ data }) => {
+const BlogTemplate: React.FC<IBlogTemplateProps> = ({ data }) => {
   // 页面数据
   const markdownRemark = data.markdownRemark
   const siteMetadata = data.site.siteMetadata

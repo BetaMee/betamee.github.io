@@ -4,32 +4,13 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import styles from './styles/tag.module.scss'
 
-interface Edge {
-  node: {
-    id: string,
-    fields: {
-      slug: string
-    },
-    frontmatter: {
-      date: string,
-      title: string
-    }
-  }
-}
 
-interface IProps {
-  data: {
-    allMarkdownRemark: {
-      edges: Array<Edge>
-    }
-  },
-  pathContext: {
-    tag: string
-  }
-}
+import {
+  ITagTemplateProps
+} from '../interfaces'
 
 
-const TagTemplate: React.FC<IProps> = ({ data, pathContext }) => (
+const TagTemplate: React.FC<ITagTemplateProps> = ({ data, pathContext }) => (
   <Layout>
       <div className={styles.content} >
         <h1 className={styles.heading}>

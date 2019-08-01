@@ -4,15 +4,11 @@ import Layout from '../components/layout'
 
 import styles from './about.module.scss'
 
-interface IProps {
-  data: {
-    markdownRemark: {
-      html: string
-    }
-  }
-}
+import {
+  IAboutPageProps
+} from '../interfaces'
 
-const AboutPage: React.FC<IProps> =  ({ data }) => {
+const AboutPage: React.FC<IAboutPageProps> =  ({ data }) => {
   return (
     <Layout>
       <div className={styles.content}>

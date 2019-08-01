@@ -4,39 +4,19 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 
 import styles from './styles/list.module.scss'
-interface Edge {
-  node: {
-    id: string,
-    fields: {
-      slug: string
-    },
-    frontmatter: {
-      date: string,
-      title: string
-    }
-  }
-}
 
-interface IProps {
-  data: {
-    allMarkdownRemark: {
-      edges: Array<Edge>
-    }
-  },
-  pageContext: {
-    currentPage: number,
-    numPages: number
-  }
-}
+import {
+  IBlogLIstProps
+} from '../interfaces'
 
-interface PaginationNode  {
+interface IPaginationNode  {
   _key: string,
   _index: number,
   _selected: boolean,
   _isDot: boolean
 }
 
-const BlogList: React.FC<IProps> = ({ data, pageContext }) => {
+const BlogList: React.FC<IBlogLIstProps> = ({ data, pageContext }) => {
   // 数据源
   const _edges = data.allMarkdownRemark.edges
   const {
@@ -51,7 +31,7 @@ const BlogList: React.FC<IProps> = ({ data, pageContext }) => {
     _edges: _edges.filter(edge => edge.node.frontmatter.date.split('-')[0] === _year)
   }))
   // 分页标志符
-  let _paginationNode: Array<PaginationNode> = []
+  let _paginationNode = [] as IPaginationNode[]
   if (numPages <= 6) {
     _paginationNode = Array.from({length: numPages}, ((item, i) => ({
       _key: `${i} + ${numPages}`,
