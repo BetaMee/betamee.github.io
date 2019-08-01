@@ -2,7 +2,7 @@
 title: Babel 社区概览
 date: 2019-04-18 21:00:00
 category: WebFrontEnd
-tags: Web_Basic 工程化
+tags: Web_Basic 工程化 Babel
 ---
 
 > 本文发布于 2019-04-15，总结了 babel 社区的工具使用，以及如何合理地进行配置。如果要看结论的话，直接跳到文章最后一节。

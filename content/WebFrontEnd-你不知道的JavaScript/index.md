@@ -2,7 +2,7 @@
 title: 《你不知道的 JavaScript》
 date: 2019-06-24 16:44:00
 category: WebFrontEnd
-tags: JS_Basic
+tags: JS_Basic 读书笔记
 ---
 
 > 本文记录阅读《你不知道的JavaScript》后形成的思维导图。
