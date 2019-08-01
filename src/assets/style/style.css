@@ -10,6 +10,10 @@
   border-radius: 0.3em;
 }
 
+.gatsby-highlight {
+  margin-bottom: 1.4rem;
+}
+
 /* highlight-code-line样式增强 */
 .gatsby-highlight-code-line {
   background-color: #484745;
