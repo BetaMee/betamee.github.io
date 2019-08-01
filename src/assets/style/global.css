@@ -12,7 +12,7 @@ center {
 }
 
 table tr td strong {
-  white-space: nowrap;
+  min-width: 50px;
 }
 
 h1 .anchor svg,
