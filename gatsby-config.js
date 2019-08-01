@@ -40,8 +40,9 @@ module.exports = {
           { // markdown中的图片
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 750,
-              linkImagesToOriginal: false
+              maxWidth: 1000,
+              quality: 100,
+              linkImagesToOriginal: true
             },
           },
           { // 代码高亮

@@ -9,6 +9,8 @@ body {
 
 center {
   margin: 20px 0;
+  font-weight: 700;
+  color: #333333;
 }
 
 table tr td strong {
