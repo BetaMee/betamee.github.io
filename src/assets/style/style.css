@@ -16,11 +16,11 @@
 
 /* highlight-code-line样式增强 */
 .gatsby-highlight-code-line {
-  background-color: #484745;
+  /* background-color: #484745;
   display: block;
   margin-right: -1em;
   margin-left: -1em;
   padding-right: 1em;
   padding-left: 0.75em;
-  border-left: 0.25em solid #f8f8f2;
+  border-left: 0.25em solid #f8f8f2; */
 }

@@ -5,7 +5,7 @@ import favicon from '../../assets/images/favicon.ico'
 
 import '../../assets/style/global.css'
 import '../../assets/style/style.css'
-import 'prismjs/themes/prism-okaidia.css'
+import 'prismjs/themes/prism-coy.css'
 
 import styles from './layout.module.scss'
 

@@ -23,3 +23,12 @@ h5 .anchor svg,
 h6 .anchor svg {
   visibility: unset !important;
 }
+
+pre[class*="language-"]:before, pre[class*="language-"]:after {
+  box-shadow: unset !important;
+}
+
+p > code {
+  color: #c92c2c;
+  background-color: #fff5f5 !important;
+}
