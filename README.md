@@ -24,6 +24,6 @@
 * [HTTP 协议基础](https://betamee.github.io/content/NetWork-HTTP%20%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/)
 
 
-### SystemsLogs
+### SystemLogs
 
 * [Mac 环境安装](https://betamee.github.io/content/SystemLogs-Mac%20%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/)
