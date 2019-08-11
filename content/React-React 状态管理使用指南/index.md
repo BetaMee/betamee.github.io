@@ -1053,12 +1053,8 @@ export default TodoViewList
 
 ## 参考
 
-[Dan Abramov - You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
-
-[MobX 中文官网](https://cn.mobx.js.org/)
-
-[MobX with React](https://mobx-react.js.org)
-
-[Using MobX with React Hooks](https://dev.to/ryands17/using-mobx-with-react-hooks-52h5)
-
-[透過 React CreateContext 搭配 React useContext 與 useReducer 來做 Global State Manager](https://medium.com/@Whien/%E9%80%8F%E9%81%8E-react-usecontext-%E8%88%87-usereducer-%E4%BE%86%E5%81%9A-global-state-manager-bed30fb1f08b)
+- [Dan Abramov - You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
+- [MobX 中文官网](https://cn.mobx.js.org/)
+- [MobX with React](https://mobx-react.js.org)
+- [Using MobX with React Hooks](https://dev.to/ryands17/using-mobx-with-react-hooks-52h5)
+- [透過 React CreateContext 搭配 React useContext 與 useReducer 來做 Global State Manager](https://medium.com/@Whien/%E9%80%8F%E9%81%8E-react-usecontext-%E8%88%87-usereducer-%E4%BE%86%E5%81%9A-global-state-manager-bed30fb1f08b)
