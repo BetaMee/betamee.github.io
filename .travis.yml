@@ -15,14 +15,17 @@ cache: yarn
 install:
   - yarn
 
-# !执行脚本，这里有问题，暂时只能手动部署
 script:
-  - yarn run deploy
+  - yarn run build
 
-# deploy:
-#   provider: pages
-#   skip_cleanup: true
-#   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-#   keep_history: true
-#   on:
-#     branch: master
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  email: gongxq95@gmail.com
+  name: BetaMee
+  target_branch: master
+  local_dir: public
+  on:
+    branch: source-code
