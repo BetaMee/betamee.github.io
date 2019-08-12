@@ -40,7 +40,7 @@
     h6 .anchor:focus svg {
       visibility: visible;
     }
-  </style><meta name="generator" content="Gatsby 2.13.45"/><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><link as="script" rel="preload" href="/1-6f65283a0d0dcba7d777.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-e88c8354829972883913.js"/><link as="script" rel="preload" href="/app-057cba1681ad26bddda3.js"/><link as="script" rel="preload" href="/styles-93864435329019b31a3d.js"/><link as="script" rel="preload" href="/webpack-runtime-46d4ae3085e34eb0ed72.js"/><link as="fetch" rel="preload" href="/page-data/content/NetWork-HTTP 协议基础/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">HTTP 协议基础</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2019-07-10</span></div><div class="blog-module--tags--20J6V"><a href="/tag/Net_Basic">#<!-- -->Net_Basic</a><a href="/tag/HTTP">#<!-- -->HTTP</a></div></div><div><h2 id="目录"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
+  </style><meta name="generator" content="Gatsby 2.13.59"/><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><link as="script" rel="preload" href="/1-5d140a3f4822deb9b463.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-cb0bfaeffbf3c3233e95.js"/><link as="script" rel="preload" href="/app-bedd9bf23f8f411ea984.js"/><link as="script" rel="preload" href="/styles-185c0ff4ffdb99aec474.js"/><link as="script" rel="preload" href="/webpack-runtime-9db5e2808e004c034889.js"/><link as="fetch" rel="preload" href="/page-data/content/NetWork-HTTP 协议基础/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">HTTP 协议基础</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2019-07-10</span></div><div class="blog-module--tags--20J6V"><a href="/tag/Net_Basic">#<!-- -->Net_Basic</a><a href="/tag/HTTP">#<!-- -->HTTP</a></div></div><div><h2 id="目录"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
 <ul>
 <li><a href="#1-%E5%BC%95%E8%A8%80">1. 引言</a></li>
 <li>
@@ -127,6 +127,7 @@
 /static/7f53c8689927e73f4b71b9a25633e203/971c4/TCP_IP%E5%88%86%E5%B1%82.jpg 1000w,
 /static/7f53c8689927e73f4b71b9a25633e203/2dc14/TCP_IP%E5%88%86%E5%B1%82.jpg 1094w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 2.1 TCP/IP 协议族分层 </center>
@@ -164,6 +165,7 @@
 /static/6fbf05f516695418fb81f5cedc9c54ab/971c4/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg 1000w,
 /static/6fbf05f516695418fb81f5cedc9c54ab/d1b48/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg 1268w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 2.2 TCP 三次握手 </center>
@@ -189,6 +191,7 @@
 /static/63f75f46bae4a737dfa7eb6742149f5c/971c4/DNS.jpg 1000w,
 /static/63f75f46bae4a737dfa7eb6742149f5c/6c315/DNS.jpg 1280w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 2.3 DNS 简单工作机制 </center>
@@ -329,6 +332,7 @@ sequence
 /static/bdf03db9a82bfcd58fec5041574aa69d/45751/meta.jpg 1500w,
 /static/bdf03db9a82bfcd58fec5041574aa69d/da229/meta.jpg 1678w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.1 HTTP 报文格式 </center>
@@ -771,6 +775,7 @@ sequence
 /static/f085a1fffdbb02140d44994b122f736c/45751/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1500w,
 /static/f085a1fffdbb02140d44994b122f736c/8944e/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1944w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.2 强制缓存请求流程</center>
@@ -798,6 +803,7 @@ sequence
 /static/bb49846a8e9d7d2820af31ab5905a5c9/45751/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1500w,
 /static/bb49846a8e9d7d2820af31ab5905a5c9/8944e/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1944w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.3 协商缓存请求流程</center>
@@ -812,7 +818,7 @@ sequence
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 78.33182230281052%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe6lNIP/xAAXEAADAQAAAAAAAAAAAAAAAAAAARFB/9oACAEBAAEFAkaOzEf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAXEAADAQAAAAAAAAAAAAAAAAABECBh/9oACAEBAAY/AjGr/8QAGxABAAICAwAAAAAAAAAAAAAAEQABEDEhUXH/2gAIAQEAAT8hVcu4gN4ohb7Da6RNKZ//2gAMAwEAAgADAAAAEEPP/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/EF2f/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Qh//EABwQAQEAAgIDAAAAAAAAAAAAAAERACExgUGR4f/aAAgBAQABPxCNOnCE17yQK8rfuDeMMapdANHRhqKHIN9XEsiM2Muf/9k='); background-size: cover; display: block;"
+    style="padding-bottom: 78.33182230281052%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe6lNIP/xAAXEAADAQAAAAAAAAAAAAAAAAAAARFB/9oACAEBAAEFAkaOzEf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAXEAADAQAAAAAAAAAAAAAAAAABECBh/9oACAEBAAY/AjGr/8QAGxABAAICAwAAAAAAAAAAAAAAEQABEDEhUXH/2gAIAQEAAT8hVcu4gN4ohb7Da6RNKZ//2gAMAwEAAgADAAAAEEPP/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/EF2f/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Qh//EABwQAQEAAgIDAAAAAAAAAAAAAAERACExgUGR4f/aAAgBAQABPxCNOnCE17yQK8rfuDeMMapdANHRhoKHIN9LiWRGbGXP/9k='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -826,6 +832,7 @@ sequence
 /static/708dac804ac9b8d2e4bc33104efff34b/4aca8/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 2000w,
 /static/708dac804ac9b8d2e4bc33104efff34b/0986c/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 2206w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.4 缓存请求流程</center>
@@ -850,6 +857,7 @@ sequence
 /static/423611476274beb5fc5a681107043bbf/971c4/HTTPS.jpg 1000w,
 /static/423611476274beb5fc5a681107043bbf/2dc14/HTTPS.jpg 1094w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center> 图 4.5 HTTPS </center>
@@ -894,6 +902,7 @@ sequence
 /static/e572037ba091b503cb9fb5550b3a1739/45751/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1500w,
 /static/e572037ba091b503cb9fb5550b3a1739/dde36/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1680w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.6 对称加密及中间人攻击</center>
@@ -917,6 +926,7 @@ sequence
 /static/3d0d32c877fbda326ab1f45fffdda6fa/45751/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1500w,
 /static/3d0d32c877fbda326ab1f45fffdda6fa/94497/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1702w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.7 非对称加密及中间人攻击</center>
@@ -940,6 +950,7 @@ sequence
 /static/27f7374193ac1c1aeb077533b7716a28/45751/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1500w,
 /static/27f7374193ac1c1aeb077533b7716a28/bb204/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1722w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.8 结合非对称加密 + 对称加密及中间人攻击</center>
@@ -950,7 +961,7 @@ sequence
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 111.20772946859903%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAWABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHtzVl0qzFCg//EABoQAAEFAQAAAAAAAAAAAAAAAAECEBESIQD/2gAIAQEAAQUCAgoVcdYSMaut/8QAFhEAAwAAAAAAAAAAAAAAAAAAASBh/9oACAEDAQE/ATU//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGhAAAgIDAAAAAAAAAAAAAAAAEBEAARIhQf/aAAgBAQAGPwK7bmhj0s//xAAdEAEAAQQDAQAAAAAAAAAAAAABABARITFRYXGB/9oACAEBAAE/IXaYc24gqp+w1HbeIDCiO+Wp/9oADAMBAAIAAwAAABB8Bzz/xAAYEQACAwAAAAAAAAAAAAAAAAABESAhMf/aAAgBAwEBPxAni4f/xAAWEQADAAAAAAAAAAAAAAAAAAABIGH/2gAIAQIBAT8QET//xAAfEAEBAAIBBAMAAAAAAAAAAAABEQAhURAxQWFxgbH/2gAIAQEAAT8QfXMLx4MBNBlAYEAtec2o2X4ZrSV3L0T6s7H7grV+rcNZ/9k='); background-size: cover; display: block;"
+    style="padding-bottom: 111.20772946859903%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAWABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHtzVl0qzFCg//EABoQAAEFAQAAAAAAAAAAAAAAAAECEBESIQD/2gAIAQEAAQUCAgoVcdYSMaut/8QAFhEAAwAAAAAAAAAAAAAAAAAAASBh/9oACAEDAQE/ATU//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGhAAAgIDAAAAAAAAAAAAAAAAEBEAARIhQf/aAAgBAQAGPwK7bmhj0s//xAAdEAEAAQQDAQAAAAAAAAAAAAABABARITFRYXGB/9oACAEBAAE/IXaYc24gqp+w1HbeIDCiO+Wp/9oADAMBAAIAAwAAABB8Bzz/xAAXEQEAAwAAAAAAAAAAAAAAAAABICEx/9oACAEDAQE/EEuLh//EABYRAAMAAAAAAAAAAAAAAAAAAAEgYf/aAAgBAgEBPxARP//EAB8QAQEAAgEEAwAAAAAAAAAAAAERACFREDFBYXGBsf/aAAgBAQABPxB9cwvHgwE0GUBgQC15zajZfhmtJXcvRPqzsfuCtX6tw1n/2Q=='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -964,6 +975,7 @@ sequence
 /static/fcf01fc48bb5ea3b9410c9dce0ba724b/4aca8/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 2000w,
 /static/fcf01fc48bb5ea3b9410c9dce0ba724b/bfc6b/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 2070w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.9 CA 证书</center>
@@ -987,6 +999,7 @@ sequence
 /static/6fde8b2122ccb8f11d86e6e810988ac4/45751/https%E5%8E%9F%E7%90%86.jpg 1500w,
 /static/6fde8b2122ccb8f11d86e6e810988ac4/da229/https%E5%8E%9F%E7%90%86.jpg 1678w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.10 HTTPS 原理</center>
@@ -1030,6 +1043,7 @@ sequence
 /static/4251eb02fda744a3b36c0b574b71aae4/45751/Basic%E8%AE%A4%E8%AF%81.jpg 1500w,
 /static/4251eb02fda744a3b36c0b574b71aae4/b5562/Basic%E8%AE%A4%E8%AF%81.jpg 1572w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.11 Basic 认证原理</center>
@@ -1054,6 +1068,7 @@ sequence
 /static/34bfa92e7ec156b5d956440688636edc/45751/Digest%E8%AE%A4%E8%AF%81.jpg 1500w,
 /static/34bfa92e7ec156b5d956440688636edc/b5562/Digest%E8%AE%A4%E8%AF%81.jpg 1572w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        loading="lazy"
       />
     </span></p>
 <center>图 4.12 Digest 认证原理</center>
@@ -1118,4 +1133,4 @@ sequence
 <li><a href="https://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&#x26;mid=2653578381&#x26;idx=1&#x26;sn=3f676e2b2e08bcff831c69d31cf51c51&#x26;chksm=84b3b68ab3c43f9c9f5fc826f462494dc8457d8994c3789007b7182e3d30e86876688ea1bc8f&#x26;mpshare=1&#x26;scene=1&#x26;srcid=1215muPmHY8jyQT277grjyvE#rd">彻底弄懂 Http 缓存机制 - 基于缓存策略三要素分解法</a></li>
 <li><a href="https://segmentfault.com/a/1190000016199807">10分钟彻底搞懂Http的强制缓存和协商缓存 - SegmentFault 思否</a></li>
 <li><a href="https://www.wosign.com/faq/faq2016-0216-01.htm">SSL双向认证原理,SSL单向认证原理,SSL双向认证和SSL单向认证的区别-沃通WoSign SSL证书!</a></li>
-</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/NetWork-HTTP 协议基础/";window.webpackCompilationHash="86529098ee50ae55f80b";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-057cba1681ad26bddda3.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-e72219a640df2db8c933.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-e88c8354829972883913.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-5c87e0693ead8641dccc.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-0109a20d1183a52282f0.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-c697479305b644bc4c25.js"]};/*]]>*/</script><script src="/webpack-runtime-46d4ae3085e34eb0ed72.js" async=""></script><script src="/styles-93864435329019b31a3d.js" async=""></script><script src="/app-057cba1681ad26bddda3.js" async=""></script><script src="/component---src-templates-blog-template-tsx-e88c8354829972883913.js" async=""></script><script src="/1-6f65283a0d0dcba7d777.js" async=""></script></body></html>
+</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/NetWork-HTTP 协议基础/";window.webpackCompilationHash="939c21a038fa74314c13";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-bedd9bf23f8f411ea984.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-f53cf433e5869944bc76.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-cb0bfaeffbf3c3233e95.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-5b493e6086a7aed6d077.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-a25bb08b388f0f5eb223.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-61412c1cc1667c9e6505.js"]};/*]]>*/</script><script src="/webpack-runtime-9db5e2808e004c034889.js" async=""></script><script src="/styles-185c0ff4ffdb99aec474.js" async=""></script><script src="/app-bedd9bf23f8f411ea984.js" async=""></script><script src="/component---src-templates-blog-template-tsx-cb0bfaeffbf3c3233e95.js" async=""></script><script src="/1-5d140a3f4822deb9b463.js" async=""></script></body></html>
