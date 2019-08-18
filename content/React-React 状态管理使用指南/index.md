@@ -1,6 +1,6 @@
 ---
 title: React 状态管理使用指南
-date: 2019-08-11 15:59:54
+date: 2019-08-11 08:59:54
 category: React
 tags: React_Usage
 ---
@@ -10,7 +10,7 @@ tags: React_Usage
 <!-- toc -->
 - [1. 引言](#1-引言)
 - [2. 状态管理之 Redux 解决方案](#2-状态管理之-redux-解决方案)
-- [3. 状态管理之 MobX 解决方案](#3-状态管理之-mobX-解决方案)
+- [3. 状态管理之 MobX 解决方案](#3-状态管理之-mobx-解决方案)
 - [4. 这个 example 长啥样](#4-这个-example-长啥样)
 - [5. Classic React App with Redux](#5-Classic-React-App-with-Redux)
 - [6. Classic React App with Mobx](#6-Classic-React-App-with-Mobx)
