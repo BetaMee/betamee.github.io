@@ -18,28 +18,28 @@ tags: JS_Basic 读书笔记
 
 ## 作用域与闭包
 
-![JS代码执行机制](./1.JS代码执行机制.png)
+![JS代码执行机制](./attachments/1.JS代码执行机制.png)
 
-![作用域是什么](./2.作用域是什么.png)
+![作用域是什么](./attachments/2.作用域是什么.png)
 
-![词法作用域](./3.词法作用域.png)
+![词法作用域](./attachments/3.词法作用域.png)
 
-![函数作用域和块级作用域](./4.函数作用域和块级作用域.png)
+![函数作用域和块级作用域](./attachments/4.函数作用域和块级作用域.png)
 
-![提升](./5.提升.png)
+![提升](./attachments/5.提升.png)
 
-![作用域闭包](./6.作用域闭包.png)
+![作用域闭包](./attachments/6.作用域闭包.png)
 
 ## this 和原型对象
 
-![关于this](./1.关于this.png)
+![关于this](./attachments/1.关于this.png)
 
-![this全面解析](./2.this全面解析.png)
+![this全面解析](./attachments/2.this全面解析.png)
 
-![对象](./3.对象.png)
+![对象](./attachments/3.对象.png)
 
-![混合对象“类”](./4.混合对象“类”.png)
+![混合对象“类”](./attachments/4.混合对象“类”.png)
 
-![原型机制](./5.原型机制.png)
+![原型机制](./attachments/5.原型机制.png)
 
-![行为委托](./6.行为委托.png)
+![行为委托](./attachments/6.行为委托.png)
