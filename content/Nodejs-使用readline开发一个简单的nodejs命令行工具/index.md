@@ -138,7 +138,7 @@ const handleSetDataFromReadline = (line: string) => {
 
 最后当都完成问题后，调用 `rl.close()` 来关闭命令行，这时候会触发 `close` 事件。在 `close` 事件的回调函数中，我们可以对输入获取到的数据进行处理，比如生成一个文件或者其他工作：
 
-![](./attachments/done.png)
+![](./attachments/done1.png)
 
 ![](./attachments/done2.png)
 
