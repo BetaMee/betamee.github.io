@@ -12,7 +12,7 @@ openreword: true
 
 这个工具的好处在于它提供了一套处理数据的接口，使用 graphql 进行查询，至于你用这个数据怎么玩，怎么展示，它不管，最终生成的是一个个静态页面。这就给了我非常高的自由度，可以自由定义页面、组件、功能。
 
-现在的这个 [GitHub 仓库](https://github.com/BetaMee/betamee.github.io)就是我用 Gatsby 进行开发的源码，所有的博客文章都在 `/content` 文件夹下。上周呢，我新增了 TravisCI 进行自动部署，它会在它自己的服务器上上跑 `yarn run build`，然后将生成的 `public` 文件夹下的内容自动 deploy 到 `master` 分支上。 
+现在的这个 [GitHub 仓库](https://github.com/BetaMee/betamee.github.io)就是我用 Gatsby 进行开发的源码，所有的博客文章都在 `/content` 文件夹下。上周呢，我新增了 TravisCI 进行自动部署，它会在它自己的服务器上跑 `yarn run build`，然后将生成的 `public` 文件夹下的内容自动 deploy 到 `master` 分支上。 
 
 到这一步，基本上已经很自动化了，不过还有一个比较难办的问题，就是每次新增一个新的文件，都需要手动添加文件夹、添加新文件、添加新的 meta 信息。所以我想着自己搞一个命令行工具来解决这个痛点。这就是本次介绍的内容：**使用readline开发一个简单的nodejs命令行工具**。
 
