@@ -17,13 +17,13 @@
     "gatsby-source-filesystem": "^2.1.5",
     "gatsby-transformer-remark": "^2.6.4",
     "gatsby-transformer-sharp": "^2.2.3",
-    "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
     "typography": "^0.16.19",
     "typography-plugin-code": "^0.16.19",
@@ -40,9 +40,11 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && node ./scripts/deploy-github"
+    "deploy": "gatsby build && ts-node ./scripts/deploy-github",
+    "init": "ts-node ./scripts/initblog"
   },
   "devDependencies": {
+    "@types/node": "^12.7.2",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",

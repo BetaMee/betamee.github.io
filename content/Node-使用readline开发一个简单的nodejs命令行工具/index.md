@@ -16,6 +16,8 @@ openreword: true
 
 到这一步，基本上已经很自动化了，不过还有一个比较难办的问题，就是每次新增一个新的文件，都需要手动添加文件夹、添加新文件、添加新的 meta 信息。所以我想着自己搞一个命令行工具来解决这个痛点。这就是本次介绍的内容：**使用readline开发一个简单的nodejs命令行工具**。
 
+具体源码可见：[BetaMee/betamee.github.io](https://github.com/BetaMee/betamee.github.io/blob/source-code/scripts/initblog.ts)
+
 ## readline 对象
 
 这里用到的第一个 nodejs api 是 [readeline](https://nodejs.org/dist/latest-v10.x/docs/api/readline.html)。
