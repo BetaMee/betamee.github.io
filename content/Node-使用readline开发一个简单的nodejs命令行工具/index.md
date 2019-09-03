@@ -3,7 +3,7 @@ title: 使用readline开发一个简单的nodejs命令行工具
 date: 2019-08-18 09:35:53
 category: Node
 tags: Node cli
-openreword: true
+openreward: true
 ---
 
 ## 前言
@@ -157,7 +157,7 @@ const fsWriteFileAsync = promisify(fs.writeFile)
 
 const handleCreateNewTemplate = async () => {
   // tslint:disable-next-line: max-line-length
-  const metaInfo = `---\r\ntitle: ${MetaResult[0]}\r\ndate: ${createDate()}\r\ncategory: ${MetaResult[1]}\r\ntags: ${MetaResult[2]}\r\nopenreword: ${MetaResult[3]}\r\n---`
+  const metaInfo = `---\r\ntitle: ${MetaResult[0]}\r\ndate: ${createDate()}\r\ncategory: ${MetaResult[1]}\r\ntags: ${MetaResult[2]}\r\nopenreward: ${MetaResult[3]}\r\n---`
 
   const newPostDir = `${newPostDirPath}${MetaResult[1]}-${MetaResult[0]}`
   // 创建目录

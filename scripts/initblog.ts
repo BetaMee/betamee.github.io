@@ -119,7 +119,7 @@ const createDate = () => {
 
 const handleCreateNewTemplate = async () => {
   // tslint:disable-next-line: max-line-length
-  const metaInfo = `---\r\ntitle: ${MetaResult[0]}\r\ndate: ${createDate()}\r\ncategory: ${MetaResult[1]}\r\ntags: ${MetaResult[2]}\r\nopenreword: ${MetaResult[3]}\r\n---`
+  const metaInfo = `---\r\ntitle: ${MetaResult[0]}\r\ndate: ${createDate()}\r\ncategory: ${MetaResult[1]}\r\ntags: ${MetaResult[2]}\r\nopenreward: ${MetaResult[3]}\r\n---`
 
   const newPostDir = `${newPostDirPath}${MetaResult[1]}-${MetaResult[0]}`
   // 创建目录
