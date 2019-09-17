@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/BetaMee/betamee.github.io.svg?branch=source-code)](https://travis-ci.org/BetaMee/betamee.github.io)
 
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
+
 ## 技术学习纲领
 
 ![技术学习纲领](./site/技术学习纲领.png)
