@@ -1,7 +1,7 @@
 {
   "name": "betamee.github.io",
   "description": "blog site repo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "BetaMee <gongxq95@gmail.com>",
   "husky": {
     "hooks": {
@@ -47,7 +47,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build && ts-node ./scripts/deploy-github",
     "init": "ts-node ./scripts/initblog",
-    "release": "standard-version"
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major",
+    "release:patch": "standard-version --release-as patch"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
