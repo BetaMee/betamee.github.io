@@ -1,5 +1,4 @@
 {
-    "changelogHeader": "# CHANGELOG \/n This md file is used to log all commit for betamee.github.io \/n\/n",
     "types": [
         {"type": "feat", "section": "Features"},
         {"type": "fix", "section": "Bug Fixes"},
