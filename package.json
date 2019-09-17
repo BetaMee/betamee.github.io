@@ -1,7 +1,7 @@
 {
   "name": "betamee.github.io",
   "description": "blog site repo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "BetaMee <gongxq95@gmail.com>",
   "husky": {
     "hooks": {
