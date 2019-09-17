@@ -36,7 +36,7 @@ const ImageViewer: React.FC<IProps> = ({ imageUrl, description, closeViewer }) =
         </span>
       </div>
     </div>
-  )  
+  )
 }
 
 export default ImageViewer
