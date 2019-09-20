@@ -123,7 +123,7 @@ module.exports = {
 "release:patch": "standard-version --release-as patch && git push --follow-tags"
 ```
 
-这里的 `minor`、`major`、`patch`，是指 Semver 规范版本号，这个后面我会再整理一篇文章出来，整理一下语义化版本号的知识。每一个正式软件版本可以用`minor.major.patch`来表示，使用 `release:minor` 可以将当前项目由 `1.0.0` 升级到 `2.0.0，相似的，`release:major` 升级次版本号，`release:patch` 升级小版本号。
+这里的 `minor`、`major`、`patch`，是指 Semver 规范版本号，这个后面我会再整理一篇文章出来，整理一下语义化版本号的知识。每一个正式软件版本可以用`minor.major.patch`来表示，使用 `release:minor` 可以将当前项目由 `1.0.0` 升级到 `2.0.0`，相似的，`release:major` 升级次版本号，`release:patch` 升级小版本号。
 
 通过这样的命令，`standard-version` 可以帮助我们生成一份 CHANGELOG.md、升级版本、发布新的 tag、发布 Github release。非常自动化：
 
