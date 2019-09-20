@@ -21,6 +21,8 @@
 
 * [JavaScript 模块化总结](https://betamee.github.io/content/WebFrontEnd-JavaScript%20%E6%A8%A1%E5%9D%97%E5%8C%96%E6%80%BB%E7%BB%93/)
 
+* [Commit 规范与 CHANGELOG 生成](https://betamee.github.io/content/WebFrontEnd-Commit%20%E8%A7%84%E8%8C%83%E4%B8%8E%20CHANGELOG%20%E7%94%9F%E6%88%90/#changelog-%E7%94%9F%E6%88%90)
+
 ### React
 
 * [React 状态管理使用指南](https://betamee.github.io/content/React-React%20%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/)
