@@ -39,3 +39,5 @@
 ### SystemLogs
 
 * [Mac 环境安装](https://betamee.github.io/content/SystemLogs-Mac%20%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/)
+
+* [优质学习资源站点](https://betamee.github.io/content/SystemLog-%E4%BC%98%E8%B4%A8%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E7%AB%99%E7%82%B9/)
