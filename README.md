@@ -23,6 +23,8 @@
 
 * [Commit 规范与 CHANGELOG 生成](https://betamee.github.io/content/WebFrontEnd-Commit%20%E8%A7%84%E8%8C%83%E4%B8%8E%20CHANGELOG%20%E7%94%9F%E6%88%90/)
 
+* [语义版本知识](https://betamee.github.io/content/WebFrontEnd-%E8%AF%AD%E4%B9%89%E7%89%88%E6%9C%AC%E7%9F%A5%E8%AF%86/)
+
 ### React
 
 * [React 状态管理使用指南](https://betamee.github.io/content/React-React%20%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/)
