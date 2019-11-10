@@ -11,6 +11,8 @@ tags: _about
 
 For Test...to be continued...
 
+![self](./images/self.jpg)
+
 ![gongxq](./images/gongxq.jpg)
 
 ![gongxq2](./images/gongxq2.JPG)
