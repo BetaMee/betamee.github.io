@@ -40,7 +40,7 @@
     h6 .anchor:focus svg {
       visibility: visible;
     }
-  </style><meta name="generator" content="Gatsby 2.17.10"/><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><link as="script" rel="preload" href="/styles-0b30694706a50f59d555.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-520966b0d621752aead5.js"/><link as="script" rel="preload" href="/commons-b6b81e9df85fc06b374c.js"/><link as="script" rel="preload" href="/app-91dea7ab0a3ffd99b2a1.js"/><link as="script" rel="preload" href="/webpack-runtime-2e46839dae40b156dee8.js"/><link as="fetch" rel="preload" href="/page-data/content/NetWork-HTTP 协议基础/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">HTTP 协议基础</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2019-07-10</span></div><div class="blog-module--tags--20J6V"><a href="/tag/Net_Basic">#<!-- -->Net_Basic</a><a href="/tag/HTTP">#<!-- -->HTTP</a></div></div><div><h2 id="目录"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
+  </style><meta name="generator" content="Gatsby 2.18.7"/><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><link as="script" rel="preload" href="/styles-f7c8d31f2eddcbeaba47.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-fb9165298f6a73d01f58.js"/><link as="script" rel="preload" href="/commons-585c18cbbbc01686e12d.js"/><link as="script" rel="preload" href="/app-009fd7a9880c6b1abe7b.js"/><link as="script" rel="preload" href="/webpack-runtime-c8645f8b03a892ec02db.js"/><link as="fetch" rel="preload" href="/page-data/content/NetWork-HTTP 协议基础/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">HTTP 协议基础</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2019-07-10</span></div><div class="blog-module--tags--20J6V"><a href="/tag/Net_Basic">#<!-- -->Net_Basic</a><a href="/tag/HTTP">#<!-- -->HTTP</a></div></div><div><h2 id="目录"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
 <ul>
 <li><a href="#1-%E5%BC%95%E8%A8%80">1. 引言</a></li>
 <li>
@@ -121,11 +121,11 @@
         class="gatsby-resp-image-image"
         alt="TCP/IP 协议族分层"
         title="TCP/IP 协议族分层"
-        src="/static/7f53c8689927e73f4b71b9a25633e203/971c4/TCP_IP%E5%88%86%E5%B1%82.jpg"
-        srcset="/static/7f53c8689927e73f4b71b9a25633e203/9fb78/TCP_IP%E5%88%86%E5%B1%82.jpg 250w,
-/static/7f53c8689927e73f4b71b9a25633e203/48a11/TCP_IP%E5%88%86%E5%B1%82.jpg 500w,
-/static/7f53c8689927e73f4b71b9a25633e203/971c4/TCP_IP%E5%88%86%E5%B1%82.jpg 1000w,
-/static/7f53c8689927e73f4b71b9a25633e203/2dc14/TCP_IP%E5%88%86%E5%B1%82.jpg 1094w"
+        src="/static/7f53c8689927e73f4b71b9a25633e203/7e3f6/TCP_IP%E5%88%86%E5%B1%82.jpg"
+        srcset="/static/7f53c8689927e73f4b71b9a25633e203/74ce1/TCP_IP%E5%88%86%E5%B1%82.jpg 250w,
+/static/7f53c8689927e73f4b71b9a25633e203/c635c/TCP_IP%E5%88%86%E5%B1%82.jpg 500w,
+/static/7f53c8689927e73f4b71b9a25633e203/7e3f6/TCP_IP%E5%88%86%E5%B1%82.jpg 1000w,
+/static/7f53c8689927e73f4b71b9a25633e203/a5204/TCP_IP%E5%88%86%E5%B1%82.jpg 1094w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -159,11 +159,11 @@
         class="gatsby-resp-image-image"
         alt="TCP    "
         title="TCP    "
-        src="/static/6fbf05f516695418fb81f5cedc9c54ab/971c4/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg"
-        srcset="/static/6fbf05f516695418fb81f5cedc9c54ab/9fb78/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg 250w,
-/static/6fbf05f516695418fb81f5cedc9c54ab/48a11/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg 500w,
-/static/6fbf05f516695418fb81f5cedc9c54ab/971c4/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg 1000w,
-/static/6fbf05f516695418fb81f5cedc9c54ab/d1b48/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg 1268w"
+        src="/static/6fbf05f516695418fb81f5cedc9c54ab/7e3f6/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg"
+        srcset="/static/6fbf05f516695418fb81f5cedc9c54ab/74ce1/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg 250w,
+/static/6fbf05f516695418fb81f5cedc9c54ab/c635c/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg 500w,
+/static/6fbf05f516695418fb81f5cedc9c54ab/7e3f6/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg 1000w,
+/static/6fbf05f516695418fb81f5cedc9c54ab/0fa30/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg 1268w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -185,11 +185,11 @@
         class="gatsby-resp-image-image"
         alt="DNS"
         title="DNS"
-        src="/static/63f75f46bae4a737dfa7eb6742149f5c/971c4/DNS.jpg"
-        srcset="/static/63f75f46bae4a737dfa7eb6742149f5c/9fb78/DNS.jpg 250w,
-/static/63f75f46bae4a737dfa7eb6742149f5c/48a11/DNS.jpg 500w,
-/static/63f75f46bae4a737dfa7eb6742149f5c/971c4/DNS.jpg 1000w,
-/static/63f75f46bae4a737dfa7eb6742149f5c/6c315/DNS.jpg 1280w"
+        src="/static/63f75f46bae4a737dfa7eb6742149f5c/7e3f6/DNS.jpg"
+        srcset="/static/63f75f46bae4a737dfa7eb6742149f5c/74ce1/DNS.jpg 250w,
+/static/63f75f46bae4a737dfa7eb6742149f5c/c635c/DNS.jpg 500w,
+/static/63f75f46bae4a737dfa7eb6742149f5c/7e3f6/DNS.jpg 1000w,
+/static/63f75f46bae4a737dfa7eb6742149f5c/e7068/DNS.jpg 1280w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -325,12 +325,12 @@ sequence
         class="gatsby-resp-image-image"
         alt="HTTP 报文"
         title="HTTP 报文"
-        src="/static/bdf03db9a82bfcd58fec5041574aa69d/971c4/meta.jpg"
-        srcset="/static/bdf03db9a82bfcd58fec5041574aa69d/9fb78/meta.jpg 250w,
-/static/bdf03db9a82bfcd58fec5041574aa69d/48a11/meta.jpg 500w,
-/static/bdf03db9a82bfcd58fec5041574aa69d/971c4/meta.jpg 1000w,
-/static/bdf03db9a82bfcd58fec5041574aa69d/45751/meta.jpg 1500w,
-/static/bdf03db9a82bfcd58fec5041574aa69d/da229/meta.jpg 1678w"
+        src="/static/bdf03db9a82bfcd58fec5041574aa69d/7e3f6/meta.jpg"
+        srcset="/static/bdf03db9a82bfcd58fec5041574aa69d/74ce1/meta.jpg 250w,
+/static/bdf03db9a82bfcd58fec5041574aa69d/c635c/meta.jpg 500w,
+/static/bdf03db9a82bfcd58fec5041574aa69d/7e3f6/meta.jpg 1000w,
+/static/bdf03db9a82bfcd58fec5041574aa69d/db64a/meta.jpg 1500w,
+/static/bdf03db9a82bfcd58fec5041574aa69d/27b9d/meta.jpg 1678w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -768,12 +768,12 @@ sequence
         class="gatsby-resp-image-image"
         alt="      "
         title="      "
-        src="/static/f085a1fffdbb02140d44994b122f736c/971c4/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg"
-        srcset="/static/f085a1fffdbb02140d44994b122f736c/9fb78/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 250w,
-/static/f085a1fffdbb02140d44994b122f736c/48a11/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 500w,
-/static/f085a1fffdbb02140d44994b122f736c/971c4/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1000w,
-/static/f085a1fffdbb02140d44994b122f736c/45751/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1500w,
-/static/f085a1fffdbb02140d44994b122f736c/8944e/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1944w"
+        src="/static/f085a1fffdbb02140d44994b122f736c/7e3f6/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg"
+        srcset="/static/f085a1fffdbb02140d44994b122f736c/74ce1/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 250w,
+/static/f085a1fffdbb02140d44994b122f736c/c635c/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 500w,
+/static/f085a1fffdbb02140d44994b122f736c/7e3f6/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1000w,
+/static/f085a1fffdbb02140d44994b122f736c/db64a/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1500w,
+/static/f085a1fffdbb02140d44994b122f736c/12df1/%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1944w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -796,12 +796,12 @@ sequence
         class="gatsby-resp-image-image"
         alt="      "
         title="      "
-        src="/static/bb49846a8e9d7d2820af31ab5905a5c9/971c4/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg"
-        srcset="/static/bb49846a8e9d7d2820af31ab5905a5c9/9fb78/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 250w,
-/static/bb49846a8e9d7d2820af31ab5905a5c9/48a11/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 500w,
-/static/bb49846a8e9d7d2820af31ab5905a5c9/971c4/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1000w,
-/static/bb49846a8e9d7d2820af31ab5905a5c9/45751/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1500w,
-/static/bb49846a8e9d7d2820af31ab5905a5c9/8944e/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1944w"
+        src="/static/bb49846a8e9d7d2820af31ab5905a5c9/7e3f6/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg"
+        srcset="/static/bb49846a8e9d7d2820af31ab5905a5c9/74ce1/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 250w,
+/static/bb49846a8e9d7d2820af31ab5905a5c9/c635c/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 500w,
+/static/bb49846a8e9d7d2820af31ab5905a5c9/7e3f6/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1000w,
+/static/bb49846a8e9d7d2820af31ab5905a5c9/db64a/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1500w,
+/static/bb49846a8e9d7d2820af31ab5905a5c9/12df1/%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.jpg 1944w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -824,13 +824,13 @@ sequence
         class="gatsby-resp-image-image"
         alt="      "
         title="      "
-        src="/static/708dac804ac9b8d2e4bc33104efff34b/971c4/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg"
-        srcset="/static/708dac804ac9b8d2e4bc33104efff34b/9fb78/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 250w,
-/static/708dac804ac9b8d2e4bc33104efff34b/48a11/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 500w,
-/static/708dac804ac9b8d2e4bc33104efff34b/971c4/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 1000w,
-/static/708dac804ac9b8d2e4bc33104efff34b/45751/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 1500w,
-/static/708dac804ac9b8d2e4bc33104efff34b/4aca8/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 2000w,
-/static/708dac804ac9b8d2e4bc33104efff34b/0986c/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 2206w"
+        src="/static/708dac804ac9b8d2e4bc33104efff34b/7e3f6/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg"
+        srcset="/static/708dac804ac9b8d2e4bc33104efff34b/74ce1/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 250w,
+/static/708dac804ac9b8d2e4bc33104efff34b/c635c/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 500w,
+/static/708dac804ac9b8d2e4bc33104efff34b/7e3f6/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 1000w,
+/static/708dac804ac9b8d2e4bc33104efff34b/db64a/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 1500w,
+/static/708dac804ac9b8d2e4bc33104efff34b/7ef33/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 2000w,
+/static/708dac804ac9b8d2e4bc33104efff34b/36a74/%E7%BC%93%E5%AD%98%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.jpg 2206w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -851,11 +851,11 @@ sequence
         class="gatsby-resp-image-image"
         alt="HTTPS 是基于 HTTP 的安全扩展"
         title="HTTPS 是基于 HTTP 的安全扩展"
-        src="/static/423611476274beb5fc5a681107043bbf/971c4/HTTPS.jpg"
-        srcset="/static/423611476274beb5fc5a681107043bbf/9fb78/HTTPS.jpg 250w,
-/static/423611476274beb5fc5a681107043bbf/48a11/HTTPS.jpg 500w,
-/static/423611476274beb5fc5a681107043bbf/971c4/HTTPS.jpg 1000w,
-/static/423611476274beb5fc5a681107043bbf/2dc14/HTTPS.jpg 1094w"
+        src="/static/423611476274beb5fc5a681107043bbf/7e3f6/HTTPS.jpg"
+        srcset="/static/423611476274beb5fc5a681107043bbf/74ce1/HTTPS.jpg 250w,
+/static/423611476274beb5fc5a681107043bbf/c635c/HTTPS.jpg 500w,
+/static/423611476274beb5fc5a681107043bbf/7e3f6/HTTPS.jpg 1000w,
+/static/423611476274beb5fc5a681107043bbf/a5204/HTTPS.jpg 1094w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -895,12 +895,12 @@ sequence
         class="gatsby-resp-image-image"
         alt="对称加密"
         title="对称加密"
-        src="/static/e572037ba091b503cb9fb5550b3a1739/971c4/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg"
-        srcset="/static/e572037ba091b503cb9fb5550b3a1739/9fb78/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 250w,
-/static/e572037ba091b503cb9fb5550b3a1739/48a11/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 500w,
-/static/e572037ba091b503cb9fb5550b3a1739/971c4/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1000w,
-/static/e572037ba091b503cb9fb5550b3a1739/45751/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1500w,
-/static/e572037ba091b503cb9fb5550b3a1739/dde36/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1680w"
+        src="/static/e572037ba091b503cb9fb5550b3a1739/7e3f6/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg"
+        srcset="/static/e572037ba091b503cb9fb5550b3a1739/74ce1/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 250w,
+/static/e572037ba091b503cb9fb5550b3a1739/c635c/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 500w,
+/static/e572037ba091b503cb9fb5550b3a1739/7e3f6/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1000w,
+/static/e572037ba091b503cb9fb5550b3a1739/db64a/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1500w,
+/static/e572037ba091b503cb9fb5550b3a1739/17a85/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1680w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -919,12 +919,12 @@ sequence
         class="gatsby-resp-image-image"
         alt="非对称加密"
         title="非对称加密"
-        src="/static/3d0d32c877fbda326ab1f45fffdda6fa/971c4/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg"
-        srcset="/static/3d0d32c877fbda326ab1f45fffdda6fa/9fb78/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 250w,
-/static/3d0d32c877fbda326ab1f45fffdda6fa/48a11/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 500w,
-/static/3d0d32c877fbda326ab1f45fffdda6fa/971c4/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1000w,
-/static/3d0d32c877fbda326ab1f45fffdda6fa/45751/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1500w,
-/static/3d0d32c877fbda326ab1f45fffdda6fa/94497/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1702w"
+        src="/static/3d0d32c877fbda326ab1f45fffdda6fa/7e3f6/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg"
+        srcset="/static/3d0d32c877fbda326ab1f45fffdda6fa/74ce1/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 250w,
+/static/3d0d32c877fbda326ab1f45fffdda6fa/c635c/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 500w,
+/static/3d0d32c877fbda326ab1f45fffdda6fa/7e3f6/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1000w,
+/static/3d0d32c877fbda326ab1f45fffdda6fa/db64a/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1500w,
+/static/3d0d32c877fbda326ab1f45fffdda6fa/77e4a/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1702w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -943,12 +943,12 @@ sequence
         class="gatsby-resp-image-image"
         alt="非对称加密 + 对称加密"
         title="非对称加密 + 对称加密"
-        src="/static/27f7374193ac1c1aeb077533b7716a28/971c4/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg"
-        srcset="/static/27f7374193ac1c1aeb077533b7716a28/9fb78/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 250w,
-/static/27f7374193ac1c1aeb077533b7716a28/48a11/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 500w,
-/static/27f7374193ac1c1aeb077533b7716a28/971c4/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1000w,
-/static/27f7374193ac1c1aeb077533b7716a28/45751/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1500w,
-/static/27f7374193ac1c1aeb077533b7716a28/bb204/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1722w"
+        src="/static/27f7374193ac1c1aeb077533b7716a28/7e3f6/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg"
+        srcset="/static/27f7374193ac1c1aeb077533b7716a28/74ce1/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 250w,
+/static/27f7374193ac1c1aeb077533b7716a28/c635c/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 500w,
+/static/27f7374193ac1c1aeb077533b7716a28/7e3f6/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1000w,
+/static/27f7374193ac1c1aeb077533b7716a28/db64a/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1500w,
+/static/27f7374193ac1c1aeb077533b7716a28/71774/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%2B%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.jpg 1722w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -967,13 +967,13 @@ sequence
         class="gatsby-resp-image-image"
         alt="CA证书原理"
         title="CA证书原理"
-        src="/static/fcf01fc48bb5ea3b9410c9dce0ba724b/971c4/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg"
-        srcset="/static/fcf01fc48bb5ea3b9410c9dce0ba724b/9fb78/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 250w,
-/static/fcf01fc48bb5ea3b9410c9dce0ba724b/48a11/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 500w,
-/static/fcf01fc48bb5ea3b9410c9dce0ba724b/971c4/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 1000w,
-/static/fcf01fc48bb5ea3b9410c9dce0ba724b/45751/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 1500w,
-/static/fcf01fc48bb5ea3b9410c9dce0ba724b/4aca8/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 2000w,
-/static/fcf01fc48bb5ea3b9410c9dce0ba724b/bfc6b/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 2070w"
+        src="/static/fcf01fc48bb5ea3b9410c9dce0ba724b/7e3f6/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg"
+        srcset="/static/fcf01fc48bb5ea3b9410c9dce0ba724b/74ce1/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 250w,
+/static/fcf01fc48bb5ea3b9410c9dce0ba724b/c635c/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 500w,
+/static/fcf01fc48bb5ea3b9410c9dce0ba724b/7e3f6/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 1000w,
+/static/fcf01fc48bb5ea3b9410c9dce0ba724b/db64a/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 1500w,
+/static/fcf01fc48bb5ea3b9410c9dce0ba724b/7ef33/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 2000w,
+/static/fcf01fc48bb5ea3b9410c9dce0ba724b/56333/CA%E8%AF%81%E4%B9%A6%E5%8E%9F%E7%90%86.jpg 2070w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -992,12 +992,12 @@ sequence
         class="gatsby-resp-image-image"
         alt="https原理"
         title="https原理"
-        src="/static/6fde8b2122ccb8f11d86e6e810988ac4/971c4/https%E5%8E%9F%E7%90%86.jpg"
-        srcset="/static/6fde8b2122ccb8f11d86e6e810988ac4/9fb78/https%E5%8E%9F%E7%90%86.jpg 250w,
-/static/6fde8b2122ccb8f11d86e6e810988ac4/48a11/https%E5%8E%9F%E7%90%86.jpg 500w,
-/static/6fde8b2122ccb8f11d86e6e810988ac4/971c4/https%E5%8E%9F%E7%90%86.jpg 1000w,
-/static/6fde8b2122ccb8f11d86e6e810988ac4/45751/https%E5%8E%9F%E7%90%86.jpg 1500w,
-/static/6fde8b2122ccb8f11d86e6e810988ac4/da229/https%E5%8E%9F%E7%90%86.jpg 1678w"
+        src="/static/6fde8b2122ccb8f11d86e6e810988ac4/7e3f6/https%E5%8E%9F%E7%90%86.jpg"
+        srcset="/static/6fde8b2122ccb8f11d86e6e810988ac4/74ce1/https%E5%8E%9F%E7%90%86.jpg 250w,
+/static/6fde8b2122ccb8f11d86e6e810988ac4/c635c/https%E5%8E%9F%E7%90%86.jpg 500w,
+/static/6fde8b2122ccb8f11d86e6e810988ac4/7e3f6/https%E5%8E%9F%E7%90%86.jpg 1000w,
+/static/6fde8b2122ccb8f11d86e6e810988ac4/db64a/https%E5%8E%9F%E7%90%86.jpg 1500w,
+/static/6fde8b2122ccb8f11d86e6e810988ac4/27b9d/https%E5%8E%9F%E7%90%86.jpg 1678w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -1036,12 +1036,12 @@ sequence
         class="gatsby-resp-image-image"
         alt="Basic 认证原理"
         title="Basic 认证原理"
-        src="/static/4251eb02fda744a3b36c0b574b71aae4/971c4/Basic%E8%AE%A4%E8%AF%81.jpg"
-        srcset="/static/4251eb02fda744a3b36c0b574b71aae4/9fb78/Basic%E8%AE%A4%E8%AF%81.jpg 250w,
-/static/4251eb02fda744a3b36c0b574b71aae4/48a11/Basic%E8%AE%A4%E8%AF%81.jpg 500w,
-/static/4251eb02fda744a3b36c0b574b71aae4/971c4/Basic%E8%AE%A4%E8%AF%81.jpg 1000w,
-/static/4251eb02fda744a3b36c0b574b71aae4/45751/Basic%E8%AE%A4%E8%AF%81.jpg 1500w,
-/static/4251eb02fda744a3b36c0b574b71aae4/b5562/Basic%E8%AE%A4%E8%AF%81.jpg 1572w"
+        src="/static/4251eb02fda744a3b36c0b574b71aae4/7e3f6/Basic%E8%AE%A4%E8%AF%81.jpg"
+        srcset="/static/4251eb02fda744a3b36c0b574b71aae4/74ce1/Basic%E8%AE%A4%E8%AF%81.jpg 250w,
+/static/4251eb02fda744a3b36c0b574b71aae4/c635c/Basic%E8%AE%A4%E8%AF%81.jpg 500w,
+/static/4251eb02fda744a3b36c0b574b71aae4/7e3f6/Basic%E8%AE%A4%E8%AF%81.jpg 1000w,
+/static/4251eb02fda744a3b36c0b574b71aae4/db64a/Basic%E8%AE%A4%E8%AF%81.jpg 1500w,
+/static/4251eb02fda744a3b36c0b574b71aae4/193b0/Basic%E8%AE%A4%E8%AF%81.jpg 1572w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -1061,12 +1061,12 @@ sequence
         class="gatsby-resp-image-image"
         alt="Digest 认证原理"
         title="Digest 认证原理"
-        src="/static/34bfa92e7ec156b5d956440688636edc/971c4/Digest%E8%AE%A4%E8%AF%81.jpg"
-        srcset="/static/34bfa92e7ec156b5d956440688636edc/9fb78/Digest%E8%AE%A4%E8%AF%81.jpg 250w,
-/static/34bfa92e7ec156b5d956440688636edc/48a11/Digest%E8%AE%A4%E8%AF%81.jpg 500w,
-/static/34bfa92e7ec156b5d956440688636edc/971c4/Digest%E8%AE%A4%E8%AF%81.jpg 1000w,
-/static/34bfa92e7ec156b5d956440688636edc/45751/Digest%E8%AE%A4%E8%AF%81.jpg 1500w,
-/static/34bfa92e7ec156b5d956440688636edc/b5562/Digest%E8%AE%A4%E8%AF%81.jpg 1572w"
+        src="/static/34bfa92e7ec156b5d956440688636edc/7e3f6/Digest%E8%AE%A4%E8%AF%81.jpg"
+        srcset="/static/34bfa92e7ec156b5d956440688636edc/74ce1/Digest%E8%AE%A4%E8%AF%81.jpg 250w,
+/static/34bfa92e7ec156b5d956440688636edc/c635c/Digest%E8%AE%A4%E8%AF%81.jpg 500w,
+/static/34bfa92e7ec156b5d956440688636edc/7e3f6/Digest%E8%AE%A4%E8%AF%81.jpg 1000w,
+/static/34bfa92e7ec156b5d956440688636edc/db64a/Digest%E8%AE%A4%E8%AF%81.jpg 1500w,
+/static/34bfa92e7ec156b5d956440688636edc/193b0/Digest%E8%AE%A4%E8%AF%81.jpg 1572w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         loading="lazy"
       />
@@ -1133,4 +1133,4 @@ sequence
 <li><a href="https://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&#x26;mid=2653578381&#x26;idx=1&#x26;sn=3f676e2b2e08bcff831c69d31cf51c51&#x26;chksm=84b3b68ab3c43f9c9f5fc826f462494dc8457d8994c3789007b7182e3d30e86876688ea1bc8f&#x26;mpshare=1&#x26;scene=1&#x26;srcid=1215muPmHY8jyQT277grjyvE#rd">彻底弄懂 Http 缓存机制 - 基于缓存策略三要素分解法</a></li>
 <li><a href="https://segmentfault.com/a/1190000016199807">10分钟彻底搞懂Http的强制缓存和协商缓存 - SegmentFault 思否</a></li>
 <li><a href="https://www.wosign.com/faq/faq2016-0216-01.htm">SSL双向认证原理,SSL单向认证原理,SSL双向认证和SSL单向认证的区别-沃通WoSign SSL证书!</a></li>
-</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/NetWork-HTTP 协议基础/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-91dea7ab0a3ffd99b2a1.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-e3afe4c2388628664a0a.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-520966b0d621752aead5.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-e455974bf9cc1f5e8c02.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-077485fa72a0edcd0d5c.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-3b11ca95711e6f7fd09f.js"]};/*]]>*/</script><script src="/webpack-runtime-2e46839dae40b156dee8.js" async=""></script><script src="/app-91dea7ab0a3ffd99b2a1.js" async=""></script><script src="/commons-b6b81e9df85fc06b374c.js" async=""></script><script src="/component---src-templates-blog-template-tsx-520966b0d621752aead5.js" async=""></script><script src="/styles-0b30694706a50f59d555.js" async=""></script></body></html>
+</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/NetWork-HTTP 协议基础/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-009fd7a9880c6b1abe7b.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-dc41ec17d336dae95156.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-fb9165298f6a73d01f58.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-15b7ed9fb5ecca0b64a4.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-f44e488ef2c155b6ac37.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-92988b7a7061e3b0cc6d.js"]};/*]]>*/</script><script src="/webpack-runtime-c8645f8b03a892ec02db.js" async=""></script><script src="/app-009fd7a9880c6b1abe7b.js" async=""></script><script src="/commons-585c18cbbbc01686e12d.js" async=""></script><script src="/component---src-templates-blog-template-tsx-fb9165298f6a73d01f58.js" async=""></script><script src="/styles-f7c8d31f2eddcbeaba47.js" async=""></script></body></html>
