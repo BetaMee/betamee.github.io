@@ -4,7 +4,7 @@ import { promisify } from 'util'
 
 const QuestionsPrompt = [
   '请输入文章\x1b[37;44m 标题 \x1b[0m\x1b[37;46m > \x1b[0m',
-  '请输入文章\x1b[37;44m 类别 \x1b[0m\x1b[37;46m > \x1b[0m ',
+  '请输入文章\x1b[37;44m 类别 \x1b[0m\x1b[37;46m > \x1b[0m',
   '请输入文章\x1b[37;44m 标签 \x1b[0m\x1b[37;46m > \x1b[0m',
   '是否需要开启\x1b[37;44m 打赏[y or n] \x1b[0m\x1b[37;46m > \x1b[0m'
 ]
