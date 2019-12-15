@@ -11,13 +11,13 @@ openreward: true
 <!-- toc -->
 
 - [结构型设计模式](#结构型设计模式)
-  * [1.外观模式（Facade）](#1外观模式（Facade）)
-  * [2.适配器模式（Adapter）](#2适配器模式（Adapter）)
-  * [3.代理模式（Proxy）](#3代理模式（Proxy）)
-  * [4.装饰者模式（Decorator）](#4装饰者模式（Decorator）)
-  * [5.桥接模式（Bridge）](#5桥接模式（Bridge）)
-  * [6.组合模式（Composite）](#6组合模式（Composite）)
-  * [7.享元模式（Flyweight）](#7享元模式（Flyweight）)
+  * [1.外观模式（Facade）](#1外观模式（facade）)
+  * [2.适配器模式（Adapter）](#2适配器模式（adapter）)
+  * [3.代理模式（Proxy）](#3代理模式（proxy）)
+  * [4.装饰者模式（Decorator）](#4装饰者模式（decorator）)
+  * [5.桥接模式（Bridge）](#5桥接模式（bridge）)
+  * [6.组合模式（Composite）](#6组合模式（composite）)
+  * [7.享元模式（Flyweight）](#7享元模式（flyweight）)
 
 <!-- tocstop -->
 

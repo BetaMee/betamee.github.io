@@ -13,12 +13,12 @@ openreward: true
 <!-- toc -->
 
 - [创建型设计模式](#创建型设计模式)
-  * [1. 简单工厂模式（Simple Factory）](#1-简单工厂模式（Simple-Factory）)
-  * [2. 工厂方法模式（Factory Method）](#2-工厂方法模式（Factory-Method）)
-  * [3. 抽象工厂模式（Abstract Factory）](#3-抽象工厂模式（Abstract-Factory）)
-  * [4. 建造者模式（Builder）](#4-建造者模式（Builder）)
-  * [5. 原型模式（Prototype）](#5-原型模式（Prototype）)
-  * [6. 单例模式（Singleton）](#6-单例模式（Singleton）)
+  * [1. 简单工厂模式（Simple Factory）](#1-简单工厂模式（simple-factory）)
+  * [2. 工厂方法模式（Factory Method）](#2-工厂方法模式（factory-method）)
+  * [3. 抽象工厂模式（Abstract Factory）](#3-抽象工厂模式（abstract-factory）)
+  * [4. 建造者模式（Builder）](#4-建造者模式（builder）)
+  * [5. 原型模式（Prototype）](#5-原型模式（prototype）)
+  * [6. 单例模式（Singleton）](#6-单例模式（singleton）)
 
 <!-- tocstop -->
 
