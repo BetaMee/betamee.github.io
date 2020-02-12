@@ -4,7 +4,9 @@
       if (hash !== '') {
         var element = document.getElementById(hash)
         if (element) {
-          var offset = element.offsetTop
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
           // Wait for the browser to finish rendering before scrolling.
           setTimeout((function() {
             window.scrollTo(0, offset - 0)
@@ -12,11 +14,17 @@
         }
       }
     })
-  </script><title data-react-helmet="true">十二棵橡树</title><link data-react-helmet="true" rel="icon" type="image/png" href="/static/favicon-9bf81a2b82f5028f3f4b92f88cb575ba.ico" sizes="16x16"/><style data-href="/styles.829d7849e70425445fdf.css">body{margin:0;width:100%}*{box-sizing:border-box}center{margin:20px 0;font-weight:700;color:#333}table tr td strong{min-width:50px}h1 .anchor svg,h2 .anchor svg,h3 .anchor svg,h4 .anchor svg,h5 .anchor svg,h6 .anchor svg{visibility:unset!important}pre[class*=language-]:after,pre[class*=language-]:before{box-shadow:unset!important}p>code{color:#c92c2c;background-color:#fff5f5!important}.gatsby-resp-image-wrapper{cursor:pointer}.gatsby-resp-image-background-image,.gatsby-resp-image-image{border-radius:.3em}.gatsby-highlight{margin-bottom:1.4rem}code[class*=language-],pre[class*=language-]{color:#000;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{position:relative;margin:.5em 0;overflow:visible;padding:0}pre[class*=language-]>code{position:relative;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,rgba(69,142,209,.04)));background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 0);background-size:3em 3em;background-origin:content-box;background-attachment:local}code[class*=language]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,.1);display:inline;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{content:"";z-index:-2;display:block;position:absolute;bottom:.75em;left:.18em;width:40%;height:20%;max-height:13em;box-shadow:0 13px 8px #979797;-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}:not(pre)>code[class*=language-]:after,pre[class*=language-]:after{right:.75em;left:auto;-webkit-transform:rotate(2deg);transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}.token.cr:before,.token.lf:before,.token.tab:not(:empty):before{color:#e0d7d1}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}.layout-module--header--1orMk{padding:0 20%;background-color:#693476;height:80px;display:flex;flex-direction:row;justify-content:space-between;align-items:center;box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.layout-module--title--28C2S{font-size:24px;color:#e1d0e6}.layout-module--menu--Ech1f{font-size:20px}.layout-module--menu--Ech1f a{text-decoration:none;color:#e1d0e6;padding:0 5px}.layout-module--menu--Ech1f a:hover{color:#fff}.layout-module--footer--1-u4U{height:200px;padding:0 20%;border-bottom:10px solid #693476;background-color:#fafafa;display:flex;flex-direction:column;justify-content:center}.layout-module--contact--1Z-dZ a{margin-right:6px;font-size:20px;color:#cf91e2}.layout-module--contact--1Z-dZ{margin-bottom:16px}.layout-module--siteInfo--WbGrj{font-size:20px}@media screen and (max-width:376px){.layout-module--header--1orMk{height:unset;padding:unset;background-color:unset;flex-direction:column}.layout-module--header--1orMk .layout-module--title--28C2S{padding:20px 10px;width:100%;display:flex;justify-content:center;color:#693476}.layout-module--header--1orMk .layout-module--menu--Ech1f{padding:20px 10px;width:100%;background-color:#693476;display:flex;justify-content:center}.layout-module--footer--1-u4U{padding:0 5%}}.list-module--main--_HL7O{margin:0 20%}.list-module--catalog--ToZZ4{min-height:400px;display:flex;flex-direction:column;margin:30px 0 10px}.list-module--catalog--ToZZ4 .list-module--item--2P8EQ{margin-top:10px}.list-module--catalog--ToZZ4 .list-module--year--fuRyw{font-size:46px}.list-module--catalog--ToZZ4 .list-module--link--1G28D{display:flex;flex-direction:column}.list-module--catalog--ToZZ4 .list-module--link--1G28D a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}.list-module--catalog--ToZZ4 .list-module--date--1rprK{margin-right:10px;color:#999;font-style:italic}.list-module--catalog--ToZZ4 .list-module--newcontent--2jgkA{padding:1px 5px;background-color:#693476;border-radius:4px;color:#fff;margin-left:10px;font-size:20px}.list-module--pagination--4wgvY{margin:30px 0 60px}.list-module--paginationItem--127RG{color:#333;width:35px;height:35px;display:inline-block;text-align:center;line-height:35px;font-size:18px;margin-right:10px}.list-module--itemSelected--3HOvN{background-color:#cf91e2}@media screen and (max-width:376px){.list-module--main--_HL7O{margin:0 5%}}.viewer-module--viewer--3ba3_{position:fixed;top:0;left:0;z-index:100;width:100vw;height:100vh;background-color:rgba(0,0,0,.6);display:flex;flex-direction:column;justify-content:center;align-items:center}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc{width:70%;height:80%;position:relative}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--img--9w_7t{border-radius:4px;box-shadow:inset 0 0 0 400px #fff;-o-object-fit:contain;object-fit:contain;height:100%;width:100%}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--des--3lo9I{color:#fff;text-align:center;font-size:20px;font-weight:700}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--icon--1vJ-_{cursor:pointer;margin:5px;position:absolute;top:0;right:0;width:30px;height:30px}.blog-module--content--R6Wfi{margin:60px 20% 80px}.blog-module--heading--2q6UV{margin-bottom:30px}.blog-module--title--3NoN5{font-weight:700;margin-bottom:15px}.blog-module--info--U7riw{color:#666;margin-bottom:5px}.blog-module--info--U7riw span{margin-right:5px}.blog-module--tags--20J6V a{color:#666;margin-right:5px}@media screen and (max-width:420px){.blog-module--content--R6Wfi{margin:60px 5% 80px;padding-left:10px}}.tag-module--content--1DHrR{margin:60px 20% 80px;min-height:400px}.tag-module--heading--15Jbn{margin-bottom:40px}.tag-module--link--3DsMn a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}@media screen and (max-width:376px){.tag-module--content--1DHrR{margin:60px 5% 80px;min-height:400px}}._404-module--container--2kCC_{min-height:400px;margin:60px auto 80px;display:flex;flex-direction:column;justify-content:center;align-items:center}._404-module--container--2kCC_ span{font-size:40px;font-weight:700}.about-module--content--1y3Xq{margin:60px 20% 80px;min-height:400px}@media screen and (max-width:420px){.about-module--content--1y3Xq{margin:30px 5%;padding-left:10px}}</style><link href="//fonts.googleapis.com/css?family=Patua+One:400|Cabin+Condensed:400,700" rel="stylesheet" type="text/css"/><style type="text/css">
-    .anchor {
-      float: left;
+  </script><title data-react-helmet="true">十二棵橡树</title><link data-react-helmet="true" rel="icon" type="image/png" href="/static/favicon-9bf81a2b82f5028f3f4b92f88cb575ba.ico" sizes="16x16"/><style data-href="/styles.2a251d3a8bdb853e9979.css">body{margin:0;width:100%}*{box-sizing:border-box}center{margin:20px 0;font-weight:700;color:#333}table tr td strong{min-width:50px}h1 .anchor svg,h2 .anchor svg,h3 .anchor svg,h4 .anchor svg,h5 .anchor svg,h6 .anchor svg{visibility:unset!important}pre[class*=language-]:after,pre[class*=language-]:before{box-shadow:unset!important}p>code{color:#c92c2c;background-color:#fff5f5!important}.gatsby-resp-image-wrapper{cursor:pointer}.gatsby-resp-image-background-image,.gatsby-resp-image-image{border-radius:.3em}.gatsby-highlight{margin-bottom:1.4rem}code[class*=language-],pre[class*=language-]{color:#000;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{position:relative;margin:.5em 0;overflow:visible;padding:0}pre[class*=language-]>code{position:relative;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,rgba(69,142,209,.04)));background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 0);background-size:3em 3em;background-origin:content-box;background-attachment:local}code[class*=language]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,.1);display:inline;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{content:"";z-index:-2;display:block;position:absolute;bottom:.75em;left:.18em;width:40%;height:20%;max-height:13em;box-shadow:0 13px 8px #979797;-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}:not(pre)>code[class*=language-]:after,pre[class*=language-]:after{right:.75em;left:auto;-webkit-transform:rotate(2deg);transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}.token.cr:before,.token.lf:before,.token.tab:not(:empty):before{color:#e0d7d1}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}.layout-module--header--1orMk{padding:0 20%;background-color:#693476;height:80px;display:flex;flex-direction:row;justify-content:space-between;align-items:center;box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.layout-module--title--28C2S{font-size:24px;color:#e1d0e6}.layout-module--menu--Ech1f{font-size:20px}.layout-module--menu--Ech1f a{text-decoration:none;color:#e1d0e6;padding:0 5px}.layout-module--menu--Ech1f a:hover{color:#fff}.layout-module--footer--1-u4U{height:200px;padding:0 20%;border-bottom:10px solid #693476;background-color:#fafafa;display:flex;flex-direction:column;justify-content:center}.layout-module--contact--1Z-dZ a{margin-right:6px;font-size:20px;color:#cf91e2}.layout-module--contact--1Z-dZ{margin-bottom:16px}.layout-module--siteInfo--WbGrj{font-size:20px}@media screen and (max-width:376px){.layout-module--header--1orMk{height:unset;padding:unset;background-color:unset;flex-direction:column}.layout-module--header--1orMk .layout-module--title--28C2S{padding:20px 10px;width:100%;display:flex;justify-content:center;color:#693476}.layout-module--header--1orMk .layout-module--menu--Ech1f{padding:20px 10px;width:100%;background-color:#693476;display:flex;justify-content:center}.layout-module--footer--1-u4U{padding:0 5%}}.list-module--main--_HL7O{margin:0 20%}.list-module--catalog--ToZZ4{min-height:400px;display:flex;flex-direction:column;margin:30px 0 10px}.list-module--catalog--ToZZ4 .list-module--item--2P8EQ{margin-top:10px}.list-module--catalog--ToZZ4 .list-module--year--fuRyw{font-size:46px}.list-module--catalog--ToZZ4 .list-module--link--1G28D{display:flex;flex-direction:column}.list-module--catalog--ToZZ4 .list-module--link--1G28D a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}.list-module--catalog--ToZZ4 .list-module--date--1rprK{margin-right:10px;color:#999;font-style:italic}.list-module--catalog--ToZZ4 .list-module--newcontent--2jgkA{padding:1px 5px;background-color:#693476;border-radius:4px;color:#fff;margin-left:10px;font-size:20px}.list-module--pagination--4wgvY{margin:30px 0 60px}.list-module--paginationItem--127RG{color:#333;width:35px;height:35px;display:inline-block;text-align:center;line-height:35px;font-size:18px;margin-right:10px}.list-module--itemSelected--3HOvN{background-color:#cf91e2}@media screen and (max-width:376px){.list-module--main--_HL7O{margin:0 5%}}.viewer-module--viewer--3ba3_{position:fixed;top:0;left:0;z-index:100;width:100vw;height:100vh;background-color:rgba(0,0,0,.6);display:flex;flex-direction:column;justify-content:center;align-items:center}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc{width:70%;height:80%;position:relative}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--img--9w_7t{border-radius:4px;box-shadow:inset 0 0 0 400px #fff;-o-object-fit:contain;object-fit:contain;height:100%;width:100%}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--des--3lo9I{color:#fff;text-align:center;font-size:20px;font-weight:700}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--icon--1vJ-_{cursor:pointer;margin:5px;position:absolute;top:0;right:0;width:30px;height:30px}.blog-module--content--R6Wfi{margin:60px 20% 80px}.blog-module--heading--2q6UV{margin-bottom:30px}.blog-module--title--3NoN5{font-weight:700;margin-bottom:15px}.blog-module--info--U7riw{color:#666;margin-bottom:5px}.blog-module--info--U7riw span{margin-right:5px}.blog-module--tags--20J6V a{color:#666;margin-right:5px}@media screen and (max-width:420px){.blog-module--content--R6Wfi{margin:60px 5% 80px;padding-left:10px}}.tag-module--content--1DHrR{margin:60px 20% 80px;min-height:400px}.tag-module--heading--15Jbn{margin-bottom:40px}.tag-module--link--3DsMn a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}@media screen and (max-width:376px){.tag-module--content--1DHrR{margin:60px 5% 80px;min-height:400px}}._404-module--container--2kCC_{min-height:400px;margin:60px auto 80px;display:flex;flex-direction:column;justify-content:center;align-items:center}._404-module--container--2kCC_ span{font-size:40px;font-weight:700}.about-module--content--1y3Xq{margin:60px 20% 80px;min-height:400px}@media screen and (max-width:420px){.about-module--content--1y3Xq{margin:30px 5%;padding-left:10px}}</style><link href="//fonts.googleapis.com/css?family=Patua+One:400|Cabin+Condensed:400,700" rel="stylesheet" type="text/css"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
       padding-right: 4px;
-      margin-left: -20px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
     }
     h1 .anchor svg,
     h2 .anchor svg,
@@ -40,17 +48,17 @@
     h6 .anchor:focus svg {
       visibility: visible;
     }
-  </style><meta name="generator" content="Gatsby 2.18.12"/><link as="script" rel="preload" href="/styles-f7c8d31f2eddcbeaba47.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-fb9165298f6a73d01f58.js"/><link as="script" rel="preload" href="/commons-585c18cbbbc01686e12d.js"/><link as="script" rel="preload" href="/app-5629feba1c6f6e5305f4.js"/><link as="script" rel="preload" href="/webpack-runtime-c8645f8b03a892ec02db.js"/><link as="fetch" rel="preload" href="/page-data/content/WebFrontEnd-你不知道的JavaScript/page-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">《你不知道的 JavaScript》</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2019-06-24</span></div><div class="blog-module--tags--20J6V"><a href="/tag/JS_Basic">#<!-- -->JS_Basic</a><a href="/tag/读书笔记">#<!-- -->读书笔记</a></div></div><div><blockquote>
+  </style><meta name="generator" content="Gatsby 2.19.16"/><link as="script" rel="preload" href="/styles-d8e10dc4bd92286e96e6.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-e3861aad58726100458f.js"/><link as="script" rel="preload" href="/commons-fc809561c455a4a73a62.js"/><link as="script" rel="preload" href="/app-b92cbbf43add9427c56b.js"/><link as="script" rel="preload" href="/webpack-runtime-753a804d29a19f93f235.js"/><link as="fetch" rel="preload" href="/page-data/content/WebFrontEnd-你不知道的JavaScript/page-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">《你不知道的 JavaScript》</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2019-06-24</span></div><div class="blog-module--tags--20J6V"><a href="/tag/JS_Basic">#<!-- -->JS_Basic</a><a href="/tag/读书笔记">#<!-- -->读书笔记</a></div></div><div><blockquote>
 <p>本文记录阅读《你不知道的JavaScript》后形成的思维导图。</p>
 </blockquote>
-<h2 id="目录"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
+<h2 id="目录" style="position:relative;"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
 <!-- toc -->
 <ul>
 <li><a href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E9%97%AD%E5%8C%85">作用域与闭包</a></li>
 <li><a href="#this-%E5%92%8C%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1">this 和原型对象</a></li>
 </ul>
 <!-- tocstop -->
-<h2 id="作用域与闭包"><a href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E9%97%AD%E5%8C%85" aria-label="作用域与闭包 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>作用域与闭包</h2>
+<h2 id="作用域与闭包" style="position:relative;"><a href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E9%97%AD%E5%8C%85" aria-label="作用域与闭包 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>作用域与闭包</h2>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;"
@@ -63,12 +71,12 @@
         class="gatsby-resp-image-image"
         alt="JS代码执行机制"
         title="JS代码执行机制"
-        src="/static/5f19db3b8f5239935ed2ae19ef2e164c/5d675/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png"
-        srcset="/static/5f19db3b8f5239935ed2ae19ef2e164c/1abb1/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png 250w,
-/static/5f19db3b8f5239935ed2ae19ef2e164c/7217d/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png 500w,
-/static/5f19db3b8f5239935ed2ae19ef2e164c/5d675/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png 1000w,
-/static/5f19db3b8f5239935ed2ae19ef2e164c/b0eb8/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png 1500w,
-/static/5f19db3b8f5239935ed2ae19ef2e164c/bba33/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png 1506w"
+        src="/static/5f19db3b8f5239935ed2ae19ef2e164c/00d43/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png"
+        srcset="/static/5f19db3b8f5239935ed2ae19ef2e164c/63868/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png 250w,
+/static/5f19db3b8f5239935ed2ae19ef2e164c/0b533/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png 500w,
+/static/5f19db3b8f5239935ed2ae19ef2e164c/00d43/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png 1000w,
+/static/5f19db3b8f5239935ed2ae19ef2e164c/aa440/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png 1500w,
+/static/5f19db3b8f5239935ed2ae19ef2e164c/f098e/1.JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png 1506w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -86,11 +94,11 @@
         class="gatsby-resp-image-image"
         alt="作用域是什么"
         title="作用域是什么"
-        src="/static/b34ef9657e2ceaf3a90d7912d5395a53/5d675/2.%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88.png"
-        srcset="/static/b34ef9657e2ceaf3a90d7912d5395a53/1abb1/2.%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88.png 250w,
-/static/b34ef9657e2ceaf3a90d7912d5395a53/7217d/2.%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88.png 500w,
-/static/b34ef9657e2ceaf3a90d7912d5395a53/5d675/2.%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88.png 1000w,
-/static/b34ef9657e2ceaf3a90d7912d5395a53/6da63/2.%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88.png 1384w"
+        src="/static/b34ef9657e2ceaf3a90d7912d5395a53/00d43/2.%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88.png"
+        srcset="/static/b34ef9657e2ceaf3a90d7912d5395a53/63868/2.%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88.png 250w,
+/static/b34ef9657e2ceaf3a90d7912d5395a53/0b533/2.%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88.png 500w,
+/static/b34ef9657e2ceaf3a90d7912d5395a53/00d43/2.%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88.png 1000w,
+/static/b34ef9657e2ceaf3a90d7912d5395a53/0e904/2.%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88.png 1384w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -108,11 +116,11 @@
         class="gatsby-resp-image-image"
         alt="词法作用域"
         title="词法作用域"
-        src="/static/73bb651fb21c5fe25005912be47a5e8e/5d675/3.%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F.png"
-        srcset="/static/73bb651fb21c5fe25005912be47a5e8e/1abb1/3.%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F.png 250w,
-/static/73bb651fb21c5fe25005912be47a5e8e/7217d/3.%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F.png 500w,
-/static/73bb651fb21c5fe25005912be47a5e8e/5d675/3.%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F.png 1000w,
-/static/73bb651fb21c5fe25005912be47a5e8e/c7896/3.%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F.png 1112w"
+        src="/static/73bb651fb21c5fe25005912be47a5e8e/00d43/3.%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F.png"
+        srcset="/static/73bb651fb21c5fe25005912be47a5e8e/63868/3.%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F.png 250w,
+/static/73bb651fb21c5fe25005912be47a5e8e/0b533/3.%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F.png 500w,
+/static/73bb651fb21c5fe25005912be47a5e8e/00d43/3.%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F.png 1000w,
+/static/73bb651fb21c5fe25005912be47a5e8e/3fca6/3.%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F.png 1112w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -130,12 +138,12 @@
         class="gatsby-resp-image-image"
         alt="函数作用域和块级作用域"
         title="函数作用域和块级作用域"
-        src="/static/b886e812fc690b259a36da3e4b7ec9e5/5d675/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png"
-        srcset="/static/b886e812fc690b259a36da3e4b7ec9e5/1abb1/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png 250w,
-/static/b886e812fc690b259a36da3e4b7ec9e5/7217d/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png 500w,
-/static/b886e812fc690b259a36da3e4b7ec9e5/5d675/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png 1000w,
-/static/b886e812fc690b259a36da3e4b7ec9e5/b0eb8/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png 1500w,
-/static/b886e812fc690b259a36da3e4b7ec9e5/4d369/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png 1610w"
+        src="/static/b886e812fc690b259a36da3e4b7ec9e5/00d43/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png"
+        srcset="/static/b886e812fc690b259a36da3e4b7ec9e5/63868/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png 250w,
+/static/b886e812fc690b259a36da3e4b7ec9e5/0b533/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png 500w,
+/static/b886e812fc690b259a36da3e4b7ec9e5/00d43/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png 1000w,
+/static/b886e812fc690b259a36da3e4b7ec9e5/aa440/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png 1500w,
+/static/b886e812fc690b259a36da3e4b7ec9e5/6e29b/4.%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F.png 1610w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -153,11 +161,11 @@
         class="gatsby-resp-image-image"
         alt="提升"
         title="提升"
-        src="/static/2e36a6173e070b002affa1ba8fa99bec/5d675/5.%E6%8F%90%E5%8D%87.png"
-        srcset="/static/2e36a6173e070b002affa1ba8fa99bec/1abb1/5.%E6%8F%90%E5%8D%87.png 250w,
-/static/2e36a6173e070b002affa1ba8fa99bec/7217d/5.%E6%8F%90%E5%8D%87.png 500w,
-/static/2e36a6173e070b002affa1ba8fa99bec/5d675/5.%E6%8F%90%E5%8D%87.png 1000w,
-/static/2e36a6173e070b002affa1ba8fa99bec/af94b/5.%E6%8F%90%E5%8D%87.png 1156w"
+        src="/static/2e36a6173e070b002affa1ba8fa99bec/00d43/5.%E6%8F%90%E5%8D%87.png"
+        srcset="/static/2e36a6173e070b002affa1ba8fa99bec/63868/5.%E6%8F%90%E5%8D%87.png 250w,
+/static/2e36a6173e070b002affa1ba8fa99bec/0b533/5.%E6%8F%90%E5%8D%87.png 500w,
+/static/2e36a6173e070b002affa1ba8fa99bec/00d43/5.%E6%8F%90%E5%8D%87.png 1000w,
+/static/2e36a6173e070b002affa1ba8fa99bec/9937c/5.%E6%8F%90%E5%8D%87.png 1156w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -175,17 +183,17 @@
         class="gatsby-resp-image-image"
         alt="作用域闭包"
         title="作用域闭包"
-        src="/static/c4034ca298352a0d7721a944bfc92123/5d675/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.png"
-        srcset="/static/c4034ca298352a0d7721a944bfc92123/1abb1/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.png 250w,
-/static/c4034ca298352a0d7721a944bfc92123/7217d/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.png 500w,
-/static/c4034ca298352a0d7721a944bfc92123/5d675/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.png 1000w,
-/static/c4034ca298352a0d7721a944bfc92123/45320/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.png 1336w"
+        src="/static/c4034ca298352a0d7721a944bfc92123/00d43/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.png"
+        srcset="/static/c4034ca298352a0d7721a944bfc92123/63868/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.png 250w,
+/static/c4034ca298352a0d7721a944bfc92123/0b533/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.png 500w,
+/static/c4034ca298352a0d7721a944bfc92123/00d43/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.png 1000w,
+/static/c4034ca298352a0d7721a944bfc92123/9685e/6.%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85.png 1336w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
       />
     </span></p>
-<h2 id="this-和原型对象"><a href="#this-%E5%92%8C%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1" aria-label="this 和原型对象 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>this 和原型对象</h2>
+<h2 id="this-和原型对象" style="position:relative;"><a href="#this-%E5%92%8C%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1" aria-label="this 和原型对象 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>this 和原型对象</h2>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;"
@@ -198,11 +206,11 @@
         class="gatsby-resp-image-image"
         alt="关于this"
         title="关于this"
-        src="/static/62a4fd252dee7973353ad79669a040f8/5d675/1.%E5%85%B3%E4%BA%8Ethis.png"
-        srcset="/static/62a4fd252dee7973353ad79669a040f8/1abb1/1.%E5%85%B3%E4%BA%8Ethis.png 250w,
-/static/62a4fd252dee7973353ad79669a040f8/7217d/1.%E5%85%B3%E4%BA%8Ethis.png 500w,
-/static/62a4fd252dee7973353ad79669a040f8/5d675/1.%E5%85%B3%E4%BA%8Ethis.png 1000w,
-/static/62a4fd252dee7973353ad79669a040f8/dfc17/1.%E5%85%B3%E4%BA%8Ethis.png 1331w"
+        src="/static/62a4fd252dee7973353ad79669a040f8/00d43/1.%E5%85%B3%E4%BA%8Ethis.png"
+        srcset="/static/62a4fd252dee7973353ad79669a040f8/63868/1.%E5%85%B3%E4%BA%8Ethis.png 250w,
+/static/62a4fd252dee7973353ad79669a040f8/0b533/1.%E5%85%B3%E4%BA%8Ethis.png 500w,
+/static/62a4fd252dee7973353ad79669a040f8/00d43/1.%E5%85%B3%E4%BA%8Ethis.png 1000w,
+/static/62a4fd252dee7973353ad79669a040f8/0b79a/1.%E5%85%B3%E4%BA%8Ethis.png 1331w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -220,13 +228,13 @@
         class="gatsby-resp-image-image"
         alt="this全面解析"
         title="this全面解析"
-        src="/static/7ca534e495d75c0848345a68140b938e/5d675/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png"
-        srcset="/static/7ca534e495d75c0848345a68140b938e/1abb1/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 250w,
-/static/7ca534e495d75c0848345a68140b938e/7217d/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 500w,
-/static/7ca534e495d75c0848345a68140b938e/5d675/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 1000w,
-/static/7ca534e495d75c0848345a68140b938e/b0eb8/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 1500w,
-/static/7ca534e495d75c0848345a68140b938e/6864c/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 2000w,
-/static/7ca534e495d75c0848345a68140b938e/40149/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 2023w"
+        src="/static/7ca534e495d75c0848345a68140b938e/00d43/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png"
+        srcset="/static/7ca534e495d75c0848345a68140b938e/63868/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 250w,
+/static/7ca534e495d75c0848345a68140b938e/0b533/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 500w,
+/static/7ca534e495d75c0848345a68140b938e/00d43/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 1000w,
+/static/7ca534e495d75c0848345a68140b938e/aa440/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 1500w,
+/static/7ca534e495d75c0848345a68140b938e/e8950/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 2000w,
+/static/7ca534e495d75c0848345a68140b938e/36563/2.this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.png 2023w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -244,13 +252,13 @@
         class="gatsby-resp-image-image"
         alt="对象"
         title="对象"
-        src="/static/75c47875471b41ea707653d486ce89ac/5d675/3.%E5%AF%B9%E8%B1%A1.png"
-        srcset="/static/75c47875471b41ea707653d486ce89ac/1abb1/3.%E5%AF%B9%E8%B1%A1.png 250w,
-/static/75c47875471b41ea707653d486ce89ac/7217d/3.%E5%AF%B9%E8%B1%A1.png 500w,
-/static/75c47875471b41ea707653d486ce89ac/5d675/3.%E5%AF%B9%E8%B1%A1.png 1000w,
-/static/75c47875471b41ea707653d486ce89ac/b0eb8/3.%E5%AF%B9%E8%B1%A1.png 1500w,
-/static/75c47875471b41ea707653d486ce89ac/6864c/3.%E5%AF%B9%E8%B1%A1.png 2000w,
-/static/75c47875471b41ea707653d486ce89ac/05974/3.%E5%AF%B9%E8%B1%A1.png 2743w"
+        src="/static/75c47875471b41ea707653d486ce89ac/00d43/3.%E5%AF%B9%E8%B1%A1.png"
+        srcset="/static/75c47875471b41ea707653d486ce89ac/63868/3.%E5%AF%B9%E8%B1%A1.png 250w,
+/static/75c47875471b41ea707653d486ce89ac/0b533/3.%E5%AF%B9%E8%B1%A1.png 500w,
+/static/75c47875471b41ea707653d486ce89ac/00d43/3.%E5%AF%B9%E8%B1%A1.png 1000w,
+/static/75c47875471b41ea707653d486ce89ac/aa440/3.%E5%AF%B9%E8%B1%A1.png 1500w,
+/static/75c47875471b41ea707653d486ce89ac/e8950/3.%E5%AF%B9%E8%B1%A1.png 2000w,
+/static/75c47875471b41ea707653d486ce89ac/0d759/3.%E5%AF%B9%E8%B1%A1.png 2743w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -268,13 +276,13 @@
         class="gatsby-resp-image-image"
         alt="混合对象“类”"
         title="混合对象“类”"
-        src="/static/a39ff6dcca9c7376715ae456115d04be/5d675/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png"
-        srcset="/static/a39ff6dcca9c7376715ae456115d04be/1abb1/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 250w,
-/static/a39ff6dcca9c7376715ae456115d04be/7217d/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 500w,
-/static/a39ff6dcca9c7376715ae456115d04be/5d675/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 1000w,
-/static/a39ff6dcca9c7376715ae456115d04be/b0eb8/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 1500w,
-/static/a39ff6dcca9c7376715ae456115d04be/6864c/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 2000w,
-/static/a39ff6dcca9c7376715ae456115d04be/4447f/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 2831w"
+        src="/static/a39ff6dcca9c7376715ae456115d04be/00d43/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png"
+        srcset="/static/a39ff6dcca9c7376715ae456115d04be/63868/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 250w,
+/static/a39ff6dcca9c7376715ae456115d04be/0b533/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 500w,
+/static/a39ff6dcca9c7376715ae456115d04be/00d43/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 1000w,
+/static/a39ff6dcca9c7376715ae456115d04be/aa440/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 1500w,
+/static/a39ff6dcca9c7376715ae456115d04be/e8950/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 2000w,
+/static/a39ff6dcca9c7376715ae456115d04be/3f1d5/4.%E6%B7%B7%E5%90%88%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%B1%BB%E2%80%9D.png 2831w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -292,13 +300,13 @@
         class="gatsby-resp-image-image"
         alt="原型机制"
         title="原型机制"
-        src="/static/1cf288bdf092769a9db399dd09e423fd/5d675/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png"
-        srcset="/static/1cf288bdf092769a9db399dd09e423fd/1abb1/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 250w,
-/static/1cf288bdf092769a9db399dd09e423fd/7217d/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 500w,
-/static/1cf288bdf092769a9db399dd09e423fd/5d675/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 1000w,
-/static/1cf288bdf092769a9db399dd09e423fd/b0eb8/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 1500w,
-/static/1cf288bdf092769a9db399dd09e423fd/6864c/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 2000w,
-/static/1cf288bdf092769a9db399dd09e423fd/f4ac2/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 2165w"
+        src="/static/1cf288bdf092769a9db399dd09e423fd/00d43/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png"
+        srcset="/static/1cf288bdf092769a9db399dd09e423fd/63868/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 250w,
+/static/1cf288bdf092769a9db399dd09e423fd/0b533/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 500w,
+/static/1cf288bdf092769a9db399dd09e423fd/00d43/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 1000w,
+/static/1cf288bdf092769a9db399dd09e423fd/aa440/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 1500w,
+/static/1cf288bdf092769a9db399dd09e423fd/e8950/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 2000w,
+/static/1cf288bdf092769a9db399dd09e423fd/7a626/5.%E5%8E%9F%E5%9E%8B%E6%9C%BA%E5%88%B6.png 2165w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -316,14 +324,14 @@
         class="gatsby-resp-image-image"
         alt="行为委托"
         title="行为委托"
-        src="/static/8ff1aa751abb8a564f138a9084eed896/5d675/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png"
-        srcset="/static/8ff1aa751abb8a564f138a9084eed896/1abb1/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png 250w,
-/static/8ff1aa751abb8a564f138a9084eed896/7217d/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png 500w,
-/static/8ff1aa751abb8a564f138a9084eed896/5d675/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png 1000w,
-/static/8ff1aa751abb8a564f138a9084eed896/b0eb8/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png 1500w,
-/static/8ff1aa751abb8a564f138a9084eed896/1bb70/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png 1749w"
+        src="/static/8ff1aa751abb8a564f138a9084eed896/00d43/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png"
+        srcset="/static/8ff1aa751abb8a564f138a9084eed896/63868/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png 250w,
+/static/8ff1aa751abb8a564f138a9084eed896/0b533/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png 500w,
+/static/8ff1aa751abb8a564f138a9084eed896/00d43/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png 1000w,
+/static/8ff1aa751abb8a564f138a9084eed896/aa440/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png 1500w,
+/static/8ff1aa751abb8a564f138a9084eed896/d10dd/6.%E8%A1%8C%E4%B8%BA%E5%A7%94%E6%89%98.png 1749w"
         sizes="(max-width: 1000px) 100vw, 1000px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
       />
-    </span></p></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/WebFrontEnd-你不知道的JavaScript/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-5629feba1c6f6e5305f4.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-dc41ec17d336dae95156.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-fb9165298f6a73d01f58.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-15b7ed9fb5ecca0b64a4.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-f44e488ef2c155b6ac37.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-92988b7a7061e3b0cc6d.js"]};/*]]>*/</script><script src="/webpack-runtime-c8645f8b03a892ec02db.js" async=""></script><script src="/app-5629feba1c6f6e5305f4.js" async=""></script><script src="/commons-585c18cbbbc01686e12d.js" async=""></script><script src="/component---src-templates-blog-template-tsx-fb9165298f6a73d01f58.js" async=""></script><script src="/styles-f7c8d31f2eddcbeaba47.js" async=""></script></body></html>
+    </span></p></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/WebFrontEnd-你不知道的JavaScript/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-b92cbbf43add9427c56b.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-756933a2d3dadc1e6fe7.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-e3861aad58726100458f.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-886e9b83e50bd1047761.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-7a0870e752e970f4d9f0.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-f78c7f199904ee3e55aa.js"]};/*]]>*/</script><script src="/webpack-runtime-753a804d29a19f93f235.js" async=""></script><script src="/app-b92cbbf43add9427c56b.js" async=""></script><script src="/commons-fc809561c455a4a73a62.js" async=""></script><script src="/component---src-templates-blog-template-tsx-e3861aad58726100458f.js" async=""></script><script src="/styles-d8e10dc4bd92286e96e6.js" async=""></script></body></html>

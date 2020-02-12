@@ -4,7 +4,9 @@
       if (hash !== '') {
         var element = document.getElementById(hash)
         if (element) {
-          var offset = element.offsetTop
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
           // Wait for the browser to finish rendering before scrolling.
           setTimeout((function() {
             window.scrollTo(0, offset - 0)
@@ -12,11 +14,17 @@
         }
       }
     })
-  </script><title data-react-helmet="true">十二棵橡树</title><link data-react-helmet="true" rel="icon" type="image/png" href="/static/favicon-9bf81a2b82f5028f3f4b92f88cb575ba.ico" sizes="16x16"/><style data-href="/styles.829d7849e70425445fdf.css">body{margin:0;width:100%}*{box-sizing:border-box}center{margin:20px 0;font-weight:700;color:#333}table tr td strong{min-width:50px}h1 .anchor svg,h2 .anchor svg,h3 .anchor svg,h4 .anchor svg,h5 .anchor svg,h6 .anchor svg{visibility:unset!important}pre[class*=language-]:after,pre[class*=language-]:before{box-shadow:unset!important}p>code{color:#c92c2c;background-color:#fff5f5!important}.gatsby-resp-image-wrapper{cursor:pointer}.gatsby-resp-image-background-image,.gatsby-resp-image-image{border-radius:.3em}.gatsby-highlight{margin-bottom:1.4rem}code[class*=language-],pre[class*=language-]{color:#000;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{position:relative;margin:.5em 0;overflow:visible;padding:0}pre[class*=language-]>code{position:relative;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,rgba(69,142,209,.04)));background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 0);background-size:3em 3em;background-origin:content-box;background-attachment:local}code[class*=language]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,.1);display:inline;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{content:"";z-index:-2;display:block;position:absolute;bottom:.75em;left:.18em;width:40%;height:20%;max-height:13em;box-shadow:0 13px 8px #979797;-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}:not(pre)>code[class*=language-]:after,pre[class*=language-]:after{right:.75em;left:auto;-webkit-transform:rotate(2deg);transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}.token.cr:before,.token.lf:before,.token.tab:not(:empty):before{color:#e0d7d1}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}.layout-module--header--1orMk{padding:0 20%;background-color:#693476;height:80px;display:flex;flex-direction:row;justify-content:space-between;align-items:center;box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.layout-module--title--28C2S{font-size:24px;color:#e1d0e6}.layout-module--menu--Ech1f{font-size:20px}.layout-module--menu--Ech1f a{text-decoration:none;color:#e1d0e6;padding:0 5px}.layout-module--menu--Ech1f a:hover{color:#fff}.layout-module--footer--1-u4U{height:200px;padding:0 20%;border-bottom:10px solid #693476;background-color:#fafafa;display:flex;flex-direction:column;justify-content:center}.layout-module--contact--1Z-dZ a{margin-right:6px;font-size:20px;color:#cf91e2}.layout-module--contact--1Z-dZ{margin-bottom:16px}.layout-module--siteInfo--WbGrj{font-size:20px}@media screen and (max-width:376px){.layout-module--header--1orMk{height:unset;padding:unset;background-color:unset;flex-direction:column}.layout-module--header--1orMk .layout-module--title--28C2S{padding:20px 10px;width:100%;display:flex;justify-content:center;color:#693476}.layout-module--header--1orMk .layout-module--menu--Ech1f{padding:20px 10px;width:100%;background-color:#693476;display:flex;justify-content:center}.layout-module--footer--1-u4U{padding:0 5%}}.list-module--main--_HL7O{margin:0 20%}.list-module--catalog--ToZZ4{min-height:400px;display:flex;flex-direction:column;margin:30px 0 10px}.list-module--catalog--ToZZ4 .list-module--item--2P8EQ{margin-top:10px}.list-module--catalog--ToZZ4 .list-module--year--fuRyw{font-size:46px}.list-module--catalog--ToZZ4 .list-module--link--1G28D{display:flex;flex-direction:column}.list-module--catalog--ToZZ4 .list-module--link--1G28D a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}.list-module--catalog--ToZZ4 .list-module--date--1rprK{margin-right:10px;color:#999;font-style:italic}.list-module--catalog--ToZZ4 .list-module--newcontent--2jgkA{padding:1px 5px;background-color:#693476;border-radius:4px;color:#fff;margin-left:10px;font-size:20px}.list-module--pagination--4wgvY{margin:30px 0 60px}.list-module--paginationItem--127RG{color:#333;width:35px;height:35px;display:inline-block;text-align:center;line-height:35px;font-size:18px;margin-right:10px}.list-module--itemSelected--3HOvN{background-color:#cf91e2}@media screen and (max-width:376px){.list-module--main--_HL7O{margin:0 5%}}.viewer-module--viewer--3ba3_{position:fixed;top:0;left:0;z-index:100;width:100vw;height:100vh;background-color:rgba(0,0,0,.6);display:flex;flex-direction:column;justify-content:center;align-items:center}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc{width:70%;height:80%;position:relative}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--img--9w_7t{border-radius:4px;box-shadow:inset 0 0 0 400px #fff;-o-object-fit:contain;object-fit:contain;height:100%;width:100%}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--des--3lo9I{color:#fff;text-align:center;font-size:20px;font-weight:700}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--icon--1vJ-_{cursor:pointer;margin:5px;position:absolute;top:0;right:0;width:30px;height:30px}.blog-module--content--R6Wfi{margin:60px 20% 80px}.blog-module--heading--2q6UV{margin-bottom:30px}.blog-module--title--3NoN5{font-weight:700;margin-bottom:15px}.blog-module--info--U7riw{color:#666;margin-bottom:5px}.blog-module--info--U7riw span{margin-right:5px}.blog-module--tags--20J6V a{color:#666;margin-right:5px}@media screen and (max-width:420px){.blog-module--content--R6Wfi{margin:60px 5% 80px;padding-left:10px}}.tag-module--content--1DHrR{margin:60px 20% 80px;min-height:400px}.tag-module--heading--15Jbn{margin-bottom:40px}.tag-module--link--3DsMn a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}@media screen and (max-width:376px){.tag-module--content--1DHrR{margin:60px 5% 80px;min-height:400px}}._404-module--container--2kCC_{min-height:400px;margin:60px auto 80px;display:flex;flex-direction:column;justify-content:center;align-items:center}._404-module--container--2kCC_ span{font-size:40px;font-weight:700}.about-module--content--1y3Xq{margin:60px 20% 80px;min-height:400px}@media screen and (max-width:420px){.about-module--content--1y3Xq{margin:30px 5%;padding-left:10px}}</style><link href="//fonts.googleapis.com/css?family=Patua+One:400|Cabin+Condensed:400,700" rel="stylesheet" type="text/css"/><style type="text/css">
-    .anchor {
-      float: left;
+  </script><title data-react-helmet="true">十二棵橡树</title><link data-react-helmet="true" rel="icon" type="image/png" href="/static/favicon-9bf81a2b82f5028f3f4b92f88cb575ba.ico" sizes="16x16"/><style data-href="/styles.2a251d3a8bdb853e9979.css">body{margin:0;width:100%}*{box-sizing:border-box}center{margin:20px 0;font-weight:700;color:#333}table tr td strong{min-width:50px}h1 .anchor svg,h2 .anchor svg,h3 .anchor svg,h4 .anchor svg,h5 .anchor svg,h6 .anchor svg{visibility:unset!important}pre[class*=language-]:after,pre[class*=language-]:before{box-shadow:unset!important}p>code{color:#c92c2c;background-color:#fff5f5!important}.gatsby-resp-image-wrapper{cursor:pointer}.gatsby-resp-image-background-image,.gatsby-resp-image-image{border-radius:.3em}.gatsby-highlight{margin-bottom:1.4rem}code[class*=language-],pre[class*=language-]{color:#000;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{position:relative;margin:.5em 0;overflow:visible;padding:0}pre[class*=language-]>code{position:relative;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(50%,transparent),color-stop(50%,rgba(69,142,209,.04)));background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 0);background-size:3em 3em;background-origin:content-box;background-attachment:local}code[class*=language]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,.1);display:inline;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{content:"";z-index:-2;display:block;position:absolute;bottom:.75em;left:.18em;width:40%;height:20%;max-height:13em;box-shadow:0 13px 8px #979797;-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}:not(pre)>code[class*=language-]:after,pre[class*=language-]:after{right:.75em;left:auto;-webkit-transform:rotate(2deg);transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}.token.cr:before,.token.lf:before,.token.tab:not(:empty):before{color:#e0d7d1}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}.layout-module--header--1orMk{padding:0 20%;background-color:#693476;height:80px;display:flex;flex-direction:row;justify-content:space-between;align-items:center;box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.layout-module--title--28C2S{font-size:24px;color:#e1d0e6}.layout-module--menu--Ech1f{font-size:20px}.layout-module--menu--Ech1f a{text-decoration:none;color:#e1d0e6;padding:0 5px}.layout-module--menu--Ech1f a:hover{color:#fff}.layout-module--footer--1-u4U{height:200px;padding:0 20%;border-bottom:10px solid #693476;background-color:#fafafa;display:flex;flex-direction:column;justify-content:center}.layout-module--contact--1Z-dZ a{margin-right:6px;font-size:20px;color:#cf91e2}.layout-module--contact--1Z-dZ{margin-bottom:16px}.layout-module--siteInfo--WbGrj{font-size:20px}@media screen and (max-width:376px){.layout-module--header--1orMk{height:unset;padding:unset;background-color:unset;flex-direction:column}.layout-module--header--1orMk .layout-module--title--28C2S{padding:20px 10px;width:100%;display:flex;justify-content:center;color:#693476}.layout-module--header--1orMk .layout-module--menu--Ech1f{padding:20px 10px;width:100%;background-color:#693476;display:flex;justify-content:center}.layout-module--footer--1-u4U{padding:0 5%}}.list-module--main--_HL7O{margin:0 20%}.list-module--catalog--ToZZ4{min-height:400px;display:flex;flex-direction:column;margin:30px 0 10px}.list-module--catalog--ToZZ4 .list-module--item--2P8EQ{margin-top:10px}.list-module--catalog--ToZZ4 .list-module--year--fuRyw{font-size:46px}.list-module--catalog--ToZZ4 .list-module--link--1G28D{display:flex;flex-direction:column}.list-module--catalog--ToZZ4 .list-module--link--1G28D a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}.list-module--catalog--ToZZ4 .list-module--date--1rprK{margin-right:10px;color:#999;font-style:italic}.list-module--catalog--ToZZ4 .list-module--newcontent--2jgkA{padding:1px 5px;background-color:#693476;border-radius:4px;color:#fff;margin-left:10px;font-size:20px}.list-module--pagination--4wgvY{margin:30px 0 60px}.list-module--paginationItem--127RG{color:#333;width:35px;height:35px;display:inline-block;text-align:center;line-height:35px;font-size:18px;margin-right:10px}.list-module--itemSelected--3HOvN{background-color:#cf91e2}@media screen and (max-width:376px){.list-module--main--_HL7O{margin:0 5%}}.viewer-module--viewer--3ba3_{position:fixed;top:0;left:0;z-index:100;width:100vw;height:100vh;background-color:rgba(0,0,0,.6);display:flex;flex-direction:column;justify-content:center;align-items:center}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc{width:70%;height:80%;position:relative}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--img--9w_7t{border-radius:4px;box-shadow:inset 0 0 0 400px #fff;-o-object-fit:contain;object-fit:contain;height:100%;width:100%}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--des--3lo9I{color:#fff;text-align:center;font-size:20px;font-weight:700}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--icon--1vJ-_{cursor:pointer;margin:5px;position:absolute;top:0;right:0;width:30px;height:30px}.blog-module--content--R6Wfi{margin:60px 20% 80px}.blog-module--heading--2q6UV{margin-bottom:30px}.blog-module--title--3NoN5{font-weight:700;margin-bottom:15px}.blog-module--info--U7riw{color:#666;margin-bottom:5px}.blog-module--info--U7riw span{margin-right:5px}.blog-module--tags--20J6V a{color:#666;margin-right:5px}@media screen and (max-width:420px){.blog-module--content--R6Wfi{margin:60px 5% 80px;padding-left:10px}}.tag-module--content--1DHrR{margin:60px 20% 80px;min-height:400px}.tag-module--heading--15Jbn{margin-bottom:40px}.tag-module--link--3DsMn a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}@media screen and (max-width:376px){.tag-module--content--1DHrR{margin:60px 5% 80px;min-height:400px}}._404-module--container--2kCC_{min-height:400px;margin:60px auto 80px;display:flex;flex-direction:column;justify-content:center;align-items:center}._404-module--container--2kCC_ span{font-size:40px;font-weight:700}.about-module--content--1y3Xq{margin:60px 20% 80px;min-height:400px}@media screen and (max-width:420px){.about-module--content--1y3Xq{margin:30px 5%;padding-left:10px}}</style><link href="//fonts.googleapis.com/css?family=Patua+One:400|Cabin+Condensed:400,700" rel="stylesheet" type="text/css"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
       padding-right: 4px;
-      margin-left: -20px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
     }
     h1 .anchor svg,
     h2 .anchor svg,
@@ -40,10 +48,10 @@
     h6 .anchor:focus svg {
       visibility: visible;
     }
-  </style><meta name="generator" content="Gatsby 2.18.12"/><link as="script" rel="preload" href="/styles-f7c8d31f2eddcbeaba47.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-fb9165298f6a73d01f58.js"/><link as="script" rel="preload" href="/commons-585c18cbbbc01686e12d.js"/><link as="script" rel="preload" href="/app-5629feba1c6f6e5305f4.js"/><link as="script" rel="preload" href="/webpack-runtime-c8645f8b03a892ec02db.js"/><link as="fetch" rel="preload" href="/page-data/content/WebFrontEnd-Webpack4 概述/page-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">Webpack 4 概述</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2019-05-06</span></div><div class="blog-module--tags--20J6V"><a href="/tag/Web_Deep">#<!-- -->Web_Deep</a><a href="/tag/工程化">#<!-- -->工程化</a><a href="/tag/Webpack">#<!-- -->Webpack</a></div></div><div><blockquote>
+  </style><meta name="generator" content="Gatsby 2.19.16"/><link as="script" rel="preload" href="/styles-d8e10dc4bd92286e96e6.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-e3861aad58726100458f.js"/><link as="script" rel="preload" href="/commons-fc809561c455a4a73a62.js"/><link as="script" rel="preload" href="/app-b92cbbf43add9427c56b.js"/><link as="script" rel="preload" href="/webpack-runtime-753a804d29a19f93f235.js"/><link as="fetch" rel="preload" href="/page-data/content/WebFrontEnd-Webpack4 概述/page-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">Webpack 4 概述</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2019-05-06</span></div><div class="blog-module--tags--20J6V"><a href="/tag/Web_Deep">#<!-- -->Web_Deep</a><a href="/tag/工程化">#<!-- -->工程化</a><a href="/tag/Webpack">#<!-- -->Webpack</a></div></div><div><blockquote>
 <p>前端的工程化不仅需要 Babel 这样的“语法翻译者”，以抹平不同平台之间的特性差异，还需要可以妥善处理 JavaScript 模块以及各类 HTML、CSS、Image等资源的<strong>构建工具</strong>，Webpack 的出现呼应了这一趋势，极大促进了前端的发展。</p>
 </blockquote>
-<h2 id="目录"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
+<h2 id="目录" style="position:relative;"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
 <!-- toc -->
 <ul>
 <li><a href="#">引言</a></li>
@@ -59,13 +67,13 @@
 <li><a href="#-4">参考</a></li>
 </ul>
 <!-- tocstop -->
-<h2 id="引言"><a href="#%E5%BC%95%E8%A8%80" aria-label="引言 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>引言</h2>
+<h2 id="引言" style="position:relative;"><a href="#%E5%BC%95%E8%A8%80" aria-label="引言 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>引言</h2>
 <p>什么是 Webpack？本质上，Webpack 是一个现代 JavaScript 应用程序的静态模块打包工具。当 Webpack 处理应用程序时，它会在内部构建一个依赖图(dependency graph)，此依赖图会映射项目所需的每个模块，并生成一个或多个 bundle。</p>
-<h2 id="与其他构建工具的简单比较"><a href="#%E4%B8%8E%E5%85%B6%E4%BB%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7%E7%9A%84%E7%AE%80%E5%8D%95%E6%AF%94%E8%BE%83" aria-label="与其他构建工具的简单比较 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>与其他构建工具的简单比较</h2>
+<h2 id="与其他构建工具的简单比较" style="position:relative;"><a href="#%E4%B8%8E%E5%85%B6%E4%BB%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7%E7%9A%84%E7%AE%80%E5%8D%95%E6%AF%94%E8%BE%83" aria-label="与其他构建工具的简单比较 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>与其他构建工具的简单比较</h2>
 <p>什么叫构建工具呢？构建工具是一段自动根据源代码生成可使用文件的程序，构建过程包括打包、编译、压缩、测试等一切需要对源代码进行的相关处理。构建工具的目的是实现构建过程的自动化，使用它可以让咱们避免机械重复的劳动，从而提升效率。</p>
 <p>在 Webpack 出现之前，前端社区也出现过很多构建工具，比如流行的 Browserify、Gulp、Grunt，当下也出现了新的工具，如 Rollup。</p>
 <p>在这里，简单比较一下 Webpack 和 Gulp 的区别。</p>
-<h4 id="gulp"><a href="#gulp" aria-label="gulp permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gulp</h4>
+<h4 id="gulp" style="position:relative;"><a href="#gulp" aria-label="gulp permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gulp</h4>
 <p>Gulp 是一个任务管理工具，致力于<strong>自动化和优化</strong>工作流。我们在前端开发的过程中，会遇到很多重复性又耗时的工作，比如：</p>
 <ul>
 <li>用 ES6，TypeScript 编写的脚本文件需要编译成浏览器认识的 JavaScript</li>
@@ -77,12 +85,12 @@
 <li>清理 dist 文件夹</li>
 </ul>
 <p>Glup 基于流（Stream）的工作方式，通过写好的一个个 task 来分解复杂的任务，其优点是简单灵活，搭配插件可以完成常见的前端工作。但缺点在于，不适合复杂的单页应用，并且它无法解决 JS 模块化的问题，没有对于资源进行深度的整合优化（如 tree shaking 之类的技术），这个问题在 Webpack 出现后有了另一种解决思路。</p>
-<h4 id="webpack"><a href="#webpack" aria-label="webpack permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Webpack</h4>
+<h4 id="webpack" style="position:relative;"><a href="#webpack" aria-label="webpack permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Webpack</h4>
 <p>Webpack 的理念是，一切皆为模块，不管是 ES6 模块、CommonJS 模块，还是 css、fonts、png 等非 JS 资源，只要有依赖关系，就可以构建出它们之间依赖图(dependency graph)，并且通过相应的 Loader 进行精细化的管理。</p>
 <p>Webpack 初衷就是“require everything, bundle everything”，刚出来的时候结合着 Gulp 一起配合使用，Gulp 里面有个 gulp-webpack，就是让 Webpack 专门去做 module dependency 的事情, 生成一个 bundle.js 文件，然后再用 gulp 去做一些其他杂七杂八 minify, uglify 的事情。 后来开发者发现 Webpack 有个 plugins 的选项，可以用来进一步处理经过 Loader 生成的 bundle.js，于是社区出现了相应的插件 minify/uglify 之类的插件，可以对 bundle 资源进行进一步细颗粒度的处理，这也进一步取代了 Gulp 的工作。</p>
 <p>再后来大家有发现 npm/package.json 里面的 scripts 也很有用，调用任务的时候就直接写一个简单的命令，无需 Gulp 下各种插件的命令。所以现在看到的很多新项目都是 package.json 里面 scripts 命令加上安装 Webpack 一个工具就够了。</p>
 <p>Webpack 也不是没有缺点，配置复杂，需要理解的概念很多，上手难度比 Gulp 高上不少，不过这几年的发展下来，Webpack 也在不断地优化，v4 就可以开箱即用。而且 Webpack 已经流行开了，久经考验，社区也默认前端开发人员要有这个配置能力：）。</p>
-<h2 id="合理配置"><a href="#%E5%90%88%E7%90%86%E9%85%8D%E7%BD%AE" aria-label="合理配置 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>合理配置</h2>
+<h2 id="合理配置" style="position:relative;"><a href="#%E5%90%88%E7%90%86%E9%85%8D%E7%BD%AE" aria-label="合理配置 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>合理配置</h2>
 <p>首先给出一个比较合适的配置：</p>
 <p>适用版本：Webpack 4 +</p>
 <p>webpack.config.base.js</p>
@@ -100,37 +108,37 @@
 
 <span class="token comment">// *输出文件</span>
 <span class="token keyword">const</span> outputFileConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
-    path<span class="token punctuation">:</span> isProduction <span class="token operator">?</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span><span class="token constant">RELEASE_DIR</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span><span class="token constant">DEST_DIR</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    filename<span class="token punctuation">:</span> <span class="token string">'[name].js'</span><span class="token punctuation">,</span>
-    libraryTarget<span class="token punctuation">:</span> <span class="token string">'amd'</span>
+    path<span class="token operator">:</span> isProduction <span class="token operator">?</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span><span class="token constant">RELEASE_DIR</span><span class="token punctuation">)</span> <span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span><span class="token constant">DEST_DIR</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    filename<span class="token operator">:</span> <span class="token string">'[name].js'</span><span class="token punctuation">,</span>
+    libraryTarget<span class="token operator">:</span> <span class="token string">'amd'</span>
     <span class="token comment">// publicPath: isProduction ? '' : '../static/'</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token comment">// 确定脚本模式</span>
-    mode<span class="token punctuation">:</span> isProduction <span class="token operator">?</span> <span class="token string">'production'</span> <span class="token punctuation">:</span> <span class="token string">'development'</span><span class="token punctuation">,</span>
+    mode<span class="token operator">:</span> isProduction <span class="token operator">?</span> <span class="token string">'production'</span> <span class="token operator">:</span> <span class="token string">'development'</span><span class="token punctuation">,</span>
     <span class="token comment">// 入口文件</span>
-    entry<span class="token punctuation">:</span> entryFileConfig<span class="token punctuation">,</span>
+    entry<span class="token operator">:</span> entryFileConfig<span class="token punctuation">,</span>
     <span class="token comment">// 输出文件</span>
-    output<span class="token punctuation">:</span> outputFileConfig<span class="token punctuation">,</span>
-    externals<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        modules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    output<span class="token operator">:</span> outputFileConfig<span class="token punctuation">,</span>
+    externals<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    resolve<span class="token operator">:</span> <span class="token punctuation">{</span>
+        modules<span class="token operator">:</span> <span class="token punctuation">[</span>
             path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'./src'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
             <span class="token string">'node_modules'</span>
         <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        enforceExtension<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-        extensions<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'.js'</span><span class="token punctuation">,</span> <span class="token string">'.jsx'</span><span class="token punctuation">,</span> <span class="token string">'.css'</span><span class="token punctuation">,</span> <span class="token string">'.scss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        alias<span class="token punctuation">:</span> alias
+        enforceExtension<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'.js'</span><span class="token punctuation">,</span> <span class="token string">'.jsx'</span><span class="token punctuation">,</span> <span class="token string">'.css'</span><span class="token punctuation">,</span> <span class="token string">'.scss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        alias<span class="token operator">:</span> alias
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token comment">// 打包性能提示（测试环境）</span>
-    performance<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        hints<span class="token punctuation">:</span> <span class="token string">'warning'</span><span class="token punctuation">,</span>
-        maxAssetSize<span class="token punctuation">:</span> isProduction <span class="token operator">?</span> <span class="token number">500000</span> <span class="token punctuation">:</span> <span class="token number">5000000</span><span class="token punctuation">,</span> <span class="token comment">// 最大打包字节警告 5000k（测试） 500k（生产）</span>
-        maxEntrypointSize<span class="token punctuation">:</span> isProduction <span class="token operator">?</span> <span class="token number">500000</span> <span class="token punctuation">:</span> <span class="token number">5000000</span> <span class="token comment">// 最大入口打包文件 5000k（测试） 500k（生产）</span>
+    performance<span class="token operator">:</span> <span class="token punctuation">{</span>
+        hints<span class="token operator">:</span> <span class="token string">'warning'</span><span class="token punctuation">,</span>
+        maxAssetSize<span class="token operator">:</span> isProduction <span class="token operator">?</span> <span class="token number">500000</span> <span class="token operator">:</span> <span class="token number">5000000</span><span class="token punctuation">,</span> <span class="token comment">// 最大打包字节警告 5000k（测试） 500k（生产）</span>
+        maxEntrypointSize<span class="token operator">:</span> isProduction <span class="token operator">?</span> <span class="token number">500000</span> <span class="token operator">:</span> <span class="token number">5000000</span> <span class="token comment">// 最大入口打包文件 5000k（测试） 500k（生产）</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    stats<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        children<span class="token punctuation">:</span> <span class="token boolean">false</span>
+    stats<span class="token operator">:</span> <span class="token punctuation">{</span>
+        children<span class="token operator">:</span> <span class="token boolean">false</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <p>webpack.config.dev.js</p>
@@ -149,56 +157,56 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token comment">// *定义规则</span>
 <span class="token keyword">const</span> rules <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span> <span class="token comment">// eslint lint 处理</span>
-        enforce<span class="token punctuation">:</span> <span class="token string">'pre'</span><span class="token punctuation">,</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.jsx?$/</span><span class="token punctuation">,</span>
-        exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
-        use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            loader<span class="token punctuation">:</span> <span class="token string">'eslint-loader'</span><span class="token punctuation">,</span>
-            options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                emitError<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-                emitWarning<span class="token punctuation">:</span> <span class="token boolean">true</span>
+        enforce<span class="token operator">:</span> <span class="token string">'pre'</span><span class="token punctuation">,</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.jsx?$/</span><span class="token punctuation">,</span>
+        exclude<span class="token operator">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
+        use<span class="token operator">:</span> <span class="token punctuation">{</span>
+            loader<span class="token operator">:</span> <span class="token string">'eslint-loader'</span><span class="token punctuation">,</span>
+            options<span class="token operator">:</span> <span class="token punctuation">{</span>
+                emitError<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                emitWarning<span class="token operator">:</span> <span class="token boolean">true</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span> <span class="token comment">// 处理 .js 和 .jsx</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.jsx?$/</span><span class="token punctuation">,</span>
-        exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
-        parser<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            requireJs<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token comment">// 禁用 requirejs</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.jsx?$/</span><span class="token punctuation">,</span>
+        exclude<span class="token operator">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
+        parser<span class="token operator">:</span> <span class="token punctuation">{</span>
+            requireJs<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token comment">// 禁用 requirejs</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        use<span class="token punctuation">:</span> <span class="token string">'babel-loader?cacheDirectory'</span>
+        use<span class="token operator">:</span> <span class="token string">'babel-loader?cacheDirectory'</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span> <span class="token comment">// 处理样式</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.(scss|css)$/</span><span class="token punctuation">,</span>
-        exclude<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.(scss|css)$/</span><span class="token punctuation">,</span>
+        exclude<span class="token operator">:</span> <span class="token punctuation">[</span>
             path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">,</span> <span class="token string">'node_modules'</span><span class="token punctuation">)</span>
         <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        use<span class="token operator">:</span> <span class="token punctuation">[</span>
             <span class="token punctuation">{</span>
-                loader<span class="token punctuation">:</span> MiniCssExtractPlugin<span class="token punctuation">.</span>loader <span class="token comment">// 生产环境采用此方式解耦CSS文件与js文件</span>
+                loader<span class="token operator">:</span> MiniCssExtractPlugin<span class="token punctuation">.</span>loader <span class="token comment">// 生产环境采用此方式解耦CSS文件与js文件</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
             <span class="token punctuation">{</span>
-                loader<span class="token punctuation">:</span> <span class="token string">'css-loader'</span><span class="token punctuation">,</span> <span class="token comment">// CSS加载器</span>
-                options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                    modules<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-                    sourceMap<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-                    localIdentName<span class="token punctuation">:</span> <span class="token string">'[name]__[local]___[hash:base64:5]'</span>
+                loader<span class="token operator">:</span> <span class="token string">'css-loader'</span><span class="token punctuation">,</span> <span class="token comment">// CSS加载器</span>
+                options<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    modules<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    sourceMap<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    localIdentName<span class="token operator">:</span> <span class="token string">'[name]__[local]___[hash:base64:5]'</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
             <span class="token punctuation">{</span>
-                loader<span class="token punctuation">:</span> <span class="token string">'postcss-loader'</span>
+                loader<span class="token operator">:</span> <span class="token string">'postcss-loader'</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
             <span class="token punctuation">{</span>
-                loader<span class="token punctuation">:</span> <span class="token string">'sass-loader'</span>
+                loader<span class="token operator">:</span> <span class="token string">'sass-loader'</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">]</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span> <span class="token comment">// 处理其他文件资源</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.(png|jpg|jpeg|svg|ttf|eot|woff|woff2)$/</span><span class="token punctuation">,</span>
-        use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            loader<span class="token punctuation">:</span> <span class="token string">'url-loader'</span><span class="token punctuation">,</span>
-            options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                limit<span class="token punctuation">:</span> <span class="token number">8192</span> <span class="token comment">// 8k</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.(png|jpg|jpeg|svg|ttf|eot|woff|woff2)$/</span><span class="token punctuation">,</span>
+        use<span class="token operator">:</span> <span class="token punctuation">{</span>
+            loader<span class="token operator">:</span> <span class="token string">'url-loader'</span><span class="token punctuation">,</span>
+            options<span class="token operator">:</span> <span class="token punctuation">{</span>
+                limit<span class="token operator">:</span> <span class="token number">8192</span> <span class="token comment">// 8k</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
@@ -208,11 +216,11 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token keyword">const</span> plugins <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token comment">// 确定环境</span>
     <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        <span class="token string">'process.env.NODE_ENV'</span><span class="token punctuation">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token string">'development'</span><span class="token punctuation">)</span>
+        <span class="token string">'process.env.NODE_ENV'</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token string">'development'</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token comment">// 提取样式</span>
     <span class="token keyword">new</span> <span class="token class-name">MiniCssExtractPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        filename<span class="token punctuation">:</span> <span class="token string">'css/[name].min.css'</span>
+        filename<span class="token operator">:</span> <span class="token string">'css/[name].min.css'</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token comment">// hot 热加载</span>
     <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>HotModuleReplacementPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -220,15 +228,15 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 <span class="token comment">// *定制化</span>
 <span class="token keyword">const</span> optimization <span class="token operator">=</span> <span class="token punctuation">{</span>
-    splitChunks<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        cacheGroups<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    splitChunks<span class="token operator">:</span> <span class="token punctuation">{</span>
+        cacheGroups<span class="token operator">:</span> <span class="token punctuation">{</span>
             <span class="token comment">// 将所有的css组合成一个文件</span>
-            styles<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                name<span class="token punctuation">:</span> <span class="token string">'status'</span><span class="token punctuation">,</span>
-                test<span class="token punctuation">:</span> <span class="token regex">/\.(scss|css)$/</span><span class="token punctuation">,</span>
-                chunks<span class="token punctuation">:</span> <span class="token string">'all'</span><span class="token punctuation">,</span>
-                enforce<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-                priority<span class="token punctuation">:</span> <span class="token number">20</span>
+            styles<span class="token operator">:</span> <span class="token punctuation">{</span>
+                name<span class="token operator">:</span> <span class="token string">'status'</span><span class="token punctuation">,</span>
+                test<span class="token operator">:</span> <span class="token regex">/\.(scss|css)$/</span><span class="token punctuation">,</span>
+                chunks<span class="token operator">:</span> <span class="token string">'all'</span><span class="token punctuation">,</span>
+                enforce<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                priority<span class="token operator">:</span> <span class="token number">20</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
@@ -236,31 +244,31 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">merge</span><span class="token punctuation">(</span>base<span class="token punctuation">,</span> <span class="token punctuation">{</span>
     <span class="token comment">// 模块规则</span>
-    module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        rules<span class="token punctuation">:</span> rules
+    module<span class="token operator">:</span> <span class="token punctuation">{</span>
+        rules<span class="token operator">:</span> rules
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token comment">// source map</span>
-    devtool<span class="token punctuation">:</span> <span class="token string">'inline-source-map'</span><span class="token punctuation">,</span>
+    devtool<span class="token operator">:</span> <span class="token string">'inline-source-map'</span><span class="token punctuation">,</span>
     <span class="token comment">// webpack dev server 配置</span>
-    devServer<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        contentBase<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span><span class="token constant">DEST_DIR</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        open<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 默认打开</span>
-        hot<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 热加载</span>
-        disableHostCheck<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        port<span class="token punctuation">:</span> <span class="token number">8887</span><span class="token punctuation">,</span> <span class="token comment">// 端口</span>
-        publicPath<span class="token punctuation">:</span> <span class="token string">'/m/public'</span><span class="token punctuation">,</span>
-        headers<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            <span class="token string">'Access-Control-Allow-Origin'</span><span class="token punctuation">:</span> <span class="token string">'*'</span>
+    devServer<span class="token operator">:</span> <span class="token punctuation">{</span>
+        contentBase<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span><span class="token constant">DEST_DIR</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        open<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 默认打开</span>
+        hot<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 热加载</span>
+        disableHostCheck<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        port<span class="token operator">:</span> <span class="token number">8887</span><span class="token punctuation">,</span> <span class="token comment">// 端口</span>
+        publicPath<span class="token operator">:</span> <span class="token string">'/m/public'</span><span class="token punctuation">,</span>
+        headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string">'Access-Control-Allow-Origin'</span><span class="token operator">:</span> <span class="token string">'*'</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        stats<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            children<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-            chunks<span class="token punctuation">:</span> <span class="token boolean">false</span>
+        stats<span class="token operator">:</span> <span class="token punctuation">{</span>
+            children<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            chunks<span class="token operator">:</span> <span class="token boolean">false</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token comment">// 插件</span>
-    plugins<span class="token punctuation">:</span> plugins<span class="token punctuation">,</span>
+    plugins<span class="token operator">:</span> plugins<span class="token punctuation">,</span>
     <span class="token comment">// 定制化</span>
-    optimization<span class="token punctuation">:</span> optimization
+    optimization<span class="token operator">:</span> optimization
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>webpack.config.pro.js</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -281,43 +289,43 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token comment">// *rules 配置</span>
 <span class="token keyword">const</span> rules <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span> <span class="token comment">// 处理 .js 和 .jsx</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.jsx?$/</span><span class="token punctuation">,</span>
-        exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
-        parser<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            requireJs<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token comment">// 禁用 requirejs</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.jsx?$/</span><span class="token punctuation">,</span>
+        exclude<span class="token operator">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
+        parser<span class="token operator">:</span> <span class="token punctuation">{</span>
+            requireJs<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token comment">// 禁用 requirejs</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        use<span class="token punctuation">:</span> <span class="token string">'babel-loader?cacheDirectory'</span>
+        use<span class="token operator">:</span> <span class="token string">'babel-loader?cacheDirectory'</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span> <span class="token comment">// 处理样式</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.(scss|css)$/</span><span class="token punctuation">,</span>
-        exclude<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.(scss|css)$/</span><span class="token punctuation">,</span>
+        exclude<span class="token operator">:</span> <span class="token punctuation">[</span>
             path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">,</span> <span class="token string">'node_modules'</span><span class="token punctuation">)</span>
         <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        use<span class="token operator">:</span> <span class="token punctuation">[</span>
             <span class="token punctuation">{</span>
-                loader<span class="token punctuation">:</span> MiniCssExtractPlugin<span class="token punctuation">.</span>loader <span class="token comment">// 生产环境采用此方式解耦CSS文件与js文件</span>
+                loader<span class="token operator">:</span> MiniCssExtractPlugin<span class="token punctuation">.</span>loader <span class="token comment">// 生产环境采用此方式解耦CSS文件与js文件</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
             <span class="token punctuation">{</span>
-                loader<span class="token punctuation">:</span> <span class="token string">'css-loader'</span><span class="token punctuation">,</span> <span class="token comment">// CSS加载器</span>
-                options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                    modules<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-                    localIdentName<span class="token punctuation">:</span> <span class="token string">'[name]__[local]___[hash:base64:5]'</span>
+                loader<span class="token operator">:</span> <span class="token string">'css-loader'</span><span class="token punctuation">,</span> <span class="token comment">// CSS加载器</span>
+                options<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    modules<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    localIdentName<span class="token operator">:</span> <span class="token string">'[name]__[local]___[hash:base64:5]'</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
             <span class="token punctuation">{</span>
-                loader<span class="token punctuation">:</span> <span class="token string">'postcss-loader'</span>
+                loader<span class="token operator">:</span> <span class="token string">'postcss-loader'</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
             <span class="token punctuation">{</span>
-                loader<span class="token punctuation">:</span> <span class="token string">'sass-loader'</span>
+                loader<span class="token operator">:</span> <span class="token string">'sass-loader'</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">]</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span> <span class="token comment">// 处理其他文件资源</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.(png|jpg|jpeg|svg)$/</span><span class="token punctuation">,</span>
-        use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            loader<span class="token punctuation">:</span> <span class="token string">'url-loader'</span><span class="token punctuation">,</span>
-            options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                limit<span class="token punctuation">:</span> <span class="token number">8192</span> <span class="token comment">// 8k</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.(png|jpg|jpeg|svg)$/</span><span class="token punctuation">,</span>
+        use<span class="token operator">:</span> <span class="token punctuation">{</span>
+            loader<span class="token operator">:</span> <span class="token string">'url-loader'</span><span class="token punctuation">,</span>
+            options<span class="token operator">:</span> <span class="token punctuation">{</span>
+                limit<span class="token operator">:</span> <span class="token number">8192</span> <span class="token comment">// 8k</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
@@ -327,11 +335,11 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token keyword">const</span> plugins <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token comment">// 确定环境</span>
     <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        <span class="token string">'process.env.NODE_ENV'</span><span class="token punctuation">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token string">'production'</span><span class="token punctuation">)</span>
+        <span class="token string">'process.env.NODE_ENV'</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token string">'production'</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token comment">// 提取样式</span>
     <span class="token keyword">new</span> <span class="token class-name">MiniCssExtractPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        filename<span class="token punctuation">:</span> <span class="token string">'css/[name].min.css'</span>
+        filename<span class="token operator">:</span> <span class="token string">'css/[name].min.css'</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token comment">// 分析打包效果</span>
     <span class="token comment">// new BundleAnalyzerPlugin(</span>
@@ -352,30 +360,30 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 <span class="token comment">// *定制化</span>
 <span class="token keyword">const</span> optimization <span class="token operator">=</span> <span class="token punctuation">{</span>
-    splitChunks<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        cacheGroups<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    splitChunks<span class="token operator">:</span> <span class="token punctuation">{</span>
+        cacheGroups<span class="token operator">:</span> <span class="token punctuation">{</span>
             <span class="token comment">// 将所有的css组合成一个文件</span>
-            styles<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                name<span class="token punctuation">:</span> <span class="token string">'status'</span><span class="token punctuation">,</span>
-                test<span class="token punctuation">:</span> <span class="token regex">/\.(scss|css)$/</span><span class="token punctuation">,</span>
-                chunks<span class="token punctuation">:</span> <span class="token string">'all'</span><span class="token punctuation">,</span>
-                enforce<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-                priority<span class="token punctuation">:</span> <span class="token number">20</span>
+            styles<span class="token operator">:</span> <span class="token punctuation">{</span>
+                name<span class="token operator">:</span> <span class="token string">'status'</span><span class="token punctuation">,</span>
+                test<span class="token operator">:</span> <span class="token regex">/\.(scss|css)$/</span><span class="token punctuation">,</span>
+                chunks<span class="token operator">:</span> <span class="token string">'all'</span><span class="token punctuation">,</span>
+                enforce<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                priority<span class="token operator">:</span> <span class="token number">20</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    minimizer<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    minimizer<span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token comment">// 压缩css</span>
         <span class="token keyword">new</span> <span class="token class-name">OptimizeCssAssetsPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
         <span class="token comment">// 压缩JS</span>
         <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-            cache<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-            parallel<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-            sourceMap<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-            exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
-            terserOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                    comments<span class="token punctuation">:</span> <span class="token boolean">false</span>
+            cache<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            parallel<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            sourceMap<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            exclude<span class="token operator">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
+            terserOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+                output<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    comments<span class="token operator">:</span> <span class="token boolean">false</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -385,51 +393,51 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token comment">// *导出配置</span>
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">merge</span><span class="token punctuation">(</span>base<span class="token punctuation">,</span> <span class="token punctuation">{</span>
     <span class="token comment">// 模块规则</span>
-    module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        rules<span class="token punctuation">:</span> rules
+    module<span class="token operator">:</span> <span class="token punctuation">{</span>
+        rules<span class="token operator">:</span> rules
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token comment">// 插件</span>
-    plugins<span class="token punctuation">:</span> plugins<span class="token punctuation">,</span>
+    plugins<span class="token operator">:</span> plugins<span class="token punctuation">,</span>
     <span class="token comment">// 定制化</span>
-    optimization<span class="token punctuation">:</span> optimization
+    optimization<span class="token operator">:</span> optimization
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>外加上 babel.config.js</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
-    presets<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    presets<span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token punctuation">[</span>
             <span class="token string">'@babel/preset-env'</span><span class="token punctuation">,</span>
             <span class="token punctuation">{</span>
-                modules<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-                targets<span class="token punctuation">:</span> <span class="token string">'Chrome > 70'</span><span class="token punctuation">,</span>
-                useBuiltIns<span class="token punctuation">:</span> <span class="token string">'usage'</span><span class="token punctuation">,</span>
-                corejs<span class="token punctuation">:</span> <span class="token number">3</span>
+                modules<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                targets<span class="token operator">:</span> <span class="token string">'Chrome > 70'</span><span class="token punctuation">,</span>
+                useBuiltIns<span class="token operator">:</span> <span class="token string">'usage'</span><span class="token punctuation">,</span>
+                corejs<span class="token operator">:</span> <span class="token number">3</span>
                 <span class="token comment">// debug: true</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">]</span><span class="token punctuation">,</span>
         <span class="token string">'@babel/preset-react'</span>
     <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token comment">// 减少 babel helper 函数</span>
         <span class="token punctuation">[</span>
             <span class="token string">'@babel/plugin-transform-runtime'</span><span class="token punctuation">,</span>
             <span class="token punctuation">{</span>
-                <span class="token string">'corejs'</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 默认值，可以不写</span>
-                <span class="token string">'helpers'</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 默认，可以不写</span>
-                <span class="token string">'regenerator'</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 通过 preset-env 已经使用了全局的 regeneratorRuntime, 不再需要 transform-runtime 提供的 不污染全局的 regeneratorRuntime</span>
-                <span class="token string">'useESModules'</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 使用 es modules helpers, 减少 commonJS 语法代码</span>
-                <span class="token string">'absoluteRuntime'</span><span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token comment">// 是否跨项目引用 runtime</span>
+                <span class="token string">'corejs'</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 默认值，可以不写</span>
+                <span class="token string">'helpers'</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 默认，可以不写</span>
+                <span class="token string">'regenerator'</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 通过 preset-env 已经使用了全局的 regeneratorRuntime, 不再需要 transform-runtime 提供的 不污染全局的 regeneratorRuntime</span>
+                <span class="token string">'useESModules'</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 使用 es modules helpers, 减少 commonJS 语法代码</span>
+                <span class="token string">'absoluteRuntime'</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token comment">// 是否跨项目引用 runtime</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">]</span><span class="token punctuation">,</span>
         <span class="token punctuation">[</span>
             <span class="token string">'react-css-modules'</span><span class="token punctuation">,</span>
             <span class="token punctuation">{</span>
-                generateScopedName<span class="token punctuation">:</span> <span class="token string">'[name]__[local]___[hash:base64:5]'</span><span class="token punctuation">,</span>
-                filetypes<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                    <span class="token string">'.css'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                        syntax<span class="token punctuation">:</span> <span class="token string">'postcss-scss'</span>
+                generateScopedName<span class="token operator">:</span> <span class="token string">'[name]__[local]___[hash:base64:5]'</span><span class="token punctuation">,</span>
+                filetypes<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token string">'.css'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        syntax<span class="token operator">:</span> <span class="token string">'postcss-scss'</span>
                     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-                    <span class="token string">'.scss'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                        syntax<span class="token punctuation">:</span> <span class="token string">'postcss-scss'</span>
+                    <span class="token string">'.scss'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        syntax<span class="token operator">:</span> <span class="token string">'postcss-scss'</span>
                     <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
@@ -442,7 +450,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
         <span class="token punctuation">]</span>
     <span class="token punctuation">]</span>
 <span class="token punctuation">}</span></code></pre></div>
-<h2 id="打包形态"><a href="#%E6%89%93%E5%8C%85%E5%BD%A2%E6%80%81" aria-label="打包形态 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>打包形态</h2>
+<h2 id="打包形态" style="position:relative;"><a href="#%E6%89%93%E5%8C%85%E5%BD%A2%E6%80%81" aria-label="打包形态 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>打包形态</h2>
 <p>通过观察打包生成的源码来看，可以看到 Webpack 对于源码的处理过程：</p>
 <p>输入：</p>
 <p>index.js</p>
@@ -484,9 +492,9 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token comment">/******/</span> 		<span class="token punctuation">}</span>
 <span class="token comment">/******/</span> 		<span class="token comment">// Create a new module (and put it into the cache)</span>
 <span class="token comment">/******/</span> 		<span class="token keyword">var</span> module <span class="token operator">=</span> installedModules<span class="token punctuation">[</span>moduleId<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-<span class="token comment">/******/</span> 			i<span class="token punctuation">:</span> moduleId<span class="token punctuation">,</span>
-<span class="token comment">/******/</span> 			l<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-<span class="token comment">/******/</span> 			exports<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">/******/</span> 			i<span class="token operator">:</span> moduleId<span class="token punctuation">,</span>
+<span class="token comment">/******/</span> 			l<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+<span class="token comment">/******/</span> 			exports<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token comment">/******/</span> 		<span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span>
 <span class="token comment">/******/</span> 		<span class="token comment">// Execute the module function</span>
@@ -509,16 +517,16 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token comment">/******/</span> 	<span class="token comment">// define getter function for harmony exports</span>
 <span class="token comment">/******/</span> 	__webpack_require__<span class="token punctuation">.</span><span class="token function-variable function">d</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">exports<span class="token punctuation">,</span> name<span class="token punctuation">,</span> getter</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token comment">/******/</span> 		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>__webpack_require__<span class="token punctuation">.</span><span class="token function">o</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token comment">/******/</span> 			Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token punctuation">{</span> enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token keyword">get</span><span class="token punctuation">:</span> getter <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/******/</span> 			Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token punctuation">{</span> enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token keyword">get</span><span class="token operator">:</span> getter <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span> 		<span class="token punctuation">}</span>
 <span class="token comment">/******/</span> 	<span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span>
 <span class="token comment">/******/</span> 	<span class="token comment">// define __esModule on exports</span>
 <span class="token comment">/******/</span> 	__webpack_require__<span class="token punctuation">.</span><span class="token function-variable function">r</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">exports</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token comment">/******/</span> 		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> Symbol <span class="token operator">!==</span> <span class="token string">'undefined'</span> <span class="token operator">&amp;&amp;</span> Symbol<span class="token punctuation">.</span>toStringTag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token comment">/******/</span> 			Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> Symbol<span class="token punctuation">.</span>toStringTag<span class="token punctuation">,</span> <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token string">'Module'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/******/</span> 			Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> Symbol<span class="token punctuation">.</span>toStringTag<span class="token punctuation">,</span> <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token string">'Module'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span> 		<span class="token punctuation">}</span>
-<span class="token comment">/******/</span> 		Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> <span class="token string">'__esModule'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/******/</span> 		Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> <span class="token string">'__esModule'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span> 	<span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span>
 <span class="token comment">/******/</span> 	<span class="token comment">// create a fake namespace object</span>
@@ -532,7 +540,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token comment">/******/</span> 		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>mode <span class="token operator">&amp;</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> value <span class="token operator">&amp;&amp;</span> value<span class="token punctuation">.</span>__esModule<span class="token punctuation">)</span> <span class="token keyword">return</span> value<span class="token punctuation">;</span>
 <span class="token comment">/******/</span> 		<span class="token keyword">var</span> ns <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span> 		__webpack_require__<span class="token punctuation">.</span><span class="token function">r</span><span class="token punctuation">(</span>ns<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">/******/</span> 		Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span> <span class="token string">'default'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> value<span class="token punctuation">:</span> value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/******/</span> 		Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span> <span class="token string">'default'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> value<span class="token operator">:</span> value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span> 		<span class="token keyword">if</span><span class="token punctuation">(</span>mode <span class="token operator">&amp;</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> value <span class="token operator">!=</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> value<span class="token punctuation">)</span> __webpack_require__<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span> key<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> value<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span> 		<span class="token keyword">return</span> ns<span class="token punctuation">;</span>
 <span class="token comment">/******/</span> 	<span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -540,7 +548,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token comment">/******/</span> 	<span class="token comment">// getDefaultExport function for compatibility with non-harmony modules</span>
 <span class="token comment">/******/</span> 	__webpack_require__<span class="token punctuation">.</span><span class="token function-variable function">n</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token comment">/******/</span> 		<span class="token keyword">var</span> getter <span class="token operator">=</span> module <span class="token operator">&amp;&amp;</span> module<span class="token punctuation">.</span>__esModule <span class="token operator">?</span>
-<span class="token comment">/******/</span> 			<span class="token keyword">function</span> <span class="token function">getDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> module<span class="token punctuation">[</span><span class="token string">'default'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token punctuation">:</span>
+<span class="token comment">/******/</span> 			<span class="token keyword">function</span> <span class="token function">getDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> module<span class="token punctuation">[</span><span class="token string">'default'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token operator">:</span>
 <span class="token comment">/******/</span> 			<span class="token keyword">function</span> <span class="token function">getModuleExports</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> module<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span> 		__webpack_require__<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>getter<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> getter<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">/******/</span> 		<span class="token keyword">return</span> getter<span class="token punctuation">;</span>
@@ -559,7 +567,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token comment">/************************************************************************/</span>
 <span class="token comment">/******/</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
 
-<span class="token comment">/***/</span> <span class="token string">"./node_modules/@babel/runtime/helpers/esm/defineProperty.js"</span><span class="token punctuation">:</span>
+<span class="token comment">/***/</span> <span class="token string">"./node_modules/@babel/runtime/helpers/esm/defineProperty.js"</span><span class="token operator">:</span>
 <span class="token comment">/*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
   \*******************************************************************/</span>
@@ -572,10 +580,10 @@ __webpack_require__<span class="token punctuation">.</span><span class="token fu
 <span class="token keyword">function</span> <span class="token function">_defineProperty</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> key<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-      value<span class="token punctuation">:</span> value<span class="token punctuation">,</span>
-      enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-      configurable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-      writable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+      value<span class="token operator">:</span> value<span class="token punctuation">,</span>
+      enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      configurable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      writable<span class="token operator">:</span> <span class="token boolean">true</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
     obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
@@ -586,7 +594,7 @@ __webpack_require__<span class="token punctuation">.</span><span class="token fu
 
 <span class="token comment">/***/</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 
-<span class="token comment">/***/</span> <span class="token string">"./src/b.js"</span><span class="token punctuation">:</span>
+<span class="token comment">/***/</span> <span class="token string">"./src/b.js"</span><span class="token operator">:</span>
 <span class="token comment">/*!******************!*\
   !*** ./src/b.js ***!
   \******************/</span>
@@ -621,7 +629,7 @@ __webpack_require__<span class="token punctuation">.</span><span class="token fu
 
 <span class="token comment">/***/</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 
-<span class="token comment">/***/</span> <span class="token string">"./src/index.js"</span><span class="token punctuation">:</span>
+<span class="token comment">/***/</span> <span class="token string">"./src/index.js"</span><span class="token operator">:</span>
 <span class="token comment">/*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/</span>
@@ -646,21 +654,21 @@ __webpack_require__<span class="token punctuation">.</span><span class="token fu
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">modules</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// webpackBootstrap 代码从这里启动</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    <span class="token string">"./node_modules/@babel/runtime/helpers/esm/defineProperty.js"</span><span class="token punctuation">:</span>
+    <span class="token string">"./node_modules/@babel/runtime/helpers/esm/defineProperty.js"</span><span class="token operator">:</span>
     <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">module<span class="token punctuation">,</span> __webpack_exports__<span class="token punctuation">,</span> __webpack_require__</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// 每个模块的各自源码</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token string">"./src/b.js"</span><span class="token punctuation">:</span>
+    <span class="token string">"./src/b.js"</span><span class="token operator">:</span>
     <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">module<span class="token punctuation">,</span> __webpack_exports__<span class="token punctuation">,</span> __webpack_require__</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// 每个模块的各自源码</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token string">"./src/index.js"</span><span class="token punctuation">:</span>
+    <span class="token string">"./src/index.js"</span><span class="token operator">:</span>
      <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">module<span class="token punctuation">,</span> __webpack_exports__<span class="token punctuation">,</span> __webpack_require__</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// 每个模块的各自源码</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>这里，不同的 <code>devtool</code> 和 <code>libraryTarget</code> 等配置会生成不同形态的打包后的代码，但可以看到 Webpack 并非简单的将模块源码进行揉合在一块，而是分析其依赖关系，重新组织其依赖结果，通过自定义的 <code>__webpack_exports__</code> 和 <code>__webpack_require__</code> 管理模块化。这篇就不深入探讨其原理了。</p>
-<h2 id="参考"><a href="#%E5%8F%82%E8%80%83" aria-label="参考 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考</h2>
+<h2 id="参考" style="position:relative;"><a href="#%E5%8F%82%E8%80%83" aria-label="参考 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考</h2>
 <ul>
 <li><a href="https://www.gulpjs.com.cn/">gulp.js - 基于流的自动化构建工具。 | gulp.js 中文网</a></li>
 <li><a href="https://webpack.docschina.org/">webpack 中文文档(@印记中文) https://docschina.org/</a></li>
@@ -668,4 +676,4 @@ __webpack_require__<span class="token punctuation">.</span><span class="token fu
 <li><a href="https://segmentfault.com/a/1190000016596781">Webpack 常用知识点总结 - 个人文章 - SegmentFault 思否</a></li>
 <li><a href="https://segmentfault.com/q/1010000008058766">javascript - gulp和webpack究竟有什么区别？ - SegmentFault 思否</a></li>
 <li><a href="https://www.barretlee.com/blog/2017/04/27/gulp-and-webpack/">理解 Gulp 和 Webpack | 小胡子哥的个人网站</a></li>
-</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/WebFrontEnd-Webpack4 概述/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-5629feba1c6f6e5305f4.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-dc41ec17d336dae95156.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-fb9165298f6a73d01f58.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-15b7ed9fb5ecca0b64a4.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-f44e488ef2c155b6ac37.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-92988b7a7061e3b0cc6d.js"]};/*]]>*/</script><script src="/webpack-runtime-c8645f8b03a892ec02db.js" async=""></script><script src="/app-5629feba1c6f6e5305f4.js" async=""></script><script src="/commons-585c18cbbbc01686e12d.js" async=""></script><script src="/component---src-templates-blog-template-tsx-fb9165298f6a73d01f58.js" async=""></script><script src="/styles-f7c8d31f2eddcbeaba47.js" async=""></script></body></html>
+</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/WebFrontEnd-Webpack4 概述/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-b92cbbf43add9427c56b.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-756933a2d3dadc1e6fe7.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-e3861aad58726100458f.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-886e9b83e50bd1047761.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-7a0870e752e970f4d9f0.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-f78c7f199904ee3e55aa.js"]};/*]]>*/</script><script src="/webpack-runtime-753a804d29a19f93f235.js" async=""></script><script src="/app-b92cbbf43add9427c56b.js" async=""></script><script src="/commons-fc809561c455a4a73a62.js" async=""></script><script src="/component---src-templates-blog-template-tsx-e3861aad58726100458f.js" async=""></script><script src="/styles-d8e10dc4bd92286e96e6.js" async=""></script></body></html>
