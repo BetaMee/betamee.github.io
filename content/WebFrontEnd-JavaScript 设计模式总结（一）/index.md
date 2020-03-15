@@ -1,5 +1,5 @@
 ---
-title: JavaScript 设计模式总结
+title: JavaScript 设计模式总结（一）
 date: 2019-10-19 14:45:15
 category: WebFrontEnd
 tags: JS_Deep 设计模式 读书笔记
@@ -8,11 +8,28 @@ openreward: true
 
 ## 目录
 
-## 1. 引言
+<!-- toc -->
 
-## 2. 面向对象编程
+- [1. 面向对象编程](#1-面向对象编程)
+  * [1.1 类的创建](#11-类的创建)
+  * [1.2 闭包实现私有属性和方法](#12-闭包实现私有属性和方法)
+  * [1.3 创建对象的安全模式](#13-创建对象的安全模式)
+- [2. 继承](#2-继承)
+  * [2.1 类式继承](#21-类式继承)
+  * [2.2 构造函数继承](#22-构造函数继承)
+  * [2.3 组合继承](#23-组合继承)
+  * [2.4 原型式继承](#24-原型式继承)
+  * [2.5 寄生式继承](#25-寄生式继承)
+  * [2.6 寄生组合式继承](#26-寄生组合式继承)
+  * [2.7 多继承：extend 和 mix 的思路](#27-多继承：extend-和-mix-的思路)
+  * [2.8 多态：根据 arguments 参数来判断](#28-多态：根据-arguments-参数来判断)
+- [参考](#参考)
 
-### 2.1 类的创建
+<!-- tocstop -->
+
+## 1. 面向对象编程
+
+### 1.1 类的创建
 
 ```js
 // 1. 构造函数语法
@@ -65,7 +82,7 @@ const book = new Book(1, 'bookname', 100)
 //      __proto__: Object
 ```
 
-### 2.2 闭包实现私有属性和方法
+### 1.2 闭包实现私有属性和方法
 
 ```js
 const Book = (function() {
@@ -94,7 +111,8 @@ Book.prototype = {
   }
 }
 ```
-### 2.3 创建对象的安全模式
+
+### 1.3 创建对象的安全模式
 
 ```js
 const Book = function (id, bookname, price) {
@@ -109,9 +127,9 @@ const Book = function (id, bookname, price) {
 }
 ```
 
-### 3. 继承
+## 2. 继承
 
-#### 3.1 类式继承
+### 2.1 类式继承
 
 ```js
 // 父类
@@ -151,7 +169,7 @@ console.log(instance instanceof Object); // true
 2. 子类实现的继承是靠其 prototype 对父类的实例化实现的，无法在创建父类的时候向父类传递参数，对父类构造函数内的属性进行初始化
 3. 子类不是父类的实例，而是**子类的原型**是父类的实例
 
-#### 3.2 构造函数继承
+### 2.2 构造函数继承
 
 ```js
 // 父类
@@ -191,7 +209,7 @@ console.log(instance2.id); // 4
 
 缺点：由于 `SuperClass.call(this, id);` 只涉及父类的构造函数，所以父类原型中的方法不会被继承！
 
-#### 3.3 组合继承
+### 2.3 组合继承
 
 可以这么看待： 组合继承 = 类式继承 + 构造函数继承
 
@@ -239,7 +257,7 @@ instance1.getTime(); // 2013
 
 缺点：子类构造函数继承时执行一遍父类的构造函数、子类原型继承的时候又执行了一遍构造函数，这就重复调用父类构造函数两次。
 
-#### 3.4 原型式继承
+### 2.4 原型式继承
 
 原型式继承约等于类式继承。
 
@@ -284,7 +302,7 @@ console.log(book.alikeBooks); // ['css book', 'html book', 'xml book', 'as book'
 
 这种思想的发展就变成了 `Object.create()` 方法。
 
-#### 3.5 寄生式继承
+### 2.5 寄生式继承
 
 寄生式继承是在原型式继承的一个加强。
 
@@ -320,7 +338,7 @@ const newBook = createbook(book);
 
 寄生式继承本质是对原型继承的二次封装，并且在二次封装的过程中对继承对象进行了拓展，这样新创建的对象不仅拥有了父类中的属性和方法，也有自己的属性。
 
-#### 3.6 寄生组合式继承
+### 2.6 寄生组合式继承
 
 终极方案，结合寄生式继承和组合式继承的优点。
 
@@ -381,7 +399,7 @@ const instance1 = new SubClass('js book', 2014);
 const instance2 = new SubClass('css book', 2015);
 ```
 
-#### 3.7 多继承：extend 和 mix 的思路
+### 2.7 多继承：extend 和 mix 的思路
 
 多继承可以用一个 JS 中常见的 `extend` 方法来讲解：
 
@@ -415,7 +433,7 @@ const mix = function() {
 }
 ```
 
-#### 3.8 多态：根据 arguments 参数来判断
+### 2.8 多态：根据 arguments 参数来判断
 
 多态的思路很简单，根据参数多少来判断：
 
@@ -443,258 +461,6 @@ console.log(add(5)); // 15
 console.log(add(6, 7)) // 13
 ```
 
-## 4. 设计模式
-
-### 4.1 创建型设计模式
-
-创建型设计模式是一类处理对象创建的设计模式，通过某种方式控制对象的创建来避免基本对象创建时可能导致设计上的问题或者增加设计上的复杂度。
-
-### 简单工厂模式
-
-```js
-// 一种是在一个方法里提供多个类实例
-const createPop = function(type, text) {
-  switch(type) {
-    case 'alert':
-      return new Alert(text);
-    case 'prompt':
-      return new Prompt(text);
-    case 'confirm':
-      return new Confirm(text);
-  }
-}
-
-
-// OR 这种抽离共用的属性，再添加独特的自身属性
-const createPop = function(type, text){
-  const o = new Object();
-  o.content = text;
-  o.show = function(){
-    //显示方法
-  };
-  if(type == 'alert'){
-    //警示框差异部分
-  };
-  if(type == 'prompt'){
-    //提示框差异
-  };
-  if(type == 'confirm'){
-    //确认框差异部分
-  }
-  return o;
-};
-
-//创建警示框
-const pop = createPop('alert', '用户只能输入26个以内字母或者数字');
-```
-
-缺点：每次新增对象都要改动工厂方法，限制比较大，不够灵活。
-
-### 工厂方法模式
-
-```js
-// 安全模式创建的工厂类
-const Factory = function (type, content) {
-  if (this instanceof Factory) {
-    return new this[type](content);
-  } else {
-    return new Factory(type, content);
-  }
-}
-
-// 原型工厂原型中设置创建所有类型数据对象的基类
-Factory.prototype = {
-  Java: function(content) {
-    // 具体的实现
-  },
-  JavaScript: function(content) {
-    // 具体的实现
-  }
-}
-
-// 实例
-const data = [
-  {
-    type: 'JavaScript',
-    content: 'JavaScript 哪家强'
-  },
-  {
-    type: 'Java',
-    content: 'Java 哪家强'
-  }
-];
-
-for (let i = 0; i < data.length; i ++) {
-  Factory(data[i].type, data[i].content)
-}
-```
-
-### 抽象工厂模式
-
-```js
-const VehicleFactory = function (subType, superType) {
-  // 判断抽象工厂中是否有该抽象类
-  if (typeof VehicleFactory[superType] === 'function') {
-    // 缓存类
-    function F() {}
-    // 继承父类属性和方法
-    F.prototype = new VehicleFactory[superType]()
-    // 将子类 constructor 指向子类
-    subType.constructor = subType
-    // 子类原型继承父类
-    subType.prototype = new F()
-  } else {
-    // 不存在该抽象类抛出错误
-    throw new Error('未创建该抽象类')
-  }
-}
-// 小汽车抽象类
-VehicleFactory.Car = function () {
-  this.type = 'car'
-}
-
-VehicleFactory.Car.prototype = {
-  getPrice() {
-    return new Error('抽象方法不能调用')
-  },
-  getSpeed() {
-    return new Error('抽象方法不能调用')
-  }
-}
-// 公交车抽象类
-VehicleFactory.Bus = function () {
-  this.type = 'bus'
-}
-
-VehicleFactory.Bus.prototype = {
-  getPrice() {
-    return new Error('抽象方法不能调用')
-  },
-  getPassengerNum() {
-    return new Error('抽象方法不能调用')
-  }
-}
-
-// 货车抽象类
-VehicleFactory.Truck = function () {
-  this.type = 'truck'
-}
-
-VehicleFactory.Truck.prototype = {
-  getPrice() {
-    return new Error('抽象方法不能调用')
-  },
-  getTrainLoad() {
-    return new Error('抽象方法不能调用')
-  }
-}
-
-// 使用
-
-// 宝马汽车子类
-const BMW = function(price, speed) {
-  this.price = price
-  this.speed = speed
-}
-
-VehicleFactory(BMW, 'car')
-
-BMW.prototype.getPrice = function() {
-  return this.price
-}
-
-BMW.prototype.getSpeed = function() {
-  return this.speed
-}
-
-
-// 兰博基尼汽车子类
-const Lamborghini = function(price, speed) {
-  this.price = price
-  this.speed = speed
-}
-
-VehicleFactory(Lamborghini, 'car')
-
-Lamborghini.prototype.getPrice = function() {
-  return this.price
-}
-
-Lamborghini.prototype.getSpeed = function() {
-  return this.speed
-}
-```
-
-### 建造者模式
-
-### 原型模式
-
-
-### 单例模式
-
-### 外观模式
-
-### 适配器模式
-
-### 代理模式
-
-### 装饰者模式
-
-### 桥接模式
-
-### 组合模式
-
-### 享元模式
-
-### 模版方法模式
-
-### 观察者模式
-
-### 状态模式
-
-### 策略模式
-
-### 职责链模式
-
-### 命令模式
-
-### 访问者模式
-
-### 中介者模式
-
-### 备忘录模式
-
-### 迭代器模式
-
-### 解释器模式
-
-### 链模式
-
-### 委托模式
-
-### 数据访问对象模式
-
-### 节流模式
-
-### 简单模式模式
-
-### 惰性模式
-
-### 参与者模式
-
-### 等待者模式
-
-### 同步模块模式
-
-### 异步模块模式
-
-### Widgt 模式
-
-### MVC 模式
-
-### MVP 模式
-
-### MVVM 模式
 
 ## 参考
 
