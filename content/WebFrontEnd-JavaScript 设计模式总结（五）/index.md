@@ -6,6 +6,22 @@ tags: JS_Deep 设计模式 读书笔记
 openreward: true
 ---
 
+## 目录
+
+<!-- toc -->
+
+- [技巧型模式](#技巧型模式)
+  * [1. 链模式（Operate of Responsibility）（N）](#1-链模式（Operate-of-Responsibility）（N）)
+  * [2. 委托模式（Entrust）](#2-委托模式（Entrust）)
+  * [3. 数据访问对象模式（Data access object-DAO）](#3-数据访问对象模式（Data-access-object-DAO）)
+  * [4. 节流模式（Throttler）](#4-节流模式（Throttler）)
+  * [5. 简单模版模式（Simple template）](#5-简单模版模式（Simple-template）)
+  * [6. 惰性模式（Layier）](#6-惰性模式（Layier）)
+  * [7. 参与者模式（Participator）](#7-参与者模式（Participator）)
+  * [8. 等待者模式](#8-等待者模式)
+
+<!-- tocstop -->
+
 ## 技巧型模式
 
 技巧型设计模式是通过一些特定技巧来解决组件的某些方面的问题，这类技巧一般通过实践经验总结得到。

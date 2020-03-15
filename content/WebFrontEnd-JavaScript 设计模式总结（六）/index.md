@@ -6,6 +6,20 @@ tags: JS_Deep 设计模式 读书笔记
 openreward: true
 ---
 
+## 目录
+
+<!-- toc -->
+
+- [架构型设计模式](#架构型设计模式)
+  * [1. 同步模块模式（Synchronous Module Definition）](#1-同步模块模式（Synchronous-Module-Definition）)
+  * [2. 异步模块模式（Asynchronous Module Definition）](#2-异步模块模式（Asynchronous-Module-Definition）)
+  * [3. Widget 模式](#3-Widget-模式)
+  * [4. MVC 模式](#4-MVC-模式)
+  * [5. MVP 模式](#5-MVP-模式)
+  * [6. MVVM 模式](#6-MVVM-模式)
+
+<!-- tocstop -->
+
 ## 架构型设计模式
 
 架构型设计模式是一类框架结构，通过提供一些子系统，指定它们的职责，并将它们条理清晰地组织在一起。

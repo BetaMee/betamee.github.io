@@ -6,6 +6,25 @@ tags: JS_Deep 设计模式 读书笔记
 openreward: true
 ---
 
+## 目录
+
+<!-- toc -->
+
+- [行为型设计模式](#行为型设计模式)
+  * [1.模版方法模式（Template Method）](#1模版方法模式（Template-Method）)
+  * [2.观察者模式（Observer）](#2观察者模式（Observer）)
+  * [3.状态模式（State）](#3状态模式（State）)
+  * [4.策略模式（Strategy）](#4策略模式（Strategy）)
+  * [5.职责链模式（Chain of Responsiblity）](#5职责链模式（Chain-of-Responsiblity）)
+  * [6.命令模式（Command）](#6命令模式（Command）)
+  * [7.访问者模式（Visitor）](#7访问者模式（Visitor）)
+  * [8.中介者模式（Mediator）](#8中介者模式（Mediator）)
+  * [9.备忘录模式（Memento）](#9备忘录模式（Memento）)
+  * [10.迭代器模式（Iterator）](#10迭代器模式（Iterator）)
+  * [11.解释器模式（Interpreter）](#11解释器模式（Interpreter）)
+
+<!-- tocstop -->
+
 ## 行为型设计模式
 
 行为姓设计模式用于不同对象之间职责划分或者算法抽象，行为型设计及模式不仅仅设计类和对象，还涉及类或者对象之间的交流模式并加以实现。
