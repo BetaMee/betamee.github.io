@@ -1,7 +1,7 @@
 ---
 title: 优质学习资源站点
 date: 2019-09-28 11:06:16
-category: SystemLog
+category: SystemLogs
 tags: Advance
 openreward: true
 ---
