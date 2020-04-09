@@ -50,3 +50,10 @@ openreward: true
 
 * [Haskell 简明教程](https://jiajunhuang.com/articles/2017_09_11-learn_you_a_haskell_part_1.md.html)
 * [Haskell 趣学指南](http://fleurer.github.io/lyah/chapters.htm)
+
+## Linux
+
+### 资料
+
+* [Linux入门教程](http://c.biancheng.net/linux_tutorial/)
+* [鸟哥的Linux 私房菜](http://cn.linux.vbird.org/linux_basic/0120howtolinux.php)

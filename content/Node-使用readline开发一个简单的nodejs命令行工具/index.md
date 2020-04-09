@@ -2,7 +2,7 @@
 title: 使用readline开发一个简单的nodejs命令行工具
 date: 2019-08-18 09:35:53
 category: Node
-tags: Node cli
+tags: Node_Basic API
 openreward: true
 ---
 
