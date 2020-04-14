@@ -22,7 +22,7 @@ funstonTheme.overrideThemeStyles = () => ({
   },
   'blockquote': {
     lineHeight: '1.6rem',
-    fontSize: '1rem',
+    // fontSize: '1rem',
     backgroundColor: '#f8f8f8',
     borderLeft: '0.2625rem solid #cbcbcb',
     paddingTop: '10px',

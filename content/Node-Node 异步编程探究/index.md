@@ -39,7 +39,7 @@ openreward: true
 * 过渡方案-Generator Function (co)
 * 终极方案-Async Await Function
 
-其实还有像 Thunk、事件监听、发布/订阅这样的解决思路，但大浪淘沙下来，目前最重要的是 Promise + Async 这两个互有联系的技术，是需要重点掌握的。
+其实还有像 Thunk、事件监听、发布/订阅这样的解决思路，但大浪淘沙下来，目前是由 Promise + Async 这两个重要技术挑大梁，是需要重点掌握的。
 
 ## 异步编程
 
@@ -187,7 +187,7 @@ co(function* (){
 
 ## Async Await Function
 
-Async/Await 是当前 Node.js，也是 JavaScript 领域终极的异步解决方案，它集合了上面方案的所有优点，来直接看看它长什么样：
+Async/Await 是当前 Node.js，也是 JavaScript 领域终极的异步解决方案，它集合了 Promise 和 Generator 的优点，是更高程度的一个抽象。来直接看看它长什么样：
 
 ```js
 const util = require('util');
