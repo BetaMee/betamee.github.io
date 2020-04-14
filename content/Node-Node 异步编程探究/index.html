@@ -199,7 +199,20 @@ g<span class="token punctuation">.</span><span class="token function">next</span
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
-<p>可以看到这段代码优点像上一节的搭配了 co 的 Generator 用法，非常的同步 style。其实与 Generator 和 Promise 相比，它有很多进步：</p>
+<p>而且即便函数中没有特别指定，<code>async</code> 关键词也能将这个函数的返回用 Promise 包装起来：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">aFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">'test'</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">aFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>alert<span class="token punctuation">)</span>
+
+<span class="token comment">// 等同于</span>
+<span class="token keyword">const</span> <span class="token function-variable function">aFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">aFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>alert<span class="token punctuation">)</span></code></pre></div>
+<p>可以看到 Async/Await 代码有点像上一节中搭配了 co 的 Generator 用法，非常的同步 style。其实与 Generator 和 Promise 相比，它有很多进步：</p>
 <ul>
 <li>语义非常好，清晰明了</li>
 <li>自带执行器，所以无需外部的 co 这类的库</li>
@@ -215,4 +228,5 @@ g<span class="token punctuation">.</span><span class="token function">next</span
 <li><a href="http://www.ruanyifeng.com/blog/2015/05/co.html">co 函数库的含义和用法 - 阮一峰的网络日志</a></li>
 <li><a href="https://juejin.im/post/5a333fe1f265da431f4b1d5c">node 异步编程 - 掘金</a></li>
 <li><a href="https://github.com/i5ting/How-to-learn-node-correctly#%E7%9F%A5%E4%B9%8Elive%E7%8B%BC%E5%8F%94%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E5%AD%A6%E4%B9%A0nodejs">GitHub - i5ting/How-to-learn-node-correctly: [全文]如何正确的学习Node.js</a></li>
+<li><a href="https://nodejs.dev/modern-asynchronous-javascript-with-async-and-await">Modern Asynchronous JavaScript with Async and Await</a></li>
 </ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/Node-Node 异步编程探究/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-a129d9d0882a5b9775bd.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-1df390f36a27fc78c680.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-c66b2f9251c351951c80.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-a95dd18cf0eabed20560.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-14d2b9ea4245d10cc6f3.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-4ab1901f95271747e713.js"]};/*]]>*/</script><script src="/webpack-runtime-506cde48cccaff2324cb.js" async=""></script><script src="/app-a129d9d0882a5b9775bd.js" async=""></script><script src="/framework-f2db165fb1960f050581.js" async=""></script><script src="/895bab843c7b765764a1de15895603ae59adcae7-f0ab28be13110020beee.js" async=""></script><script src="/component---src-templates-blog-template-tsx-14d2b9ea4245d10cc6f3.js" async=""></script><script src="/styles-b729c27faa6284e9ff45.js" async=""></script></body></html>
