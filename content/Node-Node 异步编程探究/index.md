@@ -205,7 +205,24 @@ async function callStat() {
 }
 ```
 
-可以看到这段代码优点像上一节的搭配了 co 的 Generator 用法，非常的同步 style。其实与 Generator 和 Promise 相比，它有很多进步：
+而且即便函数中没有特别指定，`async` 关键词也能将这个函数的返回用 Promise 包装起来：
+
+```js
+const aFunction = async () => {
+  return 'test'
+}
+
+aFunction().then(alert)
+
+// 等同于
+const aFunction = async () => {
+  return Promise.resolve('test')
+}
+
+aFunction().then(alert)
+```
+
+可以看到 Async/Await 代码有点像上一节中搭配了 co 的 Generator 用法，非常的同步 style。其实与 Generator 和 Promise 相比，它有很多进步：
 
 * 语义非常好，清晰明了
 * 自带执行器，所以无需外部的 co 这类的库
@@ -222,3 +239,4 @@ async function callStat() {
 + [co 函数库的含义和用法 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/05/co.html)
 + [node 异步编程 - 掘金](https://juejin.im/post/5a333fe1f265da431f4b1d5c)
 + [GitHub - i5ting/How-to-learn-node-correctly: [全文]如何正确的学习Node.js](https://github.com/i5ting/How-to-learn-node-correctly#%E7%9F%A5%E4%B9%8Elive%E7%8B%BC%E5%8F%94%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E5%AD%A6%E4%B9%A0nodejs)
++ [Modern Asynchronous JavaScript with Async and Await](https://nodejs.dev/modern-asynchronous-javascript-with-async-and-await)
