@@ -1,0 +1,355 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.4 'Cabin Condensed','georgia',sans-serif;box-sizing:border-box;overflow-y:scroll;-webkit-font-smoothing:antialiased;letter-spacing:.05em;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.87);font-family:'Cabin Condensed','georgia',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";letter-spacing:.03em;}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:400;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:48px;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.8rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.5rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:400;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:400;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}ul{margin-left:1.4rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.4rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;list-style-position:outside;list-style-image:none;line-height:1.6rem;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;line-height:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;font-size:0.85rem;line-height:1.42;background:hsla(0,0%,0%,0.04);border-radius:3px;overflow:auto;word-wrap:normal;padding:1.4rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;font-size:1rem;line-height:1.4rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}blockquote{margin-left:-1.4rem;margin-right:1.4rem;margin-top:0;padding-bottom:10px;padding-left:1.1375rem;padding-right:0;padding-top:10px;margin-bottom:1.4rem;font-size:1.1487rem;line-height:1.6rem;color:hsla(0,0%,0%,0.6);border-left:0.2625rem solid #cbcbcb;background-color:#f8f8f8;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.4rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.4rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.4rem;margin-bottom:calc(1.4rem / 2);margin-top:calc(1.4rem / 2);}li > ul{margin-left:1.4rem;margin-bottom:calc(1.4rem / 2);margin-top:calc(1.4rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.4rem / 2);}code{font-size:0.85rem;line-height:1.4rem;}kbd{font-size:0.85rem;line-height:1.4rem;}samp{font-size:0.85rem;line-height:1.4rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.93333rem;padding-right:0.93333rem;padding-top:0.7rem;padding-bottom:calc(0.7rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}tt,code{background-color:hsla(0,0%,0%,0.04);border-radius:3px;font-family:"SFMono-Regular", Consolas,"Roboto Mono","Droid Sans Mono","Liberation Mono",Menlo,Courier,monospace;padding:0;padding-top:0.2em;padding-bottom:0.2em;}pre code{background:none;line-height:1.42;}code:before,code:after,tt:before,tt:after{letter-spacing:-0.2em;content:" ";}pre code:before,pre code:after,pre tt:before,pre tt:after{content:none;}a{color:#358ccb;}a:hover{color:#3498DB;}@media only screen and (max-width:480px){blockquote{margin-left:-1.05rem;padding-left:0.7875rem;margin-right:0;}}</style><link as="script" rel="preload" href="/styles-b729c27faa6284e9ff45.js"/><title data-react-helmet="true">十二棵橡树</title><link data-react-helmet="true" rel="icon" type="image/png" href="/static/favicon-9bf81a2b82f5028f3f4b92f88cb575ba.ico" sizes="16x16"/><style data-href="/styles.63a5bb09bc8c9316ed18.css">body{margin:0;width:100%}*{box-sizing:border-box}center{margin:20px 0;font-weight:700;color:#333}table tr td strong{min-width:50px}h1 .anchor svg,h2 .anchor svg,h3 .anchor svg,h4 .anchor svg,h5 .anchor svg,h6 .anchor svg{visibility:unset!important}pre[class*=language-]:after,pre[class*=language-]:before{box-shadow:unset!important}p>code{color:#c92c2c;background-color:#fff5f5!important}.gatsby-resp-image-wrapper{cursor:pointer}.gatsby-resp-image-background-image,.gatsby-resp-image-image{border-radius:.3em}.gatsby-highlight{margin-bottom:1.4rem}.gatsby-highlight pre[class*=language-]>code{border-left:unset;box-shadow:0 0 0 0 #358ccb,0 0 0 1px #dfdfdf}code[class*=language-],pre[class*=language-]{color:#000;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{position:relative;margin:.5em 0;overflow:visible;padding:0}pre[class*=language-]>code{position:relative;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 0);background-size:3em 3em;background-origin:content-box;background-attachment:local}code[class*=language]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,.1);display:inline;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{content:"";z-index:-2;display:block;position:absolute;bottom:.75em;left:.18em;width:40%;height:20%;max-height:13em;box-shadow:0 13px 8px #979797;transform:rotate(-2deg)}:not(pre)>code[class*=language-]:after,pre[class*=language-]:after{right:.75em;left:auto;transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}.token.cr:before,.token.lf:before,.token.tab:not(:empty):before{color:#e0d7d1}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}.layout-module--header--1orMk{padding:0 20%;background-color:#693476;height:80px;display:flex;flex-direction:row;justify-content:space-between;align-items:center;box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.layout-module--title--28C2S{font-size:24px;color:#e1d0e6}.layout-module--menu--Ech1f{font-size:20px}.layout-module--menu--Ech1f a{text-decoration:none;color:#e1d0e6;padding:0 5px}.layout-module--menu--Ech1f a:hover{color:#fff}.layout-module--footer--1-u4U{height:200px;padding:0 20%;border-bottom:10px solid #693476;background-color:#fafafa;display:flex;flex-direction:column;justify-content:center}.layout-module--contact--1Z-dZ a{margin-right:6px;font-size:20px;color:#cf91e2}.layout-module--contact--1Z-dZ{margin-bottom:16px}.layout-module--siteInfo--WbGrj{font-size:20px}@media screen and (max-width:376px){.layout-module--header--1orMk{height:unset;padding:unset;background-color:unset;flex-direction:column}.layout-module--header--1orMk .layout-module--title--28C2S{padding:20px 10px;width:100%;display:flex;justify-content:center;color:#693476}.layout-module--header--1orMk .layout-module--menu--Ech1f{padding:20px 10px;width:100%;background-color:#693476;display:flex;justify-content:center}.layout-module--footer--1-u4U{padding:0 5%}}._404-module--container--2kCC_{min-height:400px;margin:60px auto 80px;display:flex;flex-direction:column;justify-content:center;align-items:center}._404-module--container--2kCC_ span{font-size:40px;font-weight:700}.about-module--content--1y3Xq{margin:60px 20% 80px;min-height:400px}@media screen and (max-width:420px){.about-module--content--1y3Xq{margin:30px 5%;padding-left:10px}}.list-module--main--_HL7O{margin:0 20%}.list-module--catalog--ToZZ4{min-height:400px;display:flex;flex-direction:column;margin:30px 0 10px}.list-module--catalog--ToZZ4 .list-module--item--2P8EQ{margin-top:10px}.list-module--catalog--ToZZ4 .list-module--year--fuRyw{font-size:46px}.list-module--catalog--ToZZ4 .list-module--link--1G28D{display:flex;flex-direction:column}.list-module--catalog--ToZZ4 .list-module--link--1G28D a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}.list-module--catalog--ToZZ4 .list-module--date--1rprK{margin-right:10px;color:#999;font-style:italic}.list-module--catalog--ToZZ4 .list-module--newcontent--2jgkA{padding:1px 5px;background-color:#693476;border-radius:4px;color:#fff;margin-left:10px;font-size:20px}.list-module--pagination--4wgvY{margin:30px 0 60px}.list-module--paginationItem--127RG{color:#333;width:35px;height:35px;display:inline-block;text-align:center;line-height:35px;font-size:18px;margin-right:10px}.list-module--itemSelected--3HOvN{background-color:#cf91e2}@media screen and (max-width:376px){.list-module--main--_HL7O{margin:0 5%}}.viewer-module--viewer--3ba3_{position:fixed;top:0;left:0;z-index:100;width:100vw;height:100vh;background-color:rgba(0,0,0,.6);display:flex;flex-direction:column;justify-content:center;align-items:center}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc{width:70%;height:80%;position:relative}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--img--9w_7t{border-radius:4px;box-shadow:inset 0 0 0 400px #fff;-o-object-fit:contain;object-fit:contain;height:100%;width:100%}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--des--3lo9I{color:#fff;text-align:center;font-size:20px;font-weight:700}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--icon--1vJ-_{cursor:pointer;margin:5px;position:absolute;top:0;right:0;width:30px;height:30px}.blog-module--content--R6Wfi{margin:60px 20% 80px;font-size:18px}.blog-module--heading--2q6UV{margin-bottom:30px}.blog-module--title--3NoN5{font-weight:700;margin-bottom:15px}.blog-module--info--U7riw{color:#666;margin-bottom:5px}.blog-module--info--U7riw span{margin-right:5px}.blog-module--tags--20J6V a{color:#666;margin-right:5px}@media screen and (max-width:420px){.blog-module--content--R6Wfi{margin:60px 5% 80px;padding-left:10px}}.tag-module--content--1DHrR{margin:60px 20% 80px;min-height:400px}.tag-module--heading--15Jbn{margin-bottom:40px}.tag-module--link--3DsMn a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}@media screen and (max-width:376px){.tag-module--content--1DHrR{margin:60px 5% 80px;min-height:400px}}</style><link href="//fonts.googleapis.com/css?family=Patua+One:400|Cabin+Condensed:400,700" rel="stylesheet" type="text/css"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><meta name="generator" content="Gatsby 2.20.26"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-14d2b9ea4245d10cc6f3.js"/><link as="script" rel="preload" href="/895bab843c7b765764a1de15895603ae59adcae7-f0ab28be13110020beee.js"/><link as="script" rel="preload" href="/framework-f2db165fb1960f050581.js"/><link as="script" rel="preload" href="/app-a129d9d0882a5b9775bd.js"/><link as="script" rel="preload" href="/webpack-runtime-506cde48cccaff2324cb.js"/><link as="fetch" rel="preload" href="/page-data/content/WebFrontEnd-浏览器中 JavaScript 单线程运行机制/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">浏览器中 JavaScript 单线程运行机制</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2020-04-20</span></div><div class="blog-module--tags--20J6V"><a href="/tag/Web_Deep">#<!-- -->Web_Deep</a><a href="/tag/原理">#<!-- -->原理</a></div></div><div><blockquote>
+<p>本文主要整理浏览器中的 JavaScript 运行机制。</p>
+</blockquote>
+<h2 id="目录" style="position:relative;"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
+<!-- toc -->
+<ul>
+<li><a href="#%E5%8C%BA%E5%88%86%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%A6%82%E5%BF%B5">区分进程和线程的概念</a></li>
+<li><a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B">浏览器中进程和线程</a></li>
+<li><a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8%EF%BC%88%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B%EF%BC%89%E4%B8%AD%E5%90%84%E4%B8%AA%E7%BA%BF%E7%A8%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB">浏览器内核（渲染进程）中各个线程之间的关系</a></li>
+<li><a href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6">事件循环机制</a></li>
+<li><a href="#%E5%8C%BA%E5%88%86%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BE%AE%E4%BB%BB%E5%8A%A1">区分宏任务和微任务</a></li>
+<li><a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%B5%81%E7%A8%8B">浏览器渲染流程</a></li>
+<li><a href="#%E4%B8%80%E4%BA%9B%E4%BB%A3%E7%A0%81%E7%90%86%E8%A7%A3">一些代码理解</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="区分进程和线程的概念" style="position:relative;"><a href="#%E5%8C%BA%E5%88%86%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%A6%82%E5%BF%B5" aria-label="区分进程和线程的概念 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>区分进程和线程的概念</h2>
+<p>首先我们得先理解一下计算机中常见的进程和线程概念。做一个形象的比喻：</p>
+<blockquote>
+<p>进程是一个工厂，工厂有独立的资源  ->  系统分配的内存（独立的一块内存）
+各个工厂相互独立 -> 进程之间相互独立
+线程是工厂中的工人，多个工人协作完成任务 -> 多个线程在进程中协作完成任务
+工厂内有一个或多个工人 -> 一个进程由一个或多个线程组成
+工人之间共享空间 -> 同一进程下的各个线程之间共享程序的内存空间（包括代码段、数据集、堆等）</p>
+</blockquote>
+<p>用正式术语总结一下：</p>
+<ul>
+<li>进程是 CPU 资源分配的最小单位（是能拥有资源和独立运行的最小单位）</li>
+<li>线程是 CPU 调度的最小单位（线程是建立在进程的基础上的一次程序运行单位，一个进程中可以有多个线程）</li>
+</ul>
+<h2 id="浏览器中进程和线程" style="position:relative;"><a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B" aria-label="浏览器中进程和线程 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>浏览器中进程和线程</h2>
+<p>到这里让，我们回到浏览器中，对浏览器运行作出一个正确的理解：</p>
+<ol>
+<li>浏览器是多进程的，有 Browser 进程（主进程）、插件进程、GPU 进程（最多一个，用于绘制）、浏览器渲染进程</li>
+<li>每一个新开 tab 页面相当于新的一个渲染进程，所以各个页面之间崩溃了也不会影响，缺点是占用内存，比如 Chrome 就很占内存（以前是有单进程的浏览器的）</li>
+<li>浏览器渲染进程内部是多线程的，页面的渲染，JavaScript 的执行，事件的循环，都在这个进程内进行。这是本文重点讲解的进程。</li>
+<li>JavaScript 的执行是单线程的，这个是众所周知的知识点。</li>
+</ol>
+<p>总结一下，我们常说 JavaScript 是一门的单线程语言，这话没错，但放在浏览器的世界中，还需要其他进程/线程的配合，才能让一个页面完美运行。</p>
+<h2 id="浏览器内核（渲染进程）中各个线程之间的关系" style="position:relative;"><a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8%EF%BC%88%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B%EF%BC%89%E4%B8%AD%E5%90%84%E4%B8%AA%E7%BA%BF%E7%A8%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB" aria-label="浏览器内核（渲染进程）中各个线程之间的关系 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>浏览器内核（渲染进程）中各个线程之间的关系</h2>
+<p>对前端来说，最重要的是理清渲染进程的运行机制，渲染进程是多线程的，页面的渲染，JavaScript 的执行，事件的循环这些线程都在这个进程下打配合。</p>
+<p>下面分析一下渲染进程中主要的线程：</p>
+<ul>
+<li>
+<p>GUI 渲染线程</p>
+<ul>
+<li>负责渲染浏览器界面，解析HTML，CSS，构建 DOM 树和 RenderObject 树，布局和绘制等</li>
+<li>当界面需要重绘（Repaint）或由于某种操作引发回流(Reflow)时，该线程就会执行</li>
+</ul>
+</li>
+<li>
+<p>JS 引擎线程</p>
+<ul>
+<li>也称为JS内核，负责解析 Javascript 脚本，运行代码（如 Chrome 中的 V8）</li>
+<li>JS 引擎一直等待着<strong>任务队列</strong>中的任务（事件循环机制塞进来的回调函数）到来，然后加以处理</li>
+<li>有且只有一个 JS 线程在运行</li>
+</ul>
+</li>
+<li>
+<p>事件触发线程</p>
+<ul>
+<li>属于浏览器而不是 JS 引擎，用来控制事件循环</li>
+<li>当 JS 引擎执行如鼠标点击、AJAX 异步请求、定时等异步任务时，在到达定时时间或者是 AJAX 请求成功后，把被触发的事件（也就是回调函数）放到<strong>任务队列</strong>当中，等 JS 引擎空闲了再处理</li>
+</ul>
+</li>
+<li>
+<p>定时触发器线程</p>
+<ul>
+<li><code>setInterval</code> 与 <code>setTimeout</code> 所在线程</li>
+<li>浏览器定时计数器并不是由 JS 引擎计数的,（因为 JS 引擎是单线程的, 如果处于阻塞线程状态就会影响记计时的准确）</li>
+<li>计时完毕后，添加定时事件到<strong>任务队列</strong>中，等待 JS 引擎空闲后执行</li>
+<li>W3C 在 HTML 标准中规定，规定要求 setTimeout 中低于4ms的时间间隔算为4ms</li>
+</ul>
+</li>
+<li>
+<p>异步 AJAX 请求线程</p>
+<ul>
+<li>在 XMLHttpRequest 在连接后是通过浏览器新开一个线程请求</li>
+<li>检测到状态变更时，如果设置有回调函数，异步线程就产生状态变更事件，将这个状态变更事件（代码中的回调函数）再放入<strong>任务队列</strong>中，再由 JS 引擎执行</li>
+<li>当请求结束后，该线程可能就会被销毁</li>
+</ul>
+</li>
+</ul>
+<p>这里再多说几句解释：</p>
+<ol>
+<li>GUI渲染线程与JS引擎线程是互斥的，当JS引擎执行时GUI线程会被挂起（相当于被冻结了），GUI更新会被保存在一个队列中等到JS引擎空闲时立即被执行</li>
+<li>事件触发线程干的活可以理解为只是调度各种异步事件（如定时器，AJAX 请求），将已经完事的异步任务产生的事件（回调）塞到任务队列里，所以要注意，定时任务、http 请求处理过程都是由各自的线程处理的，而不是事件触发线程亲自上阵干这些脏活</li>
+<li><strong>任务队列</strong>专门加粗，这是一个重要概念，后面事件循环中会讲到</li>
+</ol>
+<h2 id="事件循环机制" style="position:relative;"><a href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6" aria-label="事件循环机制 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>事件循环机制</h2>
+<p>事件循环（Event Loop）是前端领域中非常重要的一个概念，因为 JavaScript 是单线程工作的，而 JavaScript 执行的任务有同步和异步之分。事件循环机制是用于协调同步和异步之间的流程。</p>
+<ul>
+<li>同步任务：主线程上排队执行的任务，生成一个<strong>执行栈</strong>，按顺序执行</li>
+<li>异步任务：不在主线程而进入"任务队列"（task queues）的任务，如 DOM 事件、AJAX 请求、定时器等。先交由各自的异步线程处理，完成后扔进任务队列中，等待主线程空闲后捞起</li>
+<li>任务队列（也可以叫消息队列）：类似队列的数据结构，遵循先入先出(FIFO)的规则。由事件触发线程管理，将可以运行的异步任务添加到可主线程执行栈中</li>
+</ul>
+<p>以下面的代码进行举例理解：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'bar'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">baz</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'baz'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span>baz<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// foo</span>
+<span class="token comment">// bar</span>
+<span class="token comment">// baz</span></code></pre></div>
+<p>这段代码中，<code>foo()</code>、<code>bar()</code> 是同步任务，所以会先执行，<code>setTimeout</code> 是异步任务，所以在 "0ms" 后，事件触发线程将 <code>baz()</code> 放入任务队列中，等待主线程空闲后，再取出<code>baz()</code> 这个回调函数，放入执行栈，进行消化。</p>
+<p>下面的流程图完整的展示了这个过程：</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 601px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 87.6%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsSAAALEgHS3X78AAADuElEQVQ4y22Uy2tcVRzH70aULsQWY1yKu/rExC7EXcV/wUWpIBHMQt11YUEUsbFVKkKxlroQhK6k1oBdRJuqCc1rkkyamkczj85MM5nHnekkd+Y+z71zP/7OzaRNixe+nPP7nd/5nt/zGt04Qn+WU+Ha/EmC+FtikbsoQZQgisOH9o9iv43heG1cD7xwjp9+Nbg++SahvOF4HYFN2FUPEe0njvXuEb3hBW7ikfhIvXEZszmfSPrQdjoEod8jUETdQB7zCbVOSPzAoSs6DX2miY3tnRa3bqVZW1vH86F5z2JxMUU+n6XdaaMiuYB4we4nwTC7dJO5m8vMpJcp1c2eA/RCdm0q1TKblRK2a2G1m5Tu5mi2anTsPcIY1anjF1L4dxZxc3M42RnZpxIEhXmCzWXx0sfwA4+9z3Ndydl9UQgdlHKSvVr5BfPjx5h69xBTxw8ycewgN449xfg7h9h47wDtzw6j7AbGeqnB6KLFmHeVQrtEqFbYcf7CVRP4qoXugh1XcWfyAlvfvUThm9fJnB4kJ8h+NZjIxdOvUrnwNpHXxOgoRW01w2p5kpYKpbJDFOvP0XQOU966TmajQK5UJj9xnn/PvCAYZGlkgJWvX2Ph1ADzpwaZ/+IVMt8fJfZNDJ3sYHmaMJuV1IMffkS5MUA7eAPTnMIV75KQ85fYvvg45fP9pL/sY2Wkj8XPnyZz5hl2zj2JdWmAMGhh2LbN9N9FpCGSKnvRh1S3XxbCI9IyK5Lo3Qp61X+wrh3H/HOY/OgwuctD5K58QPnqMNYfQ3SmThJFNobreaQn85J8b5cwfJ9K63khfFHkpaRI3ThISOMH9WLTtO7v4x50vo1A+YlSN66SEVHRKkE0i6emcdyGEEb7GtuTxvaI5YFc9jaBdIBulUh0eu2KjXGv1aBYLLBVKVMs6dVkbGxcClLfbejYk1VPi0xCssqkCHFOGn//yGlbDaNuVmUqNmg062Rzt6nWTGZnbouumXiu51rnUUOHr0NrbUesr68lgepZ3z/Phh5wrVQ6lMQkLfhE8Clh/KOYjIjFCVl/FpwV/Qnx46w85Mojkgq5G/aQEFaqW8zOzpBKTZPNVnHUD9KHBrlNA1sNstV8gmLNoNk+imn1sXHXwGz3y+VOMpK7aQl7I5r8vmwWFlKk0ynpO1eqfJGSaVCoGlj+EanmAfIVIbHeorbTT6ZsUGs9K5fbQvQ/hHuCrqLOkeoW5GBU3v5d5Buyjkkirsj5jJiPy/43OR9Pqh12Q1l1uh6E/B/Z7xD9PofBzgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="浏览器事件循环机制"
+        title="浏览器事件循环机制"
+        src="/static/6f1f7bc71e88e17f1b828d75fff797c2/d8f62/eventloop.png"
+        srcset="/static/6f1f7bc71e88e17f1b828d75fff797c2/63868/eventloop.png 250w,
+/static/6f1f7bc71e88e17f1b828d75fff797c2/0b533/eventloop.png 500w,
+/static/6f1f7bc71e88e17f1b828d75fff797c2/d8f62/eventloop.png 601w"
+        sizes="(max-width: 601px) 100vw, 601px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>这里 stack 是主线程的执行栈，heap 是代码中用到的数据（各种对象数组），callback queue 就是任务队列，所有经由 Web API 这些异步线程处理完后的回调事件将统统放在这个队列里，等待主线程空闲时捞起。</p>
+<h2 id="区分宏任务和微任务" style="position:relative;"><a href="#%E5%8C%BA%E5%88%86%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BE%AE%E4%BB%BB%E5%8A%A1" aria-label="区分宏任务和微任务 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>区分宏任务和微任务</h2>
+<p>对于任务队列，我们需要进一步进行细分，目前有两类任务</p>
+<ul>
+<li>宏任务（Marcotasks 大部分事件）：setTimeout setInterval、setImmediate、I/O等各种事件（比如鼠标单击事件）的回调函数</li>
+<li>微任务（Microtasks，少数事件）：then（promise）、messageChannel、mutationObersve（不兼容）</li>
+</ul>
+<p>区别在于，微任务在本轮Event Loop的所有任务结束后执行，即栈清空后，先执行微任务，再检查任务队列，继续压入栈中执行。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 628px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 21.2%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAABB0lEQVQY01WQPUvDUBSG+6PESXBx83fo4ujQQd2cdVLo5FZ0cBEchEaKtJamDg5CJOlVU/JF26RGU0x6mzzeRBB9p3Pfe857n3NrKI2fLJzeI39l3nR5aQ/+eYHv4zoOURT9egspEb17XNOszrXiM+Foc5f6yjYf1ivzXBKZgv3VLQ7Xd/gaT5inKSPbRmu1uGieo/d1siwjjmN8z0fbWEPbq5OVgcgF7eMmVwcNpAqXRaGezbg7vaR/dg1FjnIIp1Me9AHdTqeiLFRfvlwi1Z3ROEHcaj+E0WyGEBZD65myrr5gMsW2BY474l1RlCpJDMMgDENMtV6SJKSK/E2R+0Gg5od4nsc30gIfCLMOtBcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="宏任务和微任务"
+        title="宏任务和微任务"
+        src="/static/57034522695881a7a51e8d2a325c2802/3d84d/tasks.png"
+        srcset="/static/57034522695881a7a51e8d2a325c2802/63868/tasks.png 250w,
+/static/57034522695881a7a51e8d2a325c2802/0b533/tasks.png 500w,
+/static/57034522695881a7a51e8d2a325c2802/3d84d/tasks.png 628w"
+        sizes="(max-width: 628px) 100vw, 628px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>所以同样的异步场景，微任务要比宏任务先执行：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Promise1'</span><span class="token punctuation">)</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout2'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout1'</span><span class="token punctuation">)</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Promise2'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Promise1</span>
+<span class="token comment">// setTimeout1</span>
+<span class="token comment">// Promise2</span>
+<span class="token comment">// setTimeout2</span></code></pre></div>
+<ul>
+<li>一开始执行栈的同步任务执行完毕，会去查看是否有微任务队列，上题中存在(有且只有一个)，然后执行微任务队列中的所有任务输出 Promise1，同时会生成一个宏任务 setTimeout2</li>
+<li>然后去查看宏任务队列，宏任务 setTimeout1 在 setTimeout2 之前，先执行宏任务 setTimeout1，输出 setTimeout1</li>
+<li>在执行宏任务 setTimeout1 时会生成微任务 Promise2 ，放入微任务队列中，接着先去清空微任务队列中的所有任务，输出 Promise2</li>
+<li>清空完微任务队列中的所有任务后，就又会去宏任务队列取一个，这回执行的是 setTimeout2</li>
+</ul>
+<p>不过这里有一点要注意的，浏览器和 Node 中对于微任务的处理方式有所不同。因为 Node 中的事件循环是跟浏览器完全不是一个东西，是由 libuv 进行实现的。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 32.800000000000004%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAABjklEQVQoz1WQW2/TQBCF/f+feOANgZD6UCEhhESRgto0adJEuBVEbXpxgp02CdhOYudux17v+mOzQQhGOprR7uqbs8dSJZRlaaQnlFIUufhPIs+R+pxSYo8UJ46k8qMkWibIyCWPPISWjAdYe4gBcqhVvGJUuyVoPuI3HggvHX7Vu8TB1NzbQ8mn+4xKXxHOYlK3QeI2TRfPbazn5R+SSEHmFOka3/VYBwGbMGQzCVlHS7Is048U334qKo8pVVcSTiPS3ilJ/1z3MwqvjvXKTtmuFojWC8T9Bwr7JfLhPbLzGu6OoHvE39Jf3gO/9AuqXkkwmZH0qmz7NQMVgwssZ6p0bhKVzJmNn0hnPvl8xi4K2OlZrCMTh8m4VNhjxWenMBkG2mHmNdh5l6YXw/Yhw31t1gmjsw5BrWuyC1o9/Kajl0wO5gxQ0h4qPt7lnPRhMl+Rj76yG1+TjWyklqXUAVhkO+Ljd8zfvGVeqxM3WyyurhFF8Q+wZLJRPC0kg5sB2/ML8s530tsbhO8ba78BatEIWeEBHGkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="浏览器和Node端的差异"
+        title="浏览器和Node端的差异"
+        src="/static/d72f2de7309afe52603e5fc5855725dd/00d43/difference.png"
+        srcset="/static/d72f2de7309afe52603e5fc5855725dd/63868/difference.png 250w,
+/static/d72f2de7309afe52603e5fc5855725dd/0b533/difference.png 500w,
+/static/d72f2de7309afe52603e5fc5855725dd/00d43/difference.png 1000w,
+/static/d72f2de7309afe52603e5fc5855725dd/58fee/difference.png 1051w"
+        sizes="(max-width: 1000px) 100vw, 1000px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<ul>
+<li>浏览器环境下，微任务（Microtask） 的任务队列是每个宏任务（ Macrotask） 执行完之后执行。</li>
+<li>在 Node 中，微任务会在事件循环的各个阶段之间执行，也就是一个阶段执行完毕，就会去执行微任务队列的任务。</li>
+</ul>
+<p>这些知识点在后面整理 Node 的事件循环机制中再作深入整理。</p>
+<h2 id="浏览器渲染流程" style="position:relative;"><a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%B5%81%E7%A8%8B" aria-label="浏览器渲染流程 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>浏览器渲染流程</h2>
+<p>这一节简单讲讲浏览器拿到数据后的渲染过程，详细内容可以另开一篇讲解。</p>
+<p>浏览器器内核拿到内容后，渲染大概可以划分成以下几个步骤：</p>
+<ol>
+<li>解析 HTML 建立 DOM 树</li>
+<li>解析 CSS 构建 Render 树（将 CSS 代码解析成树形的数据结构，然后结合 DOM 合并成 Render 树）</li>
+<li>布局 Render 树（Layout/Reflow），负责各元素尺寸、位置的计算</li>
+<li>绘制 Render 树（Paint），绘制页面像素信息</li>
+<li>浏览器会将各层的信息发送给 GPU，GPU 会将各层合成（composite），显示在屏幕上</li>
+</ol>
+<p>所有详细步骤都已经略去，渲染完毕后就是<code>load</code>事件了，之后就是自己的 JS 逻辑处理了。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 900px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 39.2%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAAB10lEQVQoz2N4/Hg78717W5kYgGDj0VtM2089YgGxV6w8y7d562379Zuvq4P4e8+8Ytx2+iHzlpP3GUF8IM1AEti6+aHy5vX3521acz8KXW7XhedgQ42MjDA1Pny4LfTe/a0+IPb6wzfMd114FjV3zWHR1g2dXMsv7oxcd/OQH9hFp+5p7Lr4tGj7uUcGIP7O809Yt5x6wBQRaMbw+PEOZiAG+5Lh5cs9b4BeXglkMm45dX/5qUe//i9ad9Zy9c3dvoc+3vy/5/Xl5SB1O04/t1iz9/rKjQcfOOD12rVrazlh7L65q3k6pi2WAIfnqWsmK/adaVt94FIEiL/u1gH9Ndf2Td50/1h4SdlEvt0Xn6VtPf3IKzbcjvXp053xQBwMNuT//4eM//9fYUW3aNORe7ZrD1xds/7o9X4gl3nDzaO1e15e+bft0Zlib4dEMWAQrFp/5FZVQpyvwKNH2xYAI7e7tTWHgeHWrY2vr11bvwJsyPE78/ZcevF//poTlgvPrLXf/vTsxx3Pzq6DWPyfkajYBEZK6okTy/ShScF/96UXzfOWn5LYcPuw6Z6XV3t2Pbvkjaz+zv8vDGVNXQzXPvxnOv/yP2NRYSLQsutM///fZnz5chcDAHqb+nMLKFCHAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="浏览器渲染流程"
+        title="浏览器渲染流程"
+        src="/static/7a5ffc1fcdcfd71807009601b1178109/1cfc2/renderprocess.png"
+        srcset="/static/7a5ffc1fcdcfd71807009601b1178109/63868/renderprocess.png 250w,
+/static/7a5ffc1fcdcfd71807009601b1178109/0b533/renderprocess.png 500w,
+/static/7a5ffc1fcdcfd71807009601b1178109/1cfc2/renderprocess.png 900w"
+        sizes="(max-width: 900px) 100vw, 900px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>这里值得一提的是，在头部引入 CSS 资源的细节：</p>
+<ol>
+<li>CSS 加载过程不会阻塞 DOM 树解析（异步加载时DOM照常构建）</li>
+<li>CSS 解析过程会阻塞 Render 树构建（渲染时需等css加载完毕，因为render树需要css信息）</li>
+</ol>
+<p>另外还有图层合成（composite）的知识点，后面再整理。</p>
+<h2 id="一些代码理解" style="position:relative;"><a href="#%E4%B8%80%E4%BA%9B%E4%BB%A3%E7%A0%81%E7%90%86%E8%A7%A3" aria-label="一些代码理解 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>一些代码理解</h2>
+<p>这里贴一些奇奇怪怪的关于事件循环的代码，对比浏览器和 Node，以作理解：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 案例1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Node: 1 2 3 promise</span>
+<span class="token comment">// 浏览器: 1 2 promise 3</span>
+
+<span class="token comment">// 案例2</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Node: 2 4 1 3 promise 5</span>
+<span class="token comment">// 浏览器：2 4 1 promise 3 5</span></code></pre></div>
+<h2 id="参考" style="position:relative;"><a href="#%E5%8F%82%E8%80%83" aria-label="参考 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考</h2>
+<ul>
+<li><a href="https://juejin.im/post/5a6547d0f265da3e283a1df7">从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理 - 掘金</a></li>
+<li><a href="https://juejin.im/post/5be5a0b96fb9a049d518febc">总结：JavaScript异步、事件循环与消息队列、微任务与宏任务 - 掘金</a></li>
+<li><a href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/">Tasks, microtasks, queues and schedules - JakeArchibald.com</a></li>
+<li><a href="https://blog.csdn.net/Fundebug/article/details/86487117">浏览器与Node的事件循环(Event Loop)有何区别?<em>Java</em>Fundebug博客-CSDN博客</a></li>
+</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/WebFrontEnd-浏览器中 JavaScript 单线程运行机制/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-a129d9d0882a5b9775bd.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-1df390f36a27fc78c680.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-c66b2f9251c351951c80.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-a95dd18cf0eabed20560.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-14d2b9ea4245d10cc6f3.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-4ab1901f95271747e713.js"]};/*]]>*/</script><script src="/webpack-runtime-506cde48cccaff2324cb.js" async=""></script><script src="/app-a129d9d0882a5b9775bd.js" async=""></script><script src="/framework-f2db165fb1960f050581.js" async=""></script><script src="/895bab843c7b765764a1de15895603ae59adcae7-f0ab28be13110020beee.js" async=""></script><script src="/component---src-templates-blog-template-tsx-14d2b9ea4245d10cc6f3.js" async=""></script><script src="/styles-b729c27faa6284e9ff45.js" async=""></script></body></html>
