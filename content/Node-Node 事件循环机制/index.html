@@ -366,7 +366,7 @@ fs<span class="token punctuation">.</span><span class="token function">readFile<
       />
     </span></p>
 <p>那么它们的运行时机是在什么时候呢？</p>
-<p>很简单，不管在什么地方调用，它们总是在各个阶段之间执行，上一阶段完成，进入下一阶段前，会清空 nextTick 和 promsie 队列！而且 nextTick 要比 promsie 要高！</p>
+<p>很简单，不管在什么地方调用，它们总是在各个阶段之间执行，上一阶段完成，进入下一阶段前，会清空 nextTick 和 promsie 队列！而且 nextTick 优先级要比 promsie 要高！</p>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 655px;"
