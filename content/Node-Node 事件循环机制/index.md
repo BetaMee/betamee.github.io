@@ -9,6 +9,24 @@ openreward: true
 > 之前的一篇[文章](https://betamee.github.io/content/WebFrontEnd-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%20JavaScript%20%E5%8D%95%E7%BA%BF%E7%A8%8B%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/))写了浏览器中的 JavaScript 的运行机制，谈到浏览器和 Node 关于事件循环的实现有着很大不同。本文将理清 Node 的事件循环机制，以作对比。
 > 另外一个重大变更需要知道的，自从 Node V11 后，Node 中的事件循环已经和浏览器中表现一致了！具体见文。
 
+## 目录
+
+<!-- toc -->
+
+- [Node 的设计架构](#Node-的设计架构)
+- [阻塞和非阻塞](#阻塞和非阻塞)
+- [关于 libuv](#关于-libuv)
+- [事件循环的几个阶段](#事件循环的几个阶段)
+- [微任务和宏任务](#微任务和宏任务)
+- [nextTick 的问题](#nextTick-的问题)
+- [定时器和微任务在NodeV11版本后的变更](#定时器和微任务在NodeV11版本后的变更)
+- [async 代码运行机制](#async-代码运行机制)
+- [代码练习](#代码练习)
+- [总结](#总结)
+- [参考](#参考)
+
+<!-- tocstop -->
+
 ## Node 的设计架构
 
 从官网的[介绍](https://nodejs.org/en/docs/meta/topics/dependencies/)中得知，Node 本身依赖于好几个类库构建而成的，底层都是 C/C++ 编写的，用于调用系统层级的 API和处理异步、网络等工作。
