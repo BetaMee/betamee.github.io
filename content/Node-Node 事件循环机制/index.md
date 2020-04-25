@@ -222,7 +222,7 @@ setTimeout(() => {
 
 那么它们的运行时机是在什么时候呢？
 
-很简单，不管在什么地方调用，它们总是在各个阶段之间执行，上一阶段完成，进入下一阶段前，会清空 nextTick 和 promsie 队列！而且 nextTick 要比 promsie 要高！
+很简单，不管在什么地方调用，它们总是在各个阶段之间执行，上一阶段完成，进入下一阶段前，会清空 nextTick 和 promsie 队列！而且 nextTick 优先级要比 promsie 要高！
 
 ![旧版本Node微任务处理时机](./attachments/e241621d.png)
 
