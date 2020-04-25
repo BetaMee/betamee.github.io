@@ -1,0 +1,602 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.4 'Cabin Condensed','georgia',sans-serif;box-sizing:border-box;overflow-y:scroll;-webkit-font-smoothing:antialiased;letter-spacing:.05em;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.87);font-family:'Cabin Condensed','georgia',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";letter-spacing:.03em;}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:400;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:48px;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.8rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.5rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:400;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:400;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}ul{margin-left:1.4rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.4rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;list-style-position:outside;list-style-image:none;line-height:1.6rem;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;line-height:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;font-size:0.85rem;line-height:1.42;background:hsla(0,0%,0%,0.04);border-radius:3px;overflow:auto;word-wrap:normal;padding:1.4rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;font-size:1rem;line-height:1.4rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}blockquote{margin-left:-1.4rem;margin-right:1.4rem;margin-top:0;padding-bottom:10px;padding-left:1.1375rem;padding-right:0;padding-top:10px;margin-bottom:1.4rem;font-size:1.1487rem;line-height:1.6rem;color:hsla(0,0%,0%,0.6);border-left:0.2625rem solid #cbcbcb;background-color:#f8f8f8;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.4rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.4rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.4rem;margin-bottom:calc(1.4rem / 2);margin-top:calc(1.4rem / 2);}li > ul{margin-left:1.4rem;margin-bottom:calc(1.4rem / 2);margin-top:calc(1.4rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.4rem / 2);}code{font-size:0.85rem;line-height:1.4rem;}kbd{font-size:0.85rem;line-height:1.4rem;}samp{font-size:0.85rem;line-height:1.4rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.93333rem;padding-right:0.93333rem;padding-top:0.7rem;padding-bottom:calc(0.7rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}tt,code{background-color:hsla(0,0%,0%,0.04);border-radius:3px;font-family:"SFMono-Regular", Consolas,"Roboto Mono","Droid Sans Mono","Liberation Mono",Menlo,Courier,monospace;padding:0;padding-top:0.2em;padding-bottom:0.2em;}pre code{background:none;line-height:1.42;}code:before,code:after,tt:before,tt:after{letter-spacing:-0.2em;content:" ";}pre code:before,pre code:after,pre tt:before,pre tt:after{content:none;}a{color:#358ccb;}a:hover{color:#3498DB;}@media only screen and (max-width:480px){blockquote{margin-left:-1.05rem;padding-left:0.7875rem;margin-right:0;}}</style><link as="script" rel="preload" href="/styles-2784bacaa009e3e009ba.js"/><title data-react-helmet="true">十二棵橡树</title><link data-react-helmet="true" rel="icon" type="image/png" href="/static/favicon-9bf81a2b82f5028f3f4b92f88cb575ba.ico" sizes="16x16"/><style data-href="/styles.63a5bb09bc8c9316ed18.css">body{margin:0;width:100%}*{box-sizing:border-box}center{margin:20px 0;font-weight:700;color:#333}table tr td strong{min-width:50px}h1 .anchor svg,h2 .anchor svg,h3 .anchor svg,h4 .anchor svg,h5 .anchor svg,h6 .anchor svg{visibility:unset!important}pre[class*=language-]:after,pre[class*=language-]:before{box-shadow:unset!important}p>code{color:#c92c2c;background-color:#fff5f5!important}.gatsby-resp-image-wrapper{cursor:pointer}.gatsby-resp-image-background-image,.gatsby-resp-image-image{border-radius:.3em}.gatsby-highlight{margin-bottom:1.4rem}.gatsby-highlight pre[class*=language-]>code{border-left:unset;box-shadow:0 0 0 0 #358ccb,0 0 0 1px #dfdfdf}code[class*=language-],pre[class*=language-]{color:#000;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{position:relative;margin:.5em 0;overflow:visible;padding:0}pre[class*=language-]>code{position:relative;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 0);background-size:3em 3em;background-origin:content-box;background-attachment:local}code[class*=language]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,.1);display:inline;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{content:"";z-index:-2;display:block;position:absolute;bottom:.75em;left:.18em;width:40%;height:20%;max-height:13em;box-shadow:0 13px 8px #979797;transform:rotate(-2deg)}:not(pre)>code[class*=language-]:after,pre[class*=language-]:after{right:.75em;left:auto;transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}.token.cr:before,.token.lf:before,.token.tab:not(:empty):before{color:#e0d7d1}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}.layout-module--header--1orMk{padding:0 20%;background-color:#693476;height:80px;display:flex;flex-direction:row;justify-content:space-between;align-items:center;box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.layout-module--title--28C2S{font-size:24px;color:#e1d0e6}.layout-module--menu--Ech1f{font-size:20px}.layout-module--menu--Ech1f a{text-decoration:none;color:#e1d0e6;padding:0 5px}.layout-module--menu--Ech1f a:hover{color:#fff}.layout-module--footer--1-u4U{height:200px;padding:0 20%;border-bottom:10px solid #693476;background-color:#fafafa;display:flex;flex-direction:column;justify-content:center}.layout-module--contact--1Z-dZ a{margin-right:6px;font-size:20px;color:#cf91e2}.layout-module--contact--1Z-dZ{margin-bottom:16px}.layout-module--siteInfo--WbGrj{font-size:20px}@media screen and (max-width:376px){.layout-module--header--1orMk{height:unset;padding:unset;background-color:unset;flex-direction:column}.layout-module--header--1orMk .layout-module--title--28C2S{padding:20px 10px;width:100%;display:flex;justify-content:center;color:#693476}.layout-module--header--1orMk .layout-module--menu--Ech1f{padding:20px 10px;width:100%;background-color:#693476;display:flex;justify-content:center}.layout-module--footer--1-u4U{padding:0 5%}}._404-module--container--2kCC_{min-height:400px;margin:60px auto 80px;display:flex;flex-direction:column;justify-content:center;align-items:center}._404-module--container--2kCC_ span{font-size:40px;font-weight:700}.about-module--content--1y3Xq{margin:60px 20% 80px;min-height:400px}@media screen and (max-width:420px){.about-module--content--1y3Xq{margin:30px 5%;padding-left:10px}}.list-module--main--_HL7O{margin:0 20%}.list-module--catalog--ToZZ4{min-height:400px;display:flex;flex-direction:column;margin:30px 0 10px}.list-module--catalog--ToZZ4 .list-module--item--2P8EQ{margin-top:10px}.list-module--catalog--ToZZ4 .list-module--year--fuRyw{font-size:46px}.list-module--catalog--ToZZ4 .list-module--link--1G28D{display:flex;flex-direction:column}.list-module--catalog--ToZZ4 .list-module--link--1G28D a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}.list-module--catalog--ToZZ4 .list-module--date--1rprK{margin-right:10px;color:#999;font-style:italic}.list-module--catalog--ToZZ4 .list-module--newcontent--2jgkA{padding:1px 5px;background-color:#693476;border-radius:4px;color:#fff;margin-left:10px;font-size:20px}.list-module--pagination--4wgvY{margin:30px 0 60px}.list-module--paginationItem--127RG{color:#333;width:35px;height:35px;display:inline-block;text-align:center;line-height:35px;font-size:18px;margin-right:10px}.list-module--itemSelected--3HOvN{background-color:#cf91e2}@media screen and (max-width:376px){.list-module--main--_HL7O{margin:0 5%}}.viewer-module--viewer--3ba3_{position:fixed;top:0;left:0;z-index:100;width:100vw;height:100vh;background-color:rgba(0,0,0,.6);display:flex;flex-direction:column;justify-content:center;align-items:center}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc{width:70%;height:80%;position:relative}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--img--9w_7t{border-radius:4px;box-shadow:inset 0 0 0 400px #fff;-o-object-fit:contain;object-fit:contain;height:100%;width:100%}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--des--3lo9I{color:#fff;text-align:center;font-size:20px;font-weight:700}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--icon--1vJ-_{cursor:pointer;margin:5px;position:absolute;top:0;right:0;width:30px;height:30px}.blog-module--content--R6Wfi{margin:60px 20% 80px;font-size:18px}.blog-module--heading--2q6UV{margin-bottom:30px}.blog-module--title--3NoN5{font-weight:700;margin-bottom:15px}.blog-module--info--U7riw{color:#666;margin-bottom:5px}.blog-module--info--U7riw span{margin-right:5px}.blog-module--tags--20J6V a{color:#666;margin-right:5px}@media screen and (max-width:420px){.blog-module--content--R6Wfi{margin:60px 5% 80px;padding-left:10px}}.tag-module--content--1DHrR{margin:60px 20% 80px;min-height:400px}.tag-module--heading--15Jbn{margin-bottom:40px}.tag-module--link--3DsMn a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}@media screen and (max-width:376px){.tag-module--content--1DHrR{margin:60px 5% 80px;min-height:400px}}</style><link href="//fonts.googleapis.com/css?family=Patua+One:400|Cabin+Condensed:400,700" rel="stylesheet" type="text/css"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><meta name="generator" content="Gatsby 2.20.35"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-cb5038bbda0ba09aa46f.js"/><link as="script" rel="preload" href="/895bab843c7b765764a1de15895603ae59adcae7-6bde442a18b66e093fda.js"/><link as="script" rel="preload" href="/framework-972833c791692296cdd7.js"/><link as="script" rel="preload" href="/app-c7c99e1beba592596949.js"/><link as="script" rel="preload" href="/webpack-runtime-eb5fe8302012ff909126.js"/><link as="fetch" rel="preload" href="/page-data/content/Node-Node 事件循环机制/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">Node 事件循环机制</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2020-04-16</span></div><div class="blog-module--tags--20J6V"><a href="/tag/Node_Deep">#<!-- -->Node_Deep</a><a href="/tag/原理">#<!-- -->原理</a></div></div><div><blockquote>
+<p>之前的一篇文章写了浏览器中的 JavaScript 的运行机制，谈到浏览器和 Node 关于事件循环的实现有着很大不同。本文将理清 Node 的事件循环机制，以作对比。
+另外一个重大变更需要知道的，自从 Node V11 后，Node 中的事件循环已经和浏览器中表现一致了！具体见文。</p>
+</blockquote>
+<h2 id="node-的设计架构" style="position:relative;"><a href="#node-%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%9E%B6%E6%9E%84" aria-label="node 的设计架构 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Node 的设计架构</h2>
+<p>从官网的<a href="https://nodejs.org/en/docs/meta/topics/dependencies/">介绍</a>中得知，Node 本身依赖于好几个类库构建而成的，底层都是 C/C++ 编写的，用于调用系统层级的 API和处理异步、网络等工作。</p>
+<ul>
+<li>V8: JavaScript 引擎，由谷歌公司维护</li>
+<li>libuv：它是一个 C 编写的高性能、事件驱动、非阻塞型 I/O 类库，并且提供了跨平台的API</li>
+<li>llhttp：C 编写的 HTTP 解析类库</li>
+<li>c-ares：C 编写的用于处理某些异步的 DNS 请求</li>
+<li>OpenSSL：安全相关</li>
+<li>zlib：压缩</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAC30lEQVQoz02PS0wTURSGJ6Jo1z5QscUioMJGQUQSIx0tU9qCOEycdvqYEiTtgLKohYgSE1Ya486dKzGSQpUENBqD0YXEBDSihsSIISL10QoW36D2zpzjnfqIiy//l3P/c28uAwBrVQ2sqqqxf9E0YBGBpXOWnlNHVoPfrvN/9x/0DnqWwzybSsldZ8Yw2HETWo/fQp2WzlsYOjaccYWm7i2dwxlXOn/P/4fu4smzYzj7/puHuf/orWzzDOI26wW13H4Rymw9YGmIgtN3BaxifyZrPJeBc8cyaZNiwApRKON6QO/r0F3N4R/C+JvPEjM+kfSLynW0CL2q1RWFfWIUOKkPHL4Y2Dz9YPf2Z7zmT9q9MXp5H30sCnpfp4ruSq038HXii8Q8eDYuV4UdWOQrVUsaK6AkUIHFgZ24VS7Hzf4ymtT95biFUuQrw82UYtopoR29q+8Ueks19mgtziTjEjMyMSIb/SZcYluqrnAawOAw4LKabFwtrMECeROaPCZc51pH04iFgUJcT325PRsNTgPqXZqQxWVp5oAZp95MSczo01F5m7Idc/mVqlHcALkuI+ZJRsz3bMR8XwEa3RvR6MqjMzOavQWZXH9wwz9yRROs4nO00pYd+CIxLTGfpiflJ6fbMHYirN7pOgyPBiMwEHPD1Ssi3L4WAUESwV5nh9DhIAhuAXiRpx4CZ70TRK8IQTrnHJzarDRjIpGQmM+TE/6nbTxeDgV/3msWyfOYTC6dt5Ch3t3k7kCA7GWrya6KClLrrCXWvVZi2VNF9tftJ6yFJVw1R4QGgVTuqkwfqD+A8Zm4m/k6PXno3bkufHmqlXIU43e6ceZxBF89jOCTkW5sbGxCQWjA9vYI9Ub0+X3U21F0idjU1IQdHR3I8zyGw2FMJpMyo6XTRT8/zbctzL0L/fiQUtKLH5XFbwnl+0JC+UF9dnZWoUVlfn4+4zqpVCoz++v0q6G5ubkjhJCCXzMQB2Wxr003AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Node 架构图一"
+        title="Node 架构图一"
+        src="/static/7a0fdcfbfd1be078f8fcac56f8417d0d/00d43/e52da68e.png"
+        srcset="/static/7a0fdcfbfd1be078f8fcac56f8417d0d/63868/e52da68e.png 250w,
+/static/7a0fdcfbfd1be078f8fcac56f8417d0d/0b533/e52da68e.png 500w,
+/static/7a0fdcfbfd1be078f8fcac56f8417d0d/00d43/e52da68e.png 1000w,
+/static/7a0fdcfbfd1be078f8fcac56f8417d0d/2cefc/e52da68e.png 1400w"
+        sizes="(max-width: 1000px) 100vw, 1000px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 634px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 110.39999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsSAAALEgHS3X78AAAEfUlEQVQ4y32U228bRRSH87/xwBMvCIQQUgGVEkT7gFQhpNJKlEslWolyKZS2UKUhVdM0BdqQREnbxG7ixOt7fFnHu7Ed3+3YTmrHd8f+OLt2oJTCSL+d2Z3Zb3/nzJkdaTabtNttOp0OBwcH0If8XgYlZsW1bcMZX32ujDlH7DGFJzm63QOarSYGa8S49Ho9U5VqhV4HVrUF3hx7gdGbL3Fy+g3O/nFcdIIz90fN8Qd3XueYzL31y4so8WWM1mw1/glstVroukY2nSOQdPH98qdcWzlvasx2kRtr30j/NddtX3F15QJXHp/nkuUL9ELIBLaedmiG+lQL7/j5dk2Azgtctp9jwneJO+Ex0Tjj3kv8pHzGmOsc15RPiJaCQ2Dr38B+b9Dvp10k5j8kNf8RWd91Ivcm8J56H9+p40TnbvGjNcrpySBnbgfxJ/eGwPZ/A7uS8Ob0URrTx+i6r1IcnyBx7B0So+9SuT3JxcUOo5dLvHdlF8dWc5jD5wJ7Zt9J2KjeP0F19iRNzzVyE+PEz3wsOk1RgD+v1Pl8KsfZqTzeeP1/gP0hcHuF6tQRqreP0HRdJntjDO3Vl9Ffe4Xy5C2+nKvz9nc5jv6QR9EPgU/lsNvtCqxv7raUIb1akU7SbupgV6cRj1G1yUdsq7QSCdTsAXatIbAm5f2BmU6na27MiHExitqAmpJxrd6gWm+z3+hQrcm4UafW7bDfacvzGq16hW6zSrtRoVZ9QqUyUEPWjRgQA1qv10U1OTUd4iEP+bCdwqaDQsRJUTPuHZSkL+kyjrjJbboobW1Q1L3mfCqoSA2nBiErioLb7Uax24loOnvpLdiL0S9Fsc3dwfnwHp7lGdbmp3Es/s6GdV7Gd3EvzZBXnVJnWdpZnVwmPQi50WgMHdbNetIDTnEiDqIesmGFHc1FOeajoLvZkWflqDjb8pJRxVXYya7cZwScSQ0dHv4cBtXewidALeFjKxVgO6fil/DXXY9weC3Y3Uvm2O1fIZr0E08HiaUDqGIgnU4yYuyQ4Swl9L29QdVvS8j56jaJHY3MbhSPusa9hSks9kVmH/7GgnWGmcW7pIqD+dyTONndGNlsegAsl8uoqkqpVDKBW9thYrkQ654lbO5HBDQHXnWdoLjwhddN2cWtP+LAE1ojHPMQz6pkDOCzPwajBVQPis9CQF4ICsy/qeDbtLNhSiG45TI/ENCdpvuA7jCfp1LJAfCvopbeqOx4SmfV+YDZhbs8WL7PZtRLNBPCKiH/OjtJJLEh+Q2iSQ6N0C32BdJFfRDy38euT988J4OQd5sZrOsLJHNh0gWNWEZFTwZYss1TqGxLmF6SkmNjzbrHQqakk8mkngH2D4GbZKUOyzXZqFpaoBF0cVTcT7JTTZpAVcrH6HOyrrifIGVsoOGwN/zDHEKN5g04WPM+lDwus+ZclFJ5ZIanbFiwKgsSstcMW0tuiOM53KFVEvnwwKFx9AyXhzKYmh7GH3KzEXCZ8vmd+IIugpte/LJhRu+VWg1FfOY6v+omrPkp7OT5E6C3G+nMhOLLAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Node 架构图二"
+        title="Node 架构图二"
+        src="/static/299456fa2f159641a724836fc4e1992d/374ac/ef31e0c2.png"
+        srcset="/static/299456fa2f159641a724836fc4e1992d/63868/ef31e0c2.png 250w,
+/static/299456fa2f159641a724836fc4e1992d/0b533/ef31e0c2.png 500w,
+/static/299456fa2f159641a724836fc4e1992d/374ac/ef31e0c2.png 634w"
+        sizes="(max-width: 634px) 100vw, 634px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>由这张整体的架构图可以看到，Node 最重要的是 V8 和 libuv 这两部分，V8 不用说，是解析运行 JavaScript 的引擎，没有 V8 就没有 Node 的今天，而 libuv 是 Node 另一个重要的基石，提供事件循环和线程池，负责所有 I/O 任务的分发与执行，对开发者来说不可见，只需要调用封装好的 Node API 就可以了。</p>
+<p>下面是另一张类似的原理图，可见要想深入理解 Node，必须要了解 libuv 的设计（深入理解需要学习 C++、操作系统）。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 39.6%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABrElEQVQoz12RyY7UMBCG8zAMTTO9kDhOHGdf3VsyvTBoBIgDF97/CT4qGYkDh5LtqvKvf/GUUvxf+/0eay3D4Dgej4zjRN8POHdgvIw46fu+v+yGYSill/04jvHqpqXrOtq2XWr+dL3euN/uvEwvMusxxpCmKZmUTTPc8cw0jqQCYmJDkiREUbzseF1V0AnQzGY+ewF3pzOni7A6HKnqlqqq8APFarMnVj59ZohsihYQpSN8FdI0jezVeEMa0cujE0ltXXEpLVUUEG3WtJHPqe8oqoY2CfkVf+Sh11zVimvwxK22/J563krNQawZhgHPZhnb3W7xbbvd0TU1Ux7T6T33THHpGrTIMpFmUJ+JQ8U2jHmN1rzqFc/yJ1FfFrtmJd6sW2u9NGaDm1qoi6+5nJkw68UKI76drOKnfmIXW9KyJvO3vNkdm9Askmecoijw8jxfAE387se5LfmeB7jgmUcWch56dJLikoA/5gOt2pAGO+76E4864atraIxagvkHmCR2iX1uzrTngZX7PGuFbVFWDIWkK2F8E79+lIqpFLCh4tZXXF3LQQJ0zvEXO4IS1nq1CK0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Node 架构图三"
+        title="Node 架构图三"
+        src="/static/f82cb4d8620c68b3fda9eda093bff919/5a190/9adade0d.png"
+        srcset="/static/f82cb4d8620c68b3fda9eda093bff919/63868/9adade0d.png 250w,
+/static/f82cb4d8620c68b3fda9eda093bff919/0b533/9adade0d.png 500w,
+/static/f82cb4d8620c68b3fda9eda093bff919/5a190/9adade0d.png 800w"
+        sizes="(max-width: 800px) 100vw, 800px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<h2 id="阻塞和非阻塞" style="position:relative;"><a href="#%E9%98%BB%E5%A1%9E%E5%92%8C%E9%9D%9E%E9%98%BB%E5%A1%9E" aria-label="阻塞和非阻塞 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>阻塞和非阻塞</h2>
+<p>在 I/O 操作中，代码有阻塞和非阻塞之分，也就是同步和异步代码，Node 同样提供了两套 API:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 同步阻塞</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> data <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'/file.md'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 异步非阻塞</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'/file.md'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>由于在 Node 中 JavaScript 的执行是单线程的，所以一旦发生长时间阻塞，会严重影响后面代码的运行，不像其他语言可以新开一个线程处理。如果选择了非阻塞的方式，就可以释放当前的 JS 引擎的工作，用于处理后面的请求，比如一个服务器请求要花 50ms，其中 45ms 花在了数据库 I/O 上，选择了非阻塞代码，可以将这 45ms 处理其他请求。这极大了提高了<strong>并发性能</strong>。</p>
+<p>另外一个要注意的是，千万不要混用阻塞和非阻塞代码：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// ！此代码有严重问题，会造成 BUG</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'/file.md'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+fs<span class="token punctuation">.</span><span class="token function">unlinkSync</span><span class="token punctuation">(</span><span class="token string">'/file.md'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 正确做法！</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'/file.md'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">readFileErr<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>readFileErr<span class="token punctuation">)</span> <span class="token keyword">throw</span> readFileErr<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  fs<span class="token punctuation">.</span><span class="token function">unlink</span><span class="token punctuation">(</span><span class="token string">'/file.md'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">unlinkErr</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>unlinkErr<span class="token punctuation">)</span> <span class="token keyword">throw</span> unlinkErr<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h2 id="关于-libuv" style="position:relative;"><a href="#%E5%85%B3%E4%BA%8E-libuv" aria-label="关于 libuv permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>关于 libuv</h2>
+<p>libuv 是一个跨平台的类库，提供了<strong>事件循环（event-loop）机制</strong>和<strong>异步 I/O 机制</strong>，下图是其架构图：</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAACR0lEQVQoz62Q20uTcRjH33+j26iLLioUosOdIBV60QG6iKC8lC6KJFZIdpFKJ4KsVDKTYK55eDfd5uum2xiews1NNyXZJqk76Nwi3LujzcOn17e6CLrooh98+Xy/z/Pw+z38hMVgkMTGBsVikUKh8G/626xSy+VyCKuRCJlMhv9x9i8WSqVtZbstNez77V9S/fZP/q6XvpdU7u7u/qGdnR329vbI5/PKhrFlovEIa4k4+WKWdGaTTE4mV8yQljfJFmSyeRk5mya3lVF7siyTSqVUbijflU6nSSaTKoX+t6PYxAlc0jT6Vivjo26G+8bobbcx5fJi7LJj6Xapfe1LCdeQm2QqgdfjIbK6wtTkJNHIKpMTE+ojQv3l17TUaelqMlB/6Q3aFwO8quum4Uob/W0SzTWdPK7tpLNZR13VE7qae1hPreOe87MSX8PjD6ic9s2SULYU9G4D4oyZHrcR0WNi0Ccp2USvZwDRa0Y/beBT0I1jNkTf+BySL0RsKcyCxciS00ZAYdhhZWHYxNdYFKF2WMOdkYdo7I1oHI3cdzSr/p6zidu2Bm5KGnR+iQstYxx/IFL+1IHzXQfmM4cwVZ3GXH2KwXMnGKw4yhenFaFad43z2qt0zGi5MXCL/Vxr0dDu/sBFfY2i6zwfe8/ZZ3YO39Vx5JEVW1sr/WUHECvLMVSWIVYco/fkQcIjQwhiwEy/38RsdB5p0Y4YsDASdOGN+jEEhtTsi8zjCET4OPEZ0+wysVCIsLmPoMWgSCSkMCQZ+RaP8gOCCprKkY6YjgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Libuv 架构图"
+        title="Libuv 架构图"
+        src="/static/2697f25bdbeef57a5a29588793082df0/00d43/82fc60ff.png"
+        srcset="/static/2697f25bdbeef57a5a29588793082df0/63868/82fc60ff.png 250w,
+/static/2697f25bdbeef57a5a29588793082df0/0b533/82fc60ff.png 500w,
+/static/2697f25bdbeef57a5a29588793082df0/00d43/82fc60ff.png 1000w,
+/static/2697f25bdbeef57a5a29588793082df0/b12f7/82fc60ff.png 1020w"
+        sizes="(max-width: 1000px) 100vw, 1000px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>libuv 作为底层的基石，将上层传递下来的 I/O 请求分配线程池，比如定时器请求、读取文件请求、网络请求等，待其完成后，再由<strong>事件循环机制</strong>分配各个请求的注册回调事件到任务队列（或者说消息队列）中，通知上层的 JS 引擎，空闲时捞起队列中的回调函数。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 561px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 94.39999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsSAAALEgHS3X78AAACJklEQVQ4y4WUabLaMBCEdf9T5QL5AVV5QIJZyiy22Q02eKPjT0TGEOBN1ZRlLa2enhkZvbDr9frwvVwuSpKkmXvnmHm30B6naao4jvWdsd98YlhVldbrtabTqSaTiXzf136/t2yDILBzo9FIYRiqKIobQ8LJsqxxt3BnLMXHo3Y1EBfg2Hw+V6/XU7fbtRc5HMONeZ7bHyaP9eFnO6eJjvGh+YcRMrAfKbbbrXWwDAttAxgWMC3LG9tZuNXID+x4FYU6nU52zOUAAXo4HKwbtwgIIY7HY0VRpO1moyCMNAxS9Za5+kGh/jyRN/GbyzkLKJoy5mvO5/MDw00N9C8nCvZ5DVbKW8v6IKw03RSNjoDAygHC1JApMobIs9ms0bCqSo1XuX7Nzvrx07PencT6E+a65DcpAELPwWCgfr9vIzPcUJalTQzuJKjzLH+T6WtR6GuWWu8tC3lRZvc7hmhIVPjLpHCrCznNCv0OLrV+lQ23t8y0O+UPGgJCVIRrQ3Yt5YwL2l2S5aVWh1zhPlNyKSxzt+YAHZgFdJoRBqXiQm6DPnbRvZM4CyCy7Xa7W9mA6jKEDrTaXUd9fAj4stfzPAtsO4USIBnu60oHYPf/rt9hSGYBcmYIlVpkQ3uBOUBxdKbNmMMJDyBYPb9OBjZs4BBhO3BnsKT5qbPhcKjFYvHfnjaoAYxXo9PpWDbtLL9KynPYz4+xoTCpdrqFEFxdfnqZ3yUJ+wt4NMN3lwtvHQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="事件循环"
+        title="事件循环"
+        src="/static/5d22126489874b1af3dab43daa5a7128/410f3/d65a385f.png"
+        srcset="/static/5d22126489874b1af3dab43daa5a7128/63868/d65a385f.png 250w,
+/static/5d22126489874b1af3dab43daa5a7128/0b533/d65a385f.png 500w,
+/static/5d22126489874b1af3dab43daa5a7128/410f3/d65a385f.png 561w"
+        sizes="(max-width: 561px) 100vw, 561px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>上图中描绘了事件循环机制的具体过程：</p>
+<ol>
+<li>事件调度器（Event demultiplexer ）接受 <strong>I/O 请求</strong>（如文件、网络），将其发给各个具体的线程或者专门的模块进行处理（底层实现比较复杂，具体见 NodeJS Event Loop Series）</li>
+<li>等 I/O 处理完了，事件调度器将<strong>注册的回调事件</strong>放在<strong>任务队列</strong>（或者也可以叫 Event Queue）中</li>
+<li>循环往复</li>
+</ol>
+<p>事件循环机制将如上所示不停地保持运行状态，管理任务队列，调度各类事件，协调上下层之间的工作。而对于前端开发者来说，只需要考虑 JS 代码运行的模型，实现<strong>异步非阻塞</strong>的具体过程将交由 libuv 负责。</p>
+<h2 id="事件循环的几个阶段" style="position:relative;"><a href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5" aria-label="事件循环的几个阶段 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>事件循环的几个阶段</h2>
+<p>具体到事件循环（event loop）中，也是分为好几个工作阶段：</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 681px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 91.19999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsSAAALEgHS3X78AAAC90lEQVQ4y4VUi27aQBDk//+o6kuq0ofUJmmBECAPMAbb2Gf7Hr6zMZjp7jlOU1VVTlrtHTrPzc7sMpJSomkaOOd81HX9HHxu2yPCcIsoinE8HlGWJfI8h9YaSRxhMvmFxfwWinCkUhgx2GvLWUMPWL/n+8bwucFuX+B+tcNDEKFUFRGwPaC1FlmWIU1TVFWFw+EAW1kIoVCJCWz6BSb5jJOZoSgKCLqbFxLjjcObL7e4mCYI85q+MX8YcjkcXXem05lYNcSmxflkYXUMVYT0e00PWrBMShtsMod1YrDeW6Ql3SMyo55+7ZmxZpwZ2NoDDo1Fo5bIttfYh5eo5R2MLoilxDKqcDmP8W0S4Ptsi5+PBZLC9YAcXArnsuxN0ppMshpGzFAmY+TRtd8rKUieHMvYYrqp8PlXgKu7FDe7GnFe/d+Upnkq/+xQig2y/cqXzNWww1x6Rdo7Mse6GoYq4+pGfIHX+Xx+Dl513eJ0OqFVN9g/vkd8/xZHPfOyKGoPNtLaHoS168/kMl8YQDh3Xef3B8+w8wY1taGPZN9CLwArz8q+CGLIjcr6bbdbauDQtw5/oDW/6GCyMaL799gu38IWU1/yS8CB2V8MebVt62Ng6tyB3D7h1GroMkJBOnbH6h+GL8FYU68hA7E5Q+ZSGdA/0CZQ6Q05PaFmTf00/F3yn2BNvct84EscPKc8KUPJnQtgxRhqf03Chp4hu8zANUVT9+Fsr+NoaGQOdnXIQ8kdTUqZ7yDSDc5d3/hSljS7BmFaYZNoBHuDXFYedMSM2JQgCLBer/1MK0WjpSrP0OZjpKsPiB/ewdGex45nORESVw8KF5MIX+cCUc6MX2nsvp1O1DIltMxo3/VjyhOlLLbCYUd/CiHltOz7ccR68eKXuYWEEE+uNV6TWs6xX3+i1vmIg16QforuZHiMDb5OY/xYpPi+yHATSJqaGiMud2gFBuXoR6uibOhfJoDMlijTJUy5gSCJGHAdF5iuBG6DHLN1jrsw94R+A6Z+X35eBG1VAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="事件循环各个阶段"
+        title="事件循环各个阶段"
+        src="/static/402a12f11f3c321372c4dca59495cd38/8ce52/2b2830c2.png"
+        srcset="/static/402a12f11f3c321372c4dca59495cd38/63868/2b2830c2.png 250w,
+/static/402a12f11f3c321372c4dca59495cd38/0b533/2b2830c2.png 500w,
+/static/402a12f11f3c321372c4dca59495cd38/8ce52/2b2830c2.png 681w"
+        sizes="(max-width: 681px) 100vw, 681px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<ul>
+<li>定时器（timers）阶段：这个阶段执行 <code>setTimeout</code> 和 <code>setInterval</code> 的 callback</li>
+<li>待定回调（pending I/O callbacks）阶段：这个阶段执行一些系统操作的回调，比如 TCP 错误。名字会让人误解为执行 I/O 回调处理程序, 实际上 I/O 回调会由 poll 阶段处理。</li>
+<li>idle, prepare 阶段：仅 node 内部使用</li>
+<li>轮询（poll）阶段：获取新的 I/O 事件, 例如操作读取文件等等，适当的条件下 node 将阻塞在这里</li>
+<li>检查（check）阶段：执行 <code>setImmediate</code> 设定的 callback</li>
+<li>关闭的回调函数（close callbacks）阶段：一些关闭的回调函数，如：<code>socket.on('close', ...)</code></li>
+</ul>
+<p>最重要的是 timers、poll、check 阶段：</p>
+<ol>
+<li>定时器（timers）阶段：</li>
+</ol>
+<p>指定一个下限时间，而不是精确时间，在到达下限时间后，timers 会尽可能执行回调，但系统调度或者其它回调的执行可能会延迟它们。</p>
+<p>从技术上来说，poll 阶段会影响 timers 阶段的执行，所以 <code>setTimeout(callback, time)</code> 中， <code>time</code> 参数只是一个下限时间，是指到了这个时间后将 callback 置于 timers 阶段的队列中，至于真正的执行需要看事件循环有没有轮到这一阶段。</p>
+<ol start="2">
+<li>轮询（poll）阶段</li>
+</ol>
+<p> 轮询（poll）阶段是事件循环最重要的部分。它有两个重要功能：</p>
+<ul>
+<li>处理 poll 队列的事件</li>
+<li>当有已超时的 timer，执行它的回调函数</li>
+</ul>
+<p>事件循环将同步执行 poll 队列里的回调，直到队列为空或执行的回调达到系统上限。如果没有其他阶段的事要处理，事件循环将会一直阻塞在这个阶段，等待新的 I/O 事件加入 poll 队列中。</p>
+<p>如果其他阶段出现了事件，则有以下情况：</p>
+<ul>
+<li>如果 check 队列已经被 <code>setImmediate</code> 设定了回调, 事件循环将结束 poll 阶段往下进入 check 阶段来执行 check 队列（里面的回调 callback）。</li>
+<li>如果 timers 队列有到时的 <code>setTimeout</code> 或者 <code>setInterval</code> 回调，则事件循环将往上绕回 timers 阶段，并执行 timer 队列</li>
+<li>检查（check）阶段</li>
+</ul>
+<p>这个阶段允许在 poll 阶段结束后立即执行回调。如果 poll 阶段空闲，并且有被 <code>setImmediate</code> 设定的回调，事件循环会转到 check 阶段而不是继续等待。</p>
+<p><code>setImmediate</code> 可以看作一个特殊的定时器，libuv 专门为它设置了一个独立阶段。</p>
+<p>通常上来讲，随着代码执行，事件循环终将进入 poll 阶段，在这个阶段等待 incoming connection, request 等等。但是，只要有被 <code>setImmediate</code> 设定了回调，一旦 poll 阶段空闲，那么程序将结束 poll 阶段并进入 check 阶段，而不是继续等待 poll 事件。</p>
+<p>这里可以用伪代码说明情况：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 事件循环本身相当于一个死循环，当代码开始执行的时候，事件循环就已经启动了</span>
+<span class="token comment">// 然后顺序调用不同阶段的方法</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token comment">// timer阶段</span>
+	<span class="token function">timer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// I/O callbacks阶段</span>
+	<span class="token constant">IO</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// idle阶段</span>
+	<span class="token constant">IDLE</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// poll阶段，大部分时候，事件循环将会停留在此阶段，等待 I/O 事件</span>
+	<span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// check阶段</span>
+	<span class="token function">check</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// close阶段</span>
+	<span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>另外一个要理解的是，事件循环就像这段伪代码指明的，是一轮又一轮循环往复，所以事件回调函数<strong>进入的时机</strong>也很重要，以下面的代码举例：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 案例一</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token function">setImmediate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setImmediate'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 输出结果：</span>
+<span class="token comment">// 不确定，setTimeout 和 setImmediate 无法确定进入时机</span>
+
+
+<span class="token comment">// 案例二：</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'file.path'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> file</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token function">setImmediate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setImmediate'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 输出结果：setImmediate setTimeout</span>
+
+<span class="token comment">// 案例三：</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout1'</span><span class="token punctuation">)</span>
+  <span class="token function">setImmediate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setImmediate2'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout2'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 输出结果：setTimeout1 setImmediate2 setTimeout2</span></code></pre></div>
+<p>这几个案例中，我们通过分析得以一窥事件循环的机制：</p>
+<ul>
+<li>案例一：在由于系统运行性能的不同，所以 <code>setTimeout</code> 进入 timers 队列时机不确定，可能比 <code>setImmediate</code> 早，也可能晚，这就导致了循环下来，输出的不确定</li>
+<li>案例二：进入事件循环的时候 <code>fs.readFile</code> 是在 I/O poll 阶段，所以事件循环的下一个阶段必然是 check 阶段，然后再绕回开头的 timers 阶段。所以一定是 <code>setImmediate</code> 比 <code>setTimeout</code> 早</li>
+<li>案例三：跟案例二相似，进入事件循环是在 timers 阶段，当此队列的回调执行完成后，又新增了 <code>setImmediate</code> 和 <code>setTimeout</code>，然后事件循环离开 timers 阶段，往下先进入 check 阶段，再回回过头来进入 timers 阶段。输出结果必然也是确定的。</li>
+</ul>
+<h2 id="微任务和宏任务" style="position:relative;"><a href="#%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1" aria-label="微任务和宏任务 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>微任务和宏任务</h2>
+<p>在 Node 中，还有另一个非常重要的概念是微任务和宏任务，微任务是指不在事件循环阶段中的任务，Node 中只有 process.nextTick 和 Promise callbacks 两个微任务，它们都有各自的队列，<strong>不属于事件循环的一部分。</strong></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.4%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsSAAALEgHS3X78AAAC60lEQVQoz5VSbUhTURi+m0IhYWYRppUtEOpHJghFSmk/IgzMTBARorAoEKIIqRWFZmo/+tgyMxFB3Zxumlo0hfzWbfdju9d77+Y3082v6ebWNqfOMDqdOzZTiKAXHs5z7nnf577POS+CwJA365J6VPN5WmYlW8euPoDg+F3DBEjoVs39alXqQWubAag1FjDDOG9i7GqOjl25wY7+PMzVAwCQrcHLzLoTXd+Ep2CUq1JF2Cs6+2cudQ3MxhCUM0qNW4VvRXX5ZRUtT0nCWjijMcUrCWc4qnXEoqRTqNF9T+ZEYAN8WSOKIGmZt4O5D0Ui+SGUcmlzheJQ5B/hpW1RW/dQ9LEKXzrAcXxwmb/ZLlgHkSND3us+PrURChZByMjHigiq+NmVUfGbDPZVSZpeLMoxSeWxXM6g2rzT39k5aD1x8w960r6P0dp6O5U00dXGUqzWJl8cGDu2OrJ2xFhZddnU8Hmjs1wC1FUKMNfSAfDcq6cCtRjtSe3DrNKv38bL+4klMc54TiI4sxKhIV22almfU6rQuFHKTZ7OL+VxBZ1ZiUfNUjlgahRAX9sErJ+UgH0hTIeuQjhfNOOpNgx7gUTSAYZGfgDGsJaNoOgCb5ay8e1uIBg3gbPgczsy1Ib77pUqeCiYrJE1Nj0vrm0uLJEYJXLZWPmHC96x9YP2gdFoBzoZY8ZnU2aw6WSHxhi3iJnDEYJe9rXfq1kQaHQOIcdJ0uETdOjm99u+dEX97XGy54DPhYpyX0PZtaTNAzgqHPh+ngNxMXAGuvEddnxa4J+1YIigqdIyXuBcSy/HaWnPuwHMCiBE20T9IxAE+S2Mct5XU+70Ye3ieUZnn2hW6q1SucrSo7bMUwZvApy9DJh3D7rKq67ri2zvMr5WdkykbhMLrD5OwoGm3GdY3BJvoF1V8MEURS8rG/oxaz1p8B6HV3OCoD0x/vTdEHu4NSxs7y6koAD8ESV99nnIf4TofTMfdhz06IkoiNv/BqvGy/38d3ldAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="事件循环和微任务队列"
+        title="事件循环和微任务队列"
+        src="/static/506ef62c63659fd02fc8e1fabfc7e2c2/00d43/9f7f464b.png"
+        srcset="/static/506ef62c63659fd02fc8e1fabfc7e2c2/63868/9f7f464b.png 250w,
+/static/506ef62c63659fd02fc8e1fabfc7e2c2/0b533/9f7f464b.png 500w,
+/static/506ef62c63659fd02fc8e1fabfc7e2c2/00d43/9f7f464b.png 1000w,
+/static/506ef62c63659fd02fc8e1fabfc7e2c2/aa440/9f7f464b.png 1500w,
+/static/506ef62c63659fd02fc8e1fabfc7e2c2/e8950/9f7f464b.png 2000w"
+        sizes="(max-width: 1000px) 100vw, 1000px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>那么它们的运行时机是在什么时候呢？</p>
+<p>很简单，不管在什么地方调用，它们总是在各个阶段之间执行，上一阶段完成，进入下一阶段前，会清空 nextTick 和 promsie 队列！而且 nextTick 要比 promsie 要高！</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 655px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 76.8%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAAEEElEQVQ4y5WU208jZRjGh9IgMVkuiLox0ev9H/TKGNZAWNfEC0MMRo1mdQXjkc0mu3qBJi6SDSyHdmg5lBYp0BPF0nUlFkrpuZ0epi2lnBZo2VJoO6dOp+3M6xTvTfZJvrxvvosvz/O+v3wIUhcA8n8y+jISONlsrG2vSOHEJYWMV1qNL0sh7RF7pxT2LZc9yfII8mriv8cMYe7jmRAoVBg/NOkpParX2RBMLMbgQ+R59JIfGuAzpHnJx+imcIAJX600ulGsipWdigDMBVnTU9z9+kXc9nM+aBgntm1DdMo+fO7XDRPJjeHy7vowGzWO0Dsbg5lc8QqC6+wSuNvV/Nc+vPlnUrhl2YWPbCn40pqCT1d2odvqSfWsb/m+Jz3Th7xjALigGoSoFui1fqiG5wGiswCuB8BhmlqW4K4iqPGptB5aExLmF49Fh94qyFwlQD0cLB0BqEKgqSfJFMpvU1W4eUaUO3NkpZPk4MY5yd1IF7jODMG/e5SjOiIh7AVkU+8THb7XbE7w1xdwoU+cWY8RY+4sRqrfaOPQs+I56PNi0R8Ij+qwsjkI5aAGeHwRiL9/hUpYC4BrANy/QyU0X81R1avIjGGv7rBBExZGFAHgZE4mM2Yv5uRO5lQZBFoTYGce3vuqNZ90/ELHrVNkyiGn9lwoiVtQas+JUqlNlIqtKgo7jtH9o9MWZNUQaYRbrzXpY0K3JgKTKn95SOMm0Fk/O6KJwrjef3ZvzWZvKwZ1ZsIxFqPD+iCLL2OFjRGMjhixKq4PVtzj4VLU5D7NM62IzpBohJuIVBsVvp3GwCaiY5py01YVBubpEFiX/PnhIBa6TkTM5qJTgTO42V9OrAbyDjTIxCwBftscqAUmsXLC4jq9oFuRWcNuI0gQyVxYGFAGIKsM8Am5k95TBoSkGDktYiNfX1a/fJZw9Bfwx8r8jkNW3HXLLiKrskLKKSNTWzIi9hjN7zgfHZ48u4KsmcIS+OJakzkhdC3gMC4uZkAf5kYWo7WHC3EYXPYe/bbh9PYSTnSn9OQnYFwTtbJ/ir9YuSMwnkme96E8/899EO+YZ3VsJg0Hl9ioQ4Ji5hJsnhq1F8uor0ZPRwFmw6CsYyPi8Va+DJ1ZstKeo2vt5yx0nFHVjizFt2cZ6MgU2HcScbwJ8eudEui//eLqNv+GIQ6fGLahyxphPzfF+W5dEj6wuJI9Di92t2AfSxRX+oByjHGsZ6KSM35XoZzyCu8Z42pP7vBlr4LMkrVXkPdtIIFr4lKwypL2AEDuZkFEBmRbNGj3ADQYZ1p4cLuFPI4Olg69f5TS+Ez5NK5i9t0qNhNXsemoij30qKnjqPIonW1B7q9DQz2SLg5tIot9aqzaqw5WvhZP71xE+FF03PY8f8O/CzoPkAjX6wAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="旧版本Node微任务处理时机"
+        title="旧版本Node微任务处理时机"
+        src="/static/03e82491fa591a27e1e83cb37841ff93/ae6b7/e241621d.png"
+        srcset="/static/03e82491fa591a27e1e83cb37841ff93/63868/e241621d.png 250w,
+/static/03e82491fa591a27e1e83cb37841ff93/0b533/e241621d.png 500w,
+/static/03e82491fa591a27e1e83cb37841ff93/ae6b7/e241621d.png 655w"
+        sizes="(max-width: 655px) 100vw, 655px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>下面是具体的一个案例，可以看到微任务 Promise，是在 timers 阶段之后才清空。说明微任务是在<strong>阶段之间</strong>才会处理，与浏览器只要有微任务就清空很不一样！</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timeout1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Promise1'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timeout2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Promise2'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 输出</span>
+<span class="token comment">// timeout1</span>
+<span class="token comment">// timeout2</span>
+<span class="token comment">// Promise1</span>
+<span class="token comment">// Promise2</span></code></pre></div>
+<h2 id="nexttick-的问题" style="position:relative;"><a href="#nexttick-%E7%9A%84%E9%97%AE%E9%A2%98" aria-label="nexttick 的问题 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nextTick 的问题</h2>
+<p><code>process.nextTick</code> 有一个很大的问题，它会发生“饿死” I/O 的潜在风险：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'file.path'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> file</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">loopTick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+   process<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span>loopTick<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>这段代码将会一直停留在 nextTick 阶段，无法进入到 <code>fs.readFile</code> 的回调中，这就是所谓的 <em>I/O starving</em>。</p>
+<p>要解决这个问题，使用 <code>setImmediate</code> 替代，因为 <code>setImmediate</code> 属于事件循环，就算不停地循环，也不会阻塞整个事件循环机制，因为事件循环会在一轮又一轮处理 check 阶段的回调，而不像 nextTick 那么霸道，必须立即清空！</p>
+<p>这特性在一些基础库中用得多。比如替代原生 Promise 的库 Q.js 和 Bluebird.js，相比于原生 Promise 的底层实现，Q 是基于 process.nextTick 来做流程控制，而 Bluebird 使用了 setImmediate。</p>
+<h2 id="定时器和微任务在nodev11版本后的变更" style="position:relative;"><a href="#%E5%AE%9A%E6%97%B6%E5%99%A8%E5%92%8C%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%9C%A8nodev11%E7%89%88%E6%9C%AC%E5%90%8E%E7%9A%84%E5%8F%98%E6%9B%B4" aria-label="定时器和微任务在nodev11版本后的变更 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>定时器和微任务在NodeV11版本后的变更</h2>
+<p>随着 Node V11 的发布，nextTick 回调和 Promise 微任务将会在各个独立的 <code>setTimeout</code> and <code>setImmediate</code> 之间运行，即便当前的 timers 队列或者 check 队列不为空。这就跟浏览器的事件循环表现保持了一致！</p>
+<p>当然，这对于从 Node V11 以下升级到 V11 以上的代码来说，可能是个潜在的风险。</p>
+<h2 id="async-代码运行机制" style="position:relative;"><a href="#async-%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6" aria-label="async 代码运行机制 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>async 代码运行机制</h2>
+<p>前面谈了微任务中的 Promise 队列，那么对于同样是异步的 async 函数代码应该如何解释呢？</p>
+<p>本段将简单说明以下 async 代码机制。</p>
+<p>async 函数本质上是 Promise 的语法糖。每次我们使用 await, 解释器都创建一个 Promise 对象，然后把剩下的 async 函数中的操作放到 then 回调函数中。async/await 的实现，离不开 Promise。从字面意思来理解，async 是“异步”的简写，而 await 是 async wait 的简写可以认为是等待异步方法执行完成。</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'resolved'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async'</span><span class="token punctuation">)</span>
+  <span class="token keyword">await</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async done'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// => 等同于</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'resolved'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">function</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async'</span><span class="token punctuation">)</span>
+  <span class="token comment">// wait 会将 async2 变为一个 Promise</span>
+  <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// 执行成功后进入 resolve 阶段</span>
+    <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// await 下面的代码运行时机是在上面的 Promise 运行之后</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async done'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<h2 id="代码练习" style="position:relative;"><a href="#%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0" aria-label="代码练习 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>代码练习</h2>
+<p>最后整理一些代码练习，注意，这里区分新旧版本！</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 案例一</span>
+<span class="token function">setImmediate</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"setImmediate"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setImmediate</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"嵌套setImmediate"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  process<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"nextTick"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 旧版本 setImmediate nextTick setImmediate2</span>
+<span class="token comment">// 新版本 setImmediate nextTick setImmediate2</span>
+
+<span class="token comment">// 案例二</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timeout1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Promise1'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timeout2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Promise2'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 旧版本 timeout1 timeout2 Promise1 Promise2</span>
+<span class="token comment">// 新版本 timeout1 Promise1 timeout2 Promise2</span>
+
+<span class="token comment">// 案例三</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timeout0'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'resolved'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'time resolved'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  process<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'nextTick1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      process<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'nextTick2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  process<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'nextTick3'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'sync'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timeout2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout3'</span><span class="token punctuation">)</span>
+  process<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'nextTick4'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'resolved3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 旧版本：</span>
+<span class="token comment">// timeout0</span>
+<span class="token comment">// sync</span>
+<span class="token comment">// setTimeout3</span>
+<span class="token comment">// nextTick1</span>
+<span class="token comment">// nextTick3</span>
+<span class="token comment">// nextTick4</span>
+<span class="token comment">// nextTick2</span>
+<span class="token comment">// resolved</span>
+<span class="token comment">// time resolved</span>
+<span class="token comment">// resolved3</span>
+<span class="token comment">// timeout2</span>
+
+<span class="token comment">// 新版本：</span>
+<span class="token comment">// timeout0</span>
+<span class="token comment">// sync</span>
+<span class="token comment">// nextTick1</span>
+<span class="token comment">// nextTick3</span>
+<span class="token comment">// nextTick2</span>
+<span class="token comment">// resolved</span>
+<span class="token comment">// time resolved</span>
+<span class="token comment">// setTimeout3</span>
+<span class="token comment">// nextTick4</span>
+<span class="token comment">// resolved3</span>
+<span class="token comment">// timeout2</span>
+
+<span class="token comment">// 案例四：</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1 start'</span><span class="token punctuation">)</span>
+  <span class="token keyword">await</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1 end'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script start'</span><span class="token punctuation">)</span>
+<span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise1'</span><span class="token punctuation">)</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise3'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script end'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 输出</span>
+<span class="token comment">// script start</span>
+<span class="token comment">// async1 start</span>
+<span class="token comment">// async2</span>
+<span class="token comment">// promise1</span>
+<span class="token comment">// promise2</span>
+<span class="token comment">// script end</span>
+<span class="token comment">// async1 end</span>
+<span class="token comment">// promise3</span>
+
+<span class="token comment">// 案例四：</span>
+process<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'nextTick'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise1'</span><span class="token punctuation">)</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise3'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 旧版本：promise1 promise2 nextTick promise3</span>
+<span class="token comment">// 新版本：promise1 promise2 nextTick promise3</span></code></pre></div>
+<p>注意这里面的第三个案例有点奇怪，如果你能看出来的话，这点需要深入了解 async 的机制。</p>
+<h2 id="总结" style="position:relative;"><a href="#%E6%80%BB%E7%BB%93" aria-label="总结 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>总结</h2>
+<p>讲了这么多关于 Node 事件循环的机制，跟浏览器怎么个不同法，到最后发现，新版本 Node 已经跟浏览器特性保持一致了！随着新版本的逐渐普及，以后只要记住一种运行模型就可以了，当然，Node 的事件循环阶段过程也不能忘，有必要的话甚至可以了解一些 libuv 的机制。从一个坑挖向另一个坑～</p>
+<h2 id="参考" style="position:relative;"><a href="#%E5%8F%82%E8%80%83" aria-label="参考 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考</h2>
+<ul>
+<li><a href="https://nodejs.org/zh-cn/docs/meta/topics/dependencies/">所有依赖项 | Node.js</a></li>
+<li><a href="https://nodejs.org/zh-cn/docs/guides/blocking-vs-non-blocking/">阻塞对比非阻塞一览 | Node.js</a></li>
+<li><a href="https://nodejs.org/zh-cn/docs/guides/event-loop-timers-and-nexttick/">Node.js 事件循环，定时器和 process.nextTick() | Node.js</a></li>
+<li><a href="https://nodejs.org/zh-cn/docs/guides/dont-block-the-event-loop/">不要阻塞你的事件循环（或是工作线程池） | Node.js</a></li>
+<li><a href="https://blog.csdn.net/Fundebug/article/details/86487117">浏览器与Node的事件循环(Event Loop)有何区别?<em>Java</em>Fundebug博客-CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/WU5229485/article/details/103107550">深入理解NodeJS事件循环机制<em>JavaScript</em>小青蛙的博客-CSDN博客</a></li>
+<li><a href="https://juejin.im/post/5c148ec8e51d4576e83fd836">从event loop到async await来了解事件循环机制 - 掘金</a></li>
+<li>
+<p>NodeJS Event Loop Series（这个系列不错）</p>
+<ul>
+<li><a href="https://blog.insiderattack.net/event-loop-and-the-big-picture-nodejs-event-loop-part-1-1cb67a182810">Event Loop and the Big Picture — NodeJS Event Loop Part 1</a></li>
+<li><a href="https://blog.insiderattack.net/timers-immediates-and-process-nexttick-nodejs-event-loop-part-2-2c53fd511bb3">Timers, Immediates and Process.nextTick— NodeJS Event Loop Part 2</a></li>
+<li><a href="https://blog.insiderattack.net/promises-next-ticks-and-immediates-nodejs-event-loop-part-3-9226cbe7a6aa">Promises, Next-Ticks, and Immediates— NodeJS Event Loop Part 3</a></li>
+<li><a href="https://blog.insiderattack.net/handling-io-nodejs-event-loop-part-4-418062f917d1">Handling IO — NodeJS Event Loop Part 4 - Deepal’s Blog</a></li>
+<li><a href="https://blog.insiderattack.net/event-loop-best-practices-nodejs-event-loop-part-5-e29b2b50bfe2">Event Loop Best Practices — NodeJS Event Loop Part 5</a></li>
+<li><a href="https://blog.insiderattack.net/new-changes-to-timers-and-microtasks-from-node-v11-0-0-and-above-68d112743eb3">New Changes to the Timers and Microtasks in Node v11.0.0 ( and above)</a></li>
+</ul>
+</li>
+</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2019</div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/Node-Node 事件循环机制/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-c7c99e1beba592596949.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-a009e03d6c5ed3cac36b.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-1238c5837be8b696b304.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-6058350a116fce85da2a.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-cb5038bbda0ba09aa46f.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-4240020ae5e0ca15bf60.js"]};/*]]>*/</script><script src="/webpack-runtime-eb5fe8302012ff909126.js" async=""></script><script src="/app-c7c99e1beba592596949.js" async=""></script><script src="/framework-972833c791692296cdd7.js" async=""></script><script src="/895bab843c7b765764a1de15895603ae59adcae7-6bde442a18b66e093fda.js" async=""></script><script src="/component---src-templates-blog-template-tsx-cb5038bbda0ba09aa46f.js" async=""></script><script src="/styles-2784bacaa009e3e009ba.js" async=""></script></body></html>
