@@ -443,7 +443,7 @@ console.log('script end')
 // async1 end
 // promise3
 
-// 案例四：
+// 案例五：
 process.nextTick(() => console.log('nextTick'));
 new Promise(function(resolve){
   console.log('promise1')
