@@ -19,6 +19,10 @@ openreward: true
 
 ## 前端
 
+### 资料
+
+* [Browser-2020 现代浏览器可实现的特性](https://github.com/luruke/browser-2020)
+
 ### 系列教程
 
 * [不知非攻击 JavaScript基础知识](http://mp.weixin.qq.com/mp/homepage?__biz=MzI4NjE3MzQzNg==&hid=1&sn=d94896afbb61ff3d830f4609ba106469&scene=18#wechat_redirect)
@@ -29,6 +33,7 @@ openreward: true
 ### 资料
 
 * [狼叔-如何正确地学习 Node.js (Github)](https://github.com/i5ting/How-to-learn-node-correctly)
+* [Stream-Handbook](https://github.com/substack/stream-handbook)
 
 ### 书籍
 
