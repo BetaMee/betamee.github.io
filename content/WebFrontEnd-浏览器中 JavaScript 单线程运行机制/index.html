@@ -49,8 +49,8 @@
       }
     })
   </script><meta name="generator" content="Gatsby 2.24.2"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-235c916f3a1885db29db.js"/><link as="script" rel="preload" href="/commons-b61093372303f1c40234.js"/><link as="script" rel="preload" href="/framework-b5b229d58c3c710d5429.js"/><link as="script" rel="preload" href="/app-63b92efacb62bc004d29.js"/><link as="script" rel="preload" href="/webpack-runtime-e3b38bbff6813be5d8a2.js"/><link as="fetch" rel="preload" href="/page-data/content/WebFrontEnd-浏览器中 JavaScript 单线程运行机制/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">浏览器中 JavaScript 单线程运行机制</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2020-04-20</span></div><div class="blog-module--tags--20J6V"><a href="/tag/Web_Deep">#<!-- -->Web_Deep</a><a href="/tag/原理">#<!-- -->原理</a></div></div><div><blockquote>
-<p>本文主要整理浏览器中的 JavaScript 运行机制。
-另外注意一点，由于历史原因，<strong>本文中提到的作对比的 Node，指的是 v11 以下的版本！</strong> v11 以上的版本中，事件循环表现已经和浏览器一致了！具体见另一篇整理的《Node 事件循环机制》</p>
+<p>本文主要整理浏览器中的 JavaScript 运行机制。</p>
+<p>另外注意一点，由于历史原因，<strong>本文中提到的作对比的 Node，指的是 v11 以下的版本！</strong> v11 以上的版本中，事件循环表现已经和浏览器一致了！具体见另一篇整理的《Node 事件循环机制》</p>
 </blockquote>
 <h2 id="目录" style="position:relative;"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
 <!-- toc -->
@@ -68,11 +68,11 @@
 <h2 id="区分进程和线程的概念" style="position:relative;"><a href="#%E5%8C%BA%E5%88%86%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%A6%82%E5%BF%B5" aria-label="区分进程和线程的概念 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>区分进程和线程的概念</h2>
 <p>首先我们得先理解一下计算机中常见的进程和线程概念。做一个形象的比喻：</p>
 <blockquote>
-<p>进程是一个工厂，工厂有独立的资源  ->  系统分配的内存（独立的一块内存）
-各个工厂相互独立 -> 进程之间相互独立
-线程是工厂中的工人，多个工人协作完成任务 -> 多个线程在进程中协作完成任务
-工厂内有一个或多个工人 -> 一个进程由一个或多个线程组成
-工人之间共享空间 -> 同一进程下的各个线程之间共享程序的内存空间（包括代码段、数据集、堆等）</p>
+<p>进程是一个工厂，工厂有独立的资源  ->  系统分配的内存（独立的一块内存）</p>
+<p>各个工厂相互独立 -> 进程之间相互独立</p>
+<p>线程是工厂中的工人，多个工人协作完成任务 -> 多个线程在进程中协作完成任务</p>
+<p>工厂内有一个或多个工人 -> 一个进程由一个或多个线程组成</p>
+<p>工人之间共享空间 -> 同一进程下的各个线程之间共享程序的内存空间（包括代码段、数据集、堆等）</p>
 </blockquote>
 <p>用正式术语总结一下：</p>
 <ul>
