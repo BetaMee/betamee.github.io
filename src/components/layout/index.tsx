@@ -84,7 +84,7 @@ const DefaultLayout: React.FC = ({ children }) => {
         </a>
       </div>
       <div className={styles.siteInfo}>
-        Copyright © 橡树上 2019
+        Copyright © 橡树上 2020
       </div>
     </div>
   </div>
