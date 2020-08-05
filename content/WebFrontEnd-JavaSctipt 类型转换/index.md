@@ -6,6 +6,8 @@ tags: JavaScript 语言特性
 openreward: true
 ---
 
+## 目录
+
 <!-- toc -->
 
 - [类型系统](#类型系统)
@@ -155,7 +157,7 @@ let objStr = obj.toString() // '[object Object]'
 + undefined
 + NaN
 
-这样的话 `![]` 和 `!{}` 为 false，因为 `Boolean([])` 和 `Boolean({})` 都为 true。我们在判断空对象和空数组的时候千万要小心这样的陷进！
+这样的话 `![]` 和 `!{}` 为 false，因为 `Boolean([])` 和 `Boolean({})` 都为 true。我们在判断空对象和空数组的时候千万要小心这样的陷阱！
 
 而对于 Number 对象，也有一个潜在的坑，`Number(null)` 为 1，而 `Number(undefined)` 为 NaN。判类型的时候也要小心。
 
