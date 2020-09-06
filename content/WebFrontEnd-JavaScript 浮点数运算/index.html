@@ -1,0 +1,399 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.4 'Cabin Condensed','georgia',sans-serif;box-sizing:border-box;overflow-y:scroll;-webkit-font-smoothing:antialiased;letter-spacing:.05em;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.87);font-family:'Cabin Condensed','georgia',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";letter-spacing:.03em;}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:400;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:48px;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.8rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.5rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:400;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;color:inherit;font-family:'Patua One',sans-serif;font-weight:400;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}ul{margin-left:1.4rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.4rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;list-style-position:outside;list-style-image:none;line-height:1.6rem;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;line-height:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;font-size:0.85rem;line-height:1.42;background:hsla(0,0%,0%,0.04);border-radius:3px;overflow:auto;word-wrap:normal;padding:1.4rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;font-size:1rem;line-height:1.4rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}blockquote{margin-left:-1.4rem;margin-right:1.4rem;margin-top:0;padding-bottom:10px;padding-left:1.1375rem;padding-right:0;padding-top:10px;margin-bottom:1.4rem;font-size:1.1487rem;line-height:1.6rem;color:hsla(0,0%,0%,0.6);border-left:0.2625rem solid #cbcbcb;background-color:#f8f8f8;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.4rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.4rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.4rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.4rem;margin-bottom:calc(1.4rem / 2);margin-top:calc(1.4rem / 2);}li > ul{margin-left:1.4rem;margin-bottom:calc(1.4rem / 2);margin-top:calc(1.4rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.4rem / 2);}code{font-size:0.85rem;line-height:1.4rem;}kbd{font-size:0.85rem;line-height:1.4rem;}samp{font-size:0.85rem;line-height:1.4rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.93333rem;padding-right:0.93333rem;padding-top:0.7rem;padding-bottom:calc(0.7rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}tt,code{background-color:hsla(0,0%,0%,0.04);border-radius:3px;font-family:"SFMono-Regular", Consolas,"Roboto Mono","Droid Sans Mono","Liberation Mono",Menlo,Courier,monospace;padding:0;padding-top:0.2em;padding-bottom:0.2em;}pre code{background:none;line-height:1.42;}code:before,code:after,tt:before,tt:after{letter-spacing:-0.2em;content:" ";}pre code:before,pre code:after,pre tt:before,pre tt:after{content:none;}a{color:#358ccb;}a:hover{color:#3498DB;}@media only screen and (max-width:480px){blockquote{margin-left:-1.05rem;padding-left:0.7875rem;margin-right:0;}}</style><link as="script" rel="preload" href="/styles-c2fe8482057191dca484.js"/><title data-react-helmet="true">十二棵橡树</title><link data-react-helmet="true" rel="icon" type="image/png" href="/static/favicon-9bf81a2b82f5028f3f4b92f88cb575ba.ico" sizes="16x16"/><style data-href="/styles.92c0f533b9d3237a0209.css">body{margin:0;width:100%}*{box-sizing:border-box}center{margin:20px 0;font-weight:700;color:#333}table tr td strong{min-width:50px}h1 .anchor svg,h2 .anchor svg,h3 .anchor svg,h4 .anchor svg,h5 .anchor svg,h6 .anchor svg{visibility:unset!important}pre[class*=language-]:after,pre[class*=language-]:before{box-shadow:unset!important}p>code{color:#c92c2c;background-color:#fff5f5!important}.gatsby-resp-image-wrapper{cursor:pointer}.gatsby-resp-image-background-image,.gatsby-resp-image-image{border-radius:.3em}.gatsby-highlight{margin-bottom:1.4rem}.gatsby-highlight pre[class*=language-]>code{border-left:unset;box-shadow:0 0 0 0 #358ccb,0 0 0 1px #dfdfdf}code[class*=language-],pre[class*=language-]{color:#000;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{position:relative;margin:.5em 0;overflow:visible;padding:0}pre[class*=language-]>code{position:relative;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;background-color:#fdfdfd;background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 0);background-size:3em 3em;background-origin:content-box;background-attachment:local}code[class*=language-]{max-height:inherit;height:inherit;padding:0 1em;display:block;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{position:relative;padding:.2em;border-radius:.3em;color:#c92c2c;border:1px solid rgba(0,0,0,.1);display:inline;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{content:"";z-index:-2;display:block;position:absolute;bottom:.75em;left:.18em;width:40%;height:20%;max-height:13em;box-shadow:0 13px 8px #979797;transform:rotate(-2deg)}pre[class*=language-]:after{right:.75em;left:auto;transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}.layout-module--header--1orMk{padding:0 20%;background-color:#693476;height:80px;display:flex;flex-direction:row;justify-content:space-between;align-items:center;box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.layout-module--title--28C2S{font-size:24px;color:#e1d0e6}.layout-module--menu--Ech1f{font-size:20px}.layout-module--menu--Ech1f a{text-decoration:none;color:#e1d0e6;padding:0 5px}.layout-module--menu--Ech1f a:hover{color:#fff}.layout-module--footer--1-u4U{height:200px;padding:0 20%;border-bottom:10px solid #693476;background-color:#fafafa;display:flex;flex-direction:column;justify-content:center}.layout-module--contact--1Z-dZ a{margin-right:6px;font-size:20px;color:#cf91e2}.layout-module--contact--1Z-dZ{margin-bottom:16px}.layout-module--siteInfo--WbGrj{font-size:20px}@media screen and (max-width:376px){.layout-module--header--1orMk{height:unset;padding:unset;background-color:unset;flex-direction:column}.layout-module--header--1orMk .layout-module--title--28C2S{padding:20px 10px;width:100%;display:flex;justify-content:center;color:#693476}.layout-module--header--1orMk .layout-module--menu--Ech1f{padding:20px 10px;width:100%;background-color:#693476;display:flex;justify-content:center}.layout-module--footer--1-u4U{padding:0 5%}}._404-module--container--2kCC_{min-height:400px;margin:60px auto 80px;display:flex;flex-direction:column;justify-content:center;align-items:center}._404-module--container--2kCC_ span{font-size:40px;font-weight:700}.about-module--content--1y3Xq{margin:60px 20% 80px;min-height:400px}@media screen and (max-width:420px){.about-module--content--1y3Xq{margin:30px 5%;padding-left:10px}}.list-module--main--_HL7O{margin:0 20%}.list-module--catalog--ToZZ4{min-height:400px;display:flex;flex-direction:column;margin:30px 0 10px}.list-module--catalog--ToZZ4 .list-module--item--2P8EQ{margin-top:10px}.list-module--catalog--ToZZ4 .list-module--year--fuRyw{font-size:46px}.list-module--catalog--ToZZ4 .list-module--link--1G28D{display:flex;flex-direction:column}.list-module--catalog--ToZZ4 .list-module--link--1G28D a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}.list-module--catalog--ToZZ4 .list-module--date--1rprK{margin-right:10px;color:#999;font-style:italic}.list-module--catalog--ToZZ4 .list-module--newcontent--2jgkA{padding:1px 5px;background-color:#693476;border-radius:4px;color:#fff;margin-left:10px;font-size:20px}.list-module--pagination--4wgvY{margin:30px 0 60px}.list-module--paginationItem--127RG{color:#333;width:35px;height:35px;display:inline-block;text-align:center;line-height:35px;font-size:18px;margin-right:10px}.list-module--itemSelected--3HOvN{background-color:#cf91e2}@media screen and (max-width:376px){.list-module--main--_HL7O{margin:0 5%}}.viewer-module--viewer--3ba3_{position:fixed;top:0;left:0;z-index:100;width:100vw;height:100vh;background-color:rgba(0,0,0,.6);display:flex;flex-direction:column;justify-content:center;align-items:center}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc{width:70%;height:80%;position:relative}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--img--9w_7t{border-radius:4px;box-shadow:inset 0 0 0 400px #fff;-o-object-fit:contain;object-fit:contain;height:100%;width:100%}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--des--3lo9I{color:#fff;text-align:center;font-size:20px;font-weight:700}.viewer-module--viewer--3ba3_ .viewer-module--container--9MBxc .viewer-module--icon--1vJ-_{cursor:pointer;margin:5px;position:absolute;top:0;right:0;width:30px;height:30px}.blog-module--content--R6Wfi{margin:60px 20% 80px;font-size:18px}.blog-module--heading--2q6UV{margin-bottom:30px}.blog-module--title--3NoN5{font-weight:700;margin-bottom:15px}.blog-module--info--U7riw{color:#666;margin-bottom:5px}.blog-module--info--U7riw span{margin-right:5px}.blog-module--tags--20J6V a{color:#666;margin-right:5px}@media screen and (max-width:420px){.blog-module--content--R6Wfi{margin:60px 5% 80px;padding-left:10px}}.tag-module--content--1DHrR{margin:60px 20% 80px;min-height:400px}.tag-module--heading--15Jbn{margin-bottom:40px}.tag-module--link--3DsMn a{font-size:20px;color:#333;display:inline-block;margin-bottom:10px;text-decoration:none;border-bottom:1px solid #ddd}@media screen and (max-width:376px){.tag-module--content--1DHrR{margin:60px 5% 80px;min-height:400px}}</style><link href="//fonts.googleapis.com/css?family=Patua+One:400|Cabin+Condensed:400,700" rel="stylesheet" type="text/css"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><meta name="generator" content="Gatsby 2.24.53"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-9a5a9c9b89a6a0fc2947.js"/><link as="script" rel="preload" href="/commons-28fbe54ce778678f3f45.js"/><link as="script" rel="preload" href="/framework-b5b229d58c3c710d5429.js"/><link as="script" rel="preload" href="/app-53fcff6240b2fed8236d.js"/><link as="script" rel="preload" href="/webpack-runtime-268873de12d2b5e9103d.js"/><link as="fetch" rel="preload" href="/page-data/content/WebFrontEnd-JavaScript 浮点数运算/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">JavaScript 浮点数运算</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2020-09-06</span></div><div class="blog-module--tags--20J6V"><a href="/tag/JavaScript">#<!-- -->JavaScript</a><a href="/tag/语言特性">#<!-- -->语言特性</a></div></div><div><h2 id="目录" style="position:relative;"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
+<!-- toc -->
+<ul>
+<li><a href="#%E8%B5%B7%E5%9B%A0">起因</a></li>
+<li><a href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2">进制转换</a></li>
+<li><a href="#%E6%B5%AE%E7%82%B9%E6%95%B0">浮点数</a></li>
+<li><a href="#js-%E4%B8%AD%E7%9A%84%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97">js 中的浮点数计算</a></li>
+<li><a href="#%E6%95%B4%E6%95%B0%E7%9A%84%E7%B2%BE%E5%BA%A6%E9%97%AE%E9%A2%98">整数的精度问题</a></li>
+<li>
+<p><a href="#%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B2%BE%E7%A1%AE%E7%9A%84%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E5%87%BD%E6%95%B0">设计一个精确的浮点数运算函数</a></p>
+<ul>
+<li><a href="#%E6%B5%AE%E7%82%B9%E5%B0%8F%E6%95%B0%E5%88%A4%E6%96%AD">浮点小数判断</a></li>
+<li><a href="#%E7%B2%BE%E7%A1%AE%E7%9A%84%E5%8A%A0%E6%B3%95%E5%87%BD%E6%95%B0">精确的加法函数</a></li>
+<li><a href="#%E7%B2%BE%E7%A1%AE%E7%9A%84%E5%87%8F%E6%B3%95%E5%87%BD%E6%95%B0">精确的减法函数</a></li>
+<li><a href="#%E7%B2%BE%E7%A1%AE%E7%9A%84%E4%B9%98%E6%B3%95%E5%87%BD%E6%95%B0">精确的乘法函数</a></li>
+<li><a href="#%E7%B2%BE%E7%A1%AE%E7%9A%84%E9%99%A4%E6%B3%95%E5%87%BD%E6%95%B0">精确的除法函数</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="起因" style="position:relative;"><a href="#%E8%B5%B7%E5%9B%A0" aria-label="起因 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>起因</h2>
+<p>在 JavaScript 作数学计算的时候，经常会遇到这样的问题：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 加法 =====================</span>
+<span class="token comment">// 0.1 + 0.2 = 0.30000000000000004</span>
+<span class="token comment">// 0.7 + 0.1 = 0.7999999999999999</span>
+<span class="token comment">// 0.2 + 0.4 = 0.6000000000000001</span>
+<span class="token comment">// 2.22 + 0.1 = 2.3200000000000003</span>
+
+<span class="token comment">// 减法 =====================</span>
+<span class="token comment">// 1.5 - 1.2 = 0.30000000000000004</span>
+<span class="token comment">// 0.3 - 0.2 = 0.09999999999999998</span>
+
+<span class="token comment">// 乘法 =====================</span>
+<span class="token comment">// 19.9 * 100 = 1989.9999999999998</span>
+<span class="token comment">// 19.9 * 10 * 10 = 1990</span>
+<span class="token comment">// 1306377.64 * 100 = 130637763.99999999</span>
+<span class="token comment">// 1306377.64 * 10 * 10 = 130637763.99999999</span>
+<span class="token comment">// 0.7 * 180 = 125.99999999999999</span>
+<span class="token comment">// 9.7 * 100 = 969.9999999999999</span>
+<span class="token comment">// 39.7 * 100 = 3970.0000000000005</span>
+
+<span class="token comment">// 除法 =====================</span>
+<span class="token comment">// 0.3 / 0.1 = 2.9999999999999996</span>
+<span class="token comment">// 0.69 / 10 = 0.06899999999999999</span></code></pre></div>
+<p>这种不太精确的值原因在于，在 JavaScript 中整数和浮点数都是属于 <em>Number</em> 类型，所有数字都是以 64 位浮点数（double float）形式存储，即便整数也是如此。</p>
+<p>它的实现遵循 IEEE 754 标准，使用 64 位固定长度来表示，也就是标准的 double 双精度浮点数（相关的还有 float 32 位单精度）。</p>
+<p>在解决这个问题前，先理解一下进制的知识、浮点数的概念以及计算机内部是如何存储这些值的。</p>
+<h2 id="进制转换" style="position:relative;"><a href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2" aria-label="进制转换 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>进制转换</h2>
+<p>计算机中都是以二进制存储数据的，我们举一些常见的十进制和二进制转换例子。</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 十进制</span>
+<span class="token number">100.3</span>
+<span class="token comment">// 二进制</span>
+<span class="token number">1100100.0100110011001100110011001100110011001100110011</span>（<span class="token number">1001</span>无限循环）
+
+<span class="token comment">// 十进制</span>
+<span class="token number">0.1</span>
+<span class="token comment">// 二进制</span>
+<span class="token number">0.0001100110011001</span><span class="token operator">...</span><span class="token punctuation">(</span><span class="token number">1001</span>无限循环<span class="token punctuation">)</span>
+
+<span class="token comment">// 十进制</span>
+<span class="token number">0.2</span>
+<span class="token comment">// 二进制</span>
+<span class="token number">0.0011001100110011</span><span class="token operator">...</span><span class="token punctuation">(</span><span class="token number">1001</span>无限循环<span class="token punctuation">)</span></code></pre></div>
+<p>由于计算机内部的存储不可能是无限的位数，必然会有取舍。假设一个 8 位的存储器都用来存这些数据（不考虑正负等其他情况），那么多于 8 位以外的值将会被舍弃，舍弃的原则是第九位<strong>0 舍 1 进</strong>：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 现实值</span>
+<span class="token number">0001100110011001.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token comment">// 放在计算机的存储器中，第九位 0 舍 1 进</span>
+<span class="token number">00011010</span></code></pre></div>
+<p>这说明了进制的转换，或者说计算器存储数据本身是有一定的误差的。</p>
+<h2 id="浮点数" style="position:relative;"><a href="#%E6%B5%AE%E7%82%B9%E6%95%B0" aria-label="浮点数 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>浮点数</h2>
+<p>那么什么是浮点数呢？</p>
+<p>上面的案例中提到，使用一个 8 位的存储器，最多只能存 $2^8 = 256$ （0 -255）个值，就算使用 32 位，64 位存储器，也最多能放$2^{32}$、$2^{64}$，这离现实中使用的场景差距远着呢。</p>
+<p>为了解决这个问题，引入一种<em>科学计数法</em>的数学工具，就是用简洁的方式来表示世间各种各样的数据，它的公式如下表示：</p>
+<p>$$d.dddd \times \beta^ e( 0 \leqslant di &#x3C; \beta)$$</p>
+<p>其中：$d.ddd$ 为尾数、$\beta$为基数、$e$ 为加权指数。</p>
+<p>比如，我们常用的十进制 $1901.23$，用科学计数法来表示：$1.90123 \times 10^2$。</p>
+<p>同样的，二进制也可以用科学计数法来表示，比如 $1001.1101$，可以写成这样: $1.0011101 \times 2^{11}$。</p>
+<p>不要被这里的 11 误解，它是二进制的，等于十进制的 3，也就是说左移 3 位。</p>
+<p>有了这个规则，进入到计算中的浮点数存储器，根据 IEEE 745 标准，计算机内部有单精度、双精度、拓展双精度等实现：</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 676px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 14.399999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAqUlEQVQI1x2Pyw6DMAwE+f8fQ5wAIXHgIUISkkADtClU5LSNfbBkWauZdXYcB87zhHMW0zTBGINhGLAsC/q+hxAC4zhCa422baGUgpQSZVnyvu875yi/riuyqqoQY4RIsG3b8E7wzyfA+xeu64KzFiF8WfQ8kW9aafzuO90Dw5qmYTHBszzPuQHNPEtYa9I4ttsEIxGZqT19471H13Xckva6rlEUBedJ+gej69wkvAlgnQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="3a5a6295.png"
+        title="3a5a6295.png"
+        src="/static/6179acd912d87d7a8789fa1d87bf0281/9bb7a/3a5a6295.png"
+        srcset="/static/6179acd912d87d7a8789fa1d87bf0281/63868/3a5a6295.png 250w,
+/static/6179acd912d87d7a8789fa1d87bf0281/0b533/3a5a6295.png 500w,
+/static/6179acd912d87d7a8789fa1d87bf0281/9bb7a/3a5a6295.png 676w"
+        sizes="(max-width: 676px) 100vw, 676px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<blockquote>
+<p>需要特别注意的是，扩展双精度类型没有隐含位，因此它的有效位数与尾数位数一致，而单精度类型和双精度类型均有一个隐含位，因此它的有效位数比位数位数多一个。</p>
+</blockquote>
+<p>它其实也是根据这个数学工具来摆放数据的：</p>
+<p>$$(-1)^S \times 2^{E-bias} \times 1.M$$</p>
+<p>存储的是 SEM 组成的二进制。</p>
+<p>其中：</p>
+<ol>
+<li>S 为 sign，是符号位，S = 0 为正， S = 1 为负</li>
+<li>1.M 是二进制的<strong>有效数字</strong>，IEEE 754规定，在计算机内部保存这个值时，默认这个数的第一位总是 1，因此可以被舍去，只保存后面的 M 部分</li>
+<li>E 是<strong>指数</strong>，一个无符号整数</li>
+<li>bias 是<strong>指数偏移</strong>，用于确定浮点数偏执，E - bias 后才是加权值</li>
+</ol>
+<p>IEEE 754 规定，对于 32 位的浮点数，最高的1位是符号位 S，接着的 8 位是指数 E，剩下的 23 位为有效数字 M。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 500px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20.4%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAyklEQVQY02NgYGBghWI2IOYCYg4G7ACkhgVK4wYrz55U7z03L63l4sS4tnOTE+rP9yfsXzYt9umMeZF3Z8+JujtrTtT5CZMSTnT3Jp+bMDH+4qTJ8UCxyHuz50Tenjk78ub0mdEbq2slQJbJCIuwMxz78MZ+6addS2d9XjFz3uc1s6Z8WjH7yo5l874vXT3n/YqVc94uXT7v3bIVc98vXzkHSM/5uGLVHCB7Ngi/Wbp89uslS+ftamrWBhrIIyEgyM8A9SqlgBnGAAA7Pl0HpvuKwgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="c8092105.png"
+        title="c8092105.png"
+        src="/static/626a3326a4a2dad36b7aaec9e2fe43df/0b533/c8092105.png"
+        srcset="/static/626a3326a4a2dad36b7aaec9e2fe43df/63868/c8092105.png 250w,
+/static/626a3326a4a2dad36b7aaec9e2fe43df/0b533/c8092105.png 500w"
+        sizes="(max-width: 500px) 100vw, 500px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>对于 64 位的浮点数，最高的 1 位是符号位 S，接着的11位是指数 E，剩下的 52 位为有效数字 M。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 500px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20.4%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAtElEQVQY02NggABGIBYDYl4G/ACkhh+viqyWWrWsBaUZWctKkrNXlSct6a6P2VffHLm9sSlqJxDvAOLtDY1gekVpWdLykrLk3U0tkSCxXU3NUTsamkA4EsiOW1lWrsIw98guy/az07Z0Xp26uuXipI075/ZvuT5h6voLkyavvzRpyvqLQPr8xElAesr6S5OnrIPi9RcmTl5/efJUMA1UsxaId+1pbvUAOZIH6mWY19kYyAfsAKLnXE8psmORAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="c8938d30.png"
+        title="c8938d30.png"
+        src="/static/8bd047fab30984fb6ec9aca0cbec4f9d/0b533/c8938d30.png"
+        srcset="/static/8bd047fab30984fb6ec9aca0cbec4f9d/63868/c8938d30.png 250w,
+/static/8bd047fab30984fb6ec9aca0cbec4f9d/0b533/c8938d30.png 500w"
+        sizes="(max-width: 500px) 100vw, 500px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>这里第三第四点需要整体理解一下。在内存中，存储的是 E 指数的二进制，它是一个无符号整数，这意味着，如果 E 为 8 位，它的取值范围为 0 ~ 255；如果 E 为 11 位，它的取值范围为 0 ~ 2047。但是，由于科学计数法中的指数是可以出现负数的，所以这里需要减去 bias 值，所以IEEE 754 规定，E 的真实值必须再减去一个中间数，对于 32 位浮点数（有 8 位 E 空间），这个中间数是 127；对于 64 位浮点数（有 11 位 E 空间），这个中间数是 1023。</p>
+<p>举个例子，1.1011 x 2^10 这个二进制的数的权为 10（十进制的 10）， 表示左移了 10 位，那么存在 32 位的 E 空间中需要加上 127，保存为 10 + 127 = 137，其二进制数为：10001001</p>
+<p>然后，指数E还可以再分成三种情况：</p>
+<ol>
+<li>E 不全为 0 或不全为 1。这时，浮点数就采用上面的规则表示，即指数E的计算值减去127（或1023），得到真实值，再将有效数字M前加上第一位的1。</li>
+<li>E 全为 0。这时，浮点数的指数 E 等于 1-127（或者 1-1023），有效数字 M 不再加上第一位的1，而是还原为 0.xxxxxx 的小数。这样做是为了表示 ±0，以及接近于 0 的很小的数字。</li>
+<li>E 全为 1。这时，如果有效数字 M 全为 0，表示 ± 无穷大（正负取决于符号位 s）；如果有效数字 M 不全为 0，表示这个数不是一个数（NaN）。</li>
+</ol>
+<h2 id="js-中的浮点数计算" style="position:relative;"><a href="#js-%E4%B8%AD%E7%9A%84%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97" aria-label="js 中的浮点数计算 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>js 中的浮点数计算</h2>
+<p>学习了上面的理论知识（晕），现在来看 JavaScript 中的运算过程。</p>
+<p>下图展示了 JavaScript 中的存储方式，也就是 64 位浮点数的规则，跟上面的理论知识是一样的。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABHUlEQVQoz4WR3W6DMAyF+/7vxsUmhICNFpW/Eig0gbSBhpwlETAYF7NkxcdBhy/2CTqUUljC1Fv9t/ff3WkR5KlQ6sSsRUvwqjOMrFk/nqbJ1m3bIs9zdF13MF0Nc64QPWazpgA9f4LfYtDoA+9nt6MihMBxHJRluf5kQ2hLsBG4C0Byag2HtrR0w6OytekboqqqUOs0pk3TWG2ID4QVl4hID5p+o4l9VBcfoyYbXxz12QNNQnyFAVzXRRAEYIyBcw7f9+F5HqSUe8NWKNx6iYHW4OUVfRFjMITsDk4S219ml2WZpaOUWm0oV8L59Sh6hSsDRj2Stzbp0xC8uNhTakpstiuEQJIkSNN0t+HdlpfGmnrYv3o63E/TsWfiBzVkbBWbAWAHAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="55e1bc8c.png"
+        title="55e1bc8c.png"
+        src="/static/75412f36f6d4d60f5033e28f8051468e/00d43/c42cdeb1.png"
+        srcset="/static/75412f36f6d4d60f5033e28f8051468e/63868/c42cdeb1.png 250w,
+/static/75412f36f6d4d60f5033e28f8051468e/0b533/c42cdeb1.png 500w,
+/static/75412f36f6d4d60f5033e28f8051468e/00d43/c42cdeb1.png 1000w,
+/static/75412f36f6d4d60f5033e28f8051468e/c1b63/c42cdeb1.png 1200w"
+        sizes="(max-width: 1000px) 100vw, 1000px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>复盘 0.1 + 0.2 = 0.30000000000000004 这个经典问题：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 0.1 和 0.2 都转化成二进制后再进行运算</span>
+<span class="token number">0.00011001100110011001100110011001100110011001100110011010</span> <span class="token operator">+</span>
+<span class="token number">0.0011001100110011001100110011001100110011001100110011010</span> <span class="token operator">=</span>
+<span class="token number">0.0100110011001100110011001100110011001100110011001100111</span>
+
+<span class="token comment">// 转成十进制正好是 0.30000000000000004</span></code></pre></div>
+<p>总结一下误差产生的根本原因：对因<strong>浮点数小数位的限制而截断</strong>的二进制数字进行了运算，再转换为十进制，这就造成了一定的误差！</p>
+<p>这里还有另外一个有趣的地方，由于浮点数的不精确，0.1 其实也不是真正的 0.1:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token number">0.1</span><span class="token punctuation">.</span><span class="token function">toPrecision</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0.1000000000000000</span>
+<span class="token number">0.1</span><span class="token punctuation">.</span><span class="token function">toPrecision</span><span class="token punctuation">(</span><span class="token number">21</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0.100000000000000005551</span>
+<span class="token number">0.1</span><span class="token punctuation">.</span><span class="token function">toPrecision</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0.10000000000000000555111512312578</span>
+
+<span class="token number">0.3</span><span class="token punctuation">.</span><span class="token function">toPrecision</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0.2999999999999999888977698</span></code></pre></div>
+<p>这是因为 M 固定长度是 52 位，再加上省略的一位，最多可以表示的数是 2^53 = 9007199254740992，对应科学计数尾数是 9.007199254740992，这也是 JavaScript 最多能表示的精度。它的长度是 16，所以默认使用 toPrecision(16) 来做精度运算，超过的精度会自动做凑整处理。</p>
+<h2 id="整数的精度问题" style="position:relative;"><a href="#%E6%95%B4%E6%95%B0%E7%9A%84%E7%B2%BE%E5%BA%A6%E9%97%AE%E9%A2%98" aria-label="整数的精度问题 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>整数的精度问题</h2>
+<p>上面提到的 JavaScript 能表示的最大值，实际上 JavaScript 安全整数范围为：</p>
+<ul>
+<li>最大 (2^53 - 1)，Number.MAX<em>SAFE</em>INTEGER，9007199254740991</li>
+<li>最小 -(2^53 - 1)，Number.MIN<em>SAFE</em>INTEGER，-9007199254740991</li>
+</ul>
+<p>超过这个范围的数会有问题：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">19571992547450991</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//=> 19571992547450990</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">19571992547450991</span><span class="token operator">===</span><span class="token number">19571992547450992</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//=> true</span></code></pre></div>
+<p>本质上都是因为 64 位浮点数存储的问题。</p>
+<p>当然，新的 es 特性中，引入了 bigint 类型，可以处理更大的数，这个留待有需要再去研究。</p>
+<h2 id="设计一个精确的浮点数运算函数" style="position:relative;"><a href="#%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B2%BE%E7%A1%AE%E7%9A%84%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E5%87%BD%E6%95%B0" aria-label="设计一个精确的浮点数运算函数 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>设计一个精确的浮点数运算函数</h2>
+<h3 id="浮点小数判断" style="position:relative;"><a href="#%E6%B5%AE%E7%82%B9%E5%B0%8F%E6%95%B0%E5%88%A4%E6%96%AD" aria-label="浮点小数判断 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>浮点小数判断</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/**
+* 严格判断 a + b === c
+* a、b、c 都为浮点小数，如 0.1 + 0.2 === 0.3
+*/</span>
+<span class="token keyword">function</span> <span class="token function">check</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> digits <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>
+    <span class="token function">String</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">,</span>
+    <span class="token function">String</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">,</span>
+    <span class="token function">String</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length
+  <span class="token punctuation">)</span>
+  <span class="token comment">// Math.pow(指数，幂指数)</span>
+  <span class="token keyword">const</span> m <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> digits<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">return</span> a<span class="token operator">*</span>m <span class="token operator">+</span> b<span class="token operator">*</span>m <span class="token operator">===</span> c<span class="token operator">*</span>m
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="精确的加法函数" style="position:relative;"><a href="#%E7%B2%BE%E7%A1%AE%E7%9A%84%E5%8A%A0%E6%B3%95%E5%87%BD%E6%95%B0" aria-label="精确的加法函数 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>精确的加法函数</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/**
+ ** 加法函数，用来得到精确的加法结果
+ ** 说明：javascript的加法结果会有误差，在两个浮点数相加的时候会比较明显。这个函数返回较为精确的加法结果。
+ ** 调用：accAdd(arg1,arg2)
+ ** 返回值：arg1加上arg2的精确结果
+ **/</span>
+<span class="token keyword">function</span> <span class="token function">accAdd</span><span class="token punctuation">(</span><span class="token parameter">arg1<span class="token punctuation">,</span> arg2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> r1<span class="token punctuation">,</span> r2<span class="token punctuation">,</span> m<span class="token punctuation">,</span> c<span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        r1 <span class="token operator">=</span> arg1<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        r1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        r2 <span class="token operator">=</span> arg2<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        r2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    c <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>r1 <span class="token operator">-</span> r2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    m <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>r1<span class="token punctuation">,</span> r2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> cm <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>r1 <span class="token operator">></span> r2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            arg1 <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>arg1<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            arg2 <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>arg2<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> cm<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            arg1 <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>arg1<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> cm<span class="token punctuation">;</span>
+            arg2 <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>arg2<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        arg1 <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>arg1<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        arg2 <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>arg2<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>arg1 <span class="token operator">+</span> arg2<span class="token punctuation">)</span> <span class="token operator">/</span> m<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="精确的减法函数" style="position:relative;"><a href="#%E7%B2%BE%E7%A1%AE%E7%9A%84%E5%87%8F%E6%B3%95%E5%87%BD%E6%95%B0" aria-label="精确的减法函数 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>精确的减法函数</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/**
+ ** 减法函数，用来得到精确的减法结果
+ ** 说明：javascript的减法结果会有误差，在两个浮点数相减的时候会比较明显。这个函数返回较为精确的减法结果。
+ ** 调用：accSub(arg1,arg2)
+ ** 返回值：arg1加上arg2的精确结果
+ **/</span>
+<span class="token keyword">function</span> <span class="token function">accSub</span><span class="token punctuation">(</span><span class="token parameter">arg1<span class="token punctuation">,</span> arg2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> r1<span class="token punctuation">,</span> r2<span class="token punctuation">,</span> m<span class="token punctuation">,</span> n<span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        r1 <span class="token operator">=</span> arg1<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        r1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        r2 <span class="token operator">=</span> arg2<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        r2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    m <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>r1<span class="token punctuation">,</span> r2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//last modify by deeka //动态控制精度长度</span>
+    n <span class="token operator">=</span> <span class="token punctuation">(</span>r1 <span class="token operator">>=</span> r2<span class="token punctuation">)</span> <span class="token operator">?</span> r1 <span class="token operator">:</span> r2<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>arg1 <span class="token operator">*</span> m <span class="token operator">-</span> arg2 <span class="token operator">*</span> m<span class="token punctuation">)</span> <span class="token operator">/</span> m<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="精确的乘法函数" style="position:relative;"><a href="#%E7%B2%BE%E7%A1%AE%E7%9A%84%E4%B9%98%E6%B3%95%E5%87%BD%E6%95%B0" aria-label="精确的乘法函数 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>精确的乘法函数</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/**
+ ** 乘法函数，用来得到精确的乘法结果
+ ** 说明：javascript的乘法结果会有误差，在两个浮点数相乘的时候会比较明显。这个函数返回较为精确的乘法结果。
+ ** 调用：accMul(arg1,arg2)
+ ** 返回值：arg1乘以 arg2的精确结果
+ **/</span>
+<span class="token keyword">function</span> <span class="token function">accMul</span><span class="token punctuation">(</span><span class="token parameter">arg1<span class="token punctuation">,</span> arg2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> m <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> s1 <span class="token operator">=</span> arg1<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> s2 <span class="token operator">=</span> arg2<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        m <span class="token operator">+=</span> s1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        m <span class="token operator">+=</span> s2<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">Number</span><span class="token punctuation">(</span>s1<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">Number</span><span class="token punctuation">(</span>s2<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="精确的除法函数" style="position:relative;"><a href="#%E7%B2%BE%E7%A1%AE%E7%9A%84%E9%99%A4%E6%B3%95%E5%87%BD%E6%95%B0" aria-label="精确的除法函数 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>精确的除法函数</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/** 
+ ** 除法函数，用来得到精确的除法结果
+ ** 说明：javascript的除法结果会有误差，在两个浮点数相除的时候会比较明显。这个函数返回较为精确的除法结果。
+ ** 调用：accDiv(arg1,arg2)
+ ** 返回值：arg1除以arg2的精确结果
+ **/</span>
+<span class="token keyword">function</span> <span class="token function">accDiv</span><span class="token punctuation">(</span><span class="token parameter">arg1<span class="token punctuation">,</span> arg2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> t1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> t2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> r1<span class="token punctuation">,</span> r2<span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        t1 <span class="token operator">=</span> arg1<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        t2 <span class="token operator">=</span> arg2<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">with</span> <span class="token punctuation">(</span>Math<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        r1 <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>arg1<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        r2 <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>arg2<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>r1 <span class="token operator">/</span> r2<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> t2 <span class="token operator">-</span> t1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h2 id="参考" style="position:relative;"><a href="#%E5%8F%82%E8%80%83" aria-label="参考 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考</h2>
+<ul>
+<li><a href="https://www.html.cn/archives/7340">JavaScript 浮点数运算的精度问题-WEB前端开发</a></li>
+<li><a href="https://www.cnblogs.com/jikexianfeng/p/6407017.html">程序员必知之浮点数运算原理详解 - 极客先锋 - 博客园</a></li>
+<li><a href="http://0.30000000000000004.com/">Floating Point Math</a></li>
+<li><a href="https://www.ruanyifeng.com/blog/2010/06/ieee_floating-point_representation.html">浮点数的二进制表示 - 阮一峰的网络日志</a></li>
+</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2020</div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/WebFrontEnd-JavaScript 浮点数运算/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f868fe25d0aa00fbbcbe.js"],"app":["/app-53fcff6240b2fed8236d.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-de029358cad3105060c5.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-3706a633373125098a06.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-d3a46bd53fd42f12143d.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-9a5a9c9b89a6a0fc2947.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-6263daee69aa03e1d183.js"]};/*]]>*/</script><script src="/polyfill-f868fe25d0aa00fbbcbe.js" nomodule=""></script><script src="/webpack-runtime-268873de12d2b5e9103d.js" async=""></script><script src="/app-53fcff6240b2fed8236d.js" async=""></script><script src="/framework-b5b229d58c3c710d5429.js" async=""></script><script src="/commons-28fbe54ce778678f3f45.js" async=""></script><script src="/component---src-templates-blog-template-tsx-9a5a9c9b89a6a0fc2947.js" async=""></script><script src="/styles-c2fe8482057191dca484.js" async=""></script></body></html>
