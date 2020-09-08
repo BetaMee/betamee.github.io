@@ -29,6 +29,8 @@ module.exports = {
         path: `${__dirname}/about`
       }
     },
+    // mdx
+    'gatsby-plugin-mdx',
     // markdown支持
     {
       resolve: 'gatsby-transformer-remark',
@@ -56,6 +58,13 @@ module.exports = {
               noInlineHighlight: true
             },
           },
+          { // 数学图标
+            resolve: 'gatsby-remark-katex',
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          }
         ],
       },
     },

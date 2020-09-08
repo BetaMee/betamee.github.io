@@ -220,7 +220,7 @@ function check (a, b, c) {
   )
   // Math.pow(指数，幂指数)
   const m = Math.pow(10, digits);
-  
+
   return a*m + b*m === c*m
 }
 ```
