@@ -17,7 +17,7 @@ const BlogTemplate: React.FC<IBlogTemplateProps> = ({ data }) => {
   const [isOpenImageView, changeViewerState] = useState<boolean>(false)
   const [ imageUrl, changeImageUrlState ] = useState<string>('')
   const [ description, changeDescriptionState ] = useState<string>('')
-  
+
   useEffect(() => {
     const $imageNodes: NodeList = document.querySelectorAll('.gatsby-resp-image-image')
     // !TS + DOM 怎么写？？？

@@ -189,8 +189,8 @@ IEEE 754 规定，对于 32 位的浮点数，最高的1位是符号位 S，接�
 
 上面提到的 JavaScript 能表示的最大值，实际上 JavaScript 安全整数范围为：
 
-+ 最大 (2^53 - 1)，Number.MAX_SAFE_INTEGER，9007199254740991
-+ 最小 -(2^53 - 1)，Number.MIN_SAFE_INTEGER，-9007199254740991
++ 最大 (2^53 - 1)，Number.MAX\_SAFE\_INTEGER，9007199254740991
++ 最小 -(2^53 - 1)，Number.MIN\_SAFE\_INTEGER，-9007199254740991
 
 超过这个范围的数会有问题：
 
