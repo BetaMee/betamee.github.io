@@ -2,7 +2,7 @@
 title: 浏览器中 JavaScript 单线程运行机制
 date: 2020-04-20 19:46:50
 category: WebFrontEnd
-tags: Web_Deep 原理
+tags: Browser 运行原理
 openreward: true
 ---
 
