@@ -145,7 +145,7 @@ let objStr = obj.toString() // '[object Object]'
 
 如下图总结所示：
 
-![类型转换](type.png)
+![类型转换](./attachments/type.png)
 
 这里有一个点需要理解的，布尔数转数字的场景，只有当布尔对象参数为以下值时，才为 false，其余都为 true：
 
