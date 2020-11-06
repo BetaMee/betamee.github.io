@@ -16,6 +16,7 @@ openreward: true
 - [async 和 defer 属性差异](#async-和-defer-属性差异)
 - [如何使用](#如何使用)
 - [DOMContentLoaded 与 load 的区别](#DOMContentLoaded-与-load-的区别)
+- [动态加载脚本对于渲染的影响](#动态加载脚本对于渲染的影响)
 - [参考](#参考)
 
 <!-- tocstop -->
@@ -178,6 +179,21 @@ loadScript("/article/script-async-defer/small.js");
 *load* 事件要比 *DOMContentLoaded* 晚一点触发。而上面提到的 *async* 和 *defer* 属性都会阻塞 *load* 事件。
 
 点击这个[测试网页](https://testdrive-archive.azurewebsites.net/HTML5/DOMContentLoaded/Default.html) 也可以看到两者的直观区别。
+
+## 动态加载脚本对于渲染的影响
+
+由上面的话题，引申出另外的一个问题，动态引入样式表会不会影响浏览器渲染？
+
+结论是：
+
++ 动态插入的外部样式表或脚本不阻塞DOM解析或渲染
++ 动态插入的内联样式表或脚本会阻塞DOM解析和渲染
++ 未连接到 DOM 树的样式表或脚本（外部或内联）不会被下载、解析或执行。
++ 动态插入的外部资源会影响 onload 时机，必须等所有的资源都准备好的时候才触发 onload
+
+具体探究过程见参考后两篇文章。需要注意的是，如果动态插入的外部样式表在 HTML 解析后才加载完成，是会造成 FOUC 问题，因为前次的 HTML 文档已经显示出来了，样式资源后续才解析渲染，这会造成一闪而过的样式变化。
+
+这些都是小的知识点细节，把它放在整个的浏览器渲染流程角度来思考，才能彻底把握这背后的原因。
 
 ## 参考
 
