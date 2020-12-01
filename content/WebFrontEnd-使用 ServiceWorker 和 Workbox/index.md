@@ -589,7 +589,10 @@ const handlerCb = ({url, event, params}) => {
 
 ```js
 workbox.routing
-  .registerRoute(/\/api/, new workbox.strategies.NetworkFirst())
+  .registerRoute(
+    /\/api/,
+    new workbox.strategies.NetworkFirst()
+  )
 ```
 
 #### 缓存策略配置
