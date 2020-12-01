@@ -11,35 +11,35 @@ openreward: true
 <!-- toc -->
 
 - [前沿](#前沿)
-- [Service Worker](#Service-Worker)
-  * [历史](#历史)
-  * [特点](#特点)
-  * [开始使用](#开始使用)
-  * [作用域](#作用域)
-  * [作用域污染](#作用域污染)
-  * [生命周期](#生命周期)
-  * [工作流程](#工作流程)
-  * [waitUntil 机制](#waitUntil-机制)
-  * [终端概念](#终端概念)
-  * [更新](#更新)
-    + [更新原理](#更新原理)
-    + [skipWaiting](#skipWaiting)
-    + [手动更新](#手动更新)
-  * [容错](#容错)
-- [WorkBox](#WorkBox)
-  * [引入 Workbox](#引入-Workbox)
-  * [Workbox 配置](#Workbox-配置)
-  * [Workbox.precaching 预缓存功能](#Workboxprecaching-预缓存功能)
-  * [Workbox.routing 路由功能](#Workboxrouting-路由功能)
-    + [路由匹配规则](#路由匹配规则)
-    + [资源请求处理方法](#资源请求处理方法)
-  * [Workbox.strategies 缓存策略](#Workboxstrategies-缓存策略)
-    + [缓存策略配置](#缓存策略配置)
-    + [指定资源缓存名称](#指定资源缓存名称)
-    + [添加插件](#添加插件)
-    + [配置 fetchOptions](#配置-fetchOptions)
-    + [配置 matchOptions](#配置-matchOptions)
-  * [小结](#小结)
+- [Service Worker](#service-worker)
+  + [历史](#历史)
+  + [特点](#特点)
+  + [开始使用](#开始使用)
+  + [作用域](#作用域)
+  + [作用域污染](#作用域污染)
+  + [生命周期](#生命周期)
+  + [工作流程](#工作流程)
+  + [waitUntil 机制](#waituntil-机制)
+  + [终端概念](#终端概念)
+  + [更新](#更新)
+      + [更新原理](#更新原理)
+      + [skipWaiting](#skipwaiting)
+      + [手动更新](#手动更新)
+  + [容错](#容错)
+- [WorkBox](#workbox)
+  + [引入 Workbox](#引入-workbox)
+  + [Workbox 配置](#Workbox-配置)
+  + [Workbox.precaching 预缓存功能](#workboxprecaching-预缓存功能)
+  + [Workbox.routing 路由功能](#workboxrouting-路由功能)
+      + [路由匹配规则](#路由匹配规则)
+      + [资源请求处理方法](#资源请求处理方法)
+  + [Workbox.strategies 缓存策略](#workboxstrategies-缓存策略)
+      + [缓存策略配置](#缓存策略配置)
+      + [指定资源缓存名称](#指定资源缓存名称)
+      + [添加插件](#添加插件)
+      + [配置 fetchOptions](#配置-fetchOptions)
+      + [配置 matchOptions](#配置-matchOptions)
+  + [小结](#小结)
 - [参考](#参考)
 
 <!-- tocstop -->
@@ -462,6 +462,31 @@ if (workbox) {
 
 ### Workbox 配置
 
+Workbox 提供了默认的预缓存和动态缓存的名称，可分别通过*workbox.core.cacheNames.precache* 和 *workbox.core.cacheNames.runtime* 获取当前定义的预缓存和动态缓存名称。
+
+![95cf4495.png](attachments/95cf4495.png)
+
+这里的缓存名称对应着 Chrome 开发者工具 > Applications > Cache Storage 中存储的 key 名。
+
+在通常情况下，我们使用默认的缓存名称进行资源存取即可，假如遇到缓存名称冲突的情况，也可以调用 *workbox.core.setCacheNameDetails* 方法去修改这些默认名称：
+
+```js
+// 修改默认配置
+workbox.core.setCacheNameDetails({
+  prefix: 'app',
+  suffix: 'v1',
+  precache: 'precache',
+  runtime: 'runtime'
+})
+
+// 打印修改结果
+
+// 将打印 'app-precache-v1'
+console.log(worbox.core.cacheNames.precache)
+// 将打印 'app-runtime-v1'
+console.log(workbox.core.cacheNames.runtime)
+```
+
 ### Workbox.precaching 预缓存功能
 
 *workbox.precaching* 对象提供了常用的预缓存功能，其中最常用的方法是 *workbox.precaching.precacheAndRoute*。
@@ -563,7 +588,8 @@ const handlerCb = ({url, event, params}) => {
 下面的例子来演示 Workbox 缓存策略的使用。假设需要对 /api 的资源请求采用 NetworkFirst 的策略，那么相应的路由规则和策略的使用代码如下所示：
 
 ```js
-workbox.routing.registerRoute(/\/api/, new workbox.strategies.NetworkFirst())
+workbox.routing
+  .registerRoute(/\/api/, new workbox.strategies.NetworkFirst())
 ```
 
 #### 缓存策略配置
@@ -595,7 +621,6 @@ workbox.routing.registerRoute(
 ```
 
 这样当站点图片资源缓存成功之后，打开 Chrome 开发者工具 > Applications > Cache Storage，就可以看到此时多了一个名为“image-runtime-cache”的缓存空间，里面缓存的内容全是图片资源。
-
 
 #### 添加插件
 
