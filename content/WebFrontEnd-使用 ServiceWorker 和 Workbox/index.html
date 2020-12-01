@@ -48,12 +48,12 @@
         }
       }
     })
-  </script><meta name="generator" content="Gatsby 2.27.4"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-b09b38ee039edd50a28e.js"/><link as="script" rel="preload" href="/commons-10c9c2148a4c99a87af3.js"/><link as="script" rel="preload" href="/framework-741ade27086b2708e961.js"/><link as="script" rel="preload" href="/app-9ed7efbf75f25b30f8e7.js"/><link as="script" rel="preload" href="/webpack-runtime-4b9082bdcb38a4df05ef.js"/><link as="fetch" rel="preload" href="/page-data/content/WebFrontEnd-使用 ServiceWorker 和 Workbox/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">使用 ServiceWorker 和 Workbox</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2020-11-30</span></div><div class="blog-module--tags--20J6V"><a href="/tag/WebAPI">#<!-- -->WebAPI</a><a href="/tag/ServiceWorker">#<!-- -->ServiceWorker</a></div></div><div><h2 id="目录" style="position:relative;"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
+  </script><meta name="generator" content="Gatsby 2.27.5"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-b09b38ee039edd50a28e.js"/><link as="script" rel="preload" href="/commons-10c9c2148a4c99a87af3.js"/><link as="script" rel="preload" href="/framework-741ade27086b2708e961.js"/><link as="script" rel="preload" href="/app-9ed7efbf75f25b30f8e7.js"/><link as="script" rel="preload" href="/webpack-runtime-4b9082bdcb38a4df05ef.js"/><link as="fetch" rel="preload" href="/page-data/content/WebFrontEnd-使用 ServiceWorker 和 Workbox/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">使用 ServiceWorker 和 Workbox</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2020-11-30</span></div><div class="blog-module--tags--20J6V"><a href="/tag/WebAPI">#<!-- -->WebAPI</a><a href="/tag/ServiceWorker">#<!-- -->ServiceWorker</a></div></div><div><h2 id="目录" style="position:relative;"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
 <!-- toc -->
 <ul>
 <li><a href="#%E5%89%8D%E6%B2%BF">前沿</a></li>
 <li>
-<p><a href="#Service-Worker">Service Worker</a></p>
+<p><a href="#service-worker">Service Worker</a></p>
 <ul>
 <li><a href="#%E5%8E%86%E5%8F%B2">历史</a></li>
 <li><a href="#%E7%89%B9%E7%82%B9">特点</a></li>
@@ -62,30 +62,42 @@
 <li><a href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%B1%A1%E6%9F%93">作用域污染</a></li>
 <li><a href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">生命周期</a></li>
 <li><a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B">工作流程</a></li>
-<li><a href="#waitUntil-%E6%9C%BA%E5%88%B6">waitUntil 机制</a></li>
+<li><a href="#waituntil-%E6%9C%BA%E5%88%B6">waitUntil 机制</a></li>
 <li><a href="#%E7%BB%88%E7%AB%AF%E6%A6%82%E5%BF%B5">终端概念</a></li>
-<li><a href="#%E6%9B%B4%E6%96%B0">更新</a></li>
+<li>
+<p><a href="#%E6%9B%B4%E6%96%B0">更新</a></p>
+<ul>
 <li><a href="#%E6%9B%B4%E6%96%B0%E5%8E%9F%E7%90%86">更新原理</a></li>
-<li><a href="#skipWaiting">skipWaiting</a></li>
+<li><a href="#skipwaiting">skipWaiting</a></li>
 <li><a href="#%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0">手动更新</a></li>
+</ul>
+</li>
 <li><a href="#%E5%AE%B9%E9%94%99">容错</a></li>
 </ul>
 </li>
 <li>
-<p><a href="#WorkBox">WorkBox</a></p>
+<p><a href="#workbox">WorkBox</a></p>
 <ul>
-<li><a href="#%E5%BC%95%E5%85%A5-Workbox">引入 Workbox</a></li>
+<li><a href="#%E5%BC%95%E5%85%A5-workbox">引入 Workbox</a></li>
 <li><a href="#Workbox-%E9%85%8D%E7%BD%AE">Workbox 配置</a></li>
-<li><a href="#Workboxprecaching-%E9%A2%84%E7%BC%93%E5%AD%98%E5%8A%9F%E8%83%BD">Workbox.precaching 预缓存功能</a></li>
-<li><a href="#Workboxrouting-%E8%B7%AF%E7%94%B1%E5%8A%9F%E8%83%BD">Workbox.routing 路由功能</a></li>
+<li><a href="#workboxprecaching-%E9%A2%84%E7%BC%93%E5%AD%98%E5%8A%9F%E8%83%BD">Workbox.precaching 预缓存功能</a></li>
+<li>
+<p><a href="#workboxrouting-%E8%B7%AF%E7%94%B1%E5%8A%9F%E8%83%BD">Workbox.routing 路由功能</a></p>
+<ul>
 <li><a href="#%E8%B7%AF%E7%94%B1%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99">路由匹配规则</a></li>
 <li><a href="#%E8%B5%84%E6%BA%90%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95">资源请求处理方法</a></li>
-<li><a href="#Workboxstrategies-%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5">Workbox.strategies 缓存策略</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#workboxstrategies-%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5">Workbox.strategies 缓存策略</a></p>
+<ul>
 <li><a href="#%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E9%85%8D%E7%BD%AE">缓存策略配置</a></li>
 <li><a href="#%E6%8C%87%E5%AE%9A%E8%B5%84%E6%BA%90%E7%BC%93%E5%AD%98%E5%90%8D%E7%A7%B0">指定资源缓存名称</a></li>
 <li><a href="#%E6%B7%BB%E5%8A%A0%E6%8F%92%E4%BB%B6">添加插件</a></li>
 <li><a href="#%E9%85%8D%E7%BD%AE-fetchOptions">配置 fetchOptions</a></li>
 <li><a href="#%E9%85%8D%E7%BD%AE-matchOptions">配置 matchOptions</a></li>
+</ul>
+</li>
 <li><a href="#%E5%B0%8F%E7%BB%93">小结</a></li>
 </ul>
 </li>
@@ -547,6 +559,47 @@ self<span class="token punctuation">.</span><span class="token function">addEven
   <span class="token comment">// Workbox 加载完成</span>
 <span class="token punctuation">}</span></code></pre></div>
 <h3 id="workbox-配置" style="position:relative;"><a href="#workbox-%E9%85%8D%E7%BD%AE" aria-label="workbox 配置 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Workbox 配置</h3>
+<p>Workbox 提供了默认的预缓存和动态缓存的名称，可分别通过<em>workbox.core.cacheNames.precache</em> 和 <em>workbox.core.cacheNames.runtime</em> 获取当前定义的预缓存和动态缓存名称。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABf0lEQVQoz52STW+cMBCG+f+/podUqnrJJVJ6qlQ1uxsIYIMxmA8DttnNZg37xnaiPfTUFunR2Mz4gZEnokWJklWYpumGlBKMMbStcPsRizGYlcY0Kxi3HoYh4Gv7vr+d8++iglLkeQYhRCj2KHdYtD3SnKIoK5CCgTrIJ0ovIZ+kOeQ4Y9YGGSlCLuKcw+PtWuuAcgyjQpJRZJSFeEhyxClFShje7AY5G8QvBJNacHy9hLqmk4jiOMFut3dtMyczQejba4fRSbIgi1OCfZxi95wG8els0ckZT4cX9O7Dzu/+kKGoGkR1RVGVBEcz4/xqcD5pnBYvNWC8Qd204I6KC1S1QC1avF1saLNgHNossOsVouvRyxHRz0ONX0mLPZFImMJzqUAbDWsttm1zrJ9xu+19bl0/8j5ae8G2rm69Ivr+o8SX+wRfH3J8e6S4eyB4/N38Ifl7ok5wlDQFd623TYVOuBGSPf73ifxlEDc6nNcft+zGZjkecb1eQ4GP/8I7JBuplzBH/Z0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="95cf4495.png"
+        title="95cf4495.png"
+        src="/static/308f090296c2fe1d76c08faf1305b6bc/00d43/95cf4495.png"
+        srcset="/static/308f090296c2fe1d76c08faf1305b6bc/63868/95cf4495.png 250w,
+/static/308f090296c2fe1d76c08faf1305b6bc/0b533/95cf4495.png 500w,
+/static/308f090296c2fe1d76c08faf1305b6bc/00d43/95cf4495.png 1000w,
+/static/308f090296c2fe1d76c08faf1305b6bc/aa440/95cf4495.png 1500w,
+/static/308f090296c2fe1d76c08faf1305b6bc/e8950/95cf4495.png 2000w,
+/static/308f090296c2fe1d76c08faf1305b6bc/d8fc6/95cf4495.png 2052w"
+        sizes="(max-width: 1000px) 100vw, 1000px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>这里的缓存名称对应着 Chrome 开发者工具 > Applications > Cache Storage 中存储的 key 名。</p>
+<p>在通常情况下，我们使用默认的缓存名称进行资源存取即可，假如遇到缓存名称冲突的情况，也可以调用 <em>workbox.core.setCacheNameDetails</em> 方法去修改这些默认名称：</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 修改默认配置</span>
+workbox<span class="token punctuation">.</span>core<span class="token punctuation">.</span><span class="token function">setCacheNameDetails</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  prefix<span class="token operator">:</span> <span class="token string">'app'</span><span class="token punctuation">,</span>
+  suffix<span class="token operator">:</span> <span class="token string">'v1'</span><span class="token punctuation">,</span>
+  precache<span class="token operator">:</span> <span class="token string">'precache'</span><span class="token punctuation">,</span>
+  runtime<span class="token operator">:</span> <span class="token string">'runtime'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 打印修改结果</span>
+
+<span class="token comment">// 将打印 'app-precache-v1'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>worbox<span class="token punctuation">.</span>core<span class="token punctuation">.</span>cacheNames<span class="token punctuation">.</span>precache<span class="token punctuation">)</span>
+<span class="token comment">// 将打印 'app-runtime-v1'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>workbox<span class="token punctuation">.</span>core<span class="token punctuation">.</span>cacheNames<span class="token punctuation">.</span>runtime<span class="token punctuation">)</span></code></pre></div>
 <h3 id="workboxprecaching-预缓存功能" style="position:relative;"><a href="#workboxprecaching-%E9%A2%84%E7%BC%93%E5%AD%98%E5%8A%9F%E8%83%BD" aria-label="workboxprecaching 预缓存功能 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Workbox.precaching 预缓存功能</h3>
 <p><em>workbox.precaching</em> 对象提供了常用的预缓存功能，其中最常用的方法是 <em>workbox.precaching.precacheAndRoute</em>。</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">workbox<span class="token punctuation">.</span>routing<span class="token punctuation">.</span><span class="token function">precacheAndRoute</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
@@ -617,7 +670,11 @@ workbox<span class="token punctuation">.</span>routing<span class="token punctua
 <li>StaleWhileRevalidate：从缓存中读取资源的同时发送网络请求更新本地缓存</li>
 </ul>
 <p>下面的例子来演示 Workbox 缓存策略的使用。假设需要对 /api 的资源请求采用 NetworkFirst 的策略，那么相应的路由规则和策略的使用代码如下所示：</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">workbox<span class="token punctuation">.</span>routing<span class="token punctuation">.</span><span class="token function">registerRoute</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\/api</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">workbox<span class="token punctuation">.</span>strategies<span class="token punctuation">.</span>NetworkFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">workbox<span class="token punctuation">.</span>routing
+  <span class="token punctuation">.</span><span class="token function">registerRoute</span><span class="token punctuation">(</span>
+    <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\/api</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+    <span class="token keyword">new</span> <span class="token class-name">workbox<span class="token punctuation">.</span>strategies<span class="token punctuation">.</span>NetworkFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span></code></pre></div>
 <h4 id="缓存策略配置" style="position:relative;"><a href="#%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E9%85%8D%E7%BD%AE" aria-label="缓存策略配置 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>缓存策略配置</h4>
 <p>Workbox 缓存策略均可进行如下配置：</p>
 <ul>
