@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{DBfQ:function(e,n,t){e.exports={container:"_404-module--container--2kCC_"}},"i6+/":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),r=t.n(a),c=t("Ac47"),o=t("DBfQ"),i=t.n(o);n.default=function(){return r.a.createElement(c.a,null,r.a.createElement("div",{className:i.a.container},r.a.createElement("span",null,"ReferenceError: 404 is Not Found!")))}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-0c413be9d305bce10e53.js.map
