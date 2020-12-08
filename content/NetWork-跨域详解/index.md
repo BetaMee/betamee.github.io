@@ -171,7 +171,7 @@ domain1 的页面A：
     setTimeout(function() {
         iframe.src = iframe.src + '#user=admin';
     }, 1000);
-    
+
     // 开放给同域 proxy.html 的回调方法
     function onProxyCallback(res) {
         alert('data from c.html ---> ' + res);
@@ -394,7 +394,7 @@ User-Agent: Mozilla/5.0..
 XMLHttpRequest 默认支持跨域，只需要服务器支持就可以，只是跨域默认不带 Cookie，开启需要设置 *xhr.withCredentials*。
 
 ```js
-const xhr = new XMLHttpRequest(); 
+const xhr = new XMLHttpRequest();
 // 前端设置是否带cookie
 xhr.withCredentials = true;
 
