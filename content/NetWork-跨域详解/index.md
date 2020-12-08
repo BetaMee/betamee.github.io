@@ -5,9 +5,6 @@ category: NetWork
 tags: Net_Basic Request
 openreward: true
 ---
-
-# 跨域详解
-
 ## 目录
 
 <!-- toc -->
