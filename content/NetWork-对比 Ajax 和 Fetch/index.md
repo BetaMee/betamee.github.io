@@ -43,10 +43,10 @@ openreward: true
 
 Ajax 是一个成熟但在当下（2020）有些过时的技术，其核心是 XMLHttpRequest 对象。出于理解的需要，对其进行整理。
 
-> *[MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/AJAX) 资源参考：* 
+> *[MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/AJAX) 资源参考：*
 >
 > Ajax 全称 Asynchronous JavaScript + XML（异步 JavaScript 和 XML）。其本身不是一种新技术，而是一个在 2005 年被 Jesse James Garrett 提出的新术语，用来描述一种使用现有技术集合的‘新’方法，包括: HTML 或 XHTML, CSS, JavaScript, DOM, XML, XSLT, 以及最重要的 XMLHttpRequest。
-> 
+>
 
 XMLHttpRequest 之所以使用“XML”开头，是因为在它诞生之时用于异步数据交换的主要格式便是 XML。不过现在它能传递的数据不只是 XML，还有 JSON 这些格式。
 
@@ -129,7 +129,7 @@ xhr.onreadystatechange = function() {
 
 > **注意：**
 > 在旧的脚本中，可能会看到 xhr.responseText 、 xhr.responseXML、readyState、onreadystatechange 属性的使用，它们是由于历史原因而存在的，现在早就被 xhr.response、onload、onerror 事件监听器替代。
-> 
+>
 
 ### xhr.onprogress
 
@@ -281,6 +281,7 @@ xhr.open('POST', 'http://anywhere.com/request');
 
 如果发送了凭据请求而服务器返回的响应中没有这个头部，则浏览器不会把响应交给 JavaScript (responseText 是空字符串，status 是 0，onerror 被调用)。注意，服务器也可以在预检请求的响应中发送这个 HTTP 头部，以表明这个源允许发送凭据请求。
 
+另一点要注意，如果 XMLHttpRequest 请求设置了 withCredentials 属性，那么服务器不得设置 Access-Control-Allow-Origin 的值为 * 。
 ## Fetch
 
 Fetch API 是新一代的网络请求接口。它能够执行 XMLHttpRequest 对象的所有任务，但更容易使用，基于 Promise 异步风格的接口相比于 XMLHttpRequest 丑陋的 API 设计更加现代化。同时这个 API 能够应用在服务线程 (service worker)中，提供拦截、重定向和修改通过 fetch() 生成的请求接口。

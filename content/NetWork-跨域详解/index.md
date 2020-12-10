@@ -72,7 +72,7 @@ SECOND iframe.onload ->|           SET window.name ->|
                        |                             |
                        |------>domain1 域的代理页面<---|
 ```
-  
+
 假设有三个页面：
 
 + 页面A：www.domain1.com/a.html
@@ -388,7 +388,7 @@ User-Agent: Mozilla/5.0..
 
 #### Ajax
 
-XMLHttpRequest 默认支持跨域，只需要服务器支持就可以，只是跨域默认不带 Cookie，开启需要设置 *xhr.withCredentials*。
+XMLHttpRequest 默认支持跨域，只需要服务器支持就可以，只是跨域默认不带 Cookie，开启需要设置 *xhr.withCredentials*。不过值得注意的是，如果 XMLHttpRequest 请求设置了 withCredentials 属性，那么服务器不得设置 Access-Control-Allow-Origin 的值为 * 。
 
 ```js
 const xhr = new XMLHttpRequest();
