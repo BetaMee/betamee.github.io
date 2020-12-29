@@ -478,7 +478,7 @@ function Layer(path, methods, middleware, opts) {
 };
 // 返回请求是否匹配路由
 Layer.prototype.match = function (path) {...}
-// 为给定的 path 和 paramNames 返回 URL 参数列表 
+// 为给定的 path 和 paramNames 返回 URL 参数列表
 Layer.prototype.params = function (path, captures, existingParams) {...}
 // 返回正则 url path 捕获的数组
 Layer.prototype.captures = function (path) {...}
@@ -500,7 +500,7 @@ let router = new Router()
 router.get('/koa', async ( ctx ) => {})
 
 // page router 调用 register 注册
-router.register('/koa', ['HEAD', GET'], [async (ctx, next) => {}], options)
+router.register('/koa', ['HEAD', 'GET'], [async (ctx, next) => {}], options)
 
 // register 方法中会新建一个 Layer 实例，里面保存的是上一步注册路径方法对应的函数
 const route = new Layer(path, methods, middleware, options);
