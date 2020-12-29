@@ -6,8 +6,6 @@ tags: practice
 openreward: true
 ---
 
-# 优化业务埋点
-
 ## 目录
 
 <!-- toc -->
