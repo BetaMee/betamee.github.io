@@ -184,7 +184,7 @@ function Book() {
   }
   // 被 idle 的函数
   const idleLog = defineIdleTask(log);
-  
+
   function handleBook(){
       // 校验逻辑
       checkpay()
@@ -201,11 +201,13 @@ export default Book;
 
 ## 限制
 
-需要注意的一点，在 React 的类组件中，使用 Decorator 增强必须满足的一点是，函数不能是箭头函数，因为在 es6 的 class 类中，箭头函数是作为变量属性被绑在类实例上的，而非类的原型上，这就造成了 Decorator 读不到当前实例，也就无法获取 this，这对于被增强函数中要使用 this 带来了麻烦，所以为了避免这个问题，直接使用普通函数手动绑定吧。
+需要注意的一点，class 类中应用 Decorator 装饰器模式对于常规函数和箭头函数效果是不同的，具体原因可见[JavaScript Decorator 装饰器模式](https://betamee.github.io/content/WebFrontEnd-JavaScript%20Decorator%20%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/)。
 
-具体原因可以搜索 Decorator + Arrow Function 关键词了解背后详情，这说明了 Decorator 标准还不够成熟。
+简单来说，就是概念上有一点问题，Decorator 装饰器模式是在类创建后，实例创建前应用的，而类中的常规方法是绑定在 prototype 上，但类中的属性方法是绑在实例上的，这就是造成了使用上的不确定。
 
 ![7af72063.png](attachments/7af72063.png)
+
+更多原因可以搜索 Decorator + class properties 关键词了解背后详情，这说明了 Decorator 标准还不够成熟。
 
 ## 效果
 
