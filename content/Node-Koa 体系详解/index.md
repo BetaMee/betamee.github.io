@@ -34,22 +34,22 @@ openreward: true
 
 + koa
   + 源码结构：
-    + application.js: 应用程序的入口
-    + context.js：全局功能模块，其实是代理 request 和 response 的一个对象
-    + request.js：请求功能模块，封装了原生 req 对象
-    + response.js：响应功能模块，封装了原生 res 对象
+      + application.js: 应用程序的入口
+      + context.js：全局功能模块，其实是代理 request 和 response 的一个对象
+      + request.js：请求功能模块，封装了原生 req 对象
+      + response.js：响应功能模块，封装了原生 res 对象
   + 模块依赖：
-    + koa-compose：核心模块，实现中间件串联功能
-    + cookies：封装 cookie 功能的模块，本质上是对于 req、res 对象的 `headers[cookie]` 的管理
-    + delegates：帮助 context 代理 request 和 response
+      + koa-compose：核心模块，实现中间件串联功能
+      + cookies：封装 cookie 功能的模块，本质上是对于 req、res 对象的 `headers[cookie]` 的管理
+      + delegates：帮助 context 代理 request 和 response
 
 + koa-router
   + 功能：路由功能的实现
   + 源码结构：
-    + router.js
-    + layer.js
+      + router.js
+      + layer.js
   + 模块依赖：
-    + koa-compose：路由功能的中间件串联
+      + koa-compose：路由功能的中间件串联
 
 + koa-bodypraser
   + 功能：实现 POST 请求参数的解析，绑定到 ctx.request.body 上
