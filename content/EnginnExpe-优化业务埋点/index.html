@@ -201,7 +201,7 @@
   <span class="token punctuation">}</span>
   <span class="token comment">// 被 idle 的函数</span>
   <span class="token keyword">const</span> idleLog <span class="token operator">=</span> <span class="token function">defineIdleTask</span><span class="token punctuation">(</span>log<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  
+
   <span class="token keyword">function</span> <span class="token function">handleBook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
       <span class="token comment">// 校验逻辑</span>
       <span class="token function">checkpay</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -215,8 +215,8 @@
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> Book<span class="token punctuation">;</span></code></pre></div>
 <h2 id="限制" style="position:relative;"><a href="#%E9%99%90%E5%88%B6" aria-label="限制 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>限制</h2>
-<p>需要注意的一点，在 React 的类组件中，使用 Decorator 增强必须满足的一点是，函数不能是箭头函数，因为在 es6 的 class 类中，箭头函数是作为变量属性被绑在类实例上的，而非类的原型上，这就造成了 Decorator 读不到当前实例，也就无法获取 this，这对于被增强函数中要使用 this 带来了麻烦，所以为了避免这个问题，直接使用普通函数手动绑定吧。</p>
-<p>具体原因可以搜索 Decorator + Arrow Function 关键词了解背后详情，这说明了 Decorator 标准还不够成熟。</p>
+<p>需要注意的一点，class 类中应用 Decorator 装饰器模式对于常规函数和箭头函数效果是不同的，具体原因可见<a href="https://betamee.github.io/content/WebFrontEnd-JavaScript%20Decorator%20%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/">JavaScript Decorator 装饰器模式</a>。</p>
+<p>简单来说，就是概念上有一点问题，Decorator 装饰器模式是在类创建后，实例创建前应用的，而类中的常规方法是绑定在 prototype 上，但类中的属性方法是绑在实例上的，这就是造成了使用上的不确定。</p>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 692px; "
@@ -238,6 +238,7 @@
         loading="lazy"
       />
     </span></p>
+<p>更多原因可以搜索 Decorator + class properties 关键词了解背后详情，这说明了 Decorator 标准还不够成熟。</p>
 <h2 id="效果" style="position:relative;"><a href="#%E6%95%88%E6%9E%9C" aria-label="效果 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>效果</h2>
 <p>通过以上方案的改造，我们可以对比一下优化前后的差异：</p>
 <p>优化前：</p>
