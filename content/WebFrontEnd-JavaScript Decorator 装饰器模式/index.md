@@ -186,6 +186,7 @@ class Cat {
 常规类方法：
 + 是直接绑在类的 prototype 中，所有能在 target 上看到，通过原型链共享该方法
 + descriptor 有 value 值，为此方法
+
 属性方法：
 + 归属于类的实例，不能在 target 上看到，在类的不同实例中并不相同
 + descriptor 没有 value 值，只有一个 initializer 的值，调用 initializer() 会返回这个属性方法
