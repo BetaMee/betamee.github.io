@@ -54,9 +54,9 @@ openreward: true
 + koa-bodypraser
   + 功能：实现 POST 请求参数的解析，绑定到 ctx.request.body 上
   + 模块依赖：
-    + co-body：依赖于下面两个库
-    + raw-body：解析 stream 流的工具，监听 data、end 这些事件
-    + inflation：Automatically unzip an HTTP stream.
+      + co-body：依赖于下面两个库
+      + raw-body：解析 stream 流的工具，监听 data、end 这些事件
+      + inflation：Automatically unzip an HTTP stream.
 
 ## 主要模块依赖
 
