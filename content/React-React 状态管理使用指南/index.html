@@ -48,7 +48,7 @@
         }
       }
     })
-  </script><meta name="generator" content="Gatsby 2.29.3"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-2e237926ab1146b43e6d.js"/><link as="script" rel="preload" href="/commons-abdb0269314c582f2a6b.js"/><link as="script" rel="preload" href="/framework-741ade27086b2708e961.js"/><link as="script" rel="preload" href="/app-7d603cbb8d35235fa71b.js"/><link as="script" rel="preload" href="/webpack-runtime-f476c86a123e64cbea4d.js"/><link as="fetch" rel="preload" href="/page-data/content/React-React 状态管理使用指南/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">React 状态管理使用指南</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2019-08-11</span></div><div class="blog-module--tags--20J6V"><a href="/tag/React_Usage">#<!-- -->React_Usage</a></div></div><div><h2 id="目录" style="position:relative;"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
+  </script><meta name="generator" content="Gatsby 2.30.3"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-2e237926ab1146b43e6d.js"/><link as="script" rel="preload" href="/commons-abdb0269314c582f2a6b.js"/><link as="script" rel="preload" href="/framework-741ade27086b2708e961.js"/><link as="script" rel="preload" href="/app-969f634cd11025ffd853.js"/><link as="script" rel="preload" href="/webpack-runtime-f476c86a123e64cbea4d.js"/><link as="fetch" rel="preload" href="/page-data/content/React-React 状态管理使用指南/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--2CAqk"><div class="layout-module--header--1orMk"><div class="layout-module--title--28C2S">十二棵橡树</div><div class="layout-module--menu--Ech1f"><a href="/">主页</a><a title="I Love You a Thousands Times" href="/about">WHO AM I?</a></div></div><div class="blog-module--content--R6Wfi"><div class="blog-module--heading--2q6UV"><h1 class="blog-module--title--3NoN5">React 状态管理使用指南</h1><div class="blog-module--info--U7riw"><span>橡树上</span><span>2019-08-11</span></div><div class="blog-module--tags--20J6V"><a href="/tag/React_Usage">#<!-- -->React_Usage</a></div></div><div><h2 id="目录" style="position:relative;"><a href="#%E7%9B%AE%E5%BD%95" aria-label="目录 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录</h2>
 <!-- toc -->
 <ul>
 <li><a href="#1-%E5%BC%95%E8%A8%80">1. 引言</a></li>
@@ -94,7 +94,7 @@
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 105.60000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAVABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB9zO8x0RVgUH/xAAbEAACAgMBAAAAAAAAAAAAAAABEgARAhAhMf/aAAgBAQABBQJu2oihswCB5K1//8QAFhEAAwAAAAAAAAAAAAAAAAAAASAx/9oACAEDAQE/ARU//8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQIBAT8BY//EABwQAAEDBQAAAAAAAAAAAAAAABAAASIREiExQf/aAAgBAQAGPwKik4u6paOR/8QAHRAAAgIBBQAAAAAAAAAAAAAAAREAEDFBUWFxgf/aAAgBAQABPyEhnD2gbITzAWGJonaIqQgBYr0r/9oADAMBAAIAAwAAABDMyDz/xAAXEQEAAwAAAAAAAAAAAAAAAAABABAR/9oACAEDAQE/EAI2N//EABcRAQADAAAAAAAAAAAAAAAAAAERICH/2gAIAQIBAT8QUGU//8QAGxABAQEAAwEBAAAAAAAAAAAAAREAITFREEH/2gAIAQEAAT8QLLj2nkwkZez1gBBEom/I8ZikVXmIUQEnnykiD5McEN//2Q=='); background-size: cover; display: block;"
+    style="padding-bottom: 105.60000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAVABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB9zO8x0RVgUH/xAAbEAACAgMBAAAAAAAAAAAAAAABEgARAhAhMf/aAAgBAQABBQJu2oihswCB5K1//8QAFhEAAwAAAAAAAAAAAAAAAAAAASAx/9oACAEDAQE/ARU//8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQIBAT8BY//EABwQAAEDBQAAAAAAAAAAAAAAABAAASIREiExQf/aAAgBAQAGPwKik4u6paOR/8QAHRAAAgIBBQAAAAAAAAAAAAAAAREAEDFBUWFxgf/aAAgBAQABPyEhnD2gbITzAWHNE7RFSEALFelf/9oADAMBAAIAAwAAABDMyDz/xAAXEQEAAwAAAAAAAAAAAAAAAAABABAR/9oACAEDAQE/EAI2N//EABcRAQADAAAAAAAAAAAAAAAAAAERICH/2gAIAQIBAT8QUGU//8QAGxABAQEAAwEBAAAAAAAAAAAAAREAITFREEH/2gAIAQEAAT8QLLj2nkwkZez1gAIiUTfkeMxSKrzEKICTz5SRB8mOCG//2Q=='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -129,7 +129,7 @@
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 105.60000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAVABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB9zOpHRFWBQf/xAAbEAACAgMBAAAAAAAAAAAAAAABEgARAhAhMf/aAAgBAQABBQJu2oihswCB5K1//8QAFhEAAwAAAAAAAAAAAAAAAAAAASAx/9oACAEDAQE/ARU//8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQIBAT8BY//EABoQAAEFAQAAAAAAAAAAAAAAABAAAREhIjH/2gAIAQEABj8ChacTFrXDY//EABwQAAMAAgMBAAAAAAAAAAAAAAABERAxUWGBsf/aAAgBAQABPyFpvV4FW0vsTqqPoxGwISTWPTH/2gAMAwEAAgADAAAAEMzIPP/EABcRAQADAAAAAAAAAAAAAAAAAAEAEBH/2gAIAQMBAT8QAjY3/8QAFxEBAAMAAAAAAAAAAAAAAAAAAREgIf/aAAgBAgEBPxBQZT//xAAbEAEBAQADAQEAAAAAAAAAAAABEQAhMVEQQf/aAAgBAQABPxAsuPaeTCRl7PWAEESiZ/XTMQiq8xCiAk8+UkQfJjghv//Z'); background-size: cover; display: block;"
+    style="padding-bottom: 105.60000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAVABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB9zOpHRFWBQf/xAAbEAACAgMBAAAAAAAAAAAAAAABEgARAhAhMf/aAAgBAQABBQJu2oihswCB5K1//8QAFhEAAwAAAAAAAAAAAAAAAAAAASAx/9oACAEDAQE/ARU//8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQIBAT8BY//EABoQAAEFAQAAAAAAAAAAAAAAABAAAREhIjH/2gAIAQEABj8ChacTFrXDY//EABwQAAMAAgMBAAAAAAAAAAAAAAABERAxUWGBsf/aAAgBAQABPyFpvV4FW0vsTqp9GI2BCSax6Y//2gAMAwEAAgADAAAAEMzIPP/EABcRAQADAAAAAAAAAAAAAAAAAAEAEBH/2gAIAQMBAT8QAjY3/8QAFxEBAAMAAAAAAAAAAAAAAAAAAREgIf/aAAgBAgEBPxBQZT//xAAbEAEBAQADAQEAAAAAAAAAAAABEQAhMVEQQf/aAAgBAQABPxAsuPaeTCRl7PWAAiJRM/rpmIRVeYhRASefKSIPkxwQ3//Z'); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -162,7 +162,7 @@
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 34.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABh0lEQVQoz2WQy2oUQRSG+5Hc+BiufA5xlYXgxkUQXOkiIEgWLryQiCJxIyIhStCFGAMz40xMdC49XenpS7qnr9Uz05+nyqiQ/HC6ur7z1/mr22GV8ODFT67e7HDtzhEn45As8bm+vsOVG09Y29yDdsHH4zc8Pdhg+/ARW98eolKf1axP9eEe1e46i+lXjBxoePsl4vbmgLvPx/hxSV1X3H99wK3H+zzb61tj3z9kf/iOz6NdPo3eM9c5bRagu6/QnZcs4+GfgS1/pWEZ0jaZ3EjzXyu5YMklrWp5LC/AFqcsS9J0jvIDkiShLHLm6RlKeUwmE8IwEJYRR4G8+/i+J/74nM0IZ4pIPPM0xcxyoijC8zw63S4/jk+Iohh1ekp/cCSsh+tOMZ5fwyHd3nfhA6bij+MzRqOxsJ5lrusKi3HqupbEVNJDu5q9STJ7Y6iqEq217SmlCCQsy7JzltgwU7mwWphjvrxpGmswa9u2too8t8P//WHpm0NFUdi+kQk2Hi21kLNGvwG3EQbxRDY0bgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    style="padding-bottom: 34.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABeElEQVQoz2WQz2sUMRzF5//14Fnw4MGDR0+CoAdBsIL4AxEV0VJLYQ+FWthtd3Wru93dyc7OJJ3J/MzMdj4mwVrQBy/k+/LyHklAl/J6f8XNhwvuPF0SriWljrm7M+DGgy88+nAMXcNwNWB3+pb9n+/5evaORCds1Yx2+AJzvMM2meIQQMvHQ8ntxxPuPT9noyrqpub+myNuPTng2d7YG0+jbxzMPjGY71p+RpuCPo8xo1eY4Usf7gN7rmCwNfRtDr3hGpf0XcV/uGzssv1H7AmqqiLLNCKKSdOUqizQ2QVChCwWC5IktlqOkhu7j4ii0PrVtbYRSOvRWYbLCpSUhGHIcDTix/QMKRVivWY8+c7o5ITlcmU1ya/ZzM6nXg9DgVIXzOfn3jOeTKxvaTVFYExjGzPbnqC1pmka3+RmZ6jrGmOM9wghiKM1RZ7/0VJf5nilBe7lXdv5oW1b+r73LIvSh//9YXteFDllWfpzB1fsPMays3cdfgPYOArnWJYeAAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -430,12 +430,12 @@ serviceWorker<span class="token punctuation">.</span><span class="token function
   IViewListProp
 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../interfaces'</span>
 
-<span class="token keyword">const</span> TodoViewList<span class="token operator">:</span> React<span class="token punctuation">.</span><span class="token constant">FC</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">IViewListProp</span></span><span class="token punctuation">></span></span><span class="token plain-text"> = ({
-  todos,
-  selectTodoById,
+<span class="token keyword">const</span> TodoViewList<span class="token operator">:</span> React<span class="token punctuation">.</span><span class="token constant">FC</span><span class="token operator">&lt;</span>IViewListProp<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>
+  todos<span class="token punctuation">,</span>
+  selectTodoById<span class="token punctuation">,</span>
   removeTodoById
-}) => (
-  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewlist<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewlist<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
     </span><span class="token punctuation">{</span>todos<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">TodoView</span></span>
         <span class="token attr-name">todo</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>item<span class="token punctuation">}</span></span>
@@ -444,10 +444,10 @@ serviceWorker<span class="token punctuation">.</span><span class="token function
         <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span></span>
       <span class="token punctuation">/></span></span>
     <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
-  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
-)
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token punctuation">)</span>
 
-export default TodoViewList</span></code></pre></div>
+<span class="token keyword">export</span> <span class="token keyword">default</span> TodoViewList</code></pre></div>
 <p>这就是 React 和 Redux 的结合使用，到这一步基本完成所有的工作了，后续只要 state 有变化，组件就会发生更新，而<strong>要使 state 发生变化，唯一的途径是传入的 action 函数</strong>。这样，整个应用依赖清晰，数据流变化清晰可调控，对于排查问题非常方便。</p>
 <h2 id="6-classic-react-app-with-mobx" style="position:relative;"><a href="#6-classic-react-app-with-mobx" aria-label="6 classic react app with mobx permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Classic React App with Mobx</h2>
 <p>接下来我们看看使用类模式 + MobX 架构的 Todo 应用。</p>
@@ -586,7 +586,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 <span class="token comment">// ! @inject 高阶方法注入会和 Typescript 有冲突，原因在于 TS 会检查外部调用传进来的 props 接口，</span>
 <span class="token comment">// ! 但是 inject 相当于中间注入，避开了检查，这就导致 TS 报错。</span>
 
-<span class="token keyword">const</span> App<span class="token operator">:</span> React<span class="token punctuation">.</span><span class="token constant">FC</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">IAppProp</span></span><span class="token punctuation">></span></span><span class="token plain-text"> = inject('todoListStore')(observer(({ todoListStore }) => </span><span class="token punctuation">{</span>
+<span class="token keyword">const</span> App<span class="token operator">:</span> React<span class="token punctuation">.</span><span class="token constant">FC</span><span class="token operator">&lt;</span>IAppProp<span class="token operator">></span> <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span><span class="token string">'todoListStore'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token function">observer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> todoListStore <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">Classic React App ( mobx )</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
@@ -604,9 +604,9 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
       <span class="token punctuation">/></span></span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token plain-text">))
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-export default App;</span></code></pre></div>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
 <p><strong>TodoViewList.tsx:</strong></p>
 <div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> observer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'mobx-react'</span>
@@ -711,25 +711,25 @@ export default App;</span></code></pre></div>
   todoReducer
 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./todo'</span>
 
-<span class="token keyword">type</span> <span class="token class-name">combineDispatchsType</span> <span class="token operator">=</span> React<span class="token punctuation">.</span>Dispatch<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">TodoActionType</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+<span class="token keyword">type</span> <span class="token class-name">combineDispatchsType</span> <span class="token operator">=</span> React<span class="token punctuation">.</span>Dispatch<span class="token operator">&lt;</span>TodoActionType<span class="token operator">></span>
 
-// 将所有的 dispatch 组合
-const combineDispatchs = (dispatchs: Array</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>combineDispatchsType</span><span class="token punctuation">></span></span><span class="token plain-text">) => (obj: TodoActionType) => </span><span class="token punctuation">{</span>
+<span class="token comment">// 将所有的 dispatch 组合</span>
+<span class="token keyword">const</span> <span class="token function-variable function">combineDispatchs</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">dispatchs<span class="token operator">:</span> Array<span class="token operator">&lt;</span>combineDispatchsType<span class="token operator">></span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token parameter">obj<span class="token operator">:</span> TodoActionType</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  i <span class="token operator">&lt;</span> dispatchs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     dispatchs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token plain-text">
+<span class="token punctuation">}</span>
 
-// 根组件状态
-const AppState = </span><span class="token punctuation">{</span>
+<span class="token comment">// 根组件状态</span>
+<span class="token keyword">const</span> AppState <span class="token operator">=</span> <span class="token punctuation">{</span>
   todoState<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token keyword">as</span> TodoReducerType<span class="token punctuation">,</span>
-  dispatch<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token keyword">as</span> ReturnType<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>typeof</span> <span class="token attr-name">combineDispatchs</span><span class="token punctuation">></span></span><span class="token plain-text">
-}
+  dispatch<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token keyword">as</span> ReturnType<span class="token operator">&lt;</span><span class="token keyword">typeof</span> combineDispatchs<span class="token operator">></span>
+<span class="token punctuation">}</span>
 
-// Context
-export const ContextStore = React.createContext(AppState)
+<span class="token comment">// Context</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> ContextStore <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span>AppState<span class="token punctuation">)</span>
 
-const HookContextProvider: React.FC = ({ children }) => </span><span class="token punctuation">{</span>
+<span class="token keyword">const</span> HookContextProvider<span class="token operator">:</span> React<span class="token punctuation">.</span><span class="token function-variable function">FC</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
 
   <span class="token keyword">const</span> <span class="token punctuation">[</span>todoState<span class="token punctuation">,</span> todoDispatch<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useReducer</span><span class="token punctuation">(</span>
     todoReducer<span class="token punctuation">,</span>
@@ -748,9 +748,9 @@ const HookContextProvider: React.FC = ({ children }) => </span><span class="toke
       </span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">ContextStore.Provider</span></span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token plain-text">
+<span class="token punctuation">}</span>
 
-export default HookContextProvider</span></code></pre></div>
+<span class="token keyword">export</span> <span class="token keyword">default</span> HookContextProvider</code></pre></div>
 <p>这个文件干了这些事：</p>
 <blockquote>
 <ol>
@@ -912,32 +912,32 @@ export default HookContextProvider</span></code></pre></div>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token keyword">type</span> <span class="token class-name">TTodoStore</span> <span class="token operator">=</span> ReturnType<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>typeof</span> <span class="token attr-name">createStore</span><span class="token punctuation">></span></span><span class="token plain-text">
+<span class="token keyword">type</span> <span class="token class-name">TTodoStore</span> <span class="token operator">=</span> ReturnType<span class="token operator">&lt;</span><span class="token keyword">typeof</span> createStore<span class="token operator">></span>
 
 
-// 创建 context
-const TodoStoreContext = React.createContext&lt;TTodoStore | null>(null)
+<span class="token comment">// 创建 context</span>
+<span class="token keyword">const</span> TodoStoreContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">createContext</span><span class="token generic class-name"><span class="token operator">&lt;</span>TTodoStore <span class="token operator">|</span> <span class="token keyword">null</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
 
-// 创建 Provider，通过 React.Context 来注入
-const TodoStoreProvider: React.FC = ({ children }) => </span><span class="token punctuation">{</span>
+<span class="token comment">// 创建 Provider，通过 React.Context 来注入</span>
+<span class="token keyword">const</span> TodoStoreProvider<span class="token operator">:</span> React<span class="token punctuation">.</span><span class="token function-variable function">FC</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useLocalStore</span><span class="token punctuation">(</span>createStore<span class="token punctuation">)</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">TodoStoreContext.Provider</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>store<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
       </span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">TodoStoreContext.Provider</span></span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token plain-text">
+<span class="token punctuation">}</span>
 
-// 创建 Hook
-const useTodoStore = () => </span><span class="token punctuation">{</span>
+<span class="token comment">// 创建 Hook</span>
+<span class="token keyword">const</span> <span class="token function-variable function">useTodoStore</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useContext</span><span class="token punctuation">(</span>TodoStoreContext<span class="token punctuation">)</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>store<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'You have forgot to use StoreProvider, shame on you.'</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
   <span class="token keyword">return</span> store
-<span class="token punctuation">}</span><span class="token plain-text">
+<span class="token punctuation">}</span>
 
-export </span><span class="token punctuation">{</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span>
   TodoStoreProvider<span class="token punctuation">,</span>
   useTodoStore
 <span class="token punctuation">}</span></code></pre></div>
@@ -1015,4 +1015,4 @@ export </span><span class="token punctuation">{</span>
 <li><a href="https://mobx-react.js.org">MobX with React</a></li>
 <li><a href="https://dev.to/ryands17/using-mobx-with-react-hooks-52h5">Using MobX with React Hooks</a></li>
 <li><a href="https://medium.com/@Whien/%E9%80%8F%E9%81%8E-react-usecontext-%E8%88%87-usereducer-%E4%BE%86%E5%81%9A-global-state-manager-bed30fb1f08b">透過 React CreateContext 搭配 React useContext 與 useReducer 來做 Global State Manager</a></li>
-</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2020</div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/React-React 状态管理使用指南/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f33cc994945b2249d5ee.js"],"app":["/app-7d603cbb8d35235fa71b.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-0c413be9d305bce10e53.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-f1799704ce744c27583b.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-6bd9c49ceb430041f05f.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-2e237926ab1146b43e6d.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-cfd4627574e5f3f0f3b0.js"]};/*]]>*/</script><script src="/polyfill-f33cc994945b2249d5ee.js" nomodule=""></script><script src="/webpack-runtime-f476c86a123e64cbea4d.js" async=""></script><script src="/app-7d603cbb8d35235fa71b.js" async=""></script><script src="/framework-741ade27086b2708e961.js" async=""></script><script src="/commons-abdb0269314c582f2a6b.js" async=""></script><script src="/component---src-templates-blog-template-tsx-2e237926ab1146b43e6d.js" async=""></script><script src="/styles-e9d24b1846c7d6eb9685.js" async=""></script></body></html>
+</ul></div></div><div class="layout-module--footer--1-u4U"><div class="layout-module--contact--1Z-dZ"><a href="https://github.com/BetaMee" target="_blank" rel="noopener noreferrer">Github</a><a href="https://twitter.com/gongxq" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://weibo.com/2909438360" target="_blank" rel="noopener noreferrer">Weibo</a><a href="https://www.instagram.com/gongxq95" target="_blank" rel="noopener noreferrer">Instagram</a></div><div class="layout-module--siteInfo--WbGrj">Copyright © 橡树上 2020</div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/content/React-React 状态管理使用指南/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-2966d4d8fea208fd6f8f.js"],"app":["/app-969f634cd11025ffd853.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-0c413be9d305bce10e53.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-f1799704ce744c27583b.js"],"component---src-templates-blog-list-tsx":["/component---src-templates-blog-list-tsx-6bd9c49ceb430041f05f.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-2e237926ab1146b43e6d.js"],"component---src-templates-tag-template-tsx":["/component---src-templates-tag-template-tsx-cfd4627574e5f3f0f3b0.js"]};/*]]>*/</script><script src="/polyfill-2966d4d8fea208fd6f8f.js" nomodule=""></script><script src="/webpack-runtime-f476c86a123e64cbea4d.js" async=""></script><script src="/app-969f634cd11025ffd853.js" async=""></script><script src="/framework-741ade27086b2708e961.js" async=""></script><script src="/commons-abdb0269314c582f2a6b.js" async=""></script><script src="/component---src-templates-blog-template-tsx-2e237926ab1146b43e6d.js" async=""></script><script src="/styles-e9d24b1846c7d6eb9685.js" async=""></script></body></html>
