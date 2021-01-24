@@ -75,7 +75,26 @@
 <p>与事件冒泡相反的是，事件捕获(event capturing)从最外层再到最里层：</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">document -&gt; html -&gt; body -&gt; div -&gt; p</code></pre></div>
 <h2 id="过程" style="position:relative;"><a href="#%E8%BF%87%E7%A8%8B" aria-label="过程 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>过程</h2>
-<p><img src="attachments/1974253d.png" alt="1974253d.png"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 394px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 90.8%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAABt0lEQVQ4y42Uia6CQAxF+/9fhzHGBcUV3BD3DZe+d5r0hRD0MckEB5nT29vOiP6O5/Opy+VSgyDQdrut8/lcG42Grtdrvd1ufKLv97vWFGCTyUSzLNM4jg18PB51MBjoZrPR8/msl8ulEurviv/J6/UyCAtXs91utdPp2JNxOp1qqxTfwAIl9/vdlIZhaKoPh4OmafoX7D+wAYGQJkB86/f72mq1tNlsahRFptatwKJP6TPEF0BRAwDFeZ7b5DfAx+Oh2LPf77U4KhUWI6CCjdfr1dIE2u12dbfb2f8UyW3AkjJUytViAzBAbEQhqmknqj4ej80KLMHrSmDZC5Qxp9OpJkli/tFGwAGuVisLiE1fga4QNaTJ9JYBgI8UjEAMMqBIX4GkiyqqTQHwExAdALzX6xmId/jNs1ggqep6H0R3FTQ5hcA393M4HJpaAjlYvjWp+wl0NpvZZlJHOZmQPtXnW39K1dmsalgA7ic+M6g09nhgVEqdM+pFcRDeUWGqPxqN7P1isTCVUufAe1BAKKVtuKGAcIpocNLn2pO695xDHUiqXgg6wI+klL0qn9FPa/eVghXvyx8YMHXdqpvR+gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="1974253d.png"
+        title="1974253d.png"
+        src="/static/8b8be1ecbe129a2042c337e202d77673/cc097/1974253d.png"
+        srcset="/static/8b8be1ecbe129a2042c337e202d77673/63868/1974253d.png 250w,
+/static/8b8be1ecbe129a2042c337e202d77673/cc097/1974253d.png 394w"
+        sizes="(max-width: 394px) 100vw, 394px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
 <p>1-5 是捕获过程，5-6 是目标阶段，6-10 是冒泡阶段。</p>
 <h2 id="addeventlistener" style="position:relative;"><a href="#addeventlistener" aria-label="addeventlistener permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>addEventListener</h2>
 <p>DOM2 级事件中规定的事件流同时支持了事件捕获阶段和事件冒泡阶段，而作为开发者，我们可以选择事件处理函数在哪一个阶段被调用。</p>
