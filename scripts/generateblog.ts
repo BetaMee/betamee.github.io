@@ -1,7 +1,7 @@
 import readline from 'readline'
 import fs from 'fs'
 import { promisify } from 'util'
-import { v5 as uuidv5 } from 'uuid';
+import getUniquePostId from './utils/getUniquePostId'
 
 const QuestionsPrompt = [
   '请输入文章\x1b[37;44m 标题 \x1b[0m\x1b[37;46m > \x1b[0m',
@@ -116,16 +116,6 @@ const createDate = () => {
 
   const createDate = `${year}-${month}-${day} ${hour}:${min}:${sec}`
   return createDate
-}
-
-/**
- * https://github.com/uuidjs/uuid
- * @param post 文章的名称
- * @param category 文章的类别
- * @returns {*}
- */
-const getUniquePostId = (post: string) => {
-  return uuidv5(post, BLOG_NAMESPACE).replace(/-/g, '')
 }
 
 const handleCreateNewTemplate = async () => {

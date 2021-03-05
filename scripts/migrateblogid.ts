@@ -44,8 +44,8 @@ async function asyncHandleFileMigration(fileName: string) {
 
 // *问题的出现：
 // 如何处理读取多个文件这种涉及多个异步任务的问题？
-// 存在多个异步任务，要么一个个迭代，那样效率就会很低，要么使用类似 Promise.all 的方法，并发请求
-// 但这样的话短时间内性能消耗很大，得不偿失
+// 存在多个异步任务，要么一个个处理，那样效率就会很低，并且异步操作很容易写出回调嵌套函数这样难以理解的代码
+// 要么使用类似 Promise.all 的方法，并发请求，但这样的话短时间内性能消耗很大，得不偿失。
 
 // *方案一：使用异步并发控制器
 // *方案思路：
@@ -97,6 +97,7 @@ async function MigrateBlogWithAsyncIterator() {
         const filePromises = files.map(fileName => asyncHandleFileMigration(fileName));
         // 生成异步可迭代对象
         const filePromisesIterables  = new AsyncIterator(filePromises, 2);
+        // 异步迭代
         for await (const fileResult of filePromisesIterables) {
             console.log(fileResult)
         }
