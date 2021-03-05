@@ -82,24 +82,22 @@ const BlogTemplate: React.FC<IBlogTemplateProps> = ({ data }) => {
 export default BlogTemplate
 
 export const blogTemplateQuery = graphql`
-  query blogBySlug($slug: String!) {
+  query blogBySlug($uninqueid: String!) {
     site {
       siteMetadata {
         author
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(frontmatter: { uninqueid: { eq: $uninqueid } }) {
       id
       html
-      fields {
-        slug
-      }
       frontmatter {
         title
         category
         tags
         date(formatString: "YYYY-MM-DD")
+        uninqueid
       }
     }
   }

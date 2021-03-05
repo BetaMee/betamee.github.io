@@ -4,6 +4,7 @@ date: 2019-04-18 21:00:00
 category: WebFrontEnd
 tags: JS_Basic 模块化
 openreward: false
+uninqueid: e967a8717f145933ac2e7c6ea8aa5b01
 ---
 
 > 规范JavaScript的模块定义和加载机制，降低学习和使用各种框架的门槛，能够以一种统一的方式去定义和使用模块，提高开发效率，降低了应用维护成本。

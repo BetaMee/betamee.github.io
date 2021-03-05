@@ -4,6 +4,7 @@ date: 2019-04-18 21:00:00
 category: WebFrontEnd
 tags: Web_Deep 工程化 Babel
 openreward: false
+uninqueid: 1c5c1fded79a5241abd6ccbc1ad8235b
 ---
 
 > 本文发布于 2019-04-15，总结了 babel 社区的工具使用，以及如何合理地进行配置。如果要看结论的话，直接跳到文章最后一节。

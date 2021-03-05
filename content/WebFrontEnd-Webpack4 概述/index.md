@@ -4,6 +4,7 @@ date: 2019-05-06 10:51:00
 category: WebFrontEnd
 tags: Web_Deep 工程化 Webpack
 openreward: false
+uninqueid: 633c6e1cd3bb56a5be503d6dfd6043c1
 ---
 
 > 前端的工程化不仅需要 Babel 这样的“语法翻译者”，以抹平不同平台之间的特性差异，还需要可以妥善处理 JavaScript 模块以及各类 HTML、CSS、Image等资源的**构建工具**，Webpack 的出现呼应了这一趋势，极大促进了前端的发展。
