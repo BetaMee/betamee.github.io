@@ -449,7 +449,7 @@ function _asyncToGenerator(fn) { ... }
 
 asyncToGenerator 是核心函数。具体可以在 Babel 官网试验一下：https://babeljs.io/repl
 
-关于 asyncToGenerator 更多细节分析，可以见[JavaScript 异步编程原理解析](https://betamee.github.io/content/WebFrontEnd-JavaScript%20%E8%BF%AD%E4%BB%A3%E5%99%A8/)文章，里面将拆解分析生成器 + 异步的实现。
+关于 asyncToGenerator 更多细节分析，可以见[JavaScript 异步编程原理解析]()文章，里面将拆解分析生成器 + 异步的实现。
 
 ## 参考
 

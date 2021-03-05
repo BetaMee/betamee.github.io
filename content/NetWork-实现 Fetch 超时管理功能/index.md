@@ -18,7 +18,7 @@ uninqueid: a76e79b1d7dd5cfb850a577f47564b5f
 
 ## 前言
 
-在[对比 Ajax 和 Fetch](https://betamee.github.io/content/NetWork-%E5%AF%B9%E6%AF%94%20Ajax%20%E5%92%8C%20Fetch/)一文中提到，Fetch API 是没有内置的 timeout 超时管理功能的，但现实项目中如果需要这个功能，该怎么实现呢？
+在[对比 Ajax 和 Fetch](https://betamee.github.io/content/network-a13182a82897579b9b1cb247bf91490f)一文中提到，Fetch API 是没有内置的 timeout 超时管理功能的，但现实项目中如果需要这个功能，该怎么实现呢？
 
 ## 实现
 

@@ -159,7 +159,7 @@ CSS 匹配 HTML 元素是一个相当复杂和有性能问题的事情，所以�
 
 渲染过程中，如果遇到 `<script>` 就停止渲染，执行 JavaScript 代码。因为浏览器有 GUI 渲染线程与 JS 引擎线程，为了防止渲染出现不可预期的结果，这两个线程是互斥的关系。**JavaScript 的加载、解析与执行会阻塞 DOM 的解析**，也就是说，在解析 DOM 时，HTML 解析器若遇到了 JavaScript，那么它会暂停解析 DOM，将控制权移交给 JS 引擎，等 JS 引擎运行完毕，浏览器再从中断的地方恢复 DOM 解析。
 
-如果 JavaScript 代码是通过外部文件资源引入的，还可以通过设置 *async、defer* 属性来控制它执行的时机，具体见文章[关于 Script 标签的加载过程](https://betamee.github.io/content/WebFrontEnd-%E5%85%B3%E4%BA%8E%20Script%20%E6%A0%87%E7%AD%BE%E7%9A%84%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/)。
+如果 JavaScript 代码是通过外部文件资源引入的，还可以通过设置 *async、defer* 属性来控制它执行的时机，具体见文章[关于 Script 标签的加载过程](https://betamee.github.io/content/webfrontend-e64a8745be7b58099deace63def19e88)。
 
 简单可以总结为：
 

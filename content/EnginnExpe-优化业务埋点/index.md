@@ -202,7 +202,7 @@ export default Book;
 
 ## 限制
 
-需要注意的一点，class 类中应用 Decorator 装饰器模式对于常规函数和箭头函数效果是不同的，具体原因可见[JavaScript Decorator 装饰器模式](https://betamee.github.io/content/WebFrontEnd-JavaScript%20Decorator%20%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/)。
+需要注意的一点，class 类中应用 Decorator 装饰器模式对于常规函数和箭头函数效果是不同的，具体原因可见[JavaScript Decorator 装饰器模式](https://betamee.github.io/content/webfrontend-42d4215b6a7a5cb09b22865ada6cc3dd)。
 
 简单来说，就是概念上有一点问题，Decorator 装饰器模式是在类创建后，实例创建前应用的，而类中的常规方法是绑定在 prototype 上，但类中的属性方法是绑在实例上的，这就是造成了使用上的不确定。
 
@@ -228,4 +228,4 @@ export default Book;
 
 ## 参考
 
-+ [理解 requestIdleCallback](https://betamee.github.io/content/WebFrontEnd-%E7%90%86%E8%A7%A3%20requestIdleCallback/)
++ [理解 requestIdleCallback](https://betamee.github.io/content/webfrontend-af7e5693d19953109a987b234c81b641)

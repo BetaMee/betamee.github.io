@@ -25,7 +25,7 @@ uninqueid: fbc322d41e5d59a99f238ab8d164c91a
 
 ## 前言
 
-在[JavaScript 迭代器](https://betamee.github.io/content/WebFrontEnd-JavaScript%20%E8%BF%AD%E4%BB%A3%E5%99%A8/)和[JavaScript 生成器](https://betamee.github.io/content/WebFrontEnd-JavaScript%20%E7%94%9F%E6%88%90%E5%99%A8/)两文中，已经讲清楚迭代器和生成器两个工具概念的来龙去脉。本文将进一步，讲解新的知识：异步迭代器和异步生成器。
+在[JavaScript 迭代器](https://betamee.github.io/content/webfrontend-48c963a56c1a5933b11cddc0a777a3c8)和[JavaScript 生成器](https://betamee.github.io/content/webfrontend-90f567f116cc51adb5ed23e6583edbd6)两文中，已经讲清楚迭代器和生成器两个工具概念的来龙去脉。本文将进一步，讲解新的知识：异步迭代器和异步生成器。
 
 之前的知识点中，迭代器和生成器本质都是同步的，返回的是确定的值，而异步的返回值则变成了 Promsie。
 

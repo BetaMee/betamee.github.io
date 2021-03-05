@@ -1,6 +1,7 @@
 import readline from 'readline'
 import fs from 'fs'
 import { promisify } from 'util'
+import { v5 as uuidv5 } from 'uuid';
 
 const QuestionsPrompt = [
   '请输入文章\x1b[37;44m 标题 \x1b[0m\x1b[37;46m > \x1b[0m',
@@ -10,7 +11,7 @@ const QuestionsPrompt = [
 ]
 
 // 最终的结果数据
-const MetaResult: Array<string | boolean> = []
+const MetaResult: Array<any> = []
 
 // 创建一个 readline 实例
 const rl = readline.createInterface({
@@ -117,9 +118,25 @@ const createDate = () => {
   return createDate
 }
 
+/**
+ * https://github.com/uuidjs/uuid
+ * @param post 文章的名称
+ * @param category 文章的类别
+ * @returns {*}
+ */
+const getUniquePostId = (post: string) => {
+  return uuidv5(post, BLOG_NAMESPACE).replace(/-/g, '')
+}
+
 const handleCreateNewTemplate = async () => {
   // tslint:disable-next-line: max-line-length
-  const metaInfo = `---\r\ntitle: ${MetaResult[0]}\r\ndate: ${createDate()}\r\ncategory: ${MetaResult[1]}\r\ntags: ${MetaResult[2]}\r\nopenreward: ${MetaResult[3]}\r\n---`
+  const metaInfo = `---\r\ntitle: ${MetaResult[0]}`
+  + `\r\ndate: ${createDate()}`
+  + `\r\ncategory: ${MetaResult[1]}`
+  + `\r\ntags: ${MetaResult[2]}`
+  + `\r\nopenreward: ${MetaResult[3]}`
+  + `\r\nuninqueid: ${getUniquePostId(MetaResult[0])}` // 生成文章的唯一 id，用作分享
+  + `\r\n---`
 
   const newPostDir = `${newPostDirPath}${MetaResult[1]}-${MetaResult[0]}`
   // 创建目录

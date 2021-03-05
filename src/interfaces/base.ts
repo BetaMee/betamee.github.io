@@ -6,7 +6,9 @@ export interface IEdge {
     },
     frontmatter: {
       date: string,
-      title: string
+      title: string,
+      category: string,
+      uninqueid: string
     }
   }
 }
