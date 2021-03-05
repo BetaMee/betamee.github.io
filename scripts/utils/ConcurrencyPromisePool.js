@@ -21,7 +21,7 @@ class ConcurrencyPromisePool {
     _run(promise, resolve, reject) {
         // 如果请求数大于限制数，就加入 quene 队列
         if (this.runningNum >= this.limit) {
-            console.log(">>> 达到上限，入队：");
+            console.log(">>> 达到上限，入队！");
             this.queue.push(promise);
             return;
         }
