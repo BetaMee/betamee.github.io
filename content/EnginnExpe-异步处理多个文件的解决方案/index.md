@@ -24,7 +24,7 @@ uninqueid: 101e9c5a7edd51e59b5f4f592b77c247
 
 ![7bfb5e0b.png](attachments/7bfb5e0b.png)
 
-这就遇到一个问题，我要处理整个 content 目录下的文件，每一个文件要经历*读取文件 -> 更新文件内容 -> 写入原来文件*的过程，这是一个异步的过程。由此引申出的问题：如何优雅地处理 N 多个异步任务？
+这就遇到一个问题，我要处理整个 content 目录下的文件，每一个文件要经历*读取文件 -> 更新文件内容 -> 写入原来文件*的过程，这是一个异步的过程。由此引申出的问题：**如何优雅地处理 N 多个异步任务**？
 
 在前端开发者的认识里，有多个异步任务，要么一个个处理，那样效率就会很低，并且异步操作很容易写出回调嵌套函数这样难以理解的代码，要么使用类似 Promise.all 的方法，并发请求，但这样的话短时间内性能消耗很大，得不偿失。
 
@@ -186,7 +186,7 @@ async function MigrateBlogWithAsyncIterator() {
 MigrateBlogWithAsyncIterator()
 ```
 
-这个方案也有缺点，目前没有支持 Symbol.asyncIterator 异步迭代器的原生对象，需要手动部署。这里使用的是异步生成器（Async Generator）来简化异步迭代器的写法。
+这个方案也有缺点，目前没有支持 Symbol.asyncIterator 异步迭代器的原生对象，需要手动部署。上面使用的是异步生成器（Async Generator）来简化异步迭代器的写法。
 
 ## 参考
 
