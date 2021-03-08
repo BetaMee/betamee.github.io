@@ -35,7 +35,7 @@ uninqueid: 2e825bdc723c553ea973e08678f25a68
 
 ## 前言
 
-之前有整理过 [Node 异步编程探究](:note:281b4dfa-3e7e-4da7-8ca3-b45867117301)，只写了一些用法，没有深入解析其实现。
+之前有整理过 [Node 异步编程探究](http://localhost:8000/content/node-997eef3aee4757cb95429a80428b6dd7)，只写了一些用法，没有深入解析其实现。
 
 本文将整理 JavaScript 中三种异步编程的实现原理：
 
