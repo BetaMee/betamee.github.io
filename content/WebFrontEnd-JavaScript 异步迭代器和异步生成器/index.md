@@ -7,8 +7,6 @@ openreward: true
 uninqueid: fbc322d41e5d59a99f238ab8d164c91a
 ---
 
-# JavaScript 异步迭代器和异步生成器
-
 ## 目录
 
 <!-- toc -->
@@ -16,8 +14,9 @@ uninqueid: fbc322d41e5d59a99f238ab8d164c91a
 - [前言](#前言)
 - [异步迭代器](#异步迭代器)
 - [异步生成器](#异步生成器)
-- [限制](#限制)
 - [应用](#应用)
+- [关于异步循环的一些思考](#关于异步循环的一些思考)
+- [限制](#限制)
 - [总结](#总结)
 - [参考](#参考)
 
@@ -25,7 +24,7 @@ uninqueid: fbc322d41e5d59a99f238ab8d164c91a
 
 ## 前言
 
-在[JavaScript 迭代器](https://betamee.github.io/content/webfrontend-48c963a56c1a5933b11cddc0a777a3c8)和[JavaScript 生成器](https://betamee.github.io/content/webfrontend-90f567f116cc51adb5ed23e6583edbd6)两文中，已经讲清楚迭代器和生成器两个工具概念的来龙去脉。本文将进一步，讲解新的知识：异步迭代器和异步生成器。
+在[JavaScript 迭代器](:note:fbd80b32-bcd7-4e85-b288-fe3e232097ba)和[JavaScript 生成器](:note:bec86241-9e17-4fe6-af05-fa6fdebf27f5)两文中，已经讲清楚迭代器和生成器两个工具概念的来龙去脉。本文将进一步，讲解新的知识：异步迭代器和异步生成器。
 
 之前的知识点中，迭代器和生成器本质都是同步的，返回的是确定的值，而异步的返回值则变成了 Promsie。
 
@@ -118,7 +117,7 @@ const myAsyncIterable = {
 
 myAsyncIterable[Symbol.asyncIterator] = async function*() {
   let len = this.to - this.from;
-
+  
   for (let i = 0; i < len; i++) {
     // 将 await 的逻辑 yield 出去
     yield await new Promise((resolve, reject) => {
@@ -136,17 +135,77 @@ myAsyncIterable[Symbol.asyncIterator] = async function*() {
 })();
 ```
 
-## 限制
-
-使用 Symbol.asyncIterator 也不是没有限制，根据 MDN 官网介绍：
-
-> 目前没有默认设定了 Symbol.asyncIterator 属性的 JavaScript 内建的对象。不过，WHATWG（网页超文本应用技术工作小组）Streams会被设定为第一批异步可迭代对象，Symbol.asyncIterator 最近已在设计规范中落地。
-
 ## 应用
 
 在一些涉及到数据流、异步流场景，可以考虑使用 for-await-of 来消费数据。
 
 参考这个例子：[分页的数据](https://zh.javascript.info/async-iterators-generators#shi-ji-de-li-zi-fen-ye-de-shu-ju)。
+
+## 关于异步循环的一些思考
+
+在很多场景下，我们会用到循环处理数据，比如使用 forEach、for-of，在 ES9 的 for-await-of 出现之前，如果需要循环异步操作，我们可能会见到这样的代码：
+
+```js
+function Gen(time) {
+  return new Promise((resolve, reject) => {
+    setTimeout(function () {
+      resolve(time)
+    }, time)
+  })
+}
+
+async function for_of_loop_test() {
+  let arr = [Gen(6000), Gen(1000), Gen(3000)]
+  console.log(Date.now())
+  for(let item of arr) {
+    console.log(Date.now())
+    const d = await item;
+    console.log(d)
+  }
+}
+
+async function for_await_of_loop_test() {
+  let arr = [Gen(6000), Gen(1000), Gen(3000)]
+  console.log(Date.now())
+  for await (let item of arr) {
+    console.log(Date.now())
+    console.log(item)
+  }
+}
+
+for_of_loop_test()
+// 1617347960325
+// 1617347960325
+// Promise {<pending>} *注意这里*
+// 6000
+// 1617347966330
+// 1000
+// 1617347966330
+// 3000
+
+for_await_of_loop_test()
+// 1617348166466
+// Promise {<pending>} *注意这里*
+// 1617348172467
+// 6000
+// 1617348172468
+// 1000
+// 1617348172468
+```
+
+看起来 for_of_loop_test 和 for_await_of_loop_test 效果一样，那么使用 for-of + await 组合不就能实现 for-awit-of 吗？
+
+但两者是不同的，for-of 本质上是同步代码，是按同步代码的执行顺序来的，可以看到测试函数输出的 *Promise {\<pending\>}* 信息是在两个时间戳后面，直到遇到 await 后才 pending。而 for-awit-of 是专门用于循环异步数据的，也就是说整个 await {...} 代码块中都处于 pending 状态，直到 resovled。
+
+使用 for-awit-of 能保证异步代码的执行顺序，for-of 是同步代码，如果处理不好，很容易造成顺序错误。
+
+同理，forEach 和 for loop 也是同步代码，非必要时不要轻易循环异步代码。
+
+## 限制
+
+使用 Symbol.asyncIterator 也不是没有限制，根据 MDN 官网介绍：
+
+> 目前没有默认设定了 Symbol.asyncIterator 属性的 JavaScript 内建的对象。不过，WHATWG（网页超文本应用技术工作小组）Streams会被设定为第一批异步可迭代对象，Symbol.asyncIterator 最近已在设计规范中落地。
 
 ## 总结
 
@@ -161,3 +220,4 @@ myAsyncIterable[Symbol.asyncIterator] = async function*() {
 + [ES9中的异步迭代器（Async iterator）和异步生成器（Async generator）](https://juejin.cn/post/6844903735534026765)
 + [ES2018 新特征之：异步迭代器 for-await-of - SegmentFault 思否](https://segmentfault.com/a/1190000013387616)
 + [异步迭代和 generator](https://zh.javascript.info/async-iterators-generators)
++ [ES9(一) —— For await of - SegmentFault 思否](https://segmentfault.com/a/1190000037738864)
