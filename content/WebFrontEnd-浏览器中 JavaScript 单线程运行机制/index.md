@@ -258,9 +258,15 @@ console.log(2)
 // 浏览器：2 4 1 promise 3 5
 ```
 
-
 ## 参考
 
+这篇把微任务和宏任务概念讲得非常清，可参考：
+
++ [事件循环：微任务和宏任务](https://zh.javascript.info/event-loop)
+
+其他参考：
+
++ [「硬核JS」一次搞懂JS运行机制 - 掘金](https://juejin.im/post/6844904050543034376)
 + [从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理 - 掘金](https://juejin.im/post/5a6547d0f265da3e283a1df7)
 + [总结：JavaScript异步、事件循环与消息队列、微任务与宏任务 - 掘金](https://juejin.im/post/5be5a0b96fb9a049d518febc)
 + [Tasks, microtasks, queues and schedules - JakeArchibald.com](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
