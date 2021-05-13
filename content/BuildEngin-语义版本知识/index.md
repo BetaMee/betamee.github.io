@@ -1,8 +1,8 @@
 ---
 title: 语义版本知识
 date: 2019-09-24 14:52:29
-category: WebFrontEnd
-tags: Web_Deep 工程化 npm
+category: BuildEngin
+tags: 工程化 npm
 openreward: true
 uninqueid: 6563f9a389ca5c81b8c8baa2cc58680d
 ---

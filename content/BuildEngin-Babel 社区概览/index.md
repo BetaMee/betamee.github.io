@@ -1,8 +1,8 @@
 ---
 title: Babel 社区概览
 date: 2019-04-18 21:00:00
-category: WebFrontEnd
-tags: Web_Deep 工程化 Babel
+category: BuildEngin
+tags: 工程化 Babel
 openreward: false
 uninqueid: 1c5c1fded79a5241abd6ccbc1ad8235b
 ---
