@@ -6,17 +6,17 @@ notifications:
 
 # nodejs语言版本
 node_js:
-  - "10"
+  - "14"
 
 #缓存
-cache: yarn
+cache: npm
 
 # 安装
 install:
-  - yarn
+  - npm i
 
 script:
-  - yarn run build
+  - npm run build
 
 deploy:
   provider: pages
