@@ -115,7 +115,7 @@ Google 提供了一个[计算器](https://googlechrome.github.io/lighthouse/scor
 ![71326f65.png](attachments/71326f65.png)
 
 > 这里提一下，计算器中的 Speed Index（SI） 不在上一节的指标介绍中，这是因为官网中列出的最新版六大指标中没有 SI（随着技术发展，Google 性能标准也一直在变化），但目前算分的时候是算这个指标的。我们姑且把这个作为总的页面加载速度指标，无需特意在意，因为当我们优化其他指标的时候，SI 一定是会提升的。
-> 
+>
 > 从技术细节上，我们只要关心上一节的六项指标，万变不离其宗。基于上述六个指标，Google 还给出了[Web Vitals](https://web.dev/learn-web-vitals/) 这样的核心性能指标。有机会研读一下他们团队的一些思考。
 
 
