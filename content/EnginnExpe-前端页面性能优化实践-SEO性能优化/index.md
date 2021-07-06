@@ -176,7 +176,7 @@ Google 提供了一个[计算器](https://googlechrome.github.io/lighthouse/scor
 + 全局引入的 css 文件，很多都被组件化的 css module 替代了
 + 国际化多语言资源，很多冗余 key
 
-解决这类问题，思路是很简单的，只是做起来比较麻烦，是一个体力活。最难搞的是多语言资源，我们页面每次通过 shark script 脚本引入全量资源，其中有不少冗余 key。
+解决这类问题，思路是很简单的，只是做起来比较麻烦，是一个体力活。最难搞的是多语言资源，我们页面每次通过 script 脚本引入全量资源，其中有不少冗余 key。
 
 为了解决这个问题，我自己写了个[扫描脚本](https://github.com/BetaMee/node-usage-examples/blob/master/scankey/index.ts)，扫出来 36% 的 key 是废弃的，去除后脚本资源量直接从 83KB 减少到 54KB（JP 站）。
 
