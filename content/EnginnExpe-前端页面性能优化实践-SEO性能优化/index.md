@@ -43,7 +43,7 @@ uninqueid: cfa0b1e49db05c37b776d25900dc8025
 
 ## 问题的产生
 
-在优化前，我们[站点](https://www/trip.com/m/flights)在 Google Page Speed 上得分 30 分往下，这个分数在千万个网络站点中基本上算是不合格的一批。分数越低，用户打开越慢，严重影响站点的用户体验。
+在优化前，我们[站点](https://www.trip.com/m/flights)在 Google Page Speed 上得分 30 分往下，这个分数在千万个网络站点中基本上算是不合格的一批。分数越低，用户打开越慢，严重影响站点的用户体验。
 
 ![9ce4f009.png](attachments/9ce4f009.png)
 
